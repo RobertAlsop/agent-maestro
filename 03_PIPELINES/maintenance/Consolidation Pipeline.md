@@ -20,7 +20,7 @@ relationships:
   part_of:
     - "[[Maintenance Pipeline]]"
   implements:
-    - "[[Agent Maestro — Principles]]"
+    - "[[Agent Maestro — Foundations]]"
   governs: []
   inherits_from: []
   applies_to: []
@@ -215,7 +215,7 @@ To run this pipeline on a new target:
 | [[Maintenance Pipeline]] | Parent — Consolidation is a type of maintenance, run periodically rather than continuously |
 | [[Build Session Protocol]] | Consumer — Each consolidation instance is a build session governed by the protocol |
 | [[Note Upgrade Workflow]] | Consumed by Stage 3 — Note upgrade is a sub-process of content audit |
-| [[Frontmatter Upgrade Checklist]] | Consumed by Stage 3 — Frontmatter checks are part of content audit |
+| [[LLM-Script Boundary Reference]] | Produced by Stage 5 — Documents script vs LLM executor classification |
 
 ---
 
@@ -224,3 +224,4 @@ To run this pipeline on a new target:
 | Version | Date | Change |
 |---------|------|--------|
 | 1 | 2026-03-15 | Initial pipeline definition, extracted from Wave 5 proposal |
+| 2 | 2026-03-15 | Validated against Wave 5 execution (SES-012 through SES-017). Implements reference updated to Foundations. Frontmatter Upgrade Checklist ref replaced with LLM-Script Boundary Reference. All 6 stages confirmed operational. |

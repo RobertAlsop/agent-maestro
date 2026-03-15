@@ -5,8 +5,9 @@
 # Checks every .md file in the vault for required frontmatter fields,
 # valid field values, and schema compliance.
 #
-# Usage: ./validate_frontmatter.sh [VAULT_ROOT]
+# Usage: ./validate_frontmatter.sh [VAULT_ROOT] [--csv]
 #        VAULT_ROOT defaults to current directory.
+#        --csv outputs a summary line in CSV format for logging integration.
 #
 # Output: Structured report to stdout. Exit code 0 = pass, 1 = failures found.
 #
@@ -266,8 +267,22 @@ echo ""
 
 if (( ERRORS > 0 )); then
   echo -e "${RED}RESULT: FAIL${NC} — $ERRORS errors found"
-  exit 1
 else
   echo -e "${GREEN}RESULT: PASS${NC} — No errors (${WARNINGS} warnings)"
+fi
+
+# CSV output for logging integration
+CSV_FLAG="${2:-}"
+if [[ "$CSV_FLAG" == "--csv" ]]; then
+  RESULT="PASS"
+  if (( ERRORS > 0 )); then RESULT="FAIL"; fi
+  echo ""
+  echo "# CSV output (append to 06_EXECUTION/logs/validation_log.csv)"
+  echo "$(date -I),$VAULT_ROOT,$FILES_CHECKED,$FILES_PASSED,$FILES_FAILED,$FILES_SKIPPED,$ERRORS,$WARNINGS,$RESULT"
+fi
+
+if (( ERRORS > 0 )); then
+  exit 1
+else
   exit 0
 fi

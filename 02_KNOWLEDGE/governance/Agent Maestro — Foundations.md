@@ -9,8 +9,8 @@ authority_weight: 95
 resolution_basis: canonical
 canonical: true
 status: active
-review_status: draft
-version: 2
+review_status: approved
+version: 3
 created_date: 2026-03-15
 last_modified: 2026-03-15
 owner: AgentMaestro

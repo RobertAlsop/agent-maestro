@@ -7,9 +7,9 @@ domain: agent_maestro
 layer: projects
 authority_weight: 75
 resolution_basis: authority_weight
-status: active
+status: completed
 review_status: approved
-version: 1
+version: 2
 created_date: 2026-03-15
 last_modified: 2026-03-15
 owner: AgentMaestro

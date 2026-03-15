@@ -94,7 +94,7 @@ These documents define the fundamental principles and constraints for the entire
 | Registry | Path | What it tracks |
 |----------|------|---------------|
 | Authority Pack Registry | `05_SYSTEMS/authority_architecture/authority_pack_registry.csv` | All 29 authority packs |
-| Constellation Registry | `05_SYSTEMS/agent_systems/constellation_registry.csv` | 2 constellations (1 active, 1 deprecated) |
+| Constellation Registry | `05_SYSTEMS/agent_systems/constellation_registry.csv` | 2 constellations (1 active, 1 archived) |
 | Agent Registry | `05_SYSTEMS/agent_systems/agent_registry.csv` | All 18 agents with roles and permissions |
 | Compiler Artifacts Registry | `05_SYSTEMS/authority_architecture/compiler/compiler_artifacts_registry.csv` | All 17 compiled JSON artifacts |
 | Knowledge Graph Index | `02_KNOWLEDGE/indexes/knowledge_graph_index.csv` | All vault notes with metadata |
@@ -146,7 +146,7 @@ Before beginning any build work, agents MUST read:
 1. Input → 2. Brief/Roadmap → 3. Proposal (Build Contract) → 4. Build → 5. Output Summary → 6. Session Log → 7. Git Commit + Release
 
 **Repository:** `https://github.com/robertalsop/agent-maestro`
-**Current version:** v0.4.0 (Phase D complete — execution architecture + external integration)
+**Current version:** v0.5.0 (Wave 5 complete — Foundations alignment pass)
 **Default branch:** `master` — never commit build work directly here; use a feature branch
 
 **Critical rules:**
