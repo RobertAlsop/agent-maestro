@@ -1,52 +1,37 @@
 ---
-id: GOV.agent_maestro.scope
+schema_version: 2
+title: "Agent Maestro — Scope"
 type: scope
 note_class: governance
 domain: governance
 layer: governance
-scope: null
-
-canonical: false
-authority_weight: 65
+authority_weight: 80
 resolution_basis: authority_weight
-schema_version: 2
-
+canonical: true
 status: active
-review_status: draft
-version: 1
-
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
-
+review_status: approved
+version: 2
+created_date: 2026-03-10
+last_modified: 2026-03-15
 owner: AgentMaestro
-
+source_type: collaborative
 relationships:
-  defines: []
+  defines:
+    - "[[Agent Maestro Scope Boundaries]]"
   part_of: []
-  implements: []
+  implements:
+    - "[[Agent Maestro — Foundations]]"
+    - "[[Agent Maestro — North Star]]"
   governs: []
   inherits_from: []
   applies_to: []
   uses: []
   produces: []
-
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
-
-related: []
-related_maps: []
-related_pipes: []
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
+  supersedes: []
+  superseded_by: []
 tags:
   - governance
   - scope
-
 hash: ""
 ---
 
@@ -58,14 +43,14 @@ Define what Agent Maestro does and does not cover.
 
 ## Principle
 
-Agent Maestro is bounded. Clear scope prevents drift and keeps the discipline operationally focused.
+Agent Maestro is bounded. Clear scope prevents drift and keeps the discipline operationally focused. This boundary enforcement is an expression of Law 3 (Economy) — only what is necessary.
 
 ## In Scope
 
-- [[Agent Systems|Agent system architecture]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture|Authority governance]]
+- [[Agent Systems]] architecture
+- [[Authority Architecture]] governance
 - Operational workflows
-- [[Memory Architecture|Memory architecture]]
+- [[Memory Architecture]]
 - Orchestration systems
 - Monitoring and observability
 - Operational intelligence infrastructure
@@ -88,6 +73,6 @@ When evaluating whether a project, concept, or system belongs inside Agent Maest
 
 ## Related
 
+- [[Agent Maestro — Foundations]]
 - [[Agent Maestro — North Star]]
 - [[Agent Maestro — Strategy]]
-- [[Agent Maestro — Governance Map]]
