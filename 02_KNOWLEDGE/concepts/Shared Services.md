@@ -17,12 +17,12 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]"
+    - "Agent Ecosystem]]"
   implements: []
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
     - "[[Agent System]]"
   uses:
     - "[[Memory Architecture]]"
@@ -42,7 +42,7 @@ hash: ""
 
 ## Definition
 
-Reusable operational capabilities provided to multiple agents and agent systems within an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] or [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — such as memory services, orchestration services, and governance services — that are centrally managed and consistently available rather than duplicated per agent.
+Reusable operational capabilities provided to multiple agents and agent systems within an Agent Constellation]] or Agent Ecosystem]] — such as memory services, orchestration services, and governance services — that are centrally managed and consistently available rather than duplicated per agent.
 
 ## Boundaries
 
@@ -60,8 +60,8 @@ Shared Services prevent capability duplication and ensure consistency across an 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — constellations consume shared services
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — shared services operate at ecosystem scope
+- Agent Constellation]] — constellations consume shared services
+- Agent Ecosystem]] — shared services operate at ecosystem scope
 - [[Memory Architecture]] — memory services are a major shared service category
 - [[Shared Services Index]] — navigational index of all shared services
 - [[Agent Maestro — Systems Map]]

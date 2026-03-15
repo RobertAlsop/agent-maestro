@@ -1,24 +1,21 @@
 ---
-id:
 type: system_registry
 note_class: registry
 domain:
 layer: registry
-scope:
 
 canonical: true
 authority_weight: 95
 resolution_basis: canonical
 schema_version: 2
+title: "System Registry"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: annual
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

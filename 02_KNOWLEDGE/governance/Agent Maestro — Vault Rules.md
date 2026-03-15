@@ -116,7 +116,7 @@ Each note contains at minimum:
 
 ### Link Integrity
 - All wiki-links use the canonical format: `[[Note Title]]`
-- No full-path links (`[[02_Systems/Agent Maestro/...]]`)
+- No full-path links (`...]]`)
 - Internal links resolve to existing notes
 
 ## When It Applies

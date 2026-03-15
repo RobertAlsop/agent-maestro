@@ -191,4 +191,4 @@ Authoritative registry of all canonical note IDs. IDs are stable and must never 
 - [[Canonical Notes Index]]
 - [[Artifact Taxonomy]]
 - [[Agent Maestro — Vault Rules]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+- System Registry]]

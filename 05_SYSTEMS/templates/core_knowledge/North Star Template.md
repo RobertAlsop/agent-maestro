@@ -1,24 +1,21 @@
 ---
-id:
 type: north_star
 note_class: doctrine
 domain:
 layer: governance
-scope:
 
 canonical: true
 authority_weight: 90
 resolution_basis: canonical
 schema_version: 2
+title: "North Star Template"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: annual
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

@@ -22,9 +22,9 @@ relationships:
   inherits_from: []
   applies_to:
     - "[[Agent System]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
     - "[[Memory Architecture]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   uses:
     - "[[Agent]]"
     - "[[Authority Pack]]"
@@ -34,7 +34,7 @@ relationships:
   - "[[Agent Maestro — Stack Map]]"
   - "[[Agent Maestro — Systems Map]]"
   - "[[Authority Pack]]"
-  - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+  - "Agent Constellation]]"
   - "[[Model Workspace Protocol]]"
 source_type: ai_authored
 supersedes: []
@@ -112,7 +112,7 @@ The Layer Model is also not a replacement for existing concepts. It organises th
 ## Relationships
 
 - [[Model Workspace Protocol]] — defines the structure of the Workspace Layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the system that implements the Authority Layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the primary unit that operates across all four layers
+- Authority Architecture]] — the system that implements the Authority Layer
+- Agent Constellation]] — the primary unit that operates across all four layers
 - [[Agent Maestro — Layer Model Map]]
 - [[Agent Maestro — Stack Map]]

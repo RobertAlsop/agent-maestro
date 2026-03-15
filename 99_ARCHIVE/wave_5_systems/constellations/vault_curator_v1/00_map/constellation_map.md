@@ -1,21 +1,18 @@
 ---
-id: CONST.vault_curator.map
 type: map
 note_class: navigation
 domain: vault_governance
 layer: systems
-scope:
 canonical: false
 authority_weight: 75
 resolution_basis: authority_weight
 schema_version: 2
+title: "constellation_map"
 status: deprecated
 review_status: approved
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines:
@@ -34,14 +31,9 @@ relationships:
     - "[[authority_packs]]"
   produces:
     - "[[maintenance_cycle]]"
-map: "[[Agent Maestro — Constellation Architecture Map]]"
-maps:
   - "[[Agent Maestro — Systems Map]]"
-related: []
-related_maps:
   - "[[Agent Maestro — Constellation Architecture Map]]"
   - "[[Authority Architecture Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by:

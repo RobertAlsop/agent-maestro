@@ -47,7 +47,7 @@ hash: ""
 
 ## Purpose
 
-Formal schema definitions for all artifact types produced by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]. This reference is the authoritative source for what a valid [[Compiled Governance Artifact]] must contain.
+Formal schema definitions for all artifact types produced by the 01_CAPTURE/inbox/Authority Pack Compiler]]. This reference is the authoritative source for what a valid [[Compiled Governance Artifact]] must contain.
 
 ## Context
 

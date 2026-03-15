@@ -1,24 +1,21 @@
 ---
-id: CONST.vault_curator.agent.executive
 type: agent_definition
 note_class: architecture
 domain: vault_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 90
 resolution_basis: authority_weight
 schema_version: 2
+title: "vault_governance_director"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -40,18 +37,13 @@ relationships:
   produces:
     - "[[Execution Log]]"
 
-map: "[[CONST.vault_curator.map]]"
-maps:
   - "[[Agent Maestro — Constellation Architecture Map]]"
 
-related:
   - "[[CONST.vault_curator.agent.supervisor]]"
   - "[[CONST.vault_curator.agent.specialist.link_auditor]]"
   - "[[CONST.vault_curator.agent.specialist.schema_validator]]"
   - "[[CONST.vault_curator.agent.specialist.orphan_detector]]"
-related_maps:
   - "[[Agent Maestro — Agent Taxonomy Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

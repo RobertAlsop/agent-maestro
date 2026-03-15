@@ -52,7 +52,7 @@ Complete all 14 sections of the governance authority pack folder at `05_SYSTEMS/
 ## Deliverables
 
 - All 14 sections authored with meaningful content
-- Pack reviewed against [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] design principles
+- Pack reviewed against Authority Architecture]] design principles
 - Pack registered in [[Authority Packs Index]]
 
 ## Current Status
@@ -67,5 +67,5 @@ Sections created with structural scaffolding. Content authoring in progress.
 
 ## Related
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]
+- Authority Architecture]]
 - [[System Design Pipeline]]

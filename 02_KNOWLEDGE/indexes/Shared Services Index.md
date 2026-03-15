@@ -46,7 +46,7 @@ hash: ""
 
 ## Purpose
 
-Navigation index for all [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] available across Agent Maestro constellations and ecosystems.
+Navigation index for all Shared Services]] available across Agent Maestro constellations and ecosystems.
 
 ## Context
 
@@ -74,8 +74,8 @@ Services supporting agent workflow coordination:
 
 Services providing authority enforcement and policy checking:
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — governance service layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — `05_SYSTEMS/agent_systems/shared_services/`
+- Authority Architecture]] — governance service layer
+- Shared Services]] (system) — `05_SYSTEMS/agent_systems/shared_services/`
 
 ### Intelligence Services
 
@@ -86,6 +86,6 @@ Services providing operational intelligence to agents:
 
 ## Related
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (concept) — the concept this index navigates
+- Shared Services]] (concept) — the concept this index navigates
 - [[Agent Maestro — Systems Map]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — for registry-level resolution
+- System Registry]] — for registry-level resolution

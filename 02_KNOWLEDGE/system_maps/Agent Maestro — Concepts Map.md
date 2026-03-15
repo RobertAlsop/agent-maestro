@@ -50,7 +50,7 @@ Navigation layer for all canonical concept, domain, and pattern notes in the Age
 
 - [[Operational Intelligence]]
 - [[Agent Systems]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Memory Architecture]]
 - [[Agent]]
 - [[Agent Workflow]]
@@ -66,21 +66,21 @@ Navigation layer for all canonical concept, domain, and pattern notes in the Age
 # Agent Architecture Concepts
 
 - [[Agent System]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]
+- Agent Ecosystem]]
+- Agent Constellation]]
 - [[Executive Agent]]
 - [[Supervisor Agent]]
 - [[Specialist Agent]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]]
+- Shared Services]]
 - [[Human Escalation]]
 
 ---
 
 # Authority & Governance Concepts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]]
+- Authority Model]]
+- Authority Inheritance]]
+- Pack Versioning]]
 - [[Governance Artifact]]
 - [[Compiled Governance Artifact]]
 - [[Host Binding]]
@@ -101,7 +101,7 @@ Navigation layer for all canonical concept, domain, and pattern notes in the Age
 - [[Multi-Agent Coordination]]
 - [[Operational Governance]]
 - [[Organizational Intelligence]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/domains/Platformization]]
+- Platformization]]
 
 ---
 

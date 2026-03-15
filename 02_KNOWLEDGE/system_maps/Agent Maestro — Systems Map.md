@@ -62,33 +62,33 @@ Navigation layer for all system architecture notes across Agent Maestro — incl
 - [[Agent Runtime Architecture]]
 - [[Agent Workflow Architecture]]
 - [[Multi-Agent Systems]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] (system)
+- Agent Ecosystem]] (system)
 
 ### Executive Layer
 - [[Executive Layer]] — top governance tier of constellations
 
 ### Shared Services
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — reusable operational capabilities
+- Shared Services]] (system) — reusable operational capabilities
 
 ### Constellations
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] (system) — constellation structure standard
+- Agent Constellation]] (system) — constellation structure standard
 - [[Constellation Index]] — navigational index of all constellations
 
 ---
 
 ## Authority Architecture
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] (system)
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] (system)
+- Authority Architecture]]
+- Authority Model]]
+- Authority Inheritance]] (system)
+- Pack Versioning]] (system)
 - [[Pack Manifest]]
 
 ---
 
 ## Compiler
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]
+- 01_CAPTURE/inbox/Authority Pack Compiler]]
 - [[Compiler Pipeline]]
 - [[Compiler Inputs]] · [[Compiler Outputs]]
 - [[Host Bindings]] · [[Integration Manifest]]
@@ -111,7 +111,7 @@ Navigation layer for all system architecture notes across Agent Maestro — incl
 
 ## Registries
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — authoritative system registry
+- System Registry]] — authoritative system registry
 - [[Shared Services Index]] — shared services navigation
 - [[Constellation Index]] — constellation navigation
 

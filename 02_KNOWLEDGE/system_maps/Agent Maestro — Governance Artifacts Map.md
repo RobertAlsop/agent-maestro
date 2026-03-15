@@ -73,15 +73,15 @@ These artifacts define governance intent before compilation:
 
 ## Inheritance and Versioning Artifacts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — how packs inherit from parent packs
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — how packs are versioned and evolved
+- Authority Inheritance]] — how packs inherit from parent packs
+- Pack Versioning]] — how packs are versioned and evolved
 - [[Pack Override Rules]] — how overrides are declared and tracked
 
 ---
 
 ## Compiler Artifacts
 
-Produced by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]:
+Produced by the 01_CAPTURE/inbox/Authority Pack Compiler]]:
 
 - [[Compiled Governance Artifacts]] (system) — the full compiled output set
 - [[Integration Manifest]] — binding contracts for runtime hosts

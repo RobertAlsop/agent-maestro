@@ -56,8 +56,8 @@ Architecture reference for governed agent constellations — how they are struct
 
 ## Core Concept
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the concept: a governed cluster of agents sharing authority architecture
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — the broader deployment context containing constellations
+- Agent Constellation]] — the concept: a governed cluster of agents sharing authority architecture
+- Agent Ecosystem]] — the broader deployment context containing constellations
 
 ---
 
@@ -70,9 +70,9 @@ Architecture reference for governed agent constellations — how they are struct
 
 ## System Implementation
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] (system) — implementation reference in `05_SYSTEMS/agent_systems/constellations/`
+- Agent Constellation]] (system) — implementation reference in `05_SYSTEMS/agent_systems/constellations/`
 - [[Executive Layer]] — system note for the executive layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — services shared across agents in a constellation
+- Shared Services]] (system) — services shared across agents in a constellation
 
 ---
 
@@ -107,7 +107,7 @@ Constellations are governed by authority packs applied at each layer. See:
 ## Registry
 
 - [[Constellation Index]] — navigational index of all constellations
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — registry-resolvable system entries
+- System Registry]] — registry-resolvable system entries
 
 ---
 

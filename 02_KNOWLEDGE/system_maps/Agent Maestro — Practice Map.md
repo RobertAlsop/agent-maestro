@@ -51,18 +51,18 @@ This map guides practitioners through the operational workflows of Agent Maestro
 ## How to Design an Agent
 
 1. Identify the agent's role — executive, supervisor, or specialist (see [[Executive-Supervisor-Specialist Pattern]])
-2. Determine the agent's authority scope — consult [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] and [[Decision Authority]]
+2. Determine the agent's authority scope — consult Authority Architecture]] and [[Decision Authority]]
 3. Assign or create an [[Authority Pack]] using the [[Authority Pack Grammar]]
-4. Link to the appropriate [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] or constellation definition
-5. Register the agent in the [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+4. Link to the appropriate Agent Constellation]] or constellation definition
+5. Register the agent in the System Registry]]
 
 ---
 
 ## How to Define Authority
 
-- Start from the [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — understand the conceptual framework
+- Start from the Authority Model]] — understand the conceptual framework
 - Apply [[Authority Pack Grammar]] — sections 00–13
-- Use [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] to inherit from a base pack where applicable
+- Use Authority Inheritance]] to inherit from a base pack where applicable
 - Apply [[Pack Override Rules]] to manage deviations
 - Version the pack using [[Pack Versioning Pattern]]
 - Register in [[Authority Pack Registry]] and [[Pack Version Registry]]
@@ -74,7 +74,7 @@ This map guides practitioners through the operational workflows of Agent Maestro
 - Define the constellation structure (see [[Constellation Architecture Pattern]])
 - Link executive, supervisors, and specialists (see [[Executive-Supervisor-Specialist Pattern]])
 - Apply authority packs to each layer
-- Run the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] to produce [[Compiled Governance Artifact|compiled governance artifacts]]
+- Run the 01_CAPTURE/inbox/Authority Pack Compiler]] to produce [[Compiled Governance Artifact|compiled governance artifacts]]
 - Bind outputs using [[Host Binding Pattern]]
 - Register in [[Constellation Index]]
 

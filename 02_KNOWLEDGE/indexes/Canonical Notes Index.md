@@ -70,7 +70,7 @@ Index of all canonical notes by prefix. For full registry with IDs see [[Canonic
 
 - [[Operational Intelligence]]
 - [[Agent Systems]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Memory Architecture]]
 - [[Agent]]
 - [[Agent Workflow]]

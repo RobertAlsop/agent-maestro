@@ -61,17 +61,17 @@ This map navigates the Agent Maestro Layer Model — the four-layer runtime arch
 
 | Component | Location |
 |---|---|
-| [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] | `05_SYSTEMS/authority_architecture/` |
+| Authority Architecture]] | `05_SYSTEMS/authority_architecture/` |
 | [[Authority Pack]] | `02_KNOWLEDGE/concepts/` |
-| [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] | `05_SYSTEMS/authority_architecture/compiler/` |
+| 01_CAPTURE/inbox/Authority Pack Compiler]] | `05_SYSTEMS/authority_architecture/compiler/` |
 | [[Compiled Governance Artifact]] | `05_SYSTEMS/authority_architecture/compiler/` |
-| [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] | `05_SYSTEMS/authority_architecture/` |
+| Authority Model]] | `05_SYSTEMS/authority_architecture/` |
 
 ### Agent Runtime — Who does it
 
 | Component | Location |
 |---|---|
-| [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] | `02_KNOWLEDGE/concepts/` |
+| Agent Constellation]] | `02_KNOWLEDGE/concepts/` |
 | [[Executive Agent]] | `02_KNOWLEDGE/concepts/` |
 | [[Supervisor Agent]] | `02_KNOWLEDGE/concepts/` |
 | [[Specialist Agent]] | `02_KNOWLEDGE/concepts/` |
@@ -82,7 +82,7 @@ This map navigates the Agent Maestro Layer Model — the four-layer runtime arch
 | Component | Location |
 |---|---|
 | [[Exploration Pipeline]] | `03_PIPELINES/` |
-| [[02_Systems/Agent Maestro/03_PIPELINES/development/Development Pipeline]] | `03_PIPELINES/` |
+| Development Pipeline]] | `03_PIPELINES/` |
 | [[System Design Pipeline]] | `03_PIPELINES/` |
 | [[Agent Deployment Pipeline]] | `03_PIPELINES/` |
 | [[02_Systems/Bartram/03_PIPELINES/learning_pipeline/Learning Pipeline]] | `03_PIPELINES/` |

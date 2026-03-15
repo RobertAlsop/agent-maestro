@@ -74,7 +74,7 @@ The canonical ontology of Agent Maestro — what things are.
 - [[Agent Maestro — Agent Taxonomy Map]] — agent types
 - [[Agent Maestro — Domain Map]] — fields of application
 
-Key concepts: [[Agent]] · [[Agent System]] · [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] · [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] · [[Authority Pack]] · [[Executive Agent]] · [[Supervisor Agent]] · [[Specialist Agent]] · [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] · [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] · [[Compiled Governance Artifact]]
+Key concepts: [[Agent]] · [[Agent System]] · Agent Ecosystem]] · Agent Constellation]] · [[Authority Pack]] · [[Executive Agent]] · [[Supervisor Agent]] · [[Specialist Agent]] · Authority Architecture]] · Authority Inheritance]] · [[Compiled Governance Artifact]]
 
 ---
 
@@ -125,7 +125,7 @@ Dashboards, tasks, and weekly planning.
 Authoritative resolution anchors.
 
 - [[Canonical Notes Registry]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+- System Registry]]
 - [[Authority Pack Registry]]
 - [[Pack Version Registry]]
 - [[Compiler Artifacts Registry]]

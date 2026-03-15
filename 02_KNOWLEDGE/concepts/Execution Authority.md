@@ -17,7 +17,7 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   implements:
     - "[[Decision-Execution Separation]]"
     - "[[Evidence Over Assumptions]]"

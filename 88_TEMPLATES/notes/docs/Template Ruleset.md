@@ -35,7 +35,7 @@ Incorrect:
 
 relationships:  
   part_of:  
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]"
+    - "Agent Ecosystem]]"
 
 ---
 

@@ -68,5 +68,5 @@ Ongoing after deployment. Corresponds to Deterministic [[Agent Maestro — Modes
 
 ## Related Concepts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Controlled Evolution Pattern]]

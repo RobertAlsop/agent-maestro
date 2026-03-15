@@ -51,7 +51,7 @@ Formal schema definitions for all design-time governance artifacts in Agent Maes
 
 ## Context
 
-Schemas are the structural contracts that make governance machine-verifiable. The [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] validates input packs against these schemas before processing. This reference is the authoritative source for pack schema definitions.
+Schemas are the structural contracts that make governance machine-verifiable. The 01_CAPTURE/inbox/Authority Pack Compiler]] validates input packs against these schemas before processing. This reference is the authoritative source for pack schema definitions.
 
 ## Authority Pack Section Schemas
 

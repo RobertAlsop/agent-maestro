@@ -54,9 +54,9 @@ Multi-Agent Coordination is the operational challenge that Agent Maestro's const
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the primary structural vehicle for governed multi-agent coordination
+- Agent Constellation]] — the primary structural vehicle for governed multi-agent coordination
 - [[Agent Orchestration]] — the mechanism by which agents coordinate tasks
 - [[Supervisor Agent]] — the coordination layer within a constellation
 - [[Executive-Supervisor-Specialist Pattern]] — structural pattern for multi-agent organisation
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — shared coordination services
+- Shared Services]] — shared coordination services
 - [[Agent Maestro — Domain Map]]

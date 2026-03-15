@@ -21,7 +21,7 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   uses:
     - "[[Executive Agent]]"
     - "[[Supervisor Agent]]"

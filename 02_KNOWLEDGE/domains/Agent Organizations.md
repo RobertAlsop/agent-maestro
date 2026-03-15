@@ -55,7 +55,7 @@ Agent Organizations are not just companies that use AI tools. They are organisat
 ## Relationships
 
 - [[AI-Native Organizations]] — adjacent domain focused on native AI-first design
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — the agent deployment context within an agent organisation
+- Agent Ecosystem]] — the agent deployment context within an agent organisation
 - [[Executive-Supervisor-Specialist Pattern]] — the structural pattern for agent role design
 - [[Human-Agent Collaboration]] — how humans and agents share organisational work
 - [[Agent Maestro — Domain Map]]

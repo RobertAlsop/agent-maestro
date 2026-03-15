@@ -1,24 +1,21 @@
 ---
-id: EXEC.knowledge_executive
 type: agent_definition
 note_class: architecture
 domain: agent_systems
 layer: systems
-scope: executive
 
 canonical: true
 authority_weight: 85
 resolution_basis: canonical
 schema_version: 2
+title: "Knowledge Executive"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -35,15 +32,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Executive Layer Map]]"
-maps: []
 
-related:
   - "[[Agent Maestro — Memory Architecture]]"
   - "[[Agent Maestro — Knowledge Graph Layer]]"
-related_maps:
   - "[[Agent Maestro — Knowledge Graph Structure Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

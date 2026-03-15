@@ -58,7 +58,7 @@ None yet deployed.
 
 ## Weekly Planning
 
-- [[02_Systems/Agent Maestro/06_EXECUTION/weekly_planning/Weekly Reset Template]]
+- weekly_planning/Weekly Reset Template]]
 
 ## Key Links
 

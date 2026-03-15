@@ -51,7 +51,7 @@ The policies, structures, and enforcement mechanisms that ensure agent systems o
 
 ## Purpose
 
-Governance systems are the organizational expression of [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]. They translate technical authority controls into organizational policy.
+Governance systems are the organizational expression of Authority Architecture]]. They translate technical authority controls into organizational policy.
 
 ## Key Components
 
@@ -62,6 +62,6 @@ Governance systems are the organizational expression of [[02_Systems/Agent Maest
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Agent Maestro — Principles]]
 - [[Agent Maestro — Governance Map]]

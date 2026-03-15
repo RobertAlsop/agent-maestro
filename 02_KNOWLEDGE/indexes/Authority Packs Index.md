@@ -91,7 +91,7 @@ Domain packs extend base or role packs with authority specific to a business or 
 
 ## Constellation Packs
 
-Constellation packs define the composed authority architecture for a full [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]].
+Constellation packs define the composed authority architecture for a full Agent Constellation]].
 
 | Pack | Folder | Status |
 |---|---|---|
@@ -100,8 +100,8 @@ Constellation packs define the composed authority architecture for a full [[02_S
 ## Related
 
 - [[Authority Pack]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]]
+- Authority Model]]
+- Authority Inheritance]]
+- Pack Versioning]]
 - [[Authority Architecture Map]]
 - [[Agent Maestro — Pack Inheritance Map]]

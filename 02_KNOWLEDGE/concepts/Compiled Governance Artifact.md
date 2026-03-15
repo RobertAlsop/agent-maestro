@@ -53,7 +53,7 @@ hash: ""
 
 ## Definition
 
-A deterministic, runtime-ready governance object produced by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] from one or more [[Authority Pack|Authority Packs]]. A Compiled Governance Artifact represents the resolved, inheritance-flattened, and host-bound form of an authority contract — the form that can be loaded by an agent runtime environment.
+A deterministic, runtime-ready governance object produced by the 01_CAPTURE/inbox/Authority Pack Compiler]] from one or more [[Authority Pack|Authority Packs]]. A Compiled Governance Artifact represents the resolved, inheritance-flattened, and host-bound form of an authority contract — the form that can be loaded by an agent runtime environment.
 
 ## Boundaries
 
@@ -77,7 +77,7 @@ All compiled governance artifacts are registered in the [[Compiler Artifacts Reg
 ## Relationships
 
 - [[Authority Pack]] — the source packs consumed during compilation
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — the system that produces compiled artifacts
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — the system that produces compiled artifacts
 - [[Host Binding]] — the mechanism that binds artifacts to a runtime
 - [[Governance Artifact]] — the broader class of which this is a specialisation
 - [[Governance Compilation Pattern]] — the design pattern governing the compilation process

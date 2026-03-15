@@ -59,11 +59,11 @@ The foundational rules layer. Everything above must comply with this layer.
 
 The governance enforcement layer. Defines what agents may decide and do.
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] (concept)
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — conceptual framework
+- Authority Architecture]] (concept)
+- Authority Model]] — conceptual framework
 - [[Authority Pack]] — atomic governance contract
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — inheritance mechanics
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — version management
+- Authority Inheritance]] — inheritance mechanics
+- Pack Versioning]] — version management
 - [[Pack Manifest]] — pack composition declaration
 - [[Authority Architecture Map]] — full navigation
 
@@ -73,7 +73,7 @@ The governance enforcement layer. Defines what agents may decide and do.
 
 Transforms design-time packs into runtime-ready compiled artifacts.
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — system
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — system
 - [[Compiler Pipeline]] — processing stages
 - [[Compiled Governance Artifact]] — output concept
 - [[Host Bindings]] — runtime binding
@@ -86,9 +86,9 @@ Transforms design-time packs into runtime-ready compiled artifacts.
 The agent layer — typed agents operating under authority constraints.
 
 - [[Executive Agent]] · [[Supervisor Agent]] · [[Specialist Agent]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — governed agent cluster
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — full organisational deployment
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — reusable operational services
+- Agent Constellation]] — governed agent cluster
+- Agent Ecosystem]] — full organisational deployment
+- Shared Services]] — reusable operational services
 - [[Agent Maestro — Agent Taxonomy Map]] — full taxonomy
 
 ---

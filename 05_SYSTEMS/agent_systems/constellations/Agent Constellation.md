@@ -1,24 +1,21 @@
 ---
-id: SYS.agent_constellation
 type: system
 note_class: architecture
 domain: agent_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Constellation"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,13 +29,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Constellation Architecture Map]]"
-maps:
   - "[[Agent Maestro — Systems Map]]"
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -60,7 +52,7 @@ System reference for governed agent constellations — defining the standard str
 
 ## Context
 
-A constellation is a governed cluster of agents: one [[Executive Agent]], one or more [[Supervisor Agent|Supervisor Agents]], and multiple [[Specialist Agent|Specialist Agents]], all operating under a shared [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]. This note defines the structural standard; individual constellation instances live in subdirectories of `05_SYSTEMS/agent_systems/constellations/`.
+A constellation is a governed cluster of agents: one [[Executive Agent]], one or more [[Supervisor Agent|Supervisor Agents]], and multiple [[Specialist Agent|Specialist Agents]], all operating under a shared Authority Architecture]]. This note defines the structural standard; individual constellation instances live in subdirectories of `05_SYSTEMS/agent_systems/constellations/`.
 
 ## Responsibilities
 
@@ -89,8 +81,8 @@ Every constellation instance must follow this layout:
 
 ### Dependencies
 - [[Executive Layer]] (system) — for executive agent definition
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — for shared operational capabilities
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — for authority pack governance
+- Shared Services]] (system) — for shared operational capabilities
+- Authority Architecture]] — for authority pack governance
 
 ### Failure Modes
 - Authority pack missing or invalid → constellation cannot be activated
@@ -100,11 +92,11 @@ Every constellation instance must follow this layout:
 
 All constellations must be registered in:
 - [[Constellation Index]] — navigation index
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — authoritative system registry
+- indexes/System Registry]] — authoritative system registry
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/constellations/Agent Constellation]] (concept)
+- constellations/Agent Constellation]] (concept)
 - [[Constellation Architecture Pattern]] — the design pattern
 - [[Executive-Supervisor-Specialist Pattern]] — the layering pattern
 - [[Agent Maestro — Constellation Architecture Map]]

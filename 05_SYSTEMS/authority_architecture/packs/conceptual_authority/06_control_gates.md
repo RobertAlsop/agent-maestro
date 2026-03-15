@@ -1,24 +1,21 @@
 ---
-id: SYS.pack.conceptual_authority.control_gates
 type: authority_pack_section
 note_class: governance
 domain: system_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 70
 resolution_basis: authority_weight
 schema_version: 2
+title: "06_control_gates"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-10
+last_modified: 2026-03-10
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Architecture Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -57,9 +49,9 @@ Enforcement checkpoints that must be passed before an action proceeds.
 ## Gate Failure Behaviour
 What happens when a gate is not passed.
 
-- See [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/packs/conceptual_authority/12_failure_semantics]]
+- See packs/conceptual_authority/12_failure_semantics]]
 
 ## Related
 - [[Governance Before Autonomy]]
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/packs/conceptual_authority/05_rules]]
+- packs/conceptual_authority/05_rules]]
 - [[Authority Architecture Map]]

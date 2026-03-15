@@ -1,5 +1,4 @@
 ---
-id: WF.vault_maintenance.note_processing
 type: process
 note_class: execution
 domain: vault_maintenance
@@ -22,14 +21,9 @@ applies_to: []
 uses:
   - CONST.vault_maintenance.specialist.note_processor
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.specialist.note_processor
-related_maps:
   - MAP.vault_maintenance
-related_pipes: []
 tags:
   - constellation
   - workflow
@@ -38,8 +32,8 @@ tags:
   - note_processing
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Note Processing Workflow
 ---

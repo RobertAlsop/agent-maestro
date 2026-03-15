@@ -56,7 +56,7 @@ Understanding the AI-native org model defines the end state Agent Maestro archit
 ## Key Components
 
 - Agent-first operational design
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] embedded in org structure
+- Authority Architecture]] embedded in org structure
 - [[Operational Intelligence]] as a core competency
 - Human-agent collaboration as standard operating model
 

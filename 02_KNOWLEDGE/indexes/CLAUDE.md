@@ -23,7 +23,7 @@ Indexes are generated and maintained to keep the knowledge graph organized and d
 - **Artifact Taxonomy.md**: Taxonomy of compiler output artifacts by type and purpose
 - **knowledge_graph_index.csv**: Machine-readable index of all notes in the knowledge base (CSV format)
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/indexes/`
+All files located in `02_KNOWLEDGE/indexes/`
 
 ## Index Types
 

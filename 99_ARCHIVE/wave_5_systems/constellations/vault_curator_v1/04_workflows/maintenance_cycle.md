@@ -1,21 +1,18 @@
 ---
-id: CONST.vault_curator.workflow.maintenance_cycle
 type: workflow_definition
 note_class: execution
 domain: vault_governance
 layer: systems
-scope: null
 canonical: false
 authority_weight: 75
 resolution_basis: authority_weight
 schema_version: 2
+title: "maintenance_cycle"
 status: active
 review_status: approved
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -35,15 +32,10 @@ relationships:
   produces:
   - '[[Audit Report]]'
   - '[[Execution Log]]'
-map: '[[CONST.vault_curator.map]]'
-maps:
 - '[[Agent Maestro — Constellation Architecture Map]]'
-related:
 - '[[CONST.vault_curator.agent.executive]]'
 - '[[CONST.vault_curator.agent.supervisor]]'
-related_maps:
 - '[[Agent Maestro — Systems Map]]'
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

@@ -69,7 +69,7 @@ The following pipeline categories exist:
 - **learning/**: Pipelines for knowledge acquisition and skill development
 - **maintenance/**: Pipelines for system maintenance, updates, and upgrades
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/03_PIPELINES/`
+Location: `03_PIPELINES/`
 
 ## Pipeline Execution Model
 
@@ -90,4 +90,4 @@ Pipelines are deterministic and repeatable. The same input to the same pipeline 
 
 Pipelines are subject to authority constraints defined in 05_SYSTEMS/authority_architecture. Some stages may require specific authority permissions (e.g., only Executive Agents can approve production deployments). The compiled governance artifacts in 05_SYSTEMS define which agents can execute which pipeline stages.
 
-See [[02_Systems/Agent Maestro/03_PIPELINES/CLAUDE]] in 05_SYSTEMS/agent_systems/ for how agent roles are mapped to pipeline execution rights.
+See agent_systems/ for how agent roles are mapped to pipeline execution rights.

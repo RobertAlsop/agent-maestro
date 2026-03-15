@@ -52,7 +52,7 @@ Core terms used across the Agent Maestro vault.
 | Agent Orchestration | [[Agent Orchestration]] |
 | Agent Systems | [[Agent Systems]] |
 | Agent Workflow | [[Agent Workflow]] |
-| Authority Architecture | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] |
+| Authority Architecture | Authority Architecture]] |
 | Authority Pack | [[Authority Pack]] |
 | Context Pack | [[Context Pack]] |
 | Decision Authority | [[Decision Authority]] |

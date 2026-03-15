@@ -67,7 +67,7 @@ Navigation layer for all memory system notes, the three-layer model, context pac
 
 # Shared Services — Memory
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]]
+- Shared Services]]
 - [[Memory Authority]]
 
 ---

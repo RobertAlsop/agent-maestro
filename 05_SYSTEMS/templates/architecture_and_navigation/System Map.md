@@ -1,24 +1,21 @@
 ---
-id:
 type: system_map
 note_class: architecture
 domain:
 layer: maps
-scope:
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "System Map"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: annual
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

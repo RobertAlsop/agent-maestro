@@ -22,9 +22,9 @@ relationships:
   inherits_from: []
   applies_to: []
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
     - "[[Agent System]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]]"
+    - "Shared Services]]"
   produces:
     - "[[Operational Intelligence]]"
   - "[[Agent Maestro — Systems Map]]"
@@ -42,11 +42,11 @@ hash: ""
 
 ## Definition
 
-The full organisational deployment of agent systems — the complete set of [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation|Agent Constellations]], [[Agent System|Agent Systems]], [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]], and governance infrastructure operating within a single organisational context.
+The full organisational deployment of agent systems — the complete set of Agent Constellation|Agent Constellations]], [[Agent System|Agent Systems]], Shared Services]], and governance infrastructure operating within a single organisational context.
 
 ## Boundaries
 
-An Agent Ecosystem is broader than any individual [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] or [[Agent System]]. It is the organisational-level view. An ecosystem is not defined by a single workflow or function — it represents the entire agent operating environment of an organisation or a major division.
+An Agent Ecosystem is broader than any individual Agent Constellation]] or [[Agent System]]. It is the organisational-level view. An ecosystem is not defined by a single workflow or function — it represents the entire agent operating environment of an organisation or a major division.
 
 ## Purpose
 
@@ -55,14 +55,14 @@ The ecosystem concept allows Agent Maestro to reason about agent deployments at 
 ## Key Properties
 
 - **Organisational scope** — spans multiple functions, departments, or domains
-- **Governed** — operates under a consistent [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- **Governed** — operates under a consistent Authority Architecture]]
 - **Composed of constellations** — each major operational domain has one or more constellations
-- **Shared services** — uses [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] for reusable capabilities (memory, orchestration, governance)
+- **Shared services** — uses Shared Services]] for reusable capabilities (memory, orchestration, governance)
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the primary structural unit within an ecosystem
+- Agent Constellation]] — the primary structural unit within an ecosystem
 - [[Agent System]] — individual capability-delivering systems, part of constellations
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — reusable services consumed across the ecosystem
+- Shared Services]] — reusable services consumed across the ecosystem
 - [[Agent Maestro — Systems Map]] — navigation for the systems layer
 - [[Agent Maestro — Concepts Map]]

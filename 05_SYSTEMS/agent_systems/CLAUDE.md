@@ -1,5 +1,9 @@
 # 05_SYSTEMS/agent_systems
 
+## Foundations Alignment
+
+This directory implements the **Process seed** (Irreducible Loop) and **Structure seed** (7 Primitives) from [[Agent Maestro — Foundations]]. The Executive-Supervisor-Specialist pattern reflects D6 (Separation of Powers). Escalation paths enforce D4 (Human Sovereignty).
+
 ## Purpose
 
 The Agent Systems subdirectory defines the constellation of agents that operate in the Agent Maestro environment, including their roles, responsibilities, relationships, and runtime characteristics. It contains the architecture for the Executive-Supervisor-Specialist pattern, shared services, constellation definitions, and the registry mapping which agents are active in the system.
@@ -18,7 +22,7 @@ This is the most critical subdirectory for understanding who the agents are and 
 - **shared_services/**: Shared services that all agents depend on (logging, memory access, escalation)
 - **constellation_registry.csv**: Registry of all active agent constellations and their status
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/agent_systems/`
+All files located in `05_SYSTEMS/agent_systems/`
 
 ## Agent Roles
 
@@ -163,7 +167,7 @@ The constellation_registry.csv is the single source of truth for what agents are
 
 Each constellation is governed by a compiled authority artifact from 05_SYSTEMS/authority_architecture/compiler/. Agent actions are constrained by the constellation's authority pack.
 
-See [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/CLAUDE]] in authority_architecture/ for how authority packs govern agent behavior.
+See the authority_architecture CLAUDE.md for how authority packs govern agent behavior.
 
 ## Relationship to Execution Layer
 

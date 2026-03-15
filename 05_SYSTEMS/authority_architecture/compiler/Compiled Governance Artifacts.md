@@ -1,24 +1,21 @@
 ---
-id: SYS.compiled_governance_artifacts
 type: system
 note_class: architecture
 domain: ai_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Compiled Governance Artifacts"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Pack Compiler — Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -55,7 +47,7 @@ hash: ""
 
 ## Purpose
 
-System note for the compiled governance artifacts layer — the set of all [[Compiled Governance Artifact|Compiled Governance Artifacts]] produced by the [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] and deployed to agent runtime environments.
+System note for the compiled governance artifacts layer — the set of all [[Compiled Governance Artifact|Compiled Governance Artifacts]] produced by the Authority Pack Compiler]] and deployed to agent runtime environments.
 
 ## Context
 

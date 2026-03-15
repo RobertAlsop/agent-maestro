@@ -7,7 +7,7 @@ tags:
   - session
   - governance
 relationships:
-  part_of: "[[02_Systems/Agent Maestro/03_PIPELINES/development/Development Pipeline]]"
+  part_of: "Development Pipeline]]"
   implements: "[[Agent Maestro — Principles]]"
   governs:
     - "[[Agent Maestro — Evolution Roadmap v0.2]]"

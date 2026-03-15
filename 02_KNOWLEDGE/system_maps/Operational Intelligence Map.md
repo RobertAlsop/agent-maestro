@@ -74,7 +74,7 @@ Navigation layer for operational intelligence systems: AI operations, agent desi
 
 # Shared Services
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]]
+- Shared Services]]
 - [[Shared Services Index]]
 
 ---
@@ -90,8 +90,8 @@ Navigation layer for operational intelligence systems: AI operations, agent desi
 
 - [[Operational Intelligence]]
 - [[Operational Outcome]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]
+- Agent Constellation]]
+- Agent Ecosystem]]
 
 ---
 

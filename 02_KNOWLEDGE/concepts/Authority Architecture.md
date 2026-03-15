@@ -70,7 +70,7 @@ Per [[Agent Maestro — Principles]], the authority architecture matters more th
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — the system-level implementation of authority architecture
+- Authority Architecture]] — the system-level implementation of authority architecture
 - [[Authority Architecture Map]]
 - [[Authority Packs Index]]
 - [[Agent Maestro — Concepts Map]]

@@ -22,7 +22,7 @@ relationships:
   inherits_from: []
   applies_to:
     - "[[Authority Pack]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   uses: []
   produces: []
   - "[[Agent Maestro — Pack Inheritance Map]]"
@@ -60,7 +60,7 @@ Define a four-layer pack hierarchy: base packs (foundational rules), role packs 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — the concept this pattern implements
+- Authority Inheritance]] — the concept this pattern implements
 - [[Pack Override Rules]] — the rules governing overrides within this pattern
 - [[Authority Pack Grammar]] — the structural standard that makes inheritance possible
 - [[Controlled Evolution Pattern]] — the higher-level pattern governing governance evolution

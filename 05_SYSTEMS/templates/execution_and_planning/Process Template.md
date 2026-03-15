@@ -1,24 +1,21 @@
 ---
-id:
 type: process
 note_class: execution
 domain:
 layer: pipes
-scope:
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Process Template"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: quarterly
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

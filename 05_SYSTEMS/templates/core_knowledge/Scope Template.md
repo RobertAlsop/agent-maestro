@@ -1,24 +1,21 @@
 ---
-id:
 type: scope
 note_class: governance
 domain:
 layer: governance
-scope:
 
 canonical: false
 authority_weight: 65
 resolution_basis: authority_weight
 schema_version: 2
+title: "Scope Template"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: annual
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

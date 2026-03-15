@@ -1,24 +1,21 @@
 ---
-id: SYS.shared_services
 type: system
 note_class: architecture
 domain: agent_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Shared Services"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -65,7 +57,7 @@ Following the [[Thin-Edge Thick-Core Pattern]], agents at the execution edge sho
 
 ### Inputs
 - Service requests from agents (memory reads/writes, orchestration calls, governance checks)
-- Authority pack definitions from [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]
+- Authority pack definitions from Authority Architecture]]
 
 ### Outputs
 - Memory state (read/write responses)
@@ -93,7 +85,7 @@ Following the [[Thin-Edge Thick-Core Pattern]], agents at the execution edge sho
 - Backed by compiled artifacts from `05_SYSTEMS/authority_architecture/compiler/`
 
 ### Dependencies
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — for governance service inputs
+- Authority Architecture]] — for governance service inputs
 - [[Memory Architecture]] — for memory service substrate
 - [[Operational Intelligence]] — for intelligence service substrate
 
@@ -103,7 +95,7 @@ Following the [[Thin-Edge Thick-Core Pattern]], agents at the execution edge sho
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/shared_services/Shared Services]] (concept)
+- shared_services/Shared Services]] (concept)
 - [[Shared Services Index]] — navigational index
 - [[Thin-Edge Thick-Core Pattern]] — the design principle this system embodies
 - [[Agent Maestro — Systems Map]]

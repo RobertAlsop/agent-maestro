@@ -25,7 +25,7 @@ relationships:
     - "[[Agent]]"
     - "[[Agent Workflow]]"
     - "[[Agent Orchestration]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   produces:
     - "[[Operational Outcome]]"
     - "[[Operational Intelligence]]"
@@ -33,8 +33,8 @@ source_type: ai_authored
 supersedes: []
 superseded_by:
   - "[[Agent System]]"
-  - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]"
-  - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+  - "Agent Ecosystem]]"
+  - "Agent Constellation]]"
 tags:
   - concept
   - agent_maestro
@@ -43,19 +43,19 @@ hash: ""
 
 # Agent Systems
 
-> **Note:** This concept has been superseded by three more precise concepts: [[Agent System]], [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]], and [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]. This note is retained for historical continuity and backward link compatibility.
+> **Note:** This concept has been superseded by three more precise concepts: [[Agent System]], Agent Ecosystem]], and Agent Constellation]]. This note is retained for historical continuity and backward link compatibility.
 
 ## Definition
 
-[[Operational Intelligence]] implemented through interacting agents that execute [[Agent Workflow|workflows]] within governed [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture|authority structures]]. An agent system is not merely a collection of agents — it is a structured operational network in which agents, tools, workflows, and decision flows cooperate under shared governance to produce [[Operational Outcome|measurable outcomes]] for an organization.
+[[Operational Intelligence]] implemented through interacting agents that execute [[Agent Workflow|workflows]] within governed Authority Architecture|authority structures]]. An agent system is not merely a collection of agents — it is a structured operational network in which agents, tools, workflows, and decision flows cooperate under shared governance to produce [[Operational Outcome|measurable outcomes]] for an organization.
 
 ## Superseded By
 
 The concept of "agent systems" has been refined into three distinct concepts that carry more precise meaning:
 
 - [[Agent System]] — a single governed deployment of cooperating agents for a defined purpose
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — the full organisational deployment, encompassing all agent systems and shared services
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — a governed cluster of agents sharing an authority architecture, structured around the [[Executive-Supervisor-Specialist Pattern]]
+- Agent Ecosystem]] — the full organisational deployment, encompassing all agent systems and shared services
+- Agent Constellation]] — a governed cluster of agents sharing an authority architecture, structured around the [[Executive-Supervisor-Specialist Pattern]]
 
 ## Boundaries
 
@@ -70,12 +70,12 @@ Agent systems are the execution layer of [[Operational Intelligence]]. They tran
 - [[Agent]] — the individual execution unit that perceives, reasons, acts, and escalates
 - [[Agent Orchestration]] — the coordination layer that routes tasks and enforces authority across agents
 - [[Agent Workflow]] — structured sequences of agent actions designed to produce defined outcomes
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the governance layer that constrains what agents may decide and do
+- Authority Architecture]] — the governance layer that constrains what agents may decide and do
 
 ## Relationships
 
 - [[Agent System]] — refined successor concept
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — refined successor concept
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — refined successor concept
+- Agent Ecosystem]] — refined successor concept
+- Agent Constellation]] — refined successor concept
 - [[Agent Maestro — Systems Map]]
 - [[Agent Maestro — Concepts Map]]

@@ -47,7 +47,7 @@ hash: ""
 
 ## Purpose
 
-Navigation index of all [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation|Agent Constellations]] instantiated in the Agent Maestro system. Constellations must be registered in [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] and listed here for human navigation.
+Navigation index of all Agent Constellation|Agent Constellations]] instantiated in the Agent Maestro system. Constellations must be registered in System Registry]] and listed here for human navigation.
 
 ## Context
 
@@ -70,11 +70,11 @@ Each constellation is a governed cluster following the [[Constellation Architect
 ## Entry Rules
 
 1. A constellation must have a system note and 00_map before being listed as active
-2. Every constellation must be registered in [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+2. Every constellation must be registered in System Registry]]
 3. Authority packs must be applied before status becomes active
 
 ## Related
 
 - [[Agent Maestro — Constellation Architecture Map]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] (concept)
+- System Registry]]
+- Agent Constellation]] (concept)

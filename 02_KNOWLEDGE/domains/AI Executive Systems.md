@@ -56,6 +56,6 @@ AI Executive Systems represent the frontier of AI-native organisations: deployin
 
 - [[Executive Agent]] — the primary agent type in this domain
 - [[AI-Native Organizations]] — the broader organisational context
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the structural vehicle for executive agent deployment
+- Agent Constellation]] — the structural vehicle for executive agent deployment
 - [[Decision Authority]] — the authority type most relevant to executive systems
 - [[Agent Maestro — Domain Map]]

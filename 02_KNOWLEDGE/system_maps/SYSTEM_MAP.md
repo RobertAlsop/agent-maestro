@@ -339,7 +339,7 @@ Core architecture documents defining how authority works in the system.
 
 | Document | Path |
 |----------|------|
-| [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] | `05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler.md` |
+| 01_CAPTURE/inbox/Authority Pack Compiler]] | `05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler.md` |
 | [[Compiler Pipeline]] | `05_SYSTEMS/authority_architecture/compiler/Compiler Pipeline.md` |
 | [[Compiler Inputs]] | `05_SYSTEMS/authority_architecture/compiler/Compiler Inputs.md` |
 | [[Compiler Outputs]] | `05_SYSTEMS/authority_architecture/compiler/Compiler Outputs.md` |

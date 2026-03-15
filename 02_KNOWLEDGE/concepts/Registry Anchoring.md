@@ -23,7 +23,7 @@ relationships:
     - "[[Agent Maestro — Principles]]"
   governs:
     - "[[Canonical Notes Registry]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]"
+    - "System Registry]]"
     - "[[Authority Pack Registry]]"
   inherits_from: []
   applies_to:
@@ -108,7 +108,7 @@ That one rule makes Agent Maestro dramatically more robust.
 ## Relationships
 
 - [[Canonical Notes Registry]] — implements this concept
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — implements this concept
+- System Registry]] — implements this concept
 - [[Authority Pack Registry]] — implements this concept
 - [[Pack Version Registry]] — implements this concept
 - [[Compiler Artifacts Registry]] — implements this concept

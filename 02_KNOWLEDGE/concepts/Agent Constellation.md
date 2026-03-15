@@ -17,7 +17,7 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]"
+    - "Agent Ecosystem]]"
   implements:
     - "[[Constellation Architecture Pattern]]"
     - "[[Executive-Supervisor-Specialist Pattern]]"
@@ -48,11 +48,11 @@ hash: ""
 
 ## Definition
 
-A governed cluster of agents — typically comprising an [[Executive Agent]], one or more [[Supervisor Agent|Supervisor Agents]], and multiple [[Specialist Agent|Specialist Agents]] — that operates under a shared [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] and delivers a coherent operational capability.
+A governed cluster of agents — typically comprising an [[Executive Agent]], one or more [[Supervisor Agent|Supervisor Agents]], and multiple [[Specialist Agent|Specialist Agents]] — that operates under a shared Authority Architecture]] and delivers a coherent operational capability.
 
 ## Boundaries
 
-An Agent Constellation is not the same as an [[Agent System]] (a general collection of agents delivering a function) or an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] (the full organisational deployment). A constellation is specifically a *governed, layered cluster* with defined authority contracts at each layer. A constellation must have explicit authority governance; an informal group of agents does not qualify.
+An Agent Constellation is not the same as an [[Agent System]] (a general collection of agents delivering a function) or an Agent Ecosystem]] (the full organisational deployment). A constellation is specifically a *governed, layered cluster* with defined authority contracts at each layer. A constellation must have explicit authority governance; an informal group of agents does not qualify.
 
 ## Purpose
 
@@ -63,7 +63,7 @@ Constellations make multi-agent coordination governable. By structuring agents i
 - **Governed** — every agent in the constellation operates under an [[Authority Pack]]
 - **Layered** — follows the [[Executive-Supervisor-Specialist Pattern]]
 - **Bounded** — has a defined operational scope and clear external interfaces
-- **Composable** — can be nested within an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]
+- **Composable** — can be nested within an Agent Ecosystem]]
 
 ## Standard Structure
 
@@ -81,7 +81,7 @@ Constellations make multi-agent coordination governable. By structuring agents i
 ## Relationships
 
 - [[Agent System]] — simpler, less formal grouping; constellations add explicit governance
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — constellations are components of an ecosystem
+- Agent Ecosystem]] — constellations are components of an ecosystem
 - [[Executive Agent]] — heads the constellation
 - [[Constellation Architecture Pattern]] — design rules for building constellations
 - [[Agent Maestro — Constellation Architecture Map]]

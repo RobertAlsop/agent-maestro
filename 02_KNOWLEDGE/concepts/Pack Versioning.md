@@ -24,7 +24,7 @@ relationships:
   applies_to:
     - "[[Authority Pack]]"
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   produces: []
   - "[[Agent Maestro — Pack Inheritance Map]]"
 source_type: ai_authored
@@ -70,7 +70,7 @@ Governance without versioning is ungovernable. Pack Versioning ensures that the 
 ## Relationships
 
 - [[Authority Pack]] — what is being versioned
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — inheritance chains must declare version compatibility
+- Authority Inheritance]] — inheritance chains must declare version compatibility
 - [[Pack Versioning Pattern]] — design pattern for implementing versioning
 - [[Pack Version Registry]] — authoritative registry of all pack versions
 - [[Pack Lineage Index]] — navigation index for version lineage

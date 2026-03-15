@@ -21,7 +21,7 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   uses: []
   produces: []
   - "[[Authority Pack Compiler — Map]]"
@@ -60,7 +60,7 @@ In an inheritance chain, multiple rules from different pack levels can apply to 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — the context where policy conflicts arise
+- Authority Inheritance]] — the context where policy conflicts arise
 - [[Governance Compilation Pattern]] — the broader compilation process this is part of
 - [[Compile Failure Semantics]] — what happens when resolution fails
 - [[Pack Override Rules]] — explicit overrides are the highest-priority resolution

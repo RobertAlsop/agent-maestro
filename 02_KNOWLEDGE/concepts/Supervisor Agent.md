@@ -17,7 +17,7 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   implements:
     - "[[Executive-Supervisor-Specialist Pattern]]"
   governs:
@@ -44,7 +44,7 @@ hash: ""
 
 ## Definition
 
-An agent operating at the coordination layer of an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — responsible for managing workflows, delegating tasks to [[Specialist Agent|Specialist Agents]], enforcing the authority contracts of its team, and escalating to the [[Executive Agent]] when decisions exceed its scope.
+An agent operating at the coordination layer of an Agent Constellation]] — responsible for managing workflows, delegating tasks to [[Specialist Agent|Specialist Agents]], enforcing the authority contracts of its team, and escalating to the [[Executive Agent]] when decisions exceed its scope.
 
 ## Boundaries
 
@@ -68,6 +68,6 @@ Supervisor Agents provide the coordination layer that makes constellations scala
 - [[Specialist Agent]] — delegates tasks to; monitors
 - [[Decision Authority]] — exercises bounded decision authority within its domain
 - [[Executive-Supervisor-Specialist Pattern]] — the pattern that defines this role
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the constellation context in which supervisors operate
+- Agent Constellation]] — the constellation context in which supervisors operate
 - [[Agent Maestro — Agent Taxonomy Map]]
 - [[Agent Maestro — Concepts Map]]

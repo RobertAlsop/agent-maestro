@@ -48,7 +48,7 @@ hash: ""
 
 ## Purpose
 
-Authoritative registry of all [[Compiled Governance Artifact|Compiled Governance Artifacts]] produced by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]. Every compiled artifact must be registered here before it can be deployed to a runtime.
+Authoritative registry of all [[Compiled Governance Artifact|Compiled Governance Artifacts]] produced by the 01_CAPTURE/inbox/Authority Pack Compiler]]. Every compiled artifact must be registered here before it can be deployed to a runtime.
 
 ## Context
 

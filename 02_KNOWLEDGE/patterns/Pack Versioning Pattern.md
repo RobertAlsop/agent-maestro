@@ -21,7 +21,7 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]]"
+    - "Pack Versioning]]"
   uses: []
   produces: []
   - "[[Agent Maestro — Pack Inheritance Map]]"
@@ -67,7 +67,7 @@ Apply semantic versioning (MAJOR.MINOR.PATCH) to every pack, with change type de
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — the concept this pattern implements
+- Pack Versioning]] — the concept this pattern implements
 - [[Pack Version Registry]] — the registry where versions are recorded
 - [[Pack Lineage Index]] — the navigation index for version history
 - [[Authority Inheritance Pattern]] — version compatibility declarations live here

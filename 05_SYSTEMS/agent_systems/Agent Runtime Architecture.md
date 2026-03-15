@@ -1,24 +1,21 @@
 ---
-id: SYS.agent_runtime_architecture
 type: system
 note_class: architecture
 domain: system_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Runtime Architecture"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-10
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -72,7 +64,7 @@ The execution environment in which individual agents run, process context, make 
 
 - Model APIs (LLM providers)
 - Tool layer (APIs, databases, services)
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — authority enforcement
+- Authority Architecture]] — authority enforcement
 
 ## Invariants
 

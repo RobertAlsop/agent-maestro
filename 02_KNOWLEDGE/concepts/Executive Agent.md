@@ -17,7 +17,7 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   implements:
     - "[[Executive-Supervisor-Specialist Pattern]]"
   governs:
@@ -45,7 +45,7 @@ hash: ""
 
 ## Definition
 
-An agent operating at the top governance layer of an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — responsible for setting direction, allocating authority to supervisors, managing constellation-level outcomes, and escalating to human operators when required. The Executive Agent is the authority anchor of a constellation.
+An agent operating at the top governance layer of an Agent Constellation]] — responsible for setting direction, allocating authority to supervisors, managing constellation-level outcomes, and escalating to human operators when required. The Executive Agent is the authority anchor of a constellation.
 
 ## Boundaries
 
@@ -66,7 +66,7 @@ The Executive Agent brings accountability to multi-agent systems. By designating
 ## Relationships
 
 - [[Supervisor Agent]] — receives authority delegation from Executive Agent
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the structural context the Executive Agent heads
+- Agent Constellation]] — the structural context the Executive Agent heads
 - [[Decision Authority]] — the core authority type the Executive Agent exercises
 - [[Executive-Supervisor-Specialist Pattern]] — the pattern that defines this role
 - [[Human Escalation]] — the escalation mechanism the Executive Agent manages

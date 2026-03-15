@@ -1,24 +1,21 @@
 ---
-id:
 type: concept
 note_class: knowledge
 domain:
 layer: knowledge
-scope:
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Concept Template"
 
 status: draft
 review_status: draft
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: none
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

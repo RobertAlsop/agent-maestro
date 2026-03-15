@@ -78,7 +78,7 @@ hash: ""
 | G-A2 Consistent with Foundations? | PASS | The mission statement matches verbatim |
 | G-A3 Weight correct? | PASS | 90 is correct for canonical governance below Foundations |
 | G-I1 Frontmatter valid? | **FAIL** | Legacy fields: `id:`, `created:` (not `created_date:`), `updated:` (not `last_modified:`), `scope: null`, `last_reviewed: null`, `review_cycle:`, `map:`, `maps:`, `related:`, `related_maps:`, `related_pipes:`. Missing: `title`. Empty relationships block. |
-| G-I2 Links resolve? | **FAIL** | Broken link: `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]` (old full-path format) |
+| G-I2 Links resolve? | **FAIL** | Broken link: `Authority Architecture]]` (old full-path format) |
 | G-I3 Reciprocal relationships? | **FAIL** | Relationships block is empty — no `defines`, `implements`, or `governs` entries |
 | G-I4 Internal contradictions? | PASS | Content is consistent |
 | G-V1 Redundant? | PASS | Unique role — declares intent |
@@ -100,7 +100,7 @@ hash: ""
 | G-A2 Consistent with Foundations? | **FAIL** | The 12 principles are superseded by the kernel (7 elements) + 6 derived principles. The Treatise explicitly reconciles all 12 → 7 elevated + 5 retained as derived (now 6 with D6). This document's authority claim ("12 principles govern every decision") contradicts Foundations. |
 | G-A3 Weight correct? | **FAIL** | Weight 90 is too high for a historical document. Should be reduced to 70 or reclassified. |
 | G-I1 Frontmatter valid? | **FAIL** | Same legacy fields as North Star: `id:`, `created:`, `updated:`, `scope: null`, etc. Missing: `title`. Empty relationships. |
-| G-I2 Links resolve? | **FAIL** | Broken links: `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]` (×2), `[[02_KNOWLEDGE/patterns/\|pattern note]]` |
+| G-I2 Links resolve? | **FAIL** | Broken links: `Authority Architecture]]` (×2), `[[02_KNOWLEDGE/patterns/\|pattern note]]` |
 | G-I3 Reciprocal relationships? | **FAIL** | Empty relationships block |
 | G-I4 Internal contradictions? | PASS | Internal content is self-consistent |
 | G-V1 Redundant? | **FAIL** | Content is now largely redundant with Foundations. The Treatise shows every principle is either elevated to kernel or retained as derived. |
@@ -144,7 +144,7 @@ hash: ""
 | G-A2 Consistent with Foundations? | PASS | Nothing contradicts Foundations |
 | G-A3 Weight correct? | **FAIL** | CLAUDE.md says 80 for governance docs. 65 is too low for a governance boundary document. Should be 80. |
 | G-I1 Frontmatter valid? | **FAIL** | Legacy fields. Missing: `title`. Empty relationships. |
-| G-I2 Links resolve? | **FAIL** | `[[Agent Systems\|Agent system architecture]]`, `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture\|Authority governance]]`, `[[Memory Architecture\|Memory architecture]]` — all broken |
+| G-I2 Links resolve? | **FAIL** | `[[Agent Systems\|Agent system architecture]]`, `Authority Architecture\|Authority governance]]`, `[[Memory Architecture\|Memory architecture]]` — all broken |
 | G-I3 Reciprocal relationships? | **FAIL** | Empty relationships block |
 | G-I4 Internal contradictions? | PASS | Internally consistent |
 | G-V1 Redundant? | PASS | Unique role — boundary definition |
@@ -166,7 +166,7 @@ hash: ""
 | G-A2 Consistent with Foundations? | PASS | Five stages align with D3 (Controlled Evolution) |
 | G-A3 Weight correct? | **FAIL** | Same issue as Scope — should be 80 for governance-level strategy. |
 | G-I1 Frontmatter valid? | **FAIL** | Legacy fields. Missing: `title`. Empty relationships. |
-| G-I2 Links resolve? | **FAIL** | `[[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]` — broken old-path link |
+| G-I2 Links resolve? | **FAIL** | `Authority Architecture]]` — broken old-path link |
 | G-I3 Reciprocal relationships? | **FAIL** | Empty relationships block |
 | G-I4 Internal contradictions? | PASS | Internally consistent |
 | G-V1 Redundant? | PASS | Unique role — evolution path |
@@ -241,7 +241,7 @@ hash: ""
 
 1. **Legacy frontmatter**: 6 of 8 docs use the old schema (`id:`, `created:`, `updated:`, `scope:`, `map:`, etc.). This is the single most common integrity failure.
 2. **Empty relationships**: 6 of 8 docs have completely empty relationships blocks — no `defines`, `implements`, or `governs` entries.
-3. **Broken wiki-links**: 4 of 8 docs contain old-format full-path links (`[[02_Systems/Agent Maestro/...]]`).
+3. **Broken wiki-links**: 4 of 8 docs contain old-format full-path links (`...]]`).
 4. **Authority weight misalignment**: Scope and Strategy at 65 (should be 80). Vault Rules at 92 (should be 85). Principles at 90 (should be 70 as historical).
 5. **Governance CLAUDE.md outdated**: References "12 principles," "three modes," and old file paths.
 

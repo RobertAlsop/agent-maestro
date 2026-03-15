@@ -56,7 +56,7 @@ Before proposing next moves, a full adversarial audit was conducted across the v
 
 **C4. Compiler Artifacts Registry Out of Sync** — Only 1 of 16 compiled artifacts is registered. The compiler resets the registry on each run instead of appending. Historical compilation data is lost.
 
-**C5. 17 Files Reference Stale Vault Path** — Root CLAUDE.md and 16 other files still reference `/sessions/loving-busy-bohr/mnt/Agent Maestro/` from the original session.
+**C5. 17 Files Reference Stale Vault Path** — Root CLAUDE.md and 16 other files still reference `` from the original session.
 
 ### High-Priority Findings
 

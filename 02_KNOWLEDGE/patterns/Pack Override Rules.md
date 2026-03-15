@@ -21,7 +21,7 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   uses: []
   produces: []
   - "[[Agent Maestro — Pack Inheritance Map]]"
@@ -64,8 +64,8 @@ Without explicit override rules, inheritance chains produce silent divergence �
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — the context in which overrides operate
+- Authority Inheritance]] — the context in which overrides operate
 - [[Authority Inheritance Pattern]] — the pattern that declares overrides
 - [[Compile Failure Semantics]] — what happens when override validation fails
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — overrides must be version-tracked
+- Pack Versioning]] — overrides must be version-tracked
 - [[Agent Maestro — Pack Inheritance Map]]

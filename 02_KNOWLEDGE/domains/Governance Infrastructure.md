@@ -56,7 +56,7 @@ Governance Infrastructure distinguishes Agent Maestro from approaches that treat
 ## Relationships
 
 - [[Governance Systems]] — the domain of governance principles and patterns
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — primary governance infrastructure system
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — core infrastructure artifact
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — primary governance infrastructure system
+- System Registry]] — core infrastructure artifact
 - [[Compiled Governance Artifact]] — what infrastructure produces
 - [[Agent Maestro — Domain Map]]

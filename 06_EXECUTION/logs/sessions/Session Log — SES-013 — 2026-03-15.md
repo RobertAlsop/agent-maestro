@@ -74,7 +74,7 @@ All 8 change sets executed:
 
 **D — Modes conflict resolution**: 5-mode set confirmed as authoritative. Added mapping table showing each mode's correspondence to the Irreducible Loop. Added traceability section to Process seed.
 
-**E — Broken link repair**: All old full-path links (`[[02_Systems/Agent Maestro/...]]`) replaced with canonical short-form (`[[Authority Architecture]]`). All 11 substantive link targets verified to exist vault-wide.
+**E — Broken link repair**: All old full-path links (`...]]`) replaced with canonical short-form (`[[Authority Architecture]]`). All 11 substantive link targets verified to exist vault-wide.
 
 **F — Vault Rules content fixes**: Rule 17 updated (template path). Rule 4 reworded (title as identifier). Rule 14 reworded (inbox role). Validation checklist merged from Note Quality Rules.
 

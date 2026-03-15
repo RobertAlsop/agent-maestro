@@ -123,13 +123,13 @@ Fix all broken wiki-links in governance documents:
 
 | Document | Broken Link | Fix |
 |----------|------------|-----|
-| North Star | `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]` | `[[Authority Architecture]]` |
-| Principles | `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]` (×2) | `[[Authority Architecture]]` |
+| North Star | `Authority Architecture]]` | `[[Authority Architecture]]` |
+| Principles | `Authority Architecture]]` (×2) | `[[Authority Architecture]]` |
 | Principles | `[[02_KNOWLEDGE/patterns/\|pattern note]]` | `[[02_KNOWLEDGE/patterns]]` or remove |
 | Scope | `[[Agent Systems\|Agent system architecture]]` | `[[Agent Systems]]` |
-| Scope | `[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture\|Authority governance]]` | `[[Authority Architecture]]` |
+| Scope | `Authority Architecture\|Authority governance]]` | `[[Authority Architecture]]` |
 | Scope | `[[Memory Architecture\|Memory architecture]]` | `[[Memory Architecture]]` |
-| Strategy | `[[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]` | `[[Authority Architecture]]` |
+| Strategy | `Authority Architecture]]` | `[[Authority Architecture]]` |
 | Vault Rules | `[[Canonical Notes Registry]]` | Verify or remove |
 | Vault Rules | `[[Canonical Notes Index]]` | Verify or remove |
 

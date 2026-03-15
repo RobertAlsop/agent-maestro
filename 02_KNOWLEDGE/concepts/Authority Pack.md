@@ -19,7 +19,7 @@ relationships:
     - "[[Decision Authority]]"
     - "[[Execution Authority]]"
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   implements: []
   governs:
     - "[[Agent]]"
@@ -40,7 +40,7 @@ hash: ""
 
 ## Definition
 
-A modular, versioned governance contract that defines what a specific class of [[Agent|agent]] is permitted to decide, execute, and escalate. An authority pack is the atomic unit of [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the smallest self-contained governance specification that can be assigned to an agent or agent class.
+A modular, versioned governance contract that defines what a specific class of [[Agent|agent]] is permitted to decide, execute, and escalate. An authority pack is the atomic unit of Authority Architecture]] — the smallest self-contained governance specification that can be assigned to an agent or agent class.
 
 ## Boundaries
 
@@ -70,6 +70,6 @@ A Customer Support Agent may operate under an authority pack that specifies: whi
 - [[Decision Authority]] — the bounded permission to decide, which this pack specifies
 - [[Execution Authority]] — the bounded permission to act, which this pack specifies
 - [[Authority Packs Index]] — the registry of all authority packs in the system
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — the formal model within which packs are defined
+- Authority Model]] — the formal model within which packs are defined
 - [[Authority Architecture Map]]
 - [[Agent Maestro — Concepts Map]]

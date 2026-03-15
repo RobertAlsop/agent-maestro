@@ -64,7 +64,7 @@ Each project note should include:
 - **incubating/**: New ideas and proposals under evaluation
 - **completed/**: Archived and historical projects
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/04_PROJECTS/`
+Location: `04_PROJECTS/`
 
 ## Project Lifecycle
 
@@ -84,4 +84,4 @@ Projects use pipelines from 03_PIPELINES to execute work. Project status updates
 
 Projects (Strategy) → Pipelines (Workflow) → Execution (Operations)
 
-See [[02_Systems/Agent Maestro/04_PROJECTS/CLAUDE]] in 06_EXECUTION/ for how project work is recorded and tracked operationally.
+See CLAUDE]] in 06_EXECUTION/ for how project work is recorded and tracked operationally.

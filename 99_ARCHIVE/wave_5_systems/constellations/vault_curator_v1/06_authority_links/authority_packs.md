@@ -1,24 +1,21 @@
 ---
-id: CONST.vault_curator.authority.index
 type: authority_index
 note_class: governance
 domain: vault_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 80
 resolution_basis: authority_weight
 schema_version: 2
+title: "authority_packs"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -34,14 +31,9 @@ relationships:
   uses: []
   produces: []
 
-map: "[[CONST.vault_curator.map]]"
-maps:
   - "[[Authority Architecture Map]]"
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

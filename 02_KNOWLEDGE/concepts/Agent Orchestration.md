@@ -51,7 +51,7 @@ hash: ""
 
 ## Definition
 
-The coordination layer that routes tasks, manages [[Agent|agent]] interactions, and enforces [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture|authority boundaries]] across an [[Agent Systems|agent system]]. Orchestration operates *above* individual workflows — it decides which agent handles which task, mediates handoffs between agents, and ensures authority constraints are respected at every transition.
+The coordination layer that routes tasks, manages [[Agent|agent]] interactions, and enforces Authority Architecture|authority boundaries]] across an [[Agent Systems|agent system]]. Orchestration operates *above* individual workflows — it decides which agent handles which task, mediates handoffs between agents, and ensures authority constraints are respected at every transition.
 
 ## Boundaries
 

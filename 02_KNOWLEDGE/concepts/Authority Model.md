@@ -55,7 +55,7 @@ The conceptual framework that defines how authority is structured, bounded, and 
 
 ## Boundaries
 
-The Authority Model is a conceptual framework, not an implementation specification. It defines the philosophy and principles of authority in agent systems. The [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] translates this model into a structural design; [[Authority Pack|Authority Packs]] implement it as specific governance contracts.
+The Authority Model is a conceptual framework, not an implementation specification. It defines the philosophy and principles of authority in agent systems. The Authority Architecture]] translates this model into a structural design; [[Authority Pack|Authority Packs]] implement it as specific governance contracts.
 
 ## Purpose
 
@@ -77,7 +77,7 @@ The Authority Model ensures that every agent operates with clearly bounded, audi
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the structural design derived from this model
+- Authority Architecture]] — the structural design derived from this model
 - [[Authority Pack]] — the atomic implementation of authority boundaries
 - [[Decision Authority]] · [[Execution Authority]] — the two primary authority types
 - [[Authority Architecture Map]]

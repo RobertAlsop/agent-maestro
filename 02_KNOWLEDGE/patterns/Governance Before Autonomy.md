@@ -23,7 +23,7 @@ relationships:
   applies_to:
     - "[[Agent]]"
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   produces: []
 source_type: ai_authored
 supersedes: []
@@ -53,6 +53,6 @@ Autonomy without governance produces unpredictable systems. This pattern forces 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Controlled Evolution Pattern]]
 - [[Agent Maestro — Governance Map]]

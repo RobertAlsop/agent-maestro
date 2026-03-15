@@ -17,7 +17,7 @@ owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   implements:
     - "[[Executive-Supervisor-Specialist Pattern]]"
   governs: []
@@ -42,7 +42,7 @@ hash: ""
 
 ## Definition
 
-An agent operating at the task-execution layer of an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — focused on performing well-defined, bounded tasks within a narrow authority scope delegated by a [[Supervisor Agent]]. Specialist Agents are the workhorses of the constellation; they execute, not decide.
+An agent operating at the task-execution layer of an Agent Constellation]] — focused on performing well-defined, bounded tasks within a narrow authority scope delegated by a [[Supervisor Agent]]. Specialist Agents are the workhorses of the constellation; they execute, not decide.
 
 ## Boundaries
 
@@ -65,6 +65,6 @@ Specialist Agents enable deep capability within a governed constraint. By keepin
 - [[Supervisor Agent]] — the agent that assigns tasks and receives outputs
 - [[Execution Authority]] — the core authority type the Specialist Agent exercises
 - [[Executive-Supervisor-Specialist Pattern]] — the pattern that defines this role
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the constellation context in which specialists operate
+- Agent Constellation]] — the constellation context in which specialists operate
 - [[Agent Maestro — Agent Taxonomy Map]]
 - [[Agent Maestro — Concepts Map]]

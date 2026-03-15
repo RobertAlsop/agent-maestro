@@ -1,5 +1,4 @@
 ---
-id: CONST.vault_maintenance.specialist.template_compliance
 type: agent_definition
 note_class: architecture
 domain: vault_maintenance
@@ -23,15 +22,10 @@ inherits_from:
 applies_to: []
 uses: []
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.supervisor
   - CONST.vault_maintenance.specialist.self_healing
-related_maps:
   - MAP.vault_maintenance
-related_pipes:
   - WF.vault_maintenance.audit_cycle
 tags:
   - constellation
@@ -42,8 +36,8 @@ tags:
   - compliance
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Template Compliance Scanner — Specialist
 ---

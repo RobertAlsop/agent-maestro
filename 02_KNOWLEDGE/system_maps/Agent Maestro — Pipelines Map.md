@@ -54,7 +54,7 @@ Navigation layer for all operational pipelines.
 # Pipelines
 
 - [[Exploration Pipeline]]
-- [[02_Systems/Agent Maestro/03_PIPELINES/development/Development Pipeline]]
+- Development Pipeline]]
 - [[System Design Pipeline]]
 - [[Agent Deployment Pipeline]]
 - [[02_Systems/Bartram/03_PIPELINES/learning_pipeline/Learning Pipeline]]

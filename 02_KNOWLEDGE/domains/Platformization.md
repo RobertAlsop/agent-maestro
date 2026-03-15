@@ -50,12 +50,12 @@ The domain of building reusable, scalable platforms for agent deployment — rat
 
 ## Context
 
-Agent Maestro's emphasis on [[Authority Pack|reusable authority packs]], [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]], and composable constellation patterns is an expression of platformization thinking. Rather than building every agent system from scratch, platformization builds shared infrastructure and shared governance that future deployments can build upon.
+Agent Maestro's emphasis on [[Authority Pack|reusable authority packs]], Shared Services]], and composable constellation patterns is an expression of platformization thinking. Rather than building every agent system from scratch, platformization builds shared infrastructure and shared governance that future deployments can build upon.
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — the shared service layer is a platformization pattern
+- Shared Services]] — the shared service layer is a platformization pattern
 - [[Authority Pack]] — reusable governance contracts are a platformization artifact
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — a mature ecosystem reflects platformized agent deployment
+- Agent Ecosystem]] — a mature ecosystem reflects platformized agent deployment
 - [[Governance Infrastructure]] — platformization requires durable governance infrastructure
 - [[Agent Maestro — Domain Map]]

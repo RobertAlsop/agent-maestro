@@ -78,7 +78,7 @@ Domain-level navigation map for the Agent Maestro vault. Organises knowledge by 
 - [[Multi-Agent Coordination]]
 - [[Operational Governance]]
 - [[Organizational Intelligence]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/domains/Platformization]]
+- Platformization]]
 
 ---
 
@@ -100,7 +100,7 @@ Domain-level navigation map for the Agent Maestro vault. Organises knowledge by 
 - [[Authority Packs Index]]
 - [[Constellation Index]]
 - [[Shared Services Index]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+- System Registry]]
 
 ---
 

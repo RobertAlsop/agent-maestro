@@ -63,6 +63,6 @@ Control surfaces make agent systems governable. Principle 3 of [[Agent Maestro â
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Decision-Execution Separation]]
 - [[Authority Architecture Map]]

@@ -25,7 +25,7 @@ relationships:
   applies_to:
     - "[[Authority Pack]]"
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]]"
+    - "Pack Versioning]]"
   produces: []
   - "[[Agent Maestro — Pack Inheritance Map]]"
 source_type: ai_authored
@@ -62,12 +62,12 @@ Every pack that inherits must declare:
 
 ## Compilation
 
-Inheritance chains are resolved by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] during compilation. The compiler traverses the inheritance graph, applies overrides, and resolves conflicts per the [[Policy Resolution Pattern]].
+Inheritance chains are resolved by the 01_CAPTURE/inbox/Authority Pack Compiler]] during compilation. The compiler traverses the inheritance graph, applies overrides, and resolves conflicts per the [[Policy Resolution Pattern]].
 
 ## Relationships
 
 - [[Authority Pack]] — the units that participate in inheritance
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — versions must be tracked alongside inheritance
+- Pack Versioning]] — versions must be tracked alongside inheritance
 - [[Pack Override Rules]] — the rules governing what may be overridden
 - [[Authority Inheritance Pattern]] — design pattern for structuring inheritance hierarchies
 - [[Agent Maestro — Pack Inheritance Map]]

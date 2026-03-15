@@ -81,24 +81,24 @@ Each entry records, where relevant:
 | SYS.agent_workflow_architecture | Agent Workflow Architecture | agent_system | active | [[Agent Workflow Architecture]] |
 | SYS.multi_agent_systems | Multi-Agent Systems | agent_system | active | [[Multi-Agent Systems]] |
 | SYS.executive_layer | Executive Layer | agent_system | active | [[Executive Layer]] |
-| SYS.shared_services | Shared Services | shared_service | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] |
-| SYS.agent_constellation | Agent Constellation | constellation | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] |
-| SYS.agent_ecosystem | Agent Ecosystem | agent_system | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] |
+| SYS.shared_services | Shared Services | shared_service | active | Shared Services]] |
+| SYS.agent_constellation | Agent Constellation | constellation | active | Agent Constellation]] |
+| SYS.agent_ecosystem | Agent Ecosystem | agent_system | active | Agent Ecosystem]] |
 
 ### Authority Architecture Systems
 
 | ID | Name | Type | Status | Note |
 |---|---|---|---|---|
-| SYS.authority_architecture | Authority Architecture System | authority | active | [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] |
-| SYS.authority_model | Authority Model | authority | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] |
-| SYS.authority_inheritance | Authority Inheritance | authority | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] |
-| SYS.pack_versioning | Pack Versioning | authority | active | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] |
+| SYS.authority_architecture | Authority Architecture System | authority | active | Authority Architecture]] |
+| SYS.authority_model | Authority Model | authority | active | Authority Model]] |
+| SYS.authority_inheritance | Authority Inheritance | authority | active | Authority Inheritance]] |
+| SYS.pack_versioning | Pack Versioning | authority | active | Pack Versioning]] |
 
 ### Compiler Systems
 
 | ID | Name | Type | Status | Note |
 |---|---|---|---|---|
-| SYS.authority_pack_compiler | Authority Pack Compiler | compiler | active | [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] |
+| SYS.authority_pack_compiler | Authority Pack Compiler | compiler | active | 01_CAPTURE/inbox/Authority Pack Compiler]] |
 | SYS.compiler_pipeline | Compiler Pipeline | compiler | active | [[Compiler Pipeline]] |
 | SYS.compiler_inputs | Compiler Inputs | compiler | active | [[Compiler Inputs]] |
 | SYS.compiler_outputs | Compiler Outputs | compiler | active | [[Compiler Outputs]] |

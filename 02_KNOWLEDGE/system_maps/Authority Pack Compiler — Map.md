@@ -66,7 +66,7 @@ Architecture and navigation map for the Authority Pack Compiler subsystem — th
 
 All compiler system notes live in `05_SYSTEMS/authority_architecture/compiler/`:
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — top-level system; orchestrates compilation
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — top-level system; orchestrates compilation
 - [[Compiler Pipeline]] — the staged processing sequence
 - [[Compiler Inputs]] — what the compiler ingests (packs, manifests, inheritance graph)
 - [[Compiler Outputs]] — what the compiler produces (compiled artifacts, integration manifests)

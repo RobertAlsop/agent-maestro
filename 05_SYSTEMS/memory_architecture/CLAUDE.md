@@ -42,7 +42,7 @@ File:
 - **Structured Data Registry.md**: Master reference for all CSV file schemas, naming conventions, and validation rules
 - **Context Pack Architecture.md**: How context packs encapsulate temporary memory modifications
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/memory_architecture/`
+All files located in `05_SYSTEMS/memory_architecture/`
 
 ## Conventions
 
@@ -153,4 +153,4 @@ What agents know (from memory architecture) determines what they can do (in exec
 
 Memory consistency directly affects agent behavior. Inconsistent or corrupted memory can cause agents to violate constraints.
 
-See [[02_Systems/Agent Maestro/05_SYSTEMS/memory_architecture/CLAUDE]] in 06_EXECUTION/ to understand how agents query and use memory during execution.
+See CLAUDE]] in 06_EXECUTION/ to understand how agents query and use memory during execution.

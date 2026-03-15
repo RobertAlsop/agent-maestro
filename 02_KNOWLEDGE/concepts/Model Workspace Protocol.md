@@ -22,7 +22,7 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   uses:
     - "[[Authority Pack]]"
     - "[[Compiled Governance Artifact]]"

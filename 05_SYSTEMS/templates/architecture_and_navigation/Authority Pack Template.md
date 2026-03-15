@@ -1,24 +1,21 @@
 ---
-id:
 type: authority_pack
 note_class: governance
 domain:
 layer: systems
-scope:
 
 canonical: true
 authority_weight: 80
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Pack Template"
 
 status: active
 review_status: approved
 version: 1
 
-created:
-updated:
-last_reviewed:
-review_cycle: quarterly
+created_date:
+last_modified:
 
 owner:
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: human_authored
 supersedes: []

@@ -51,7 +51,7 @@ hash: ""
 
 ## Definition
 
-Any formally defined object in an Agent Maestro system that encodes, declares, or enforces governance rules, authority boundaries, or operational constraints. Governance Artifacts are the material expression of the [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — they give governance physical form in the vault and in runtime environments.
+Any formally defined object in an Agent Maestro system that encodes, declares, or enforces governance rules, authority boundaries, or operational constraints. Governance Artifacts are the material expression of the Authority Architecture]] — they give governance physical form in the vault and in runtime environments.
 
 ## Boundaries
 

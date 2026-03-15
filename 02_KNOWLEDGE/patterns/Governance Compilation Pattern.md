@@ -58,7 +58,7 @@ Raw source authority packs contain inheritance references and override declarati
 
 ## Solution
 
-Run all packs through the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] before deployment. The compiler: resolves inheritance, applies overrides per [[Pack Override Rules]], validates the output, and produces a [[Compiled Governance Artifact]] bound to a specific host.
+Run all packs through the 01_CAPTURE/inbox/Authority Pack Compiler]] before deployment. The compiler: resolves inheritance, applies overrides per [[Pack Override Rules]], validates the output, and produces a [[Compiled Governance Artifact]] bound to a specific host.
 
 ## Compilation Stages
 
@@ -79,7 +79,7 @@ Run all packs through the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — the system implementing this pattern
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — the system implementing this pattern
 - [[Compiled Governance Artifact]] — the output
 - [[Policy Resolution Pattern]] — conflict resolution sub-pattern
 - [[Host Binding Pattern]] — binding sub-pattern

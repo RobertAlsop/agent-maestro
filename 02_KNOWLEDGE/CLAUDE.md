@@ -78,7 +78,7 @@ All notes in KNOWLEDGE must include YAML frontmatter with:
 - **Agent Maestro — Strategy**: Strategic approach and key initiatives
 - **Agent Maestro — Vault Rules**: Vault organization and content management rules
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/`
+Location: `02_KNOWLEDGE/governance/`
 
 ### Core Concepts
 - Agent, Authority Model, Execution Authority, Memory Architecture, Supervisor Agent
@@ -88,7 +88,7 @@ Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/
 - Agent Systems, Agent Ecosystem, Operational Intelligence, Model Workspace Protocol
 - Specialist Agent, Pack Versioning, Decision Authority
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/concepts/`
+Location: `02_KNOWLEDGE/concepts/`
 
 ### Key Patterns
 - Authority Pack Grammar, Deterministic Control Surfaces, Thin-Edge Thick-Core Pattern
@@ -99,7 +99,7 @@ Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/concepts/`
 - Anti-Agent-Sprawl Pattern, Controlled Evolution Pattern, Governance Before Autonomy
 - Governance Compilation Pattern, Policy Resolution Pattern
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/patterns/`
+Location: `02_KNOWLEDGE/patterns/`
 
 ### System Maps
 Maps that show relationships between major system components:
@@ -109,7 +109,7 @@ Maps that show relationships between major system components:
 - Stack Map, Systems Map, Agent Taxonomy Map, Domain Map
 - Pack Inheritance Map, Practice Map, Layer Model Map, Operational Intelligence Map
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/system_maps/`
+Location: `02_KNOWLEDGE/system_maps/`
 
 ### Domains
 Thematic knowledge domains for different aspects of Agent Maestro:
@@ -118,16 +118,16 @@ Thematic knowledge domains for different aspects of Agent Maestro:
 - Operational Governance, Organizational Intelligence, Workflow Intelligence
 - Governance Systems, AI-Native Organizations, Platformization, Agent Organizations
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/domains/`
+Location: `02_KNOWLEDGE/domains/`
 
 ### References
 - Governance Schemas Reference, Tool and Action Class Reference
 - Compiler Artifact Schemas Reference, Escalation Classes Reference, Host Runtime Reference
 
-Location: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/references/`
+Location: `02_KNOWLEDGE/references/`
 
 ## Relationship to Authority Layer
 
 KNOWLEDGE serves as the blueprint for the Authority Layer (05_SYSTEMS/authority_architecture). Authority packs are compiled from patterns and governance documents in KNOWLEDGE. Changes to KNOWLEDGE may require recompilation of authority packs in 05_SYSTEMS.
 
-See [[02_Systems/Agent Maestro/02_KNOWLEDGE/CLAUDE]] in 05_SYSTEMS/authority_architecture/ for details on how knowledge is transformed into compiled governance artifacts.
+See CLAUDE]] in 05_SYSTEMS/authority_architecture/ for details on how knowledge is transformed into compiled governance artifacts.

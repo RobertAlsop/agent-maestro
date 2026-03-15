@@ -67,7 +67,7 @@ Canonical taxonomy of all agent types recognised by Agent Maestro, organised by 
 
 | Role | Type | Authority Source |
 |---|---|---|
-| Constellation head | [[Executive Agent]] | Assigned by [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] governance |
+| Constellation head | [[Executive Agent]] | Assigned by Agent Ecosystem]] governance |
 | Workflow coordinator | [[Supervisor Agent]] | Delegated by Executive |
 | Task executor | [[Specialist Agent]] | Delegated by Supervisor |
 
@@ -76,14 +76,14 @@ Canonical taxonomy of all agent types recognised by Agent Maestro, organised by 
 ## Agent Grouping Concepts
 
 - [[Agent System]] — a bounded collection of agents delivering a function
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — a governed cluster of agents with shared authority architecture
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — the full organisational deployment of agent systems
+- Agent Constellation]] — a governed cluster of agents with shared authority architecture
+- Agent Ecosystem]] — the full organisational deployment of agent systems
 
 ---
 
 ## Governance Relationship
 
-Every agent in the taxonomy operates under an [[Authority Pack]]. The [[Executive-Supervisor-Specialist Pattern]] defines the structural rules for composing these types into a [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation|constellation]].
+Every agent in the taxonomy operates under an [[Authority Pack]]. The [[Executive-Supervisor-Specialist Pattern]] defines the structural rules for composing these types into a Agent Constellation|constellation]].
 
 ---
 
