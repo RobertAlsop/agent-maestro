@@ -1,21 +1,18 @@
 ---
-id: MAP.agent_maestro.domain
 type: system_map
 note_class: architecture
 domain: governance
 layer: maps
-scope:
 canonical: true
 authority_weight: 85
 resolution_basis: canonical
 schema_version: 2
+title: "Agent Maestro — Domain Map"
 status: active
 review_status: approved
 version: 2
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,14 +23,9 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Navigation Map]]"
   - "[[Agent Maestro — Concepts Map]]"
   - "[[Agent Maestro — Systems Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -86,7 +78,7 @@ Domain-level navigation map for the Agent Maestro vault. Organises knowledge by 
 - [[Multi-Agent Coordination]]
 - [[Operational Governance]]
 - [[Organizational Intelligence]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/domains/Platformization]]
+- Platformization]]
 
 ---
 
@@ -108,7 +100,7 @@ Domain-level navigation map for the Agent Maestro vault. Organises knowledge by 
 - [[Authority Packs Index]]
 - [[Constellation Index]]
 - [[Shared Services Index]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+- System Registry]]
 
 ---
 

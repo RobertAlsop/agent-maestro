@@ -1,24 +1,21 @@
 ---
-id: SYS.structured_data_registry
 type: system
 note_class: architecture
 domain: system_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Structured Data Registry"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -34,15 +31,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Memory Architecture Map]]"
-maps: []
 
-related:
   - "[[Structured Data Layer]]"
   - "[[Memory Model]]"
 
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -81,7 +73,7 @@ All CSV files in Agent Maestro follow these conventions to ensure compatibility 
 - **File:** `05_SYSTEMS/authority_architecture/compiler/compiler_artifacts_registry.csv`
 - **Purpose:** Tracks all compiled governance artifacts
 - **Columns:** `artifact_id`, `pack_id`, `pack_version`, `constellation`, `agent_role`, `compiled_date`, `compiler_version`, `host_type`, `host_path`, `status`
-- **Updated by:** [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] (Stage 8: Output Registration)
+- **Updated by:** 01_CAPTURE/inbox/Authority Pack Compiler]] (Stage 8: Output Registration)
 
 ### Link Audit Report
 

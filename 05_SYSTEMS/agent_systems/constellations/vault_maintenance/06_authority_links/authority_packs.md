@@ -1,5 +1,4 @@
 ---
-id: CONST.vault_maintenance.authority.index
 type: authority_index
 note_class: governance
 domain: vault_maintenance
@@ -22,14 +21,9 @@ inherits_from:
 applies_to: []
 uses: []
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.executive_link
-related_maps:
   - MAP.vault_maintenance
-related_pipes: []
 tags:
   - constellation
   - authority
@@ -37,8 +31,8 @@ tags:
   - vault_maintenance
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Vault Maintenance — Authority Packs Index
 ---
@@ -52,7 +46,7 @@ This document indexes all authority packs that govern the Vault Maintenance Cons
 ## Core Authority Sources
 
 ### 1. Agent Maestro — Principles
-**File**: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/Agent Maestro — Principles.md`
+**File**: `02_KNOWLEDGE/governance/Agent Maestro — Principles.md`
 **Authority Weight**: 95 (Immutable)
 **Scope**: Governs all Agent Maestro operations including maintenance
 
@@ -71,7 +65,7 @@ This document indexes all authority packs that govern the Vault Maintenance Cons
 ---
 
 ### 2. Agent Maestro — Scope
-**File**: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/Agent Maestro — Scope.md`
+**File**: `02_KNOWLEDGE/governance/Agent Maestro — Scope.md`
 **Authority Weight**: 90
 **Scope**: Defines what Agent Maestro (including maintenance) covers and doesn't cover
 
@@ -91,7 +85,7 @@ This document indexes all authority packs that govern the Vault Maintenance Cons
 ---
 
 ### 3. Agent Maestro — Modes
-**File**: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/Agent Maestro — Modes.md`
+**File**: `02_KNOWLEDGE/governance/Agent Maestro — Modes.md`
 **Authority Weight**: 85
 **Scope**: Defines Design, Governance, and Execution modes
 
@@ -129,7 +123,7 @@ This document indexes all authority packs that govern the Vault Maintenance Cons
 ## Related Authority Documents
 
 ### 5. Agent Maestro — Strategy
-**File**: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/Agent Maestro — Strategy.md`
+**File**: `02_KNOWLEDGE/governance/Agent Maestro — Strategy.md`
 **Authority Weight**: 80
 **Scope**: Strategic direction for Agent Maestro
 
@@ -141,7 +135,7 @@ This document indexes all authority packs that govern the Vault Maintenance Cons
 ---
 
 ### 6. Agent Maestro — Vault Rules
-**File**: `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/governance/Agent Maestro — Vault Rules.md`
+**File**: `02_KNOWLEDGE/governance/Agent Maestro — Vault Rules.md`
 **Authority Weight**: 85
 **Scope**: Rules for vault organization and content management
 

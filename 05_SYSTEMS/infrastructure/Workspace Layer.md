@@ -1,21 +1,18 @@
 ---
-id: SYS.workspace_layer
 type: system
 note_class: architecture
 domain: system_architecture
 layer: systems
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Workspace Layer"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -27,18 +24,13 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   uses:
     - "[[Compiled Governance Artifact]]"
     - "[[Knowledge Graph Layer]]"
     - "[[Structured Data Layer]]"
   produces: []
-map: "[[Agent Maestro — Layer Model Map]]"
-maps: []
-related:
   - "[[Agent Infrastructure]]"
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

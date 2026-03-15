@@ -1,5 +1,9 @@
 # 05_SYSTEMS/authority_architecture
 
+## Foundations Alignment
+
+This directory implements the **Constraint seed** (Authority Hierarchy) from [[Agent Maestro — Foundations]]. Authority packs define the six-level hierarchy from design intent through execution. All changes require human approval per D4 (Human Sovereignty).
+
 ## Purpose
 
 The Authority Architecture subdirectory is the source of truth for what agents can and cannot do. It contains authority pack definitions (versioned blueprints of agent permissions), pack inheritance chains, versioning metadata, compiler configuration, templates for creating new packs, and reference maps showing how packs are organized.
@@ -19,7 +23,7 @@ This is the highest-stakes subdirectory in SYSTEMS. Changes here directly affect
 - **Pack Versioning.md**: Versioning rules and evolution procedures
 - **authority_pack_registry.csv**: Registry of all packs with versions and status
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/`
+All files located in `05_SYSTEMS/authority_architecture/`
 
 ## Pack Types
 
@@ -123,7 +127,7 @@ This registry is the single source of truth for which pack versions are active i
 
 ## Compiler Subsystem
 
-The compiler (in compiler/) transforms authority packs into compiled governance artifacts. See [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/CLAUDE]] in compiler/ for details on the compilation pipeline.
+The compiler (in compiler/) transforms authority packs into compiled governance artifacts. See CLAUDE]] in compiler/ for details on the compilation pipeline.
 
 ## Related Patterns
 

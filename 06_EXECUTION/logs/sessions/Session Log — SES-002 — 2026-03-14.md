@@ -18,10 +18,6 @@ authority_weight: 40
 created_date: 2026-03-14
 last_modified: 2026-03-14
 status: active
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 supersedes: []
 superseded_by: []
 review_status: draft
@@ -29,7 +25,6 @@ version: 1
 canonical: false
 resolution_basis: authority_weight
 source_type: ai_authored
-id: EXEC.session_log_ses_002_2026_03_14
 type: log
 note_class: execution
 layer: execution

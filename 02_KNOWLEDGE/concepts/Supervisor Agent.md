@@ -1,26 +1,23 @@
 ---
-id: CON.supervisor_agent
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Supervisor Agent"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   implements:
     - "[[Executive-Supervisor-Specialist Pattern]]"
   governs:
@@ -31,13 +28,8 @@ relationships:
   uses:
     - "[[Decision Authority]]"
   produces: []
-map: "[[Agent Maestro — Agent Taxonomy Map]]"
-maps:
   - "[[Agent Maestro — Concepts Map]]"
   - "[[Agent Maestro — Constellation Architecture Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -52,7 +44,7 @@ hash: ""
 
 ## Definition
 
-An agent operating at the coordination layer of an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — responsible for managing workflows, delegating tasks to [[Specialist Agent|Specialist Agents]], enforcing the authority contracts of its team, and escalating to the [[Executive Agent]] when decisions exceed its scope.
+An agent operating at the coordination layer of an Agent Constellation]] — responsible for managing workflows, delegating tasks to [[Specialist Agent|Specialist Agents]], enforcing the authority contracts of its team, and escalating to the [[Executive Agent]] when decisions exceed its scope.
 
 ## Boundaries
 
@@ -76,6 +68,6 @@ Supervisor Agents provide the coordination layer that makes constellations scala
 - [[Specialist Agent]] — delegates tasks to; monitors
 - [[Decision Authority]] — exercises bounded decision authority within its domain
 - [[Executive-Supervisor-Specialist Pattern]] — the pattern that defines this role
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the constellation context in which supervisors operate
+- Agent Constellation]] — the constellation context in which supervisors operate
 - [[Agent Maestro — Agent Taxonomy Map]]
 - [[Agent Maestro — Concepts Map]]

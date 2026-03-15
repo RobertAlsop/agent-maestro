@@ -1,5 +1,4 @@
 ---
-id: CONST.vault_maintenance.executive_link
 type: agent_definition
 note_class: architecture
 domain: vault_maintenance
@@ -22,14 +21,9 @@ inherits_from:
 applies_to: []
 uses: []
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.supervisor
-related_maps:
   - MAP.vault_maintenance
-related_pipes: []
 tags:
   - constellation
   - executive_link
@@ -37,8 +31,8 @@ tags:
   - authority
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Vault Maintenance — Executive Link to Knowledge Executive
 ---

@@ -1,26 +1,23 @@
 ---
-id: CON.decision_authority
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Decision Authority"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   implements:
     - "[[Decision-Execution Separation]]"
     - "[[Evidence Over Assumptions]]"
@@ -30,11 +27,6 @@ relationships:
     - "[[Agent]]"
   uses: []
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -52,7 +44,7 @@ The bounded permission granted to an [[Agent|agent]] to select among options and
 
 ## Boundaries
 
-Decision authority is explicitly separated from [[Execution Authority]]. An agent may hold broad decision authority (e.g., triage all incoming support tickets) while holding narrow execution authority (e.g., may only update ticket metadata, not issue refunds). This separation is formalised in [[Decision-Execution Separation]] and is a core safety principle of [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]].
+Decision authority is explicitly separated from [[Execution Authority]]. An agent may hold broad decision authority (e.g., triage all incoming support tickets) while holding narrow execution authority (e.g., may only update ticket metadata, not issue refunds). This separation is formalised in [[Decision-Execution Separation]] and is a core safety principle of Authority Architecture]].
 
 ## Purpose
 

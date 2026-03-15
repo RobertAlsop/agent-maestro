@@ -1,24 +1,21 @@
 ---
-id: SYS.host_bindings
 type: system
 note_class: architecture
 domain: ai_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Host Bindings"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Pack Compiler — Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

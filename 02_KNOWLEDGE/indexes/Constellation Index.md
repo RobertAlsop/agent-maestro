@@ -1,24 +1,21 @@
 ---
-id: IDX.constellation_index
 type: index
 note_class: navigation
 domain: agent_architecture
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Constellation Index"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,13 +29,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Constellation Architecture Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Agent Maestro — Systems Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -55,7 +47,7 @@ hash: ""
 
 ## Purpose
 
-Navigation index of all [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation|Agent Constellations]] instantiated in the Agent Maestro system. Constellations must be registered in [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] and listed here for human navigation.
+Navigation index of all Agent Constellation|Agent Constellations]] instantiated in the Agent Maestro system. Constellations must be registered in System Registry]] and listed here for human navigation.
 
 ## Context
 
@@ -78,11 +70,11 @@ Each constellation is a governed cluster following the [[Constellation Architect
 ## Entry Rules
 
 1. A constellation must have a system note and 00_map before being listed as active
-2. Every constellation must be registered in [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+2. Every constellation must be registered in System Registry]]
 3. Authority packs must be applied before status becomes active
 
 ## Related
 
 - [[Agent Maestro — Constellation Architecture Map]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] (concept)
+- System Registry]]
+- Agent Constellation]] (concept)

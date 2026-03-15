@@ -1,24 +1,21 @@
 ---
-id: REF.governance_schemas
 type: reference
 note_class: reference
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 90
 resolution_basis: authority_weight
 schema_version: 2
+title: "Governance Schemas Reference"
 
 status: draft
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: imported
 supersedes: []
@@ -59,7 +51,7 @@ Formal schema definitions for all design-time governance artifacts in Agent Maes
 
 ## Context
 
-Schemas are the structural contracts that make governance machine-verifiable. The [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] validates input packs against these schemas before processing. This reference is the authoritative source for pack schema definitions.
+Schemas are the structural contracts that make governance machine-verifiable. The 01_CAPTURE/inbox/Authority Pack Compiler]] validates input packs against these schemas before processing. This reference is the authoritative source for pack schema definitions.
 
 ## Authority Pack Section Schemas
 

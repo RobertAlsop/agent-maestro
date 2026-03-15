@@ -1,21 +1,18 @@
 ---
-id: PAT.constellation_architecture_pattern
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Constellation Architecture Pattern"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -24,18 +21,13 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
   uses:
     - "[[Executive Agent]]"
     - "[[Supervisor Agent]]"
     - "[[Specialist Agent]]"
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Agent Maestro — Constellation Architecture Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -82,7 +74,7 @@ Every significant multi-agent capability should be instantiated as a constellati
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the concept this pattern produces
+- Agent Constellation]] — the concept this pattern produces
 - [[Executive-Supervisor-Specialist Pattern]] — the layering pattern used
 - [[Authority Pack Grammar]] — governs the pack structure applied
 - [[Agent Maestro — Constellation Architecture Map]]

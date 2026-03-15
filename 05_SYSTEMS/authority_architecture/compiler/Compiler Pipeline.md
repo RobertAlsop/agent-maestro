@@ -1,24 +1,21 @@
 ---
-id: SYS.compiler_pipeline
 type: system
 note_class: architecture
 domain: ai_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Compiler Pipeline"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Pack Compiler — Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -54,7 +46,7 @@ hash: ""
 
 ## Purpose
 
-The Compiler Pipeline defines the ordered sequence of processing stages that the [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] executes to transform input packs into compiled governance artifacts.
+The Compiler Pipeline defines the ordered sequence of processing stages that the Authority Pack Compiler]] executes to transform input packs into compiled governance artifacts.
 
 ## Pipeline Stages
 
@@ -80,11 +72,11 @@ The Compiler Pipeline defines the ordered sequence of processing stages that the
 - Final [[Compiled Governance Artifact]]
 
 ### Dependencies
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] — orchestrates this pipeline
+- Authority Pack Compiler]] — orchestrates this pipeline
 - [[Compile Failure Semantics]] — defines failure handling at each stage
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] — the system this pipeline belongs to
+- Authority Pack Compiler]] — the system this pipeline belongs to
 - [[Governance Compilation Pattern]] — the pattern this pipeline implements
 - [[Authority Pack Compiler — Map]]

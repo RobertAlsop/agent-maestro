@@ -1,10 +1,10 @@
 ---
-id: CON.agent_organization_architecture
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Agent Organization Architecture"
 status: active
 review_status: reviewed
 version: 1

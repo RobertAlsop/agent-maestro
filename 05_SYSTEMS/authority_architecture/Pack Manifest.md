@@ -1,24 +1,21 @@
 ---
-id: GOV.pack_manifest
 type: governance
 note_class: governance
 domain: ai_governance
 layer: governance
-scope: null
 
 canonical: true
 authority_weight: 92
 resolution_basis: canonical
 schema_version: 2
+title: "Pack Manifest"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,13 +29,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Architecture Map]]"
-maps:
   - "[[Agent Maestro — Governance Artifacts Map]]"
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -60,7 +52,7 @@ The Pack Manifest is a canonical governance artifact that formally declares the 
 
 ## Context
 
-A Pack Manifest answers: *what packs are in use, how are they composed, what do they depend on, and what does the runtime need to enforce them?* It is a declaration of intent — the pre-compilation artifact that the [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] uses as a top-level input.
+A Pack Manifest answers: *what packs are in use, how are they composed, what do they depend on, and what does the runtime need to enforce them?* It is a declaration of intent — the pre-compilation artifact that the Authority Pack Compiler]] uses as a top-level input.
 
 ## Relationships
 
@@ -84,7 +76,7 @@ Every compilation run must be declared via a Pack Manifest before compilation be
 
 ### Enforcement
 
-The [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] validates the manifest schema before processing. A manifest that fails validation causes compilation to halt per [[Compile Failure Semantics]].
+The Authority Pack Compiler]] validates the manifest schema before processing. A manifest that fails validation causes compilation to halt per [[Compile Failure Semantics]].
 
 ### Exceptions
 
@@ -124,5 +116,5 @@ validation_rules:
 - [[Governance Artifact]] — the broader class
 - [[Authority Pack Grammar]] — the grammar standard referenced in grammar_sections
 - [[Governance Schemas Reference]] — the schema this manifest must conform to
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] — the system that consumes this manifest
+- Authority Pack Compiler]] — the system that consumes this manifest
 - [[Authority Architecture Map]]

@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.pipelines
 type: system_map
 note_class: architecture
 domain: execution
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Pipelines Map"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-10
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Domain Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -62,7 +54,7 @@ Navigation layer for all operational pipelines.
 # Pipelines
 
 - [[Exploration Pipeline]]
-- [[02_Systems/Agent Maestro/03_PIPELINES/development/Development Pipeline]]
+- Development Pipeline]]
 - [[System Design Pipeline]]
 - [[Agent Deployment Pipeline]]
 - [[02_Systems/Bartram/03_PIPELINES/learning_pipeline/Learning Pipeline]]

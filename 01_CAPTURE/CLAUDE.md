@@ -1,5 +1,7 @@
 # 01_CAPTURE
 
+**Foundations Alignment**: This directory supports Law 2 (all actions must be verifiable) by serving as the capture point for raw observations and untrusted input before validation.
+
 ## Purpose
 
 The CAPTURE layer is the vault's inbox for raw, unsorted input. This is where observations, drafts, rough notes, and captured context live before they are processed, validated, and promoted to canonical knowledge or operational records.

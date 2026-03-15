@@ -1,52 +1,38 @@
 ---
-id: GOV.agent_maestro.north_star
+schema_version: 2
+title: "Agent Maestro — North Star"
 type: north_star
 note_class: doctrine
 domain: governance
 layer: governance
-scope: null
-
-canonical: true
 authority_weight: 90
 resolution_basis: canonical
-schema_version: 2
-
+canonical: true
 status: active
-review_status: draft
-version: 1
-
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
-
+review_status: approved
+version: 2
+created_date: 2026-03-10
+last_modified: 2026-03-15
 owner: AgentMaestro
-
+source_type: collaborative
 relationships:
-  defines: []
+  defines:
+    - "[[Agent Maestro Mission]]"
   part_of: []
   implements: []
-  governs: []
+  governs:
+    - "[[Agent Maestro — Scope]]"
+    - "[[Agent Maestro — Strategy]]"
   inherits_from: []
   applies_to: []
   uses: []
   produces: []
-
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
-
-related: []
-related_maps: []
-related_pipes: []
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
+  supersedes: []
+  superseded_by: []
 tags:
   - governance
   - north_star
-
+  - canonical
 hash: ""
 ---
 
@@ -65,7 +51,7 @@ Its mission is not to create smarter AI. It is to create **more reliable intelli
 ## Implications
 
 - The goal is reliability and control, not model performance.
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] is the primary design concern — not the model.
+- [[Authority Architecture]] is the primary design concern — not the model.
 - Systems must be auditable, explainable, and safe to scale.
 - Humans must always be able to intervene.
 
@@ -75,7 +61,7 @@ This north star governs every architectural decision across Agent Maestro. When 
 
 ## Related
 
+- [[Agent Maestro — Foundations]]
 - [[Agent Maestro — Principles]]
 - [[Agent Maestro — Strategy]]
 - [[Agent Maestro — Scope]]
-- [[Agent Maestro — Governance Map]]

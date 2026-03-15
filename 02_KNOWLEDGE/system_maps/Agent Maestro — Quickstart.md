@@ -1,12 +1,12 @@
 ---
-id: MAP.quickstart
 type: map
 note_class: navigation
 domain: governance
 layer: knowledge
 schema_version: 2
-created: 2026-03-14
-last_updated: 2026-03-14
+title: "Agent Maestro — Quickstart"
+created_date: 2026-03-14
+last_modified: 2026-03-14
 status: active
 audience: all
 authority_weight: 30
@@ -15,10 +15,6 @@ tags:
 - governance
 - quickstart
 - getting_started
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 supersedes: []
 superseded_by: []
 review_status: draft

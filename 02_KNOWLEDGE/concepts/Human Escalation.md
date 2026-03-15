@@ -1,24 +1,21 @@
 ---
-id: CON.human_escalation
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Human Escalation"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -35,12 +32,7 @@ relationships:
     - "[[Decision Authority]]"
   produces: []
 
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

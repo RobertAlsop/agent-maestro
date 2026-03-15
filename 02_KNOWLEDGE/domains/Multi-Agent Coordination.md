@@ -1,24 +1,21 @@
 ---
-id: CON.domain.multi_agent_coordination
 type: concept
 note_class: knowledge
 domain: multi_agent_coordination
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Multi-Agent Coordination"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Domain Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -62,9 +54,9 @@ Multi-Agent Coordination is the operational challenge that Agent Maestro's const
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the primary structural vehicle for governed multi-agent coordination
+- Agent Constellation]] — the primary structural vehicle for governed multi-agent coordination
 - [[Agent Orchestration]] — the mechanism by which agents coordinate tasks
 - [[Supervisor Agent]] — the coordination layer within a constellation
 - [[Executive-Supervisor-Specialist Pattern]] — structural pattern for multi-agent organisation
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — shared coordination services
+- Shared Services]] — shared coordination services
 - [[Agent Maestro — Domain Map]]

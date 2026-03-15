@@ -1,5 +1,7 @@
 # 02_KNOWLEDGE/indexes
 
+**Foundations Alignment**: Indexes implement the Structure seed by making the knowledge graph discoverable and navigable, supporting Law 2 (verifiable actions require accessible information).
+
 ## Purpose
 
 The indexes subdirectory provides navigational aids and cross-references for the knowledge base. Indexes help agents and humans find relevant information by category, enabling discovery of related concepts, registries of canonical documents, and searchable catalogs of system components.
@@ -23,7 +25,7 @@ Indexes are generated and maintained to keep the knowledge graph organized and d
 - **Artifact Taxonomy.md**: Taxonomy of compiler output artifacts by type and purpose
 - **knowledge_graph_index.csv**: Machine-readable index of all notes in the knowledge base (CSV format)
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/02_KNOWLEDGE/indexes/`
+All files located in `02_KNOWLEDGE/indexes/`
 
 ## Index Types
 

@@ -1,24 +1,21 @@
 ---
-id: IDX.shared_services_index
 type: index
 note_class: navigation
 domain: agent_architecture
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Shared Services Index"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -54,7 +46,7 @@ hash: ""
 
 ## Purpose
 
-Navigation index for all [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] available across Agent Maestro constellations and ecosystems.
+Navigation index for all Shared Services]] available across Agent Maestro constellations and ecosystems.
 
 ## Context
 
@@ -82,8 +74,8 @@ Services supporting agent workflow coordination:
 
 Services providing authority enforcement and policy checking:
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — governance service layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — `05_SYSTEMS/agent_systems/shared_services/`
+- Authority Architecture]] — governance service layer
+- Shared Services]] (system) — `05_SYSTEMS/agent_systems/shared_services/`
 
 ### Intelligence Services
 
@@ -94,6 +86,6 @@ Services providing operational intelligence to agents:
 
 ## Related
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (concept) — the concept this index navigates
+- Shared Services]] (concept) — the concept this index navigates
 - [[Agent Maestro — Systems Map]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — for registry-level resolution
+- System Registry]] — for registry-level resolution

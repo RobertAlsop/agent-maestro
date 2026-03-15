@@ -1,24 +1,21 @@
 ---
-id: MAP.authority_pack.compiler
 type: system_map
 note_class: architecture
 domain: ai_governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Pack Compiler — Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Architecture Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
   - "[[Agent Maestro — Pack Inheritance Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -74,7 +66,7 @@ Architecture and navigation map for the Authority Pack Compiler subsystem — th
 
 All compiler system notes live in `05_SYSTEMS/authority_architecture/compiler/`:
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — top-level system; orchestrates compilation
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — top-level system; orchestrates compilation
 - [[Compiler Pipeline]] — the staged processing sequence
 - [[Compiler Inputs]] — what the compiler ingests (packs, manifests, inheritance graph)
 - [[Compiler Outputs]] — what the compiler produces (compiled artifacts, integration manifests)

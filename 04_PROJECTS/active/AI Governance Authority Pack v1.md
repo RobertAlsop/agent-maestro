@@ -1,21 +1,18 @@
 ---
-id: PRJ.ai_governance_authority_pack_v1
 type: project
 note_class: execution
 domain: agent_systems
 layer: execution
-scope: null
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "AI Governance Authority Pack v1"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-10
-updated: '2026-03-10'
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-10
+last_modified: '2026-03-10'
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,11 +23,6 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro \u2014 Projects & Experiments Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -52,7 +44,7 @@ Complete all 14 sections of the governance authority pack folder at `05_SYSTEMS/
 ## Deliverables
 
 - All 14 sections authored with meaningful content
-- Pack reviewed against [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] design principles
+- Pack reviewed against Authority Architecture]] design principles
 - Pack registered in [[Authority Packs Index]]
 
 ## Current Status
@@ -67,5 +59,5 @@ Sections created with structural scaffolding. Content authoring in progress.
 
 ## Related
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]]
+- Authority Architecture]]
 - [[System Design Pipeline]]

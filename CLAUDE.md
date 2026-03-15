@@ -19,7 +19,8 @@ The vault is organized into seven major functional areas (01_CAPTURE through 06_
 | If you need... | Go to... |
 |----------------|----------|
 | What Agent Maestro IS and WHY it exists | `02_KNOWLEDGE/governance/Agent Maestro — North Star.md` |
-| What principles govern all decisions | `02_KNOWLEDGE/governance/Agent Maestro — Principles.md` |
+| What the foundational kernel and derived principles are | `02_KNOWLEDGE/governance/Agent Maestro — Foundations.md` |
+| What the original 12 principles were (historical) | `02_KNOWLEDGE/governance/Agent Maestro — Principles.md` |
 | What an agent is ALLOWED to do | Your compiled authority pack JSON in `05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/` |
 | Which agents exist and what they do | `05_SYSTEMS/agent_systems/constellation_registry.csv` + constellation folders in `05_SYSTEMS/agent_systems/constellations/` |
 | All authority packs registered | `05_SYSTEMS/authority_architecture/authority_pack_registry.csv` |
@@ -80,7 +81,8 @@ These documents define the fundamental principles and constraints for the entire
 
 | Document | Authority Weight | Purpose |
 |----------|-----------------|---------|
-| [[Agent Maestro — Principles]] | 90 | The 12 principles governing all decisions |
+| [[Agent Maestro — Foundations]] | 95 | Foundational kernel (3 seeds, 1 meta-principle, 3 laws) + 6 derived principles |
+| [[Agent Maestro — Principles]] | 90 | The original 12 principles (historical — superseded in authority by Foundations) |
 | [[Agent Maestro — North Star]] | 90 | Core vision and strategic intent |
 | [[Agent Maestro — Modes]] | 80 | Three operational modes (Design, Governance, Execution) |
 | [[Agent Maestro — Scope]] | 80 | What Agent Maestro does and does not cover |
@@ -92,7 +94,7 @@ These documents define the fundamental principles and constraints for the entire
 | Registry | Path | What it tracks |
 |----------|------|---------------|
 | Authority Pack Registry | `05_SYSTEMS/authority_architecture/authority_pack_registry.csv` | All 29 authority packs |
-| Constellation Registry | `05_SYSTEMS/agent_systems/constellation_registry.csv` | 2 constellations (1 active, 1 deprecated) |
+| Constellation Registry | `05_SYSTEMS/agent_systems/constellation_registry.csv` | 2 constellations (1 active, 1 archived) |
 | Agent Registry | `05_SYSTEMS/agent_systems/agent_registry.csv` | All 18 agents with roles and permissions |
 | Compiler Artifacts Registry | `05_SYSTEMS/authority_architecture/compiler/compiler_artifacts_registry.csv` | All 17 compiled JSON artifacts |
 | Knowledge Graph Index | `02_KNOWLEDGE/indexes/knowledge_graph_index.csv` | All vault notes with metadata |
@@ -144,7 +146,7 @@ Before beginning any build work, agents MUST read:
 1. Input → 2. Brief/Roadmap → 3. Proposal (Build Contract) → 4. Build → 5. Output Summary → 6. Session Log → 7. Git Commit + Release
 
 **Repository:** `https://github.com/robertalsop/agent-maestro`
-**Current version:** v0.4.0 (Phase D complete — execution architecture + external integration)
+**Current version:** v0.5.0 (Wave 5 complete — Foundations alignment pass)
 **Default branch:** `master` — never commit build work directly here; use a feature branch
 
 **Critical rules:**

@@ -1,24 +1,21 @@
 ---
-id: SYS.agent_ecosystem
 type: system
 note_class: architecture
 domain: agent_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Ecosystem"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -59,7 +51,7 @@ The Agent Ecosystem system note defines the top-level organisational agent deplo
 
 ## Context
 
-The Agent Ecosystem is the system-level expression of the [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/Agent Ecosystem]] concept. It provides the boundary conditions, shared governance, and shared services that all [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/constellations/Agent Constellation|Agent Constellations]] within the ecosystem depend on.
+The Agent Ecosystem is the system-level expression of the Agent Ecosystem]] concept. It provides the boundary conditions, shared governance, and shared services that all constellations/Agent Constellation|Agent Constellations]] within the ecosystem depend on.
 
 ## Responsibilities
 
@@ -75,14 +67,14 @@ The Agent Ecosystem is the system-level expression of the [[02_Systems/Agent Mae
 
 ### Internal Components
 - [[Constellation Index]] — registry of all constellations within the ecosystem
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/shared_services/Shared Services]] (system) — shared capability layer
+- shared_services/Shared Services]] (system) — shared capability layer
 - [[Executive Layer]] — top-level executive authority
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — ecosystem-wide governance
+- Authority Architecture]] — ecosystem-wide governance
 
 ### Dependencies
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — for system-level resolution
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — for governance
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/shared_services/Shared Services]] (system) — for shared operational capability
+- indexes/System Registry]] — for system-level resolution
+- Authority Architecture]] — for governance
+- shared_services/Shared Services]] (system) — for shared operational capability
 
 ### Failure Modes
 - Shared services failure → individual constellations may continue within their local authority
@@ -90,7 +82,7 @@ The Agent Ecosystem is the system-level expression of the [[02_Systems/Agent Mae
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/Agent Ecosystem]] (concept)
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/constellations/Agent Constellation]] — constellations are the primary components
-- [[02_Systems/Agent Maestro/05_SYSTEMS/agent_systems/shared_services/Shared Services]] — the shared service layer
+- Agent Ecosystem]] (concept)
+- constellations/Agent Constellation]] — constellations are the primary components
+- shared_services/Shared Services]] — the shared service layer
 - [[Agent Maestro — Systems Map]]

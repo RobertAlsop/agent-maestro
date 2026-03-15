@@ -1,24 +1,21 @@
 ---
-id: CON.agent_orchestration
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Orchestration"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -37,12 +34,7 @@ relationships:
     - "[[Agent]]"
   produces: []
 
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -59,7 +51,7 @@ hash: ""
 
 ## Definition
 
-The coordination layer that routes tasks, manages [[Agent|agent]] interactions, and enforces [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture|authority boundaries]] across an [[Agent Systems|agent system]]. Orchestration operates *above* individual workflows — it decides which agent handles which task, mediates handoffs between agents, and ensures authority constraints are respected at every transition.
+The coordination layer that routes tasks, manages [[Agent|agent]] interactions, and enforces Authority Architecture|authority boundaries]] across an [[Agent Systems|agent system]]. Orchestration operates *above* individual workflows — it decides which agent handles which task, mediates handoffs between agents, and ensures authority constraints are respected at every transition.
 
 ## Boundaries
 

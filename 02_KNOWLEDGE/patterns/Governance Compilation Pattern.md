@@ -1,24 +1,21 @@
 ---
-id: PAT.governance_compilation_pattern
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Governance Compilation Pattern"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -33,13 +30,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Authority Pack Compiler — Map]]"
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -66,7 +58,7 @@ Raw source authority packs contain inheritance references and override declarati
 
 ## Solution
 
-Run all packs through the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] before deployment. The compiler: resolves inheritance, applies overrides per [[Pack Override Rules]], validates the output, and produces a [[Compiled Governance Artifact]] bound to a specific host.
+Run all packs through the 01_CAPTURE/inbox/Authority Pack Compiler]] before deployment. The compiler: resolves inheritance, applies overrides per [[Pack Override Rules]], validates the output, and produces a [[Compiled Governance Artifact]] bound to a specific host.
 
 ## Compilation Stages
 
@@ -87,7 +79,7 @@ Run all packs through the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — the system implementing this pattern
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — the system implementing this pattern
 - [[Compiled Governance Artifact]] — the output
 - [[Policy Resolution Pattern]] — conflict resolution sub-pattern
 - [[Host Binding Pattern]] — binding sub-pattern

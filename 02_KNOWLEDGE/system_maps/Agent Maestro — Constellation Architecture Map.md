@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.constellation_architecture
 type: system_map
 note_class: architecture
 domain: agent_architecture
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Constellation Architecture Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Agent Maestro — Agent Taxonomy Map]]"
   - "[[Authority Architecture Map]]"
   - "[[Agent Maestro — Systems Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -64,8 +56,8 @@ Architecture reference for governed agent constellations — how they are struct
 
 ## Core Concept
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the concept: a governed cluster of agents sharing authority architecture
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — the broader deployment context containing constellations
+- Agent Constellation]] — the concept: a governed cluster of agents sharing authority architecture
+- Agent Ecosystem]] — the broader deployment context containing constellations
 
 ---
 
@@ -78,9 +70,9 @@ Architecture reference for governed agent constellations — how they are struct
 
 ## System Implementation
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] (system) — implementation reference in `05_SYSTEMS/agent_systems/constellations/`
+- Agent Constellation]] (system) — implementation reference in `05_SYSTEMS/agent_systems/constellations/`
 - [[Executive Layer]] — system note for the executive layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] (system) — services shared across agents in a constellation
+- Shared Services]] (system) — services shared across agents in a constellation
 
 ---
 
@@ -115,7 +107,7 @@ Constellations are governed by authority packs applied at each layer. See:
 ## Registry
 
 - [[Constellation Index]] — navigational index of all constellations
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]] — registry-resolvable system entries
+- System Registry]] — registry-resolvable system entries
 
 ---
 

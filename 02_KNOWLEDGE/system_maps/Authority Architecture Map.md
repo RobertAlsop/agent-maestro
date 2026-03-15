@@ -1,24 +1,21 @@
 ---
-id: MAP.authority.architecture
 type: system_map
 note_class: architecture
 domain: system_architecture
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Architecture Map"
 
 status: active
 review_status: draft
 version: 2
 
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Pack Compiler — Map]]"
   - "[[Agent Maestro — Pack Inheritance Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -64,19 +56,19 @@ Navigation layer for all authority architecture systems, packs, inheritance, ver
 
 ## Core Systems
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — system overview
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — system implementation of the authority model
+- Authority Architecture]] — system overview
+- Authority Model]] — system implementation of the authority model
 
 ---
 
 ## Concepts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — system overview concept
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — conceptual framework
+- Authority Architecture]] — system overview concept
+- Authority Model]] — conceptual framework
 - [[Authority Pack]] — atomic governance contract
 - [[Decision Authority]] · [[Execution Authority]] — primary authority types
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] (concept) — inheritance mechanics
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] (concept) — version management
+- Authority Inheritance]] (concept) — inheritance mechanics
+- Pack Versioning]] (concept) — version management
 
 ---
 
@@ -120,8 +112,8 @@ Navigation layer for all authority architecture systems, packs, inheritance, ver
 ## Inheritance & Versioning
 
 - [[Agent Maestro — Pack Inheritance Map]] — full inheritance navigation
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] (system) — inheritance resolution
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] (system) — version tracking
+- Authority Inheritance]] (system) — inheritance resolution
+- Pack Versioning]] (system) — version tracking
 - [[Pack Lineage Index]] — lineage navigation
 - [[Pack Version Registry]] — version registry
 
@@ -130,7 +122,7 @@ Navigation layer for all authority architecture systems, packs, inheritance, ver
 ## Compiler
 
 - [[Authority Pack Compiler — Map]] — full compiler navigation
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] (system)
+- 01_CAPTURE/inbox/Authority Pack Compiler]] (system)
 - [[Pack Manifest]] — pack composition governance artifact
 
 ---

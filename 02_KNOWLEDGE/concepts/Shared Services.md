@@ -1,41 +1,33 @@
 ---
-id: CON.shared_services
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Shared Services"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]]"
+    - "Agent Ecosystem]]"
   implements: []
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
     - "[[Agent System]]"
   uses:
     - "[[Memory Architecture]]"
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Agent Maestro — Systems Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -50,7 +42,7 @@ hash: ""
 
 ## Definition
 
-Reusable operational capabilities provided to multiple agents and agent systems within an [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] or [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — such as memory services, orchestration services, and governance services — that are centrally managed and consistently available rather than duplicated per agent.
+Reusable operational capabilities provided to multiple agents and agent systems within an Agent Constellation]] or Agent Ecosystem]] — such as memory services, orchestration services, and governance services — that are centrally managed and consistently available rather than duplicated per agent.
 
 ## Boundaries
 
@@ -68,8 +60,8 @@ Shared Services prevent capability duplication and ensure consistency across an 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — constellations consume shared services
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — shared services operate at ecosystem scope
+- Agent Constellation]] — constellations consume shared services
+- Agent Ecosystem]] — shared services operate at ecosystem scope
 - [[Memory Architecture]] — memory services are a major shared service category
 - [[Shared Services Index]] — navigational index of all shared services
 - [[Agent Maestro — Systems Map]]

@@ -1,24 +1,21 @@
 ---
-id: CON.authority_architecture
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Architecture"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -37,12 +34,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -78,7 +70,7 @@ Per [[Agent Maestro — Principles]], the authority architecture matters more th
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — the system-level implementation of authority architecture
+- Authority Architecture]] — the system-level implementation of authority architecture
 - [[Authority Architecture Map]]
 - [[Authority Packs Index]]
 - [[Agent Maestro — Concepts Map]]

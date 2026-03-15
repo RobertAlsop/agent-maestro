@@ -1,24 +1,21 @@
 ---
-id: EXEC.executive_orchestrator
 type: agent_definition
 note_class: architecture
 domain: agent_systems
 layer: systems
-scope: executive
 
 canonical: true
 authority_weight: 85
 resolution_basis: canonical
 schema_version: 2
+title: "Executive Orchestrator"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -38,15 +35,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Executive Layer Map]]"
-maps: []
 
-related:
   - "[[Agent Maestro — Four-Layer Model]]"
   - "[[Agent Maestro — Modes]]"
-related_maps:
   - "[[Agent Maestro — Agent Taxonomy Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

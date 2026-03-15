@@ -1,21 +1,18 @@
 ---
-id: MAP.agent_maestro_practice
 type: map
 note_class: navigation
 domain: agent_maestro
 layer: maps
-scope: practice
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Practice Map"
 status: active
 review_status: approved
 version: 1
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,14 +23,9 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Governance Map]]"
   - "[[Agent Maestro — Pipelines Map]]"
   - "[[Project Governance Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -59,18 +51,18 @@ This map guides practitioners through the operational workflows of Agent Maestro
 ## How to Design an Agent
 
 1. Identify the agent's role — executive, supervisor, or specialist (see [[Executive-Supervisor-Specialist Pattern]])
-2. Determine the agent's authority scope — consult [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] and [[Decision Authority]]
+2. Determine the agent's authority scope — consult Authority Architecture]] and [[Decision Authority]]
 3. Assign or create an [[Authority Pack]] using the [[Authority Pack Grammar]]
-4. Link to the appropriate [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] or constellation definition
-5. Register the agent in the [[02_Systems/Agent Maestro/02_KNOWLEDGE/indexes/System Registry]]
+4. Link to the appropriate Agent Constellation]] or constellation definition
+5. Register the agent in the System Registry]]
 
 ---
 
 ## How to Define Authority
 
-- Start from the [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — understand the conceptual framework
+- Start from the Authority Model]] — understand the conceptual framework
 - Apply [[Authority Pack Grammar]] — sections 00–13
-- Use [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] to inherit from a base pack where applicable
+- Use Authority Inheritance]] to inherit from a base pack where applicable
 - Apply [[Pack Override Rules]] to manage deviations
 - Version the pack using [[Pack Versioning Pattern]]
 - Register in [[Authority Pack Registry]] and [[Pack Version Registry]]
@@ -82,7 +74,7 @@ This map guides practitioners through the operational workflows of Agent Maestro
 - Define the constellation structure (see [[Constellation Architecture Pattern]])
 - Link executive, supervisors, and specialists (see [[Executive-Supervisor-Specialist Pattern]])
 - Apply authority packs to each layer
-- Run the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] to produce [[Compiled Governance Artifact|compiled governance artifacts]]
+- Run the 01_CAPTURE/inbox/Authority Pack Compiler]] to produce [[Compiled Governance Artifact|compiled governance artifacts]]
 - Bind outputs using [[Host Binding Pattern]]
 - Register in [[Constellation Index]]
 

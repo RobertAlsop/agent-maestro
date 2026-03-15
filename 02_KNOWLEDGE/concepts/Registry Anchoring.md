@@ -1,10 +1,10 @@
 ---
-id: CON.registry_anchoring
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Registry Anchoring"
 status: active
 review_status: reviewed
 version: 1
@@ -23,7 +23,7 @@ relationships:
     - "[[Agent Maestro — Principles]]"
   governs:
     - "[[Canonical Notes Registry]]"
-    - "[[System Registry]]"
+    - "System Registry]]"
     - "[[Authority Pack Registry]]"
   inherits_from: []
   applies_to:
@@ -108,7 +108,7 @@ That one rule makes Agent Maestro dramatically more robust.
 ## Relationships
 
 - [[Canonical Notes Registry]] — implements this concept
-- [[System Registry]] — implements this concept
+- System Registry]] — implements this concept
 - [[Authority Pack Registry]] — implements this concept
 - [[Pack Version Registry]] — implements this concept
 - [[Compiler Artifacts Registry]] — implements this concept

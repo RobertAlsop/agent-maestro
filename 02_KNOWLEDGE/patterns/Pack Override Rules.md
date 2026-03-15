@@ -1,21 +1,18 @@
 ---
-id: PAT.pack_override_rules
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Pack Override Rules"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -24,15 +21,10 @@ relationships:
   governs: []
   inherits_from: []
   applies_to:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   uses: []
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Agent Maestro — Pack Inheritance Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -72,8 +64,8 @@ Without explicit override rules, inheritance chains produce silent divergence �
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — the context in which overrides operate
+- Authority Inheritance]] — the context in which overrides operate
 - [[Authority Inheritance Pattern]] — the pattern that declares overrides
 - [[Compile Failure Semantics]] — what happens when override validation fails
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — overrides must be version-tracked
+- Pack Versioning]] — overrides must be version-tracked
 - [[Agent Maestro — Pack Inheritance Map]]

@@ -1,24 +1,21 @@
 ---
-id: SYS.agent_system_architecture
 type: system
 note_class: architecture
 domain: system_architecture
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent System Architecture"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-10
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -65,7 +57,7 @@ The top-level architecture that defines how agents, workflows, orchestration, me
 - [[Agent Runtime Architecture]] — agent execution environment
 - [[Agent Workflow Architecture]] — workflow execution layer
 - [[Multi-Agent Systems]] — coordination patterns
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — governance layer
+- Authority Architecture]] — governance layer
 - [[Memory Model]] — memory layer
 
 ## Interfaces

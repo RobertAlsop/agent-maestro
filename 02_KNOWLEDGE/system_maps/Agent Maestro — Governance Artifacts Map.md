@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.governance_artifacts
 type: system_map
 note_class: architecture
 domain: ai_governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Governance Artifacts Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
   - "[[Authority Pack Compiler — Map]]"
   - "[[Agent Maestro — Governance Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -81,15 +73,15 @@ These artifacts define governance intent before compilation:
 
 ## Inheritance and Versioning Artifacts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — how packs inherit from parent packs
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — how packs are versioned and evolved
+- Authority Inheritance]] — how packs inherit from parent packs
+- Pack Versioning]] — how packs are versioned and evolved
 - [[Pack Override Rules]] — how overrides are declared and tracked
 
 ---
 
 ## Compiler Artifacts
 
-Produced by the [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]:
+Produced by the 01_CAPTURE/inbox/Authority Pack Compiler]]:
 
 - [[Compiled Governance Artifacts]] (system) — the full compiled output set
 - [[Integration Manifest]] — binding contracts for runtime hosts

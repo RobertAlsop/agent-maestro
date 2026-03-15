@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.pack_inheritance
 type: system_map
 note_class: architecture
 domain: ai_governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Pack Inheritance Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Architecture Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
   - "[[Authority Pack Compiler — Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -65,8 +57,8 @@ Navigation and architecture reference for authority pack inheritance, versioning
 
 ## Core Concepts
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — how packs inherit from parent packs, what they add, and what they override
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — how pack versions are tracked, compared, and managed
+- Authority Inheritance]] — how packs inherit from parent packs, what they add, and what they override
+- Pack Versioning]] — how pack versions are tracked, compared, and managed
 - [[Pack Override Rules]] — the rules governing how a child pack may override parent behaviour
 
 ---
@@ -81,8 +73,8 @@ Navigation and architecture reference for authority pack inheritance, versioning
 
 ## System Implementation
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] (system) — `05_SYSTEMS/authority_architecture/Authority Inheritance.md`
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] (system) — `05_SYSTEMS/authority_architecture/Pack Versioning.md`
+- Authority Inheritance]] (system) — `05_SYSTEMS/authority_architecture/Authority Inheritance.md`
+- Pack Versioning]] (system) — `05_SYSTEMS/authority_architecture/Pack Versioning.md`
 
 ---
 

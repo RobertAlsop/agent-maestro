@@ -1,24 +1,21 @@
 ---
-id: CON.authority_model
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Model"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -35,13 +32,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Authority Architecture Map]]"
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -63,7 +55,7 @@ The conceptual framework that defines how authority is structured, bounded, and 
 
 ## Boundaries
 
-The Authority Model is a conceptual framework, not an implementation specification. It defines the philosophy and principles of authority in agent systems. The [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] translates this model into a structural design; [[Authority Pack|Authority Packs]] implement it as specific governance contracts.
+The Authority Model is a conceptual framework, not an implementation specification. It defines the philosophy and principles of authority in agent systems. The Authority Architecture]] translates this model into a structural design; [[Authority Pack|Authority Packs]] implement it as specific governance contracts.
 
 ## Purpose
 
@@ -85,7 +77,7 @@ The Authority Model ensures that every agent operates with clearly bounded, audi
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the structural design derived from this model
+- Authority Architecture]] — the structural design derived from this model
 - [[Authority Pack]] — the atomic implementation of authority boundaries
 - [[Decision Authority]] · [[Execution Authority]] — the two primary authority types
 - [[Authority Architecture Map]]

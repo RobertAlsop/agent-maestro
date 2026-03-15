@@ -1,5 +1,4 @@
 ---
-id: WF.vault_maintenance.on_demand_repair
 type: process
 note_class: execution
 domain: vault_maintenance
@@ -23,15 +22,10 @@ uses:
   - CONST.vault_maintenance.supervisor
   - CONST.vault_maintenance.specialist.self_healing
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.supervisor
   - CONST.vault_maintenance.specialist.self_healing
-related_maps:
   - MAP.vault_maintenance
-related_pipes: []
 tags:
   - constellation
   - workflow
@@ -40,8 +34,8 @@ tags:
   - on_demand
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: On-Demand Repair Workflow
 ---

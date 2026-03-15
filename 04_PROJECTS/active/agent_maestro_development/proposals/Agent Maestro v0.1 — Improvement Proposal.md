@@ -1,21 +1,18 @@
 ---
-id: PROJ.improvement_proposal_v0.1
 type: project
 note_class: execution
 domain: governance
 layer: execution
-scope:
 canonical: false
 authority_weight: 70
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro v0.1 — Improvement Proposal"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,15 +23,10 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related:
   - "[[Agent Maestro — North Star]]"
   - "[[Agent Maestro — Principles]]"
-  - "[[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]]"
+  - "01_CAPTURE/inbox/Authority Pack Compiler]]"
   - "[[Memory Model]]"
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -125,7 +117,7 @@ This single example exercises authority packs, escalation, decision-execution se
 
 ### Problem
 
-The compiler pipeline is documented across six notes ([[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]], [[Compiler Pipeline]], [[Compiler Inputs]], [[Compiler Outputs]], [[Host Bindings]], [[Compile Failure Semantics]]) but no implementation exists. Until the compiler can actually process a pack, the governance model cannot be validated.
+The compiler pipeline is documented across six notes (01_CAPTURE/inbox/Authority Pack Compiler]], [[Compiler Pipeline]], [[Compiler Inputs]], [[Compiler Outputs]], [[Host Bindings]], [[Compile Failure Semantics]]) but no implementation exists. Until the compiler can actually process a pack, the governance model cannot be validated.
 
 ### Proposal
 
@@ -223,7 +215,7 @@ The three-layer memory model ([[Knowledge Graph Layer]], [[Vector Memory Layer]]
 
 **How it works:**
 
-Every entity in the knowledge graph is already a note in the vault — concepts like [[Agent]], [[Authority Pack]], [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] are nodes. The wiki-links between them (`relationships` in frontmatter, inline `[[links]]` in the body) are edges. This means the knowledge graph already exists implicitly. The improvement is to make it explicit and queryable.
+Every entity in the knowledge graph is already a note in the vault — concepts like [[Agent]], [[Authority Pack]], Agent Constellation]] are nodes. The wiki-links between them (`relationships` in frontmatter, inline `[[links]]` in the body) are edges. This means the knowledge graph already exists implicitly. The improvement is to make it explicit and queryable.
 
 **Deliverables:**
 

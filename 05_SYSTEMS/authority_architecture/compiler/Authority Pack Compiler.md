@@ -1,24 +1,21 @@
 ---
-id: SYS.authority_pack_compiler
 type: system
 note_class: architecture
 domain: ai_governance
 layer: systems
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Pack Compiler"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,13 +29,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Pack Compiler — Map]]"
-maps:
   - "[[Authority Architecture Map]]"
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -83,7 +75,7 @@ Compilation is required before any authority pack can be deployed. The compiler 
 - [[Compile Failure Semantics]] — failure handling
 
 ### Dependencies
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] — for input packs and governance schemas
+- Authority Architecture]] — for input packs and governance schemas
 - [[Pack Version Registry]] — for version validation
 - [[Compiler Artifacts Registry]] — for output registration
 

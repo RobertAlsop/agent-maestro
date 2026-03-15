@@ -1,5 +1,4 @@
 ---
-id: EXE.workflow.note_knowledge_upgrade
 type: process
 note_class: execution
 layer: pipes
@@ -7,19 +6,15 @@ canonical: false
 authority_weight: 60
 resolution_basis: canonical
 schema_version: 2
+title: "Note Knowledge Upgrade v1"
 status: active
 review_status: approved
 version: 1
 source_type: human_authored
 domain: execution
-scope: null
-created: null
-updated: null
-last_reviewed: null
-review_cycle: quarterly
+created_date: ""
+last_modified: ""
 owner: AgentMaestro
-map: null
-related: []
 tags: []
 relationships:
   defines: []
@@ -31,9 +26,6 @@ relationships:
   uses: []
   produces: []
 hash: ''
-maps: []
-related_maps: []
-related_pipes: []
 supersedes: []
 superseded_by: []
 ---

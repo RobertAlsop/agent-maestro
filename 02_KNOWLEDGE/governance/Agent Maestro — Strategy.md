@@ -1,52 +1,37 @@
 ---
-id: GOV.agent_maestro.strategy
+schema_version: 2
+title: "Agent Maestro — Strategy"
 type: strategy
 note_class: governance
 domain: governance
 layer: governance
-scope: null
-
-canonical: false
-authority_weight: 65
+authority_weight: 80
 resolution_basis: authority_weight
-schema_version: 2
-
+canonical: true
 status: active
-review_status: draft
-version: 1
-
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
-
+review_status: approved
+version: 2
+created_date: 2026-03-10
+last_modified: 2026-03-15
 owner: AgentMaestro
-
+source_type: collaborative
 relationships:
-  defines: []
+  defines:
+    - "[[Agent Maestro Capability Stages]]"
   part_of: []
-  implements: []
+  implements:
+    - "[[Agent Maestro — Foundations]]"
+    - "[[Agent Maestro — North Star]]"
   governs: []
   inherits_from: []
   applies_to: []
   uses: []
   produces: []
-
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
-
-related: []
-related_maps: []
-related_pipes: []
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
+  supersedes: []
+  superseded_by: []
 tags:
   - governance
   - strategy
-
 hash: ""
 ---
 
@@ -58,7 +43,7 @@ Define how Agent Maestro evolves from experimentation to large-scale intelligenc
 
 ## Principle
 
-Agent Maestro develops through five capability stages. Each stage increases architectural leverage before the next begins.
+Agent Maestro develops through five capability stages. Each stage increases architectural leverage before the next begins. This staged approach is an expression of D3 (Controlled Evolution) — evolution through graduated experiments within governance.
 
 ## Stages
 
@@ -72,8 +57,8 @@ Agent Maestro develops through five capability stages. Each stage increases arch
 
 ## Implications
 
-- Stages must not be skipped. [[Controlled Evolution Pattern]] applies.
-- Stage 4 requires [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Architecture]] to be hardened before scaling.
+- Stages must not be skipped. D3 ([[Controlled Evolution Pattern]]) applies.
+- Stage 4 requires [[Authority Architecture]] to be hardened before scaling.
 - The outcome is a transition from workflow design to **organizational intelligence architecture**.
 
 ## When It Applies
@@ -82,6 +67,6 @@ All roadmap planning, project prioritization, and scope decisions.
 
 ## Related
 
+- [[Agent Maestro — Foundations]]
 - [[Agent Maestro — North Star]]
 - [[Agent Maestro — Scope]]
-- [[Agent Maestro — Governance Map]]

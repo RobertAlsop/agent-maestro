@@ -1,24 +1,21 @@
 ---
-id: IDX.glossary
 type: index
 note_class: navigation
 domain: governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Glossary"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-10
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Domain Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -60,7 +52,7 @@ Core terms used across the Agent Maestro vault.
 | Agent Orchestration | [[Agent Orchestration]] |
 | Agent Systems | [[Agent Systems]] |
 | Agent Workflow | [[Agent Workflow]] |
-| Authority Architecture | [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] |
+| Authority Architecture | Authority Architecture]] |
 | Authority Pack | [[Authority Pack]] |
 | Context Pack | [[Context Pack]] |
 | Decision Authority | [[Decision Authority]] |

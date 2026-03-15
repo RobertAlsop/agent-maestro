@@ -1,24 +1,21 @@
 ---
-id: IDX.authority_packs_index
 type: index
 note_class: navigation
 domain: ai_governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Packs Index"
 
 status: active
 review_status: approved
 version: 2
 
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,14 +29,9 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Authority Architecture Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
   - "[[Agent Maestro — Pack Inheritance Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []
@@ -99,7 +91,7 @@ Domain packs extend base or role packs with authority specific to a business or 
 
 ## Constellation Packs
 
-Constellation packs define the composed authority architecture for a full [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]].
+Constellation packs define the composed authority architecture for a full Agent Constellation]].
 
 | Pack | Folder | Status |
 |---|---|---|
@@ -108,8 +100,8 @@ Constellation packs define the composed authority architecture for a full [[02_S
 ## Related
 
 - [[Authority Pack]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]]
+- Authority Model]]
+- Authority Inheritance]]
+- Pack Versioning]]
 - [[Authority Architecture Map]]
 - [[Agent Maestro — Pack Inheritance Map]]

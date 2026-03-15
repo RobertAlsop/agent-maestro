@@ -1,5 +1,4 @@
 ---
-id: CONST.vault_maintenance.supervisor
 type: agent_definition
 note_class: architecture
 domain: vault_maintenance
@@ -33,19 +32,14 @@ uses:
   - CONST.vault_maintenance.specialist.note_processor
   - CONST.vault_maintenance.specialist.self_healing
 produces: []
-map: MAP.vault_maintenance
-maps:
   - MAP.vault_maintenance
-related:
   - CONST.vault_maintenance.executive_link
   - CONST.vault_maintenance.specialist.definition_alignment
   - CONST.vault_maintenance.specialist.ontology_integrity
   - CONST.vault_maintenance.specialist.template_compliance
   - CONST.vault_maintenance.specialist.note_processor
   - CONST.vault_maintenance.specialist.self_healing
-related_maps:
   - MAP.vault_maintenance
-related_pipes:
   - WF.vault_maintenance.audit_cycle
   - WF.vault_maintenance.on_demand_repair
   - WF.vault_maintenance.note_processing
@@ -57,8 +51,8 @@ tags:
   - audit
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Maintenance Coordinator — Supervisor
 ---

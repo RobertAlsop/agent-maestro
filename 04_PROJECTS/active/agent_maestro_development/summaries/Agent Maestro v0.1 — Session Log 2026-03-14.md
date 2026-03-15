@@ -1,21 +1,18 @@
 ---
-id: PROJ.session_log.2026_03_14
 type: project
 note_class: execution
 domain: governance
 layer: execution
-scope: null
 canonical: false
 authority_weight: 50
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro v0.1 — Session Log 2026-03-14"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: null
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -28,12 +25,7 @@ relationships:
   uses: []
   produces:
   - '[[Agent Maestro v0.1 — Improvement Proposal]]'
-map: '[[Agent Maestro — Navigation Map]]'
-maps: []
-related:
 - '[[Agent Maestro v0.1 — Improvement Proposal]]'
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

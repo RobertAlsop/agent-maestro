@@ -36,7 +36,7 @@ Output artifacts are placed in `artifacts/` subdirectory and registered in the r
 - **Integration Manifest.md**: Integration points with agent runtime
 - **compiler_artifacts_registry.csv**: Registry of all compiled artifacts with versions
 
-All files located in `/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/`
+All files located in `05_SYSTEMS/authority_architecture/compiler/`
 
 ## Compiler Inputs
 
@@ -140,7 +140,7 @@ See Compile Failure Semantics.md for detailed error classifications and recovery
 
 The compiler executes the Authority Pack Grammar. Each authority pack's 14 sections are validated, inherited, overridden, and resolved by the compiler. The compiler is the enforcement mechanism for the Authority Inheritance Pattern and the Pack Override Rules.
 
-See [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/CLAUDE]] in authority_architecture/ for details on pack structure and versioning.
+See the authority_architecture CLAUDE.md for details on pack structure and versioning.
 
 ## Relationship to Agent Runtime
 

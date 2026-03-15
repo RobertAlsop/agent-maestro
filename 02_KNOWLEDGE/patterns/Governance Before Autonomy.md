@@ -1,21 +1,18 @@
 ---
-id: PAT.governance_before_autonomy
 type: pattern
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Governance Before Autonomy"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,13 +23,8 @@ relationships:
   applies_to:
     - "[[Agent]]"
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   produces: []
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -61,6 +53,6 @@ Autonomy without governance produces unpredictable systems. This pattern forces 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
+- Authority Architecture]]
 - [[Controlled Evolution Pattern]]
 - [[Agent Maestro — Governance Map]]

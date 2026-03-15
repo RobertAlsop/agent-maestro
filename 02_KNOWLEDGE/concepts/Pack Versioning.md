@@ -1,21 +1,18 @@
 ---
-id: CON.pack_versioning
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Pack Versioning"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -27,14 +24,9 @@ relationships:
   applies_to:
     - "[[Authority Pack]]"
   uses:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Agent Maestro — Pack Inheritance Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -78,7 +70,7 @@ Governance without versioning is ungovernable. Pack Versioning ensures that the 
 ## Relationships
 
 - [[Authority Pack]] — what is being versioned
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — inheritance chains must declare version compatibility
+- Authority Inheritance]] — inheritance chains must declare version compatibility
 - [[Pack Versioning Pattern]] — design pattern for implementing versioning
 - [[Pack Version Registry]] — authoritative registry of all pack versions
 - [[Pack Lineage Index]] — navigation index for version lineage

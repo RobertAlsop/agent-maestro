@@ -1,21 +1,18 @@
 ---
-id: PAT.authority_inheritance_pattern
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Inheritance Pattern"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -25,15 +22,10 @@ relationships:
   inherits_from: []
   applies_to:
     - "[[Authority Pack]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]]"
+    - "Authority Inheritance]]"
   uses: []
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps:
   - "[[Agent Maestro — Pack Inheritance Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -68,7 +60,7 @@ Define a four-layer pack hierarchy: base packs (foundational rules), role packs 
 
 ## Relationships
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — the concept this pattern implements
+- Authority Inheritance]] — the concept this pattern implements
 - [[Pack Override Rules]] — the rules governing overrides within this pattern
 - [[Authority Pack Grammar]] — the structural standard that makes inheritance possible
 - [[Controlled Evolution Pattern]] — the higher-level pattern governing governance evolution

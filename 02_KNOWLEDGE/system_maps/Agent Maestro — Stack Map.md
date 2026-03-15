@@ -1,21 +1,18 @@
 ---
-id: MAP.agent_maestro.stack
 type: system_map
 note_class: architecture
 domain: agent_maestro
 layer: maps
-scope:
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Stack Map"
 status: active
 review_status: approved
 version: 1
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,14 +23,9 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Systems Map]]"
   - "[[Authority Architecture Map]]"
   - "[[Memory Architecture Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -67,11 +59,11 @@ The foundational rules layer. Everything above must comply with this layer.
 
 The governance enforcement layer. Defines what agents may decide and do.
 
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] (concept)
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — conceptual framework
+- Authority Architecture]] (concept)
+- Authority Model]] — conceptual framework
 - [[Authority Pack]] — atomic governance contract
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Inheritance]] — inheritance mechanics
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Pack Versioning]] — version management
+- Authority Inheritance]] — inheritance mechanics
+- Pack Versioning]] — version management
 - [[Pack Manifest]] — pack composition declaration
 - [[Authority Architecture Map]] — full navigation
 
@@ -81,7 +73,7 @@ The governance enforcement layer. Defines what agents may decide and do.
 
 Transforms design-time packs into runtime-ready compiled artifacts.
 
-- [[02_Systems/Agent Maestro/01_CAPTURE/inbox/Authority Pack Compiler]] — system
+- 01_CAPTURE/inbox/Authority Pack Compiler]] — system
 - [[Compiler Pipeline]] — processing stages
 - [[Compiled Governance Artifact]] — output concept
 - [[Host Bindings]] — runtime binding
@@ -94,9 +86,9 @@ Transforms design-time packs into runtime-ready compiled artifacts.
 The agent layer — typed agents operating under authority constraints.
 
 - [[Executive Agent]] · [[Supervisor Agent]] · [[Specialist Agent]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — governed agent cluster
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Ecosystem]] — full organisational deployment
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]] — reusable operational services
+- Agent Constellation]] — governed agent cluster
+- Agent Ecosystem]] — full organisational deployment
+- Shared Services]] — reusable operational services
 - [[Agent Maestro — Agent Taxonomy Map]] — full taxonomy
 
 ---

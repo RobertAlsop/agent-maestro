@@ -1,28 +1,25 @@
 ---
-id: CON.authority_pack
 type: concept
 note_class: knowledge
 domain: ai_governance
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Pack"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines:
     - "[[Decision Authority]]"
     - "[[Execution Authority]]"
   part_of:
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   implements: []
   governs:
     - "[[Agent]]"
@@ -30,11 +27,6 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -48,7 +40,7 @@ hash: ""
 
 ## Definition
 
-A modular, versioned governance contract that defines what a specific class of [[Agent|agent]] is permitted to decide, execute, and escalate. An authority pack is the atomic unit of [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the smallest self-contained governance specification that can be assigned to an agent or agent class.
+A modular, versioned governance contract that defines what a specific class of [[Agent|agent]] is permitted to decide, execute, and escalate. An authority pack is the atomic unit of Authority Architecture]] — the smallest self-contained governance specification that can be assigned to an agent or agent class.
 
 ## Boundaries
 
@@ -78,6 +70,6 @@ A Customer Support Agent may operate under an authority pack that specifies: whi
 - [[Decision Authority]] — the bounded permission to decide, which this pack specifies
 - [[Execution Authority]] — the bounded permission to act, which this pack specifies
 - [[Authority Packs Index]] — the registry of all authority packs in the system
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Model]] — the formal model within which packs are defined
+- Authority Model]] — the formal model within which packs are defined
 - [[Authority Architecture Map]]
 - [[Agent Maestro — Concepts Map]]

@@ -1,5 +1,4 @@
 ---
-id: MAP.vault_maintenance
 type: system_map
 note_class: architecture
 domain: vault_maintenance
@@ -22,9 +21,6 @@ inherits_from: []
 applies_to: []
 uses: []
 produces: []
-map: null
-maps: []
-related:
   - CONST.vault_maintenance.executive_link
   - CONST.vault_maintenance.supervisor
   - CONST.vault_maintenance.specialist.definition_alignment
@@ -35,8 +31,6 @@ related:
   - WF.vault_maintenance.audit_cycle
   - WF.vault_maintenance.on_demand_repair
   - WF.vault_maintenance.note_processing
-related_maps: []
-related_pipes:
   - WF.vault_maintenance.audit_cycle
   - WF.vault_maintenance.on_demand_repair
   - WF.vault_maintenance.note_processing
@@ -48,8 +42,8 @@ tags:
   - knowledge_graph
 supersedes: []
 superseded_by: []
-hash: null
-owner: null
+hash: ""
+owner: ""
 resolution_basis: authority_weight
 title: Vault Maintenance Constellation — Map
 ---

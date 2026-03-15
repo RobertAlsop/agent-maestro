@@ -1,21 +1,18 @@
 ---
-id: PROJ.next_phase_proposal_v0.2
 type: project
 note_class: execution
 domain: governance
 layer: execution
-scope: null
 canonical: false
 authority_weight: 70
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro v0.2 — Next Phase Proposal"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -27,13 +24,8 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: '[[Agent Maestro — Navigation Map]]'
-maps: []
-related:
 - '[[Agent Maestro v0.1 — Improvement Proposal]]'
 - '[[Agent Maestro v0.1 — Session Log 2026-03-14]]'
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

@@ -66,15 +66,15 @@ All files in SYSTEMS must follow strict naming and versioning conventions:
 
 ### authority_architecture/
 The most critical subdirectory. Contains authority packs (versioned), templates, maps, and the compiler. Changes here have system-wide impact.
-See [[02_Systems/Agent Maestro/05_SYSTEMS/CLAUDE]] in authority_architecture/ for detailed rules.
+See the respective CLAUDE.md in authority_architecture/ for detailed rules.
 
 ### memory_architecture/
 Defines the three-layer memory model (Knowledge Graph, Structured Data, Vector). Changes here affect all agent knowledge access.
-See [[02_Systems/Agent Maestro/05_SYSTEMS/CLAUDE]] in memory_architecture/ for detailed rules.
+See the respective CLAUDE.md in memory_architecture/ for detailed rules.
 
 ### agent_systems/
 Defines agent roles, constellation structure, and supervisor/specialist relationships. Changes here affect agent organizational structure.
-See [[02_Systems/Agent Maestro/05_SYSTEMS/CLAUDE]] in agent_systems/ for detailed rules.
+See the respective CLAUDE.md in agent_systems/ for detailed rules.
 
 ### infrastructure/
 Tools, scripts, and runtime support. Read-mostly, written by system administrators.
@@ -114,11 +114,11 @@ When you need to change an authority pack, you must:
 
 ## Relationship to Knowledge Layer
 
-SYSTEMS documents should cite and implement the principles from 02_KNOWLEDGE/governance/. Authority packs are grounded in the [[Agent Maestro — Principles]]. System architecture should follow the patterns in 02_KNOWLEDGE/patterns/.
+SYSTEMS documents should cite and implement the principles from 02_KNOWLEDGE/governance/. Authority packs are grounded in [[Agent Maestro — Foundations]] (the foundational kernel: 3 seeds, 1 meta-principle, 3 laws, 6 derived principles). System architecture should follow the patterns in 02_KNOWLEDGE/patterns/.
 
 Before making changes to SYSTEMS, verify they are consistent with:
-- The Principles
-- The Governance Before Autonomy pattern
+- The Foundations (kernel + derived principles)
+- The Governance Before Autonomy pattern (D5)
 - The Authority Architecture pattern
 - The Memory Architecture concepts
 
@@ -126,4 +126,4 @@ Before making changes to SYSTEMS, verify they are consistent with:
 
 Agents in 06_EXECUTION operate according to the rules and authority structures defined in 05_SYSTEMS. The compiled governance artifacts from the authority_architecture/ compiler are the executable specifications that guide all agent action.
 
-See [[02_Systems/Agent Maestro/05_SYSTEMS/CLAUDE]] in 06_EXECUTION/ to understand how SYSTEMS rules are enforced during execution.
+See the respective CLAUDE.md in 06_EXECUTION/ to understand how SYSTEMS rules are enforced during execution.

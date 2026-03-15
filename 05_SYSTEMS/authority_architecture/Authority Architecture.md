@@ -1,57 +1,42 @@
 ---
-id: SYS.authority_architecture
+schema_version: 2
+title: "Authority Architecture"
 type: system
 note_class: architecture
 domain: system_architecture
 layer: systems
-scope: null
-
-canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
-schema_version: 2
-
+canonical: false
 status: active
 review_status: approved
-version: 2
-
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
-
+version: 3
+created_date: 2026-03-10
+last_modified: 2026-03-15
 owner: AgentMaestro
-
+source_type: ai_authored
 relationships:
-  defines: []
+  defines:
+    - "[[Authority Pack Grammar]]"
   part_of: []
-  implements: []
-  governs: []
+  implements:
+    - "[[Agent Maestro — Foundations]]"
+  governs:
+    - "[[Authority Pack]]"
+    - "[[Compiled Governance Artifact]]"
   inherits_from: []
   applies_to: []
-  uses: []
-  produces: []
-
-map: "[[Authority Architecture Map]]"
-maps: []
-
-related: []
-related_maps:
-  - "[[Authority Architecture Map]]"
-  - "[[Agent Maestro — Pack Inheritance Map]]"
-  - "[[Authority Pack Compiler — Map]]"
-  - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
+  uses:
+    - "[[Authority Model]]"
+    - "[[Authority Inheritance]]"
+  produces:
+    - "[[Compiled Governance Artifact]]"
+  supersedes: []
+  superseded_by: []
 tags:
   - system
   - authority
   - governance
-
 hash: ""
 ---
 
@@ -60,6 +45,16 @@ hash: ""
 ## Purpose
 
 The Authority Architecture is the governance layer that controls what agents may decide and execute. It defines authority models, manages pack inheritance and versioning, drives compilation of governance artifacts, and enforces authority boundaries at runtime.
+
+## Foundations Alignment
+
+This system implements the **Constraint seed** (Authority Hierarchy) from [[Agent Maestro — Foundations]]. The six-level constraint hierarchy (Design Intent → Definition → Schema → Validation → Routing → Execution) is realized through the authority pack grammar, compiler pipeline, and runtime enforcement. Key alignments:
+
+- **Law 1 (Direction of Authority)**: Purpose descends through pack inheritance; accountability ascends through escalation and audit trails.
+- **Law 2 (Action Properties)**: Every governed action is verifiable (audit events), reversible (state change logging), and accountable (agent attribution).
+- **D1 (Deterministic Control Surfaces)**: Authority packs are declarative; permission checks use exact-match only.
+- **D5 (Governance Before Autonomy)**: Packs must be compiled before any agent can execute.
+- **D6 (Separation of Powers)**: Pack authoring, compilation, and runtime enforcement are separate concerns.
 
 ## Responsibilities
 
@@ -73,21 +68,20 @@ The Authority Architecture is the governance layer that controls what agents may
 
 ### Authority Model & Packs
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Model]] — the authority rule model
+- [[Authority Model]] — the authority rule model
 - [[Authority Pack]] — modular governance units
 - [[Authority Packs Index]] — pack registry and navigation
 - [[Authority Pack Registry]] — canonical pack registry
 
 ### Inheritance & Versioning
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Inheritance]] — the inheritance system for pack hierarchies
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Pack Versioning]] — the versioning system for all pack changes
+- [[Authority Inheritance]] — the inheritance system for pack hierarchies
+- [[Pack Versioning]] — the versioning system for all pack changes
 - [[Pack Lineage Index]] — tracks pack ancestry
-- [[Pack Version Registry]] — records all registered versions
 
 ### Compiler
 
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/Authority Pack Compiler]] — transforms source packs into compiled governance artifacts
+- [[Authority Pack Compiler]] — transforms source packs into compiled governance artifacts
 - [[Compiler Pipeline]] — eight-stage compilation pipeline
 - [[Compile Failure Semantics]] — failure codes and halt conditions
 - [[Compiled Governance Artifacts]] — compiler output system
@@ -113,18 +107,10 @@ The Authority Architecture is the governance layer that controls what agents may
 - Compilation must be preceded by a valid [[Pack Manifest]]
 - Compiled artifacts are immutable after generation
 
-## Related Systems
+## Related
 
 - [[Agent System Architecture]]
-- [[Memory Governance]]
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Shared Services]]
-
-## Related Concepts
-
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Authority Inheritance]]
-- [[02_Systems/Agent Maestro/05_SYSTEMS/authority_architecture/Pack Versioning]]
+- [[Shared Services]]
 - [[Decision Authority]]
 - [[Execution Authority]]
-- [[Compiled Governance Artifact]]
 - [[Host Binding]]

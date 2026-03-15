@@ -1,5 +1,4 @@
 ---
-id: EXE.roadmap
 type: roadmap
 note_class: execution
 layer: execution
@@ -8,18 +7,14 @@ canonical: false
 authority_weight: 65
 resolution_basis: canonical
 schema_version: 2
+title: "Agent Maestro Build Roadmap"
 status: active
 review_status: approved
 version: 1
 source_type: human_authored
-scope: null
-created: 2026-03-10
-updated: 2026-03-10
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-10
+last_modified: 2026-03-10
 owner: AgentMaestro
-map: '[[Agent Maestro — Domain Map]]'
-related:
 - '[[Agent Maestro — Domain Map]]'
 - '[[Agent Maestro — Strategy]]'
 tags: []
@@ -33,9 +28,6 @@ relationships:
   uses: []
   produces: []
 hash: ''
-maps: []
-related_maps: []
-related_pipes: []
 supersedes: []
 superseded_by: []
 ---

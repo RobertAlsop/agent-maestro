@@ -1,21 +1,18 @@
 ---
-id: CON.agent_maestro_layer_model
 type: concept
 note_class: knowledge
 domain: system_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro Layer Model"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -25,25 +22,20 @@ relationships:
   inherits_from: []
   applies_to:
     - "[[Agent System]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+    - "Agent Constellation]]"
     - "[[Memory Architecture]]"
-    - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]]"
+    - "Authority Architecture]]"
   uses:
     - "[[Agent]]"
     - "[[Authority Pack]]"
     - "[[Memory Model]]"
     - "[[Model Workspace Protocol]]"
   produces: []
-map: "[[Agent Maestro — Layer Model Map]]"
-maps:
   - "[[Agent Maestro — Stack Map]]"
   - "[[Agent Maestro — Systems Map]]"
-related:
   - "[[Authority Pack]]"
-  - "[[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]]"
+  - "Agent Constellation]]"
   - "[[Model Workspace Protocol]]"
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []
@@ -120,7 +112,7 @@ The Layer Model is also not a replacement for existing concepts. It organises th
 ## Relationships
 
 - [[Model Workspace Protocol]] — defines the structure of the Workspace Layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Authority Architecture]] — the system that implements the Authority Layer
-- [[02_Systems/Agent Maestro/02_KNOWLEDGE/concepts/Agent Constellation]] — the primary unit that operates across all four layers
+- Authority Architecture]] — the system that implements the Authority Layer
+- Agent Constellation]] — the primary unit that operates across all four layers
 - [[Agent Maestro — Layer Model Map]]
 - [[Agent Maestro — Stack Map]]

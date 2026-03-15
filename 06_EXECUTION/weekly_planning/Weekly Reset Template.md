@@ -1,5 +1,4 @@
 ---
-id: EXE.weekly_reset_template
 type: process
 note_class: execution
 layer: execution
@@ -8,18 +7,14 @@ canonical: false
 authority_weight: 60
 resolution_basis: canonical
 schema_version: 2
+title: "Weekly Reset Template"
 status: active
 review_status: approved
 version: 1
 source_type: human_authored
-scope: null
-created: 2026-03-10
-updated: null
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-10
+last_modified: ""
 owner: AgentMaestro
-map: '[[Agent Maestro — Domain Map]]'
-related: []
 tags: []
 relationships:
   defines: []
@@ -31,9 +26,6 @@ relationships:
   uses: []
   produces: []
 hash: ''
-maps: []
-related_maps: []
-related_pipes: []
 supersedes: []
 superseded_by: []
 ---
