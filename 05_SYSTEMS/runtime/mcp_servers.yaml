@@ -1,0 +1,55 @@
+# MCP Server Configuration — Agent Maestro v0.4.0
+#
+# Defines external MCP servers that governed agents can interact with
+# through the MCP Adapter (mcp_adapter.py).
+#
+# Transport types:
+#   mock  — Returns simulated responses (for prototyping/testing)
+#   stdio — Spawns MCP server process, communicates via stdin/stdout
+#   sse   — Connects to MCP server via Server-Sent Events endpoint
+#
+# To add a new server:
+#   1. Add configuration here
+#   2. Register governed tools in mcp_adapter.py or tool_interface.py
+#   3. Add "send external message" (or appropriate permission) to
+#      authority packs of agents that need access
+#   4. Add entry to tool_registry.csv
+
+servers:
+  - server_id: slack
+    server_name: "Slack (via MCP)"
+    transport: mock  # Change to stdio for production
+    command: "npx -y @anthropic/slack-mcp-server"
+    env:
+      SLACK_BOT_TOKEN: "${SLACK_BOT_TOKEN}"
+      SLACK_TEAM_ID: "${SLACK_TEAM_ID}"
+    available_tools:
+      - send_message
+      - search_messages
+      - list_channels
+      - read_channel
+    status: prototype
+
+  - server_id: github
+    server_name: "GitHub (via MCP)"
+    transport: mock  # Change to stdio for production
+    command: "npx -y @anthropic/github-mcp-server"
+    env:
+      GITHUB_TOKEN: "${GITHUB_TOKEN}"
+    available_tools:
+      - create_issue
+      - list_issues
+      - create_pull_request
+      - search_repositories
+    status: planned
+
+  - server_id: filesystem
+    server_name: "Filesystem (via MCP)"
+    transport: mock
+    command: "npx -y @anthropic/filesystem-mcp-server"
+    env: {}
+    available_tools:
+      - read_file
+      - write_file
+      - list_directory
+    status: planned

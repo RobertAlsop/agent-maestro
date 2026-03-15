@@ -8,3 +8,4 @@ SES-006,2026-03-15,6,execution,sonnet,phase-b,--execute flag + evidence bootstra
 SES-007,2026-03-15,7,execution,sonnet,phase-b,escalation_processor + review queue + approve/reject/dashboard CLI commands,full-session,completed,Session Log — SES-007 — 2026-03-15.md
 SES-008,2026-03-15,8,governance,sonnet,governance,CLAUDE.md protocol block + project folder reorg + session logs backfill + git setup,partial-session,completed,Session Log — SES-008 — 2026-03-15.md
 SES-009,2026-03-15,9,execution,sonnet,phase-c,Process 16 captures: 12 promoted + 4 archived. New concepts/patterns/pipelines/projects. Full audit trail. v0.3.2.,full-session,completed,Session Log — SES-009 — 2026-03-15.md
+SES-010,2026-03-15,10,execution,opus,phase-d,Execution architecture + tool registry + MCP integration prototype + host options evaluation + self-observation spec. v0.4.0.,full-session,completed,Session Log — SES-010 — 2026-03-15.md

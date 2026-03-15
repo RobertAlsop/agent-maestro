@@ -111,6 +111,12 @@ The runtime is implemented in Python at `05_SYSTEMS/runtime/`:
 | `agent_runtime.py` | Runtime environment: logging, escalation, agent lifecycle |
 | `orchestrator.py` | CLI: `python orchestrator.py list/status/run/run-agent/compile --vault-root <path>` |
 | `state_change_logger.py` | Tracks CREATE/MODIFY/MOVE/ARCHIVE/DELETE/PROMOTE/REPAIR operations |
+| `tool_interface.py` | 9 vault tools + 2 MCP tools via `@register_tool` decorator |
+| `workflow_engine.py` | YAML workflow definitions → stage-by-stage governed execution |
+| `escalation_processor.py` | Escalation lifecycle: review queue, approve/reject, dashboard |
+| `mcp_adapter.py` | MCP client adapter for external integrations (Slack, GitHub, etc.) |
+| `mcp_servers.yaml` | MCP server configuration (transport, tools, credentials) |
+| `tool_registry.csv` | Vault-native registry of all approved tools with schemas and adapters |
 
 The compiler at `05_SYSTEMS/authority_architecture/compiler/prototype/compiler.py` transforms YAML authority packs into compiled JSON governance artifacts via an 8-stage pipeline.
 
@@ -137,12 +143,16 @@ Before beginning any build work, agents MUST read:
 
 1. Input → 2. Brief/Roadmap → 3. Proposal (Build Contract) → 4. Build → 5. Output Summary → 6. Session Log → 7. Git Commit + Release
 
+**Repository:** `https://github.com/robertalsop/agent-maestro`
+**Current version:** v0.4.0 (Phase D complete — execution architecture + external integration)
+**Default branch:** `master` — never commit build work directly here; use a feature branch
+
 **Critical rules:**
 - Never build without human approval of the proposal. The proposal is the contract.
-- Never work directly on `main`. Always create a dedicated branch (e.g., `phase-b-workflow-engine`).
+- Never work directly on `master`. Always create a dedicated branch (e.g., `phase-c-capture-processing`).
 - Create a checkpoint tag before each major build pass: `git tag pre-phase-X`
 - Commit format: `SES-XXX: [summary of changes]`
-- For milestone versions: `git tag vX.Y.Z` + release notes
+- For milestone versions: `git tag vX.Y.Z` + `git push origin vX.Y.Z`
 
 **Project document locations:**
 
@@ -153,6 +163,17 @@ Before beginning any build work, agents MUST read:
 | Proposals | `04_PROJECTS/active/agent_maestro_development/proposals/` |
 | Session logs | `06_EXECUTION/logs/sessions/` |
 | Output summaries | `04_PROJECTS/active/agent_maestro_development/summaries/` |
+
+## Phase D Architecture Documents (v0.4.0)
+
+| Document | Path | Purpose |
+|----------|------|---------|
+| Execution Architecture | `02_KNOWLEDGE/concepts/Execution Architecture.md` | Three-layer execution model: Reasoning → Governance Mediation → Tool Execution |
+| Tool Registry Design | `02_KNOWLEDGE/concepts/Tool Registry Design.md` | Tool registry architecture, adapter pattern, adding new tools |
+| Tool Registry (CSV) | `05_SYSTEMS/runtime/tool_registry.csv` | Machine-readable catalog of all 11 approved tools |
+| MCP Adapter | `05_SYSTEMS/runtime/mcp_adapter.py` | External integration via Model Context Protocol |
+| Host Options Evaluation | `02_KNOWLEDGE/references/Host Options Evaluation.md` | Hybrid recommendation: Claude sessions + Python daemon |
+| Self-Observation Spec | `02_KNOWLEDGE/concepts/Self-Observation Specification.md` | What agents log about their own performance |
 
 ## Related Documents
 
