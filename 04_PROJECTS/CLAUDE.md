@@ -1,5 +1,7 @@
 # 04_PROJECTS
 
+**Foundations Alignment**: Projects implement D3 (Controlled Evolution) from [[Agent Maestro — Foundations]], enabling bounded initiatives with defined scope, clear ownership, and measurable outcomes.
+
 ## Purpose
 
 The PROJECTS layer provides project tracking and lifecycle management. Projects move through defined lifecycle stages (incubating → active → completed) and are recorded with status updates, deliverables, and relationships to other system components.
@@ -84,4 +86,4 @@ Projects use pipelines from 03_PIPELINES to execute work. Project status updates
 
 Projects (Strategy) → Pipelines (Workflow) → Execution (Operations)
 
-See CLAUDE]] in 06_EXECUTION/ for how project work is recorded and tracked operationally.
+See the CLAUDE.md file in 06_EXECUTION/ for how project work is recorded and tracked operationally.

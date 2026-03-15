@@ -1,5 +1,7 @@
 # 05_SYSTEMS/memory_architecture
 
+**Foundations Alignment**: Memory architecture implements the Structure seed by defining how agents access and maintain the knowledge systems that enable informed, controlled decision-making.
+
 ## Purpose
 
 The Memory Architecture subdirectory defines and implements the three-layer memory model that enables agents to access, maintain, and reason about knowledge. The architecture describes how agents know things (through graphs, structured data, and vector embeddings) and provides governance for how memory is accessed and evolved.
@@ -153,4 +155,4 @@ What agents know (from memory architecture) determines what they can do (in exec
 
 Memory consistency directly affects agent behavior. Inconsistent or corrupted memory can cause agents to violate constraints.
 
-See CLAUDE]] in 06_EXECUTION/ to understand how agents query and use memory during execution.
+See the CLAUDE.md file in 06_EXECUTION/ to understand how agents query and use memory during execution.

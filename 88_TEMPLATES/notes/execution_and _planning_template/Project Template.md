@@ -65,3 +65,16 @@ How success will be judged.
 
 ## Risks
 Known uncertainties, blockers, or failure conditions that may affect the project.
+
+# Standard Subfolders
+
+Projects that follow the Build Session Protocol should organize artifacts into these subfolders:
+
+| Subfolder | Purpose | Lifecycle Stage |
+|-----------|---------|----------------|
+| `brainstorms/` | Exploratory notes, hypotheses, raw ideas | Stage 0 (Brainstorm) |
+| `briefs/` | Structured briefs and roadmaps | Stage 2 (Brief) |
+| `proposals/` | Build contracts and proposals | Stage 3 (Proposal) |
+| `audits/` | Adversarial audits and alignment reviews | Stage 4 (Audit) |
+| `contracts/` | Approved build contracts | Stage 3 → 5 (Approval) |
+| `summaries/` | Output summaries and session logs | Stage 6 (Summary) |

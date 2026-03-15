@@ -1,5 +1,7 @@
 # 03_PIPELINES
 
+**Foundations Alignment**: Pipelines implement the Process seed (Irreducible Loop) from [[Agent Maestro — Foundations]], defining structured workflows that are repeatable and verifiable.
+
 ## Purpose
 
 The PIPELINES layer defines operational workflows and pipeline contracts that guide agent execution. A pipeline is a series of stages with clear entry conditions, processing rules, exit conditions, and success criteria. Pipelines implement the Workflow Layer of the Four-Layer Model.

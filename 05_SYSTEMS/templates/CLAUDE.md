@@ -1,5 +1,7 @@
 # Templates System — Governance
 
+**Foundations Alignment**: The template system implements the Structure seed by defining canonical structural contracts for every note type, ensuring consistency and verifiability across the knowledge graph.
+
 ## Purpose
 This directory contains the canonical template system for the Agent Maestro vault. Templates define structural contracts — not suggestions — for every note type in the vault.
 

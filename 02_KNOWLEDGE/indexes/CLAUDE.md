@@ -1,5 +1,7 @@
 # 02_KNOWLEDGE/indexes
 
+**Foundations Alignment**: Indexes implement the Structure seed by making the knowledge graph discoverable and navigable, supporting Law 2 (verifiable actions require accessible information).
+
 ## Purpose
 
 The indexes subdirectory provides navigational aids and cross-references for the knowledge base. Indexes help agents and humans find relevant information by category, enabling discovery of related concepts, registries of canonical documents, and searchable catalogs of system components.

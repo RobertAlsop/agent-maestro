@@ -7,8 +7,9 @@ tags:
   - session
   - governance
 relationships:
-  part_of: "Development Pipeline]]"
-  implements: "[[Agent Maestro — Principles]]"
+  part_of: []
+  implements:
+    - "[[Agent Maestro — Foundations]]"
   governs:
     - "[[Agent Maestro — Evolution Roadmap v0.2]]"
   uses:
@@ -54,9 +55,27 @@ Every time a human and Claude work together on Agent Maestro, the interaction fo
 
 # Stages
 
+## Stage 0 — Brainstorm (v0.5+)
+Before formal session input, the human and/or Claude may engage in open-ended exploration of the problem space. Brainstorming generates raw material — observations, hypotheses, design sketches, analogies, "what if" questions — that inform the subsequent stages. Brainstorm artifacts are stored in `04_PROJECTS/active/agent_maestro_development/brainstorms/`.
+
+Entry condition: A problem, opportunity, or direction exists but is not yet well-defined.
+Exit condition: Brainstorm artifacts captured. Enough clarity to formulate session input (Stage 1).
+
+### Brainstorm Guidelines
+
+1. **Diverge before converging**: Generate many ideas before evaluating any.
+2. **Capture everything**: Even fragments and half-formed thoughts have value. Write them down.
+3. **Name artifacts clearly**: Use `AM — Wave [N] — [Topic] Brainstorm.md` naming convention.
+4. **Link to session**: Reference the brainstorm from the session log's Input Summary.
+5. **No governance required**: Brainstorms are exploratory. They do not require approval, audit, or frontmatter compliance. They become governed when promoted to proposals.
+
+### Relationship to Other Stages
+
+Brainstorm → Input → Brief → Proposal. The brainstorm feeds Stage 1 but does not replace it. Stage 1 still requires structured input; the brainstorm provides the raw material from which structured input is distilled.
+
 ## Stage 1 — Input
 The human provides context, requirements, and direction.
-Entry condition: Human initiates session with intent.
+Entry condition: Human initiates session with intent (optionally informed by Stage 0 brainstorm).
 Exit condition: Claude has enough context to produce a brief.
 
 ## Stage 2 — Brief / Roadmap

@@ -1,21 +1,18 @@
 ---
-id: PROJ.improvement_proposal_v0.1
 type: project
 note_class: execution
 domain: governance
 layer: execution
-scope:
 canonical: false
 authority_weight: 70
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro v0.1 — Improvement Proposal"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,15 +23,10 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related:
   - "[[Agent Maestro — North Star]]"
   - "[[Agent Maestro — Principles]]"
   - "01_CAPTURE/inbox/Authority Pack Compiler]]"
   - "[[Memory Model]]"
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

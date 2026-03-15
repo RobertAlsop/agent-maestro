@@ -1,5 +1,7 @@
 # Runtime Engine — Governance
 
+**Foundations Alignment**: The runtime engine implements the Authority seed and Law 3 (control over all agent actions), providing the governance mediation layer that enforces authority constraints at execution time.
+
 ## Purpose
 This directory contains the Agent Maestro runtime engine — the Python system that allows governed agents to execute operations.
 

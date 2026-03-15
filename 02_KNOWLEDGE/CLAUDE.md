@@ -1,5 +1,7 @@
 # 02_KNOWLEDGE
 
+**Foundations Alignment**: This layer implements the Structure seed (7 Primitives) from [[Agent Maestro — Foundations]], creating the semantic graph through which all agents understand the system.
+
 ## Purpose
 
 The KNOWLEDGE layer is the authoritative knowledge base for Agent Maestro. It contains the concepts, patterns, governance principles, system maps, and reference materials that define how the system is designed and operated. Knowledge notes form a semantic graph via wiki-links and typed relationships, enabling agents and humans to understand both individual concepts and how they fit into larger architectural patterns.
@@ -130,4 +132,4 @@ Location: `02_KNOWLEDGE/references/`
 
 KNOWLEDGE serves as the blueprint for the Authority Layer (05_SYSTEMS/authority_architecture). Authority packs are compiled from patterns and governance documents in KNOWLEDGE. Changes to KNOWLEDGE may require recompilation of authority packs in 05_SYSTEMS.
 
-See CLAUDE]] in 05_SYSTEMS/authority_architecture/ for details on how knowledge is transformed into compiled governance artifacts.
+See the CLAUDE.md file in 05_SYSTEMS/authority_architecture/ for details on how knowledge is transformed into compiled governance artifacts.

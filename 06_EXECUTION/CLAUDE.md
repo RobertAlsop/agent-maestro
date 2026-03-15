@@ -1,5 +1,7 @@
 # 06_EXECUTION
 
+**Foundations Alignment**: This layer implements Law 2 (verifiable, reversible, accountable actions) from [[Agent Maestro — Foundations]], providing complete observability and audit trails for all operational work.
+
 ## Purpose
 
 The EXECUTION layer is where operational intelligence systems do their work. It contains dashboards, logs, reports, task tracking, weekly planning artifacts, and workflow execution records. This is the layer where agents record what they did, what happened, and what the outcomes were.
