@@ -1,6 +1,6 @@
 ---
 schema_version: 2
-title: "Agent Maestro v0.5 — Treatise on Core Principles"
+title: "AM — Wave 5 — Treatise on Core Principles"
 type: treatise
 note_class: planning
 domain: agent_maestro
@@ -25,7 +25,7 @@ relationships:
   uses:
     - "[[Agent Maestro — Principles]]"
     - "[[Agent Maestro — North Star]]"
-    - "[[Agent Maestro v0.5 — Foundational Brainstorm]]"
+    - "[[AM — Wave 5 — Foundational Brainstorm]]"
   produces:
     - "[[Agent Maestro — Foundations]]"
   supersedes: []

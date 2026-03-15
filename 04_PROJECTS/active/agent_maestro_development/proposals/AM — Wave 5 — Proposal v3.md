@@ -32,7 +32,7 @@ relationships:
   produces:
     - "[[v0.5.0 Release]]"
   supersedes:
-    - "[[Agent Maestro v0.5 — Wave 5 Proposal]]"
+    - "[[AM — Wave 5 — Proposal v1]]"
   superseded_by: []
 tags:
   - proposal

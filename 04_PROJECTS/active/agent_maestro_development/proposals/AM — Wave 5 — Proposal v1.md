@@ -1,6 +1,6 @@
 ---
 schema_version: 2
-title: "Agent Maestro v0.5 — Wave 5 Consolidation Proposal"
+title: "AM — Wave 5 — Proposal v1"
 type: proposal
 note_class: planning
 domain: agent_maestro

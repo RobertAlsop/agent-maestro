@@ -9,3 +9,5 @@ SES-007,2026-03-15,7,execution,sonnet,phase-b,escalation_processor + review queu
 SES-008,2026-03-15,8,governance,sonnet,governance,CLAUDE.md protocol block + project folder reorg + session logs backfill + git setup,partial-session,completed,Session Log — SES-008 — 2026-03-15.md
 SES-009,2026-03-15,9,execution,sonnet,phase-c,Process 16 captures: 12 promoted + 4 archived. New concepts/patterns/pipelines/projects. Full audit trail. v0.3.2.,full-session,completed,Session Log — SES-009 — 2026-03-15.md
 SES-010,2026-03-15,10,execution,opus,phase-d,Execution architecture + tool registry + MCP integration prototype + host options evaluation + self-observation spec. v0.4.0.,full-session,completed,Session Log — SES-010 — 2026-03-15.md
+SES-011,2026-03-15,11,design+governance,opus,wave-5-prep,Foundations.md + Proposal v3 + Contract + Audit + Brainstorms + Treatise + Templates migration + Consolidation Pipeline,full-session,completed,N/A (prep commit only)
+SES-012,2026-03-15,12,execution,opus,wave-5-phase-1,Baseline inventory + D6 integration + 3 shell scripts + audit rubric + naming migration. Phase 1 complete.,full-session,completed,Session Log — SES-012 — 2026-03-15.md

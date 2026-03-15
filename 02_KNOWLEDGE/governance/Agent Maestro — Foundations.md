@@ -10,7 +10,7 @@ resolution_basis: canonical
 canonical: true
 status: active
 review_status: draft
-version: 1
+version: 2
 created_date: 2026-03-15
 last_modified: 2026-03-15
 owner: AgentMaestro
@@ -48,7 +48,7 @@ hash: ""
 
 Agent Maestro is the discipline of designing, governing, and evolving operational intelligence systems. This document defines its irreducible kernel — the foundational elements from which all other governance, architecture, and operational decisions are derived.
 
-For extended rationale and framework reconciliation, see [[Agent Maestro v0.5 — Treatise on Core Principles]].
+For extended rationale and framework reconciliation, see [[AM — Wave 5 — Treatise on Core Principles]].
 
 ---
 
@@ -122,7 +122,7 @@ Only what is necessary. Every component must earn its place. If it can be remove
 
 ## Derived Principles
 
-Five principles operationalize the kernel for Agent Maestro. Each is explicitly traced to the foundational element it derives from.
+Six principles operationalize the kernel for Agent Maestro. Each is explicitly traced to the foundational element it derives from.
 
 **D1. Deterministic Control Surfaces**
 *Derives from: Seed 2 (Control) + Law 2 (verifiable)*
@@ -144,6 +144,10 @@ Humans hold final authority at the top of every authority chain. No autonomous a
 *Derives from: Seed 3 (Constraint) + Seed 1 (validation gate)*
 No capability is deployed without governance in place first. Govern, then operate, then scale. Never the reverse.
 
+**D6. Separation of Powers**
+*Derives from: Seed 3 (Constraint) + Law 1 (Direction of Authority)*
+Different functions within the authority hierarchy must be held by different actors. The entity that proposes a change must not be the entity that approves it. The entity that executes must not be the entity that audits. This prevents self-referential governance loops and ensures that accountability (Law 1) has somewhere to ascend to.
+
 ---
 
 ## The Hierarchy
@@ -151,7 +155,7 @@ No capability is deployed without governance in place first. Govern, then operat
 ```
 Kernel (7 elements)          → What is always true
   ↓
-Derived Principles (5)       → How the kernel applies to Agent Maestro
+Derived Principles (6)       → How the kernel applies to Agent Maestro
   ↓
 Operational Patterns (many)  → Templates, authority packs, pipelines, audits
 ```

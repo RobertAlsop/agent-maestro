@@ -1,6 +1,6 @@
 ---
 schema_version: 2
-title: "Agent Maestro v0.5 — Foundational Brainstorm"
+title: "AM — Wave 5 — Foundational Brainstorm"
 type: brainstorm
 note_class: planning
 domain: agent_maestro
