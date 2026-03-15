@@ -14,7 +14,6 @@ created_date: 2026-03-15
 last_modified: 2026-03-15
 owner: AgentMaestro
 source_type: ai_authored
-id: PIPE.consolidation
 relationships:
   defines:
     - "[[Consolidation Process]]"

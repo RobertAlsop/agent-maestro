@@ -1,24 +1,21 @@
 ---
-id: REG.system_registry
 type: system_registry
 note_class: registry
 domain: agent_maestro
 layer: registry
-scope: vault_wide
 
 canonical: true
 authority_weight: 95
 resolution_basis: canonical
 schema_version: 2
+title: "System Registry"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,13 +29,8 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Agent Maestro — Constellation Architecture Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

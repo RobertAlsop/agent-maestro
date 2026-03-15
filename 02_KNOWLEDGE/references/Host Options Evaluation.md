@@ -5,7 +5,6 @@ type: reference
 note_class: evaluation
 domain: agent_maestro
 layer: knowledge
-scope: runtime
 canonical: true
 authority_weight: 70
 resolution_basis: authority_weight

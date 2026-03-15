@@ -1,21 +1,18 @@
 ---
-id: CON.executive_agent
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Executive Agent"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-12
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-12
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -32,13 +29,8 @@ relationships:
     - "[[Decision Authority]]"
     - "[[Authority Pack]]"
   produces: []
-map: "[[Agent Maestro — Agent Taxonomy Map]]"
-maps:
   - "[[Agent Maestro — Concepts Map]]"
   - "[[Agent Maestro — Constellation Architecture Map]]"
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

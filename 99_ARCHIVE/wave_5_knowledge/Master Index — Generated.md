@@ -1,21 +1,18 @@
 ---
-id: INDEX.master.generated
 type: index
 note_class: navigation
 domain: agent_maestro
 layer: maps
-scope: vault_root
 canonical: false
 authority_weight: 50
 resolution_basis: canonical
 schema_version: 2
+title: "Master Index — Generated"
 status: active
 review_status: approved
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,8 +23,6 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-related: []
-related_maps: []
 source_type: generated
 supersedes: []
 superseded_by: []
@@ -37,8 +32,6 @@ tags:
 - master_index
 - vault_root
 hash: ''
-maps: []
-related_pipes: []
 ---
 
 # INDEX.master.generated

@@ -1,10 +1,10 @@
 ---
-id: PAT.deterministic_authority_resolution
 type: pattern
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Deterministic Authority Resolution Pattern"
 status: active
 review_status: reviewed
 version: 1

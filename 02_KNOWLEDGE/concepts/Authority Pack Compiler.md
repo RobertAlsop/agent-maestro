@@ -1,10 +1,10 @@
 ---
-id: CON.authority_pack_compiler
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Authority Pack Compiler"
 status: active
 review_status: reviewed
 version: 1

@@ -26,7 +26,6 @@ review_status: approved
 version: 1
 canonical: true
 source_type: ai_authored
-id: MAP.memory_layer_registry
 type: map
 note_class: architecture
 layer: knowledge

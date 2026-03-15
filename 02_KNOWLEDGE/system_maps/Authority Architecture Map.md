@@ -1,24 +1,21 @@
 ---
-id: MAP.authority.architecture
 type: system_map
 note_class: architecture
 domain: system_architecture
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Authority Architecture Map"
 
 status: active
 review_status: draft
 version: 2
 
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Pack Compiler — Map]]"
   - "[[Agent Maestro — Pack Inheritance Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

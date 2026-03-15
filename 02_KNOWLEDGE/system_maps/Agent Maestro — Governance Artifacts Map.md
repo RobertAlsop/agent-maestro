@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.governance_artifacts
 type: system_map
 note_class: architecture
 domain: ai_governance
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Governance Artifacts Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,15 +29,10 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Authority Architecture Map]]"
   - "[[Authority Pack Compiler — Map]]"
   - "[[Agent Maestro — Governance Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

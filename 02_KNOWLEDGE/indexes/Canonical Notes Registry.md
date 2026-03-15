@@ -1,21 +1,18 @@
 ---
-id: IDX.canonical_notes_registry
 type: registry
 note_class: registry
 domain: governance
 layer: registry
-scope:
 canonical: true
 authority_weight: 95
 resolution_basis: canonical
 schema_version: 2
+title: "Canonical Notes Registry"
 status: active
 review_status: approved
 version: 2
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,11 +23,6 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

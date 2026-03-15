@@ -1,10 +1,10 @@
 ---
-id: CON.agent_architecture_synthesis
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Agent Architecture Synthesis"
 status: active
 review_status: reviewed
 version: 1

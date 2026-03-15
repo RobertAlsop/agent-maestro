@@ -1,21 +1,18 @@
 ---
-id: MAP.project.governance
 type: map
 note_class: navigation
 domain: agent_maestro
 layer: maps
-scope: project
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Project Governance Map"
 status: active
 review_status: approved
 version: 1
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,14 +23,9 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Governance Map]]"
   - "[[Authority Architecture Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

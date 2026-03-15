@@ -1,21 +1,18 @@
 ---
-id: MAP.agent_maestro.concepts
 type: system_map
 note_class: architecture
 domain: agent_architecture
 layer: maps
-scope:
 canonical: true
 authority_weight: 85
 resolution_basis: canonical
 schema_version: 2
+title: "Agent Maestro — Concepts Map"
 status: active
 review_status: approved
 version: 2
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,16 +23,11 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Systems Map]]"
   - "[[Agent Maestro — Domain Map]]"
   - "[[Agent Maestro — Agent Taxonomy Map]]"
   - "[[Agent Maestro — Governance Artifacts Map]]"
   - "[[Agent Maestro — Pack Inheritance Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

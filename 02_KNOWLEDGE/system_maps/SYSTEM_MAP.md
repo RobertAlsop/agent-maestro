@@ -23,7 +23,6 @@ review_status: approved
 version: 1
 canonical: true
 source_type: ai_authored
-id: MAP.system_map
 type: map
 note_class: navigation
 layer: knowledge

@@ -1,24 +1,21 @@
 ---
-id: MAP.agent_maestro.navigation
 type: map
 note_class: navigation
 domain: agent_maestro
 layer: maps
-scope: vault_root
 
 canonical: true
 authority_weight: 95
 resolution_basis: canonical
 schema_version: 2
+title: "Agent Maestro — Navigation Map"
 
 status: active
 review_status: approved
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,16 +29,11 @@ relationships:
   uses: []
   produces: []
 
-map:
-maps: []
 
-related: []
-related_maps:
   - "[[Agent Maestro — Systems Map]]"
   - "[[Agent Maestro — Concepts Map]]"
   - "[[Agent Maestro — Governance Map]]"
   - "[[Agent Maestro — Domain Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

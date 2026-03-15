@@ -1,24 +1,21 @@
 ---
-id: PAT.model_workspace_protocol_pattern
 type: concept
 note_class: knowledge
 domain: system_architecture
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Model Workspace Protocol Pattern"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -33,16 +30,11 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Layer Model Map]]"
-maps:
   - "[[Agent Maestro — Concepts Map]]"
 
-related:
   - "[[Constellation Architecture Pattern]]"
   - "[[Agent Maestro Layer Model]]"
 
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

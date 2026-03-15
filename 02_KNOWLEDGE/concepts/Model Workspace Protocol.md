@@ -1,21 +1,18 @@
 ---
-id: CON.model_workspace_protocol
 type: concept
 note_class: knowledge
 domain: system_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Model Workspace Protocol"
 status: active
 review_status: draft
 version: 1
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -33,14 +30,9 @@ relationships:
     - "[[Executive Agent]]"
     - "[[Supervisor Agent]]"
   produces: []
-map: "[[Agent Maestro — Layer Model Map]]"
-maps:
   - "[[Agent Maestro — Systems Map]]"
-related:
   - "[[Agent Maestro Layer Model]]"
   - "[[Model Workspace Protocol Pattern]]"
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

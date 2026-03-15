@@ -1,24 +1,21 @@
 ---
-id: MAP.layer_model_map
 type: map
 note_class: navigation
 domain: system_architecture
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 50
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Layer Model Map"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -33,14 +30,9 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
 
-related: []
-related_maps:
   - "[[Agent Maestro — Stack Map]]"
   - "[[Agent Maestro — Systems Map]]"
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

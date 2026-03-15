@@ -1,24 +1,21 @@
 ---
-id: REF.tool_action_class
 type: reference
 note_class: reference
 domain: ai_governance
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 90
 resolution_basis: authority_weight
 schema_version: 2
+title: "Tool and Action Class Reference"
 
 status: draft
 review_status: draft
 version: 1
 
-created: 2026-03-12
-updated: 2026-03-12
-last_reviewed: null
-review_cycle: annual
+created_date: 2026-03-12
+last_modified: 2026-03-12
 
 owner: AgentMaestro
 
@@ -32,12 +29,7 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Governance Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: imported
 supersedes: []

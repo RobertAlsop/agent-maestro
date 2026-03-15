@@ -5,7 +5,6 @@ type: concept
 note_class: architecture
 domain: agent_maestro
 layer: knowledge
-scope: runtime
 canonical: true
 authority_weight: 75
 resolution_basis: authority_weight

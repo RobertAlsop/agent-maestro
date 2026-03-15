@@ -1,24 +1,21 @@
 ---
-id: PAT.three_layer_memory_model
 type: pattern
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope: null
 
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Three-Layer Memory Model"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -36,12 +33,7 @@ relationships:
     - "[[Structured Data Layer]]"
   produces: []
 
-map: "[[Memory Architecture Map]]"
-maps: []
 
-related: []
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

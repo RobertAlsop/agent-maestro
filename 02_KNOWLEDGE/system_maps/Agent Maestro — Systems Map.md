@@ -1,21 +1,18 @@
 ---
-id: MAP.agent_maestro.systems
 type: system_map
 note_class: architecture
 domain: system_architecture
 layer: maps
-scope:
 canonical: true
 authority_weight: 85
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Maestro — Systems Map"
 status: active
 review_status: draft
 version: 2
-created: 2026-03-10
-updated: 2026-03-12
-last_reviewed:
-review_cycle: annual
+created_date: 2026-03-10
+last_modified: 2026-03-12
 owner: AgentMaestro
 relationships:
   defines: []
@@ -26,13 +23,8 @@ relationships:
   applies_to: []
   uses: []
   produces: []
-map: "[[Agent Maestro — Navigation Map]]"
-maps: []
-related: []
-related_maps:
   - "[[Agent Maestro — Constellation Architecture Map]]"
   - "[[Agent Maestro — Stack Map]]"
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by: []

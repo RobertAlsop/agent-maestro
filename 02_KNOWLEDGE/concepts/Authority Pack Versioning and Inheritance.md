@@ -1,10 +1,10 @@
 ---
-id: CON.authority_pack_versioning_inheritance
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Authority Pack Versioning and Inheritance"
 status: active
 review_status: reviewed
 version: 1
@@ -149,7 +149,6 @@ If a pack cannot answer those three questions, it is probably badly designed.
 Each pack must track:
 
 ```yaml
-id: PACK.specialist.outreach_email_agent
 version: 2.1
 inherits_from: PACK.specialist.email_agent@1.4
 domain: marketing

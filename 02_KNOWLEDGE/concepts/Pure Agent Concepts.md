@@ -1,10 +1,10 @@
 ---
-id: CON.pure_agent_concepts
 type: concept
 note_class: knowledge
 domain: agent_maestro
 layer: knowledge
 schema_version: 2
+title: "Pure Agent Concepts"
 status: active
 review_status: reviewed
 version: 1

@@ -1,24 +1,21 @@
 ---
-id: MAP.executive_layer
 type: system_map
 note_class: architecture
 domain: agent_systems
 layer: maps
-scope: null
 
 canonical: true
 authority_weight: 85
 resolution_basis: canonical
 schema_version: 2
+title: "Agent Maestro — Executive Layer Map"
 
 status: active
 review_status: draft
 version: 1
 
-created: 2026-03-14
-updated: 2026-03-14
-last_reviewed: null
-review_cycle: quarterly
+created_date: 2026-03-14
+last_modified: 2026-03-14
 
 owner: AgentMaestro
 
@@ -34,14 +31,9 @@ relationships:
   uses: []
   produces: []
 
-map: "[[Agent Maestro — Systems Map]]"
-maps: []
 
-related:
   - "[[Agent Maestro — Agent Taxonomy Map]]"
   - "[[Agent Maestro — Constellation Architecture Map]]"
-related_maps: []
-related_pipes: []
 
 source_type: ai_authored
 supersedes: []

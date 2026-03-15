@@ -1,21 +1,18 @@
 ---
-id: CON.agent_systems
 type: concept
 note_class: knowledge
 domain: agent_architecture
 layer: knowledge
-scope:
 canonical: false
 authority_weight: 60
 resolution_basis: authority_weight
 schema_version: 2
+title: "Agent Systems"
 status: active
 review_status: approved
 version: 2
-created: 2026-03-10
-updated: 2026-03-14
-last_reviewed:
-review_cycle: none
+created_date: 2026-03-10
+last_modified: 2026-03-14
 owner: AgentMaestro
 relationships:
   defines: []
@@ -32,11 +29,6 @@ relationships:
   produces:
     - "[[Operational Outcome]]"
     - "[[Operational Intelligence]]"
-map: "[[Agent Maestro — Concepts Map]]"
-maps: []
-related: []
-related_maps: []
-related_pipes: []
 source_type: ai_authored
 supersedes: []
 superseded_by:
