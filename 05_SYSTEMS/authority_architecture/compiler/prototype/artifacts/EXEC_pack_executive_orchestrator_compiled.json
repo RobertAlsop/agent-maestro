@@ -1,0 +1,135 @@
+{
+  "artifact_id": "compiled.EXEC.pack.executive_orchestrator.v1.0",
+  "compiled_from": {
+    "pack_id": "EXEC.pack.executive_orchestrator",
+    "pack_name": "Executive Orchestrator Authority Pack",
+    "pack_version": "1.0",
+    "parent_pack_id": null,
+    "constellation": "system",
+    "agent_role": "executive"
+  },
+  "compiled_at": "2026-03-14T11:42:24.846327+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "EXEC.pack.executive_orchestrator"
+    ],
+    "overrides_applied": [],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "decision",
+    "scope": {
+      "domain": "system_coordination",
+      "boundaries": [
+        "Cross-constellation task routing and priority assignment",
+        "System health monitoring and failure detection",
+        "Escalation routing"
+      ]
+    },
+    "governed_entities": [
+      "All constellation executives",
+      "Cross-domain task queue",
+      "System health metrics"
+    ],
+    "governed_actions": [
+      {
+        "action": "Assign priorities across constellations",
+        "permission": "allowed",
+        "conditions": "Based on system health and pending task analysis"
+      },
+      {
+        "action": "Route cross-domain tasks",
+        "permission": "allowed",
+        "conditions": "Task must have clear domain assignment"
+      },
+      {
+        "action": "Monitor system health",
+        "permission": "allowed"
+      },
+      {
+        "action": "Trigger escalation to human",
+        "permission": "allowed",
+        "conditions": "When automated resolution is insufficient"
+      },
+      {
+        "action": "Create new constellations",
+        "permission": "requires_escalation",
+        "conditions": "Constellation creation requires human approval"
+      },
+      {
+        "action": "Modify authority architecture",
+        "permission": "denied",
+        "conditions": "Architecture changes are Governance Executive domain"
+      },
+      {
+        "action": "Execute specialist operations",
+        "permission": "denied",
+        "conditions": "Executives coordinate, not execute"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "EO-001",
+        "description": "All priority decisions must be evidence-based",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "EO-002",
+        "description": "Cross-domain conflicts escalate to human within 1 cycle",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "EO-003",
+        "description": "System health must be assessed before task routing",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "EO-GATE-001",
+        "condition": "System health check must pass before routing new tasks",
+        "on_fail": "escalate"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "System health report",
+        "required": true,
+        "format": "JSON or CSV at 06_EXECUTION/reports/"
+      },
+      {
+        "evidence_type": "Execution log",
+        "required": true,
+        "format": "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "human_operator",
+      "escalation_conditions": [
+        "Cross-domain conflict unresolvable",
+        "System health critical",
+        "New constellation creation requested"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "block",
+      "on_execution_failure": "escalate"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/EXEC_pack_executive_orchestrator_compiled.json",
+    "bound_at": "2026-03-14T11:42:24.846399+00:00"
+  }
+}

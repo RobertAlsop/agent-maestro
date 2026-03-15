@@ -1,0 +1,33 @@
+# Agent Maestro .gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Node (for docx-js and other tools)
+node_modules/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.*
+credentials.json

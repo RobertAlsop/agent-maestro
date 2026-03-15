@@ -1,0 +1,63 @@
+pack_id: CONST.vault_curator.specialist.orphan_detector
+pack_name: Vault Curator — Specialist (Orphan Detector)
+version: "1.0"
+owner: AgentMaestro
+authority_type: execution
+inherits_from: CONST.vault_curator.supervisor
+constellation: vault_curator
+agent_role: specialist
+
+scope:
+  domain: vault_governance
+  boundaries:
+    - "Detecting orphaned notes with no inbound wiki-links"
+
+governed_entities:
+  - "Inbound link counts for markdown files"
+  - "Knowledge graph index CSV"
+
+governed_actions:
+  - action: "Scan vault for inbound links per note"
+    permission: allowed
+  - action: "Generate orphan report"
+    permission: allowed
+    conditions: "Output to artifacts directory"
+  - action: "Update knowledge graph index"
+    permission: allowed
+    conditions: "By running knowledge_graph_export.py"
+  - action: "Modify vault files"
+    permission: denied
+    conditions: "Orphan Detector is read-only; action on orphans is Supervisor responsibility"
+
+rules:
+  - rule_id: "VC-OD-001"
+    description: "Must check all .md files except CLAUDE.md and files in 01_CAPTURE"
+    enforcement: mandatory
+  - rule_id: "VC-OD-002"
+    description: "Orphan = note with zero inbound wiki-links from other notes"
+    enforcement: mandatory
+  - rule_id: "VC-OD-003"
+    description: "Must not modify any vault files"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VC-GATE-OD01"
+    condition: "Vault root path must be valid and accessible"
+    on_fail: block
+
+evidence_requirements:
+  - evidence_type: "Orphan report"
+    required: true
+    format: "CSV listing orphaned files with their location and note_class"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV entry in task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.vault_curator.supervisor
+  escalation_conditions:
+    - "Vault path inaccessible"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

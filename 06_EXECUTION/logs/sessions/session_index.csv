@@ -1,0 +1,9 @@
+session_id,date,session_number,mode,model,wave,upgrades_addressed,duration_approx,status,log_file
+SES-001,2026-03-13,1,execution,opus,pre-roadmap,v0.1 full vault build,full-session,completed,Agent Maestro v0.1 — Session Log 2026-03-14.md
+SES-002,2026-03-14,2,design+execution,opus,wave-1,roadmap + template integration + session mgmt + build protocol + registry + vault rules,full-session,completed,Session Log — SES-002 — 2026-03-14.md
+SES-003,2026-03-14,3,execution,opus,wave-2+3,vault maintenance packs + state change logging + orchestrator CLI,continuation,completed,Session Log — SES-003 — 2026-03-14.md
+SES-004,2026-03-15,4,execution,sonnet,phase-a,SYSTEM_MAP + CLAUDE.md upgrade + agent registry + memory layer + vault_curator deprecation + vault_maintenance executive,continuation,completed,Session Log — SES-004 — 2026-03-15.md
+SES-005,2026-03-15,5,execution,sonnet,phase-b,tool_interface + workflow_engine + 3x YAML workflow definitions,full-session,completed,Session Log — SES-005 — 2026-03-15.md
+SES-006,2026-03-15,6,execution,sonnet,phase-b,--execute flag + evidence bootstrapper + E2E integration + state change logger in tools + compiled artifact schema,full-session,completed,Session Log — SES-006 — 2026-03-15.md
+SES-007,2026-03-15,7,execution,sonnet,phase-b,escalation_processor + review queue + approve/reject/dashboard CLI commands,full-session,completed,Session Log — SES-007 — 2026-03-15.md
+SES-008,2026-03-15,8,governance,sonnet,governance,CLAUDE.md protocol block + project folder reorg + session logs backfill + git setup,partial-session,completed,Session Log — SES-008 — 2026-03-15.md

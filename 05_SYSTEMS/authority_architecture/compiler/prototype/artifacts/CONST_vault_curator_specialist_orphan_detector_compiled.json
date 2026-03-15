@@ -1,0 +1,130 @@
+{
+  "artifact_id": "compiled.CONST.vault_curator.specialist.orphan_detector.v1.0",
+  "compiled_from": {
+    "pack_id": "CONST.vault_curator.specialist.orphan_detector",
+    "pack_name": "Vault Curator — Specialist (Orphan Detector)",
+    "pack_version": "1.0",
+    "parent_pack_id": "CONST.vault_curator.supervisor",
+    "constellation": "vault_curator",
+    "agent_role": "specialist"
+  },
+  "compiled_at": "2026-03-14T21:11:11.143215+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor",
+      "CONST.vault_curator.specialist.orphan_detector"
+    ],
+    "overrides_applied": [
+      "CONST.vault_curator.specialist.orphan_detector overrides 'pack_id' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'pack_name' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'authority_type' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'inherits_from' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'agent_role' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'scope' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'governed_entities' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'governed_actions' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'rules' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'control_gates' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'evidence_requirements' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.orphan_detector overrides 'escalation' from CONST.vault_curator.executive"
+    ],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "execution",
+    "scope": {
+      "domain": "vault_governance",
+      "boundaries": [
+        "Detecting orphaned notes with no inbound wiki-links"
+      ]
+    },
+    "governed_entities": [
+      "Inbound link counts for markdown files",
+      "Knowledge graph index CSV"
+    ],
+    "governed_actions": [
+      {
+        "action": "Scan vault for inbound links per note",
+        "permission": "allowed"
+      },
+      {
+        "action": "Generate orphan report",
+        "permission": "allowed",
+        "conditions": "Output to artifacts directory"
+      },
+      {
+        "action": "Update knowledge graph index",
+        "permission": "allowed",
+        "conditions": "By running knowledge_graph_export.py"
+      },
+      {
+        "action": "Modify vault files",
+        "permission": "denied",
+        "conditions": "Orphan Detector is read-only; action on orphans is Supervisor responsibility"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "VC-OD-001",
+        "description": "Must check all .md files except CLAUDE.md and files in 01_CAPTURE",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-OD-002",
+        "description": "Orphan = note with zero inbound wiki-links from other notes",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-OD-003",
+        "description": "Must not modify any vault files",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "VC-GATE-OD01",
+        "condition": "Vault root path must be valid and accessible",
+        "on_fail": "block"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "Orphan report",
+        "required": true,
+        "format": "CSV listing orphaned files with their location and note_class"
+      },
+      {
+        "evidence_type": "Execution log",
+        "required": true,
+        "format": "CSV entry in task_execution_log.csv"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "CONST.vault_curator.supervisor",
+      "escalation_conditions": [
+        "Vault path inaccessible"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "block",
+      "on_execution_failure": "escalate"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/CONST_vault_curator_specialist_orphan_detector_compiled.json",
+    "bound_at": "2026-03-14T21:11:11.143239+00:00"
+  }
+}

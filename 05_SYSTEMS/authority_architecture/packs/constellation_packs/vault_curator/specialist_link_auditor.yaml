@@ -1,0 +1,63 @@
+pack_id: CONST.vault_curator.specialist.link_auditor
+pack_name: Vault Curator — Specialist (Link Auditor)
+version: "1.0"
+owner: AgentMaestro
+authority_type: execution
+inherits_from: CONST.vault_curator.supervisor
+constellation: vault_curator
+agent_role: specialist
+
+scope:
+  domain: vault_governance
+  boundaries:
+    - "Wiki-link validation across all vault markdown files"
+
+governed_entities:
+  - "Wiki-links in markdown files"
+  - "Link audit report CSV"
+
+governed_actions:
+  - action: "Scan vault files for wiki-links"
+    permission: allowed
+  - action: "Check link targets exist"
+    permission: allowed
+  - action: "Write link audit report CSV"
+    permission: allowed
+    conditions: "Output to 06_EXECUTION/reports/link_audit_report.csv"
+  - action: "Modify vault files"
+    permission: denied
+    conditions: "Link Auditor is read-only; fixes are Supervisor responsibility"
+
+rules:
+  - rule_id: "VC-LA-001"
+    description: "Must scan all .md files excluding CLAUDE.md"
+    enforcement: mandatory
+  - rule_id: "VC-LA-002"
+    description: "Must classify links as valid, broken, or ambiguous"
+    enforcement: mandatory
+  - rule_id: "VC-LA-003"
+    description: "Must not modify any vault files"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VC-GATE-LA01"
+    condition: "Vault root path must be valid and accessible"
+    on_fail: block
+
+evidence_requirements:
+  - evidence_type: "Link audit report"
+    required: true
+    format: "CSV with columns: source_file, link_text, target_file, status, audit_date"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV entry in task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.vault_curator.supervisor
+  escalation_conditions:
+    - "Vault path inaccessible"
+    - "Parsing error in markdown file"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Maestro Authority Pack",
+  "description": "Schema for validating authority pack YAML definitions used as compiler input.",
+  "type": "object",
+  "required": [
+    "pack_id",
+    "pack_name",
+    "version",
+    "owner",
+    "authority_type",
+    "scope"
+  ],
+  "properties": {
+    "pack_id": {
+      "type": "string",
+      "description": "Unique identifier for this authority pack",
+      "pattern": "^[A-Z]+\\.[a-z_]+(\\.[a-z_]+)*$"
+    },
+    "pack_name": {
+      "type": "string",
+      "description": "Human-readable name"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version",
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "authority_type": {
+      "type": "string",
+      "enum": ["decision", "execution", "delegation", "governance"]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "domain": { "type": "string" },
+        "boundaries": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["domain"]
+    },
+    "inherits_from": {
+      "type": ["string", "null"],
+      "description": "Parent pack ID, or null if root pack"
+    },
+    "constellation": {
+      "type": "string",
+      "description": "Constellation this pack belongs to"
+    },
+    "agent_role": {
+      "type": "string",
+      "enum": ["executive", "supervisor", "specialist"]
+    },
+    "governed_entities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "governed_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "permission": {
+            "type": "string",
+            "enum": ["allowed", "requires_escalation", "denied"]
+          },
+          "conditions": { "type": "string" }
+        },
+        "required": ["action", "permission"]
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule_id": { "type": "string" },
+          "description": { "type": "string" },
+          "enforcement": {
+            "type": "string",
+            "enum": ["mandatory", "advisory"]
+          }
+        },
+        "required": ["rule_id", "description", "enforcement"]
+      }
+    },
+    "control_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gate_id": { "type": "string" },
+          "condition": { "type": "string" },
+          "on_fail": {
+            "type": "string",
+            "enum": ["block", "escalate", "log_and_continue"]
+          }
+        },
+        "required": ["gate_id", "condition", "on_fail"]
+      }
+    },
+    "evidence_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_type": { "type": "string" },
+          "required": { "type": "boolean" },
+          "format": { "type": "string" }
+        },
+        "required": ["evidence_type", "required"]
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "properties": {
+        "escalates_to": { "type": "string" },
+        "escalation_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "failure_semantics": {
+      "type": "object",
+      "properties": {
+        "on_authority_violation": {
+          "type": "string",
+          "enum": ["block", "escalate", "log"]
+        },
+        "on_execution_failure": {
+          "type": "string",
+          "enum": ["retry", "escalate", "abort"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+pack_id: CONST.vault_maintenance.specialist.ontology_integrity
+pack_name: Vault Maintenance — Specialist (Ontology Integrity Auditor)
+version: "1.0"
+owner: AgentMaestro
+authority_type: execution
+inherits_from: CONST.vault_maintenance.supervisor
+constellation: vault_maintenance
+agent_role: specialist
+
+scope:
+  domain: vault_maintenance
+  boundaries:
+    - "Validating knowledge graph structural health"
+    - "Checking relationship completeness and bidirectionality"
+    - "Detecting broken links, orphaned nodes, and circular dependencies"
+
+governed_entities:
+  - "Wiki-links and relationship declarations in all vault notes"
+  - "Knowledge graph structure and integrity"
+  - "Ontology integrity audit reports"
+
+governed_actions:
+  - action: "Scan all wiki-links for broken targets"
+    permission: allowed
+    conditions: "Read-only traversal of all vault notes"
+  - action: "Verify bidirectional relationship completeness"
+    permission: allowed
+    conditions: "Check that all relationship pairs have corresponding inverse links"
+  - action: "Detect orphaned nodes in knowledge graph"
+    permission: allowed
+    conditions: "Identify notes with no inbound or outbound relationships"
+  - action: "Detect circular dependencies"
+    permission: allowed
+    conditions: "Check for cycles in hierarchical relationship types (part_of, inherits_from)"
+  - action: "Validate relationship type correctness"
+    permission: allowed
+    conditions: "Ensure relationship types match controlled vocabulary"
+  - action: "Generate ontology integrity audit report"
+    permission: allowed
+    conditions: "Output to 06_EXECUTION/reports/ontology_integrity_report.csv"
+  - action: "Modify vault notes or relationships"
+    permission: denied
+    conditions: "Auditors read and report only; repairs are Self-Healing Repairer domain"
+  - action: "Restructure ontology or relationship types"
+    permission: requires_escalation
+    conditions: "Structural changes to ontology require executive approval"
+
+rules:
+  - rule_id: "VM-OI-001"
+    description: "Must validate all relationship types against controlled vocabulary"
+    enforcement: mandatory
+  - rule_id: "VM-OI-002"
+    description: "Must produce evidence of all findings with affected note references"
+    enforcement: mandatory
+  - rule_id: "VM-OI-003"
+    description: "Must not modify any vault artifacts — read-only operation"
+    enforcement: mandatory
+  - rule_id: "VM-OI-004"
+    description: "Findings must include severity and suggested remediation"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VM-OI-GATE-01"
+    condition: "Full vault scan must be possible (all directories accessible)"
+    on_fail: block
+  - gate_id: "VM-OI-GATE-02"
+    condition: "Controlled vocabulary for relationship types must be available"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Ontology integrity audit report"
+    required: true
+    format: "CSV with columns: source_note, issue_type, target, severity, remediation"
+  - evidence_type: "Execution log entry"
+    required: true
+    format: "CSV entry in task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.vault_maintenance.supervisor
+  escalation_conditions:
+    - "Circular dependency detected in governance hierarchy"
+    - "Vault directories inaccessible"
+    - "Unexpected error during audit"
+    - "Systemic relationship pattern issue (>10% notes affected)"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

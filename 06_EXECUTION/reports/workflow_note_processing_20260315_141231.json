@@ -1,0 +1,41 @@
+{
+  "workflow_id": "note_processing",
+  "status": "paused",
+  "started_at": "2026-03-15T11:12:31.583573+00:00",
+  "ended_at": "2026-03-15T11:12:31.587387+00:00",
+  "stages_completed": 0,
+  "stages_skipped": 0,
+  "stages_failed": 0,
+  "stages_escalated": 1,
+  "escalations": [
+    {
+      "stage_id": "capture_scan",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "reason": "Escalation required: Action not defined in authority pack \u2014 escalating",
+      "escalates_to": "unknown",
+      "timestamp": "2026-03-15T11:12:31.587382+00:00",
+      "status": "pending"
+    }
+  ],
+  "stage_results": {
+    "capture_scan": {
+      "stage_id": "capture_scan",
+      "stage_name": "Capture Monitoring and Discovery",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "status": "escalated",
+      "data": null,
+      "error": "Escalation required: Action not defined in authority pack \u2014 escalating",
+      "tool_result": null,
+      "action_result": {
+        "action": "Classify notes",
+        "permission": "requires_escalation",
+        "executed": false,
+        "outcome": "escalation_required",
+        "conditions": "Action not defined in authority pack \u2014 escalating",
+        "error": null,
+        "timestamp": "2026-03-15T11:12:31.583693+00:00"
+      },
+      "timestamp": "2026-03-15T11:12:31.587365+00:00"
+    }
+  }
+}

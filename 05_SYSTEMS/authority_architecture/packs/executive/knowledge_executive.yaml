@@ -1,0 +1,114 @@
+pack_id: EXEC.pack.knowledge_executive
+pack_name: Knowledge Executive Authority Pack
+version: "1.0"
+owner: AgentMaestro
+authority_type: decision
+inherits_from: null
+constellation: knowledge
+agent_role: executive
+
+scope:
+  domain: knowledge_management
+  boundaries:
+    - "Knowledge graph integrity assurance"
+    - "Concept quality validation and enhancement"
+    - "Source validation and knowledge provenance"
+
+governed_entities:
+  - "All knowledge notes in 02_KNOWLEDGE"
+  - "Knowledge graph indexes and relationships"
+  - "System maps and concept hierarchies"
+  - "CSV registries and structured data"
+  - "Knowledge quality metrics"
+
+governed_actions:
+  - action: "Monitor knowledge health"
+    permission: allowed
+    conditions: "Regular health assessments and quality audits"
+  - action: "Approve non-destructive updates"
+    permission: allowed
+    conditions: "Updates that enhance or clarify without removing content"
+  - action: "Trigger knowledge upgrade cycles"
+    permission: allowed
+    conditions: "Scheduled or performance-driven upgrade initiation"
+  - action: "Validate source integrity"
+    permission: allowed
+    conditions: "Cross-reference validation and source traceability checks"
+  - action: "Generate knowledge reports"
+    permission: allowed
+    conditions: "Health, quality, and coverage reports for governance"
+  - action: "Recommend knowledge refactoring"
+    permission: allowed
+    conditions: "Non-destructive suggestions for improved organization"
+  - action: "Modify canonical knowledge"
+    permission: requires_escalation
+    conditions: "Authority weight >= 90 requires human knowledge board approval"
+  - action: "Create new knowledge domains"
+    permission: requires_escalation
+    conditions: "New domains require governance approval"
+  - action: "Delete knowledge notes"
+    permission: denied
+    conditions: "Knowledge preservation principle — deletions prohibited"
+  - action: "Modify governance documents"
+    permission: denied
+    conditions: "Governance document modifications are Governance Executive domain"
+  - action: "Execute specialist work"
+    permission: denied
+    conditions: "Knowledge executives coordinate, not execute"
+
+rules:
+  - rule_id: "KE-001"
+    description: "All knowledge changes must be traceable with creation/modification timestamps"
+    enforcement: mandatory
+  - rule_id: "KE-002"
+    description: "Canonical knowledge (authority_weight >= 90) is read-only without human approval"
+    enforcement: mandatory
+  - rule_id: "KE-003"
+    description: "All knowledge updates must produce evidence in frontmatter metadata"
+    enforcement: mandatory
+  - rule_id: "KE-004"
+    description: "Source validation must be performed before approving significant updates"
+    enforcement: mandatory
+  - rule_id: "KE-005"
+    description: "Knowledge graph consistency must be validated before upgrade completion"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "KE-GATE-001"
+    condition: "Knowledge quality baseline must be established before improvement cycles"
+    on_fail: escalate
+  - gate_id: "KE-GATE-002"
+    condition: "Source validation must pass before approval of substantive updates"
+    on_fail: escalate
+  - gate_id: "KE-GATE-003"
+    condition: "Relationship integrity checks must pass before knowledge graph updates"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Knowledge health report"
+    required: true
+    format: "JSON at 06_EXECUTION/reports/knowledge_health.json"
+  - evidence_type: "Quality audit log"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/knowledge_quality_audit.csv"
+  - evidence_type: "Source validation record"
+    required: true
+    format: "YAML at 05_SYSTEMS/knowledge/source_validation.yaml"
+  - evidence_type: "Update change log"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/knowledge_update_log.csv"
+
+escalation:
+  escalates_to: human_knowledge_steward
+  escalation_conditions:
+    - "Canonical knowledge modification required (authority_weight >= 90)"
+    - "New knowledge domain creation"
+    - "Knowledge graph integrity violation detected"
+    - "Significant source validation failure"
+    - "Quality threshold consistently unmet"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate
+  on_quality_failure: escalate_and_remediate
+  on_graph_integrity_failure: block_and_audit

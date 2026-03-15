@@ -1,0 +1,220 @@
+{
+  "artifact_id": "compiled.CONST.vault_maintenance.supervisor.v1.0",
+  "compiled_from": {
+    "pack_id": "CONST.vault_maintenance.supervisor",
+    "pack_name": "Vault Maintenance — Supervisor (Maintenance Coordinator)",
+    "pack_version": "1.0",
+    "parent_pack_id": "CONST.vault_maintenance.executive",
+    "constellation": "vault_maintenance",
+    "agent_role": "supervisor"
+  },
+  "compiled_at": "2026-03-14T21:20:54.750250+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive",
+      "CONST.vault_maintenance.supervisor"
+    ],
+    "overrides_applied": [
+      "CONST.vault_maintenance.supervisor overrides 'pack_id' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'pack_name' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'authority_type' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'inherits_from' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'constellation' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'agent_role' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'scope' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'governed_entities' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'governed_actions' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'rules' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'control_gates' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'evidence_requirements' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'escalation' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.supervisor overrides 'failure_semantics' from EXEC.pack.knowledge_executive"
+    ],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "delegation",
+    "scope": {
+      "domain": "vault_maintenance",
+      "boundaries": [
+        "Coordinating specialist audit and repair tasks",
+        "Aggregating audit results across all specialists",
+        "Approving non-destructive repairs for notes with authority_weight < 80",
+        "Managing capture inbox triage and note processing"
+      ]
+    },
+    "governed_entities": [
+      "Specialist agent task assignments and scheduling",
+      "Audit result aggregation and cross-validation",
+      "Non-destructive vault repairs (authority_weight < 80)",
+      "Capture inbox items pending triage"
+    ],
+    "governed_actions": [
+      {
+        "action": "Delegate audit tasks to specialists",
+        "permission": "allowed",
+        "conditions": "Task must match specialist capability and be within vault_maintenance scope"
+      },
+      {
+        "action": "Coordinate specialist execution sequence",
+        "permission": "allowed",
+        "conditions": "Must follow defined workflow (audit before repair)"
+      },
+      {
+        "action": "Aggregate and cross-validate specialist reports",
+        "permission": "allowed",
+        "conditions": "Reports from all active specialists in the cycle"
+      },
+      {
+        "action": "Approve repairs for notes with authority_weight < 80",
+        "permission": "allowed",
+        "conditions": "Repair must have confidence >= 80% and valid justification"
+      },
+      {
+        "action": "Trigger specialist re-run on validation failure",
+        "permission": "allowed",
+        "conditions": "Maximum 2 retries before escalation"
+      },
+      {
+        "action": "Write execution reports and audit summaries",
+        "permission": "allowed",
+        "conditions": "Reports logged to 06_EXECUTION/"
+      },
+      {
+        "action": "Triage capture inbox items",
+        "permission": "allowed",
+        "conditions": "Route items to Note Processor specialist"
+      },
+      {
+        "action": "Approve repairs for notes with authority_weight >= 80",
+        "permission": "requires_escalation",
+        "conditions": "High-authority notes require Knowledge Executive approval"
+      },
+      {
+        "action": "Delete vault files",
+        "permission": "requires_escalation",
+        "conditions": "All deletions require Knowledge Executive approval"
+      },
+      {
+        "action": "Modify canonical governance documents",
+        "permission": "requires_escalation",
+        "conditions": "Governance changes require human approval"
+      },
+      {
+        "action": "Modify workflow definitions",
+        "permission": "requires_escalation",
+        "conditions": "Workflow changes require Knowledge Executive approval"
+      },
+      {
+        "action": "Perform specialist-level operations",
+        "permission": "denied",
+        "conditions": "Supervisors orchestrate; specialists execute"
+      },
+      {
+        "action": "Override specialist findings without justification",
+        "permission": "denied",
+        "conditions": "All overrides must be evidence-based and documented"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "VM-S-001",
+        "description": "Audit specialists must complete before repair phase begins",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-S-002",
+        "description": "All repairs must be logged with before/after state",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-S-003",
+        "description": "Must validate all specialist outputs before reporting",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-S-004",
+        "description": "Systemic issues (>10% failure rate) must be escalated immediately",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-S-005",
+        "description": "Self-Healing Repairer confidence < 60% triggers immediate escalation",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "VM-GATE-S01",
+        "condition": "All required specialists must be available before starting workflow",
+        "on_fail": "escalate"
+      },
+      {
+        "gate_id": "VM-GATE-S02",
+        "condition": "Specialist outputs must pass validation before proceeding to repair phase",
+        "on_fail": "escalate"
+      },
+      {
+        "gate_id": "VM-GATE-S03",
+        "condition": "Repair count must not exceed 50 per cycle without human review",
+        "on_fail": "escalate"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "Specialist audit reports",
+        "required": true,
+        "format": "CSV reports from each specialist"
+      },
+      {
+        "evidence_type": "Repair log with before/after states",
+        "required": true,
+        "format": "CSV at 06_EXECUTION/logs/vault_maintenance_repair_log.csv"
+      },
+      {
+        "evidence_type": "Execution log",
+        "required": true,
+        "format": "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+      },
+      {
+        "evidence_type": "Cycle summary report",
+        "required": true,
+        "format": "JSON at 06_EXECUTION/reports/vault_maintenance_cycle_report.json"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "EXEC.pack.knowledge_executive",
+      "escalation_conditions": [
+        "Repair requested for note with authority_weight >= 80",
+        "File deletion requested",
+        "Specialist failure after maximum retries (2)",
+        "Systemic issue affecting > 10% of audited corpus",
+        "Repair confidence < 60%",
+        "Governance conflict detected"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "block",
+      "on_execution_failure": "escalate",
+      "on_quality_failure": "escalate_and_remediate",
+      "on_graph_integrity_failure": "block_and_audit"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/CONST_vault_maintenance_supervisor_compiled.json",
+    "bound_at": "2026-03-14T21:20:54.750278+00:00"
+  }
+}

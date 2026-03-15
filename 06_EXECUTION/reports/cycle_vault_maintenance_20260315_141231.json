@@ -1,0 +1,130 @@
+{
+  "cycle_start": "2026-03-15T11:12:31.509191+00:00",
+  "cycle_end": "2026-03-15T11:12:31.672200+00:00",
+  "duration_seconds": 0.163009,
+  "agents_loaded": 7,
+  "total_actions": 4,
+  "total_allowed": 2,
+  "total_denied": 0,
+  "total_escalated": 2,
+  "total_executed": 2,
+  "agent_summaries": {
+    "compiled.CONST.vault_maintenance.executive.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.executive.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Executive (Maintenance Director)",
+      "total_actions": 0,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 0,
+      "executed": 0,
+      "failed": 0,
+      "actions": []
+    },
+    "compiled.CONST.vault_maintenance.specialist.definition_alignment.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.definition_alignment.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Specialist (Definition Alignment Auditor)",
+      "total_actions": 1,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 1,
+      "executed": 0,
+      "failed": 0,
+      "actions": [
+        {
+          "action": "Scan definition consistency",
+          "permission": "requires_escalation",
+          "executed": false,
+          "outcome": "escalation_required",
+          "conditions": "Action not defined in authority pack \u2014 escalating",
+          "error": null,
+          "timestamp": "2026-03-15T11:12:31.647221+00:00"
+        }
+      ]
+    },
+    "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Specialist (Note Processor)",
+      "total_actions": 1,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 1,
+      "executed": 0,
+      "failed": 0,
+      "actions": [
+        {
+          "action": "Classify notes",
+          "permission": "requires_escalation",
+          "executed": false,
+          "outcome": "escalation_required",
+          "conditions": "Action not defined in authority pack \u2014 escalating",
+          "error": null,
+          "timestamp": "2026-03-15T11:12:31.583693+00:00"
+        }
+      ]
+    },
+    "compiled.CONST.vault_maintenance.specialist.ontology_integrity.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.ontology_integrity.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Specialist (Ontology Integrity Auditor)",
+      "total_actions": 0,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 0,
+      "executed": 0,
+      "failed": 0,
+      "actions": []
+    },
+    "compiled.CONST.vault_maintenance.specialist.self_healing.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.self_healing.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Specialist (Self-Healing Repairer)",
+      "total_actions": 0,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 0,
+      "executed": 0,
+      "failed": 0,
+      "actions": []
+    },
+    "compiled.CONST.vault_maintenance.specialist.template_compliance.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.template_compliance.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Specialist (Template Compliance Scanner)",
+      "total_actions": 0,
+      "allowed": 0,
+      "denied": 0,
+      "escalated": 0,
+      "executed": 0,
+      "failed": 0,
+      "actions": []
+    },
+    "compiled.CONST.vault_maintenance.supervisor.v1.0": {
+      "agent_id": "compiled.CONST.vault_maintenance.supervisor.v1.0",
+      "agent_name": "Vault Maintenance \u2014 Supervisor (Maintenance Coordinator)",
+      "total_actions": 2,
+      "allowed": 2,
+      "denied": 0,
+      "escalated": 0,
+      "executed": 2,
+      "failed": 0,
+      "actions": [
+        {
+          "action": "Delegate audit tasks to specialists",
+          "permission": "allowed",
+          "executed": true,
+          "outcome": "{'tool_name': 'read_note', 'success': False, 'data': None, 'error': \"[Errno 21] Is a directory: '/sessions/loving-busy-bohr/mnt/Agent Maestro/'\", 'artifacts': [], 'timestamp': '2026-03-15T11:12:31.591097+00:00'}",
+          "conditions": "Task must match specialist capability and be within vault_maintenance scope",
+          "error": null,
+          "timestamp": "2026-03-15T11:12:31.591123+00:00"
+        },
+        {
+          "action": "Coordinate specialist execution sequence",
+          "permission": "allowed",
+          "executed": true,
+          "outcome": "{'tool_name': 'scan_directory', 'success': True, 'data': {'directory': '02_KNOWLEDGE', 'pattern': '*.md', 'files': [{'path': '02_KNOWLEDGE/CLAUDE.md', 'name': 'CLAUDE.md', 'size_bytes': 7350, 'modified': '2026-03-14T21:11:00.952571+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Quickstart.md', 'name': 'Agent Maestro \u2014 Quickstart.md', 'size_bytes': 12975, 'modified': '2026-03-14T21:11:00.960222+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Navigation Map.md', 'name': 'Agent Maestro \u2014 Navigation Map.md', 'size_bytes': 3594, 'modified': '2026-03-14T10:35:34.606328+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Concepts Map.md', 'name': 'Agent Maestro \u2014 Concepts Map.md', 'size_bytes': 3286, 'modified': '2026-03-14T10:35:34.586155+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Constellation Architecture Map.md', 'name': 'Agent Maestro \u2014 Constellation Architecture Map.md', 'size_bytes': 3226, 'modified': '2026-03-14T10:35:34.590497+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Pipelines Map.md', 'name': 'Agent Maestro \u2014 Pipelines Map.md', 'size_bytes': 1544, 'modified': '2026-03-14T10:35:34.608961+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Governance Artifacts Map.md', 'name': 'Agent Maestro \u2014 Governance Artifacts Map.md', 'size_bytes': 2986, 'modified': '2026-03-15T11:00:42.056130+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Project Governance Map.md', 'name': 'Project Governance Map.md', 'size_bytes': 3034, 'modified': '2026-03-12T17:06:46.122948+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Projects & Experiments Map.md', 'name': 'Agent Maestro \u2014 Projects & Experiments Map.md', 'size_bytes': 1138, 'modified': '2026-03-12T16:03:41.335658+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Authority Architecture Map.md', 'name': 'Authority Architecture Map.md', 'size_bytes': 3914, 'modified': '2026-03-15T11:00:42.069436+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Governance Map.md', 'name': 'Agent Maestro \u2014 Governance Map.md', 'size_bytes': 1952, 'modified': '2026-03-12T17:06:46.032915+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Stack Map.md', 'name': 'Agent Maestro \u2014 Stack Map.md', 'size_bytes': 3568, 'modified': '2026-03-15T11:00:42.060812+00:00'}, {'path': '02_KNOWLEDGE/system_maps/SYSTEM_MAP.md', 'name': 'SYSTEM_MAP.md', 'size_bytes': 23346, 'modified': '2026-03-15T11:00:42.078492+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Operational Intelligence Map.md', 'name': 'Operational Intelligence Map.md', 'size_bytes': 1980, 'modified': '2026-03-14T10:35:34.638579+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Systems Map.md', 'name': 'Agent Maestro \u2014 Systems Map.md', 'size_bytes': 3367, 'modified': '2026-03-15T11:00:42.062427+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Agent Taxonomy Map.md', 'name': 'Agent Maestro \u2014 Agent Taxonomy Map.md', 'size_bytes': 2715, 'modified': '2026-03-14T10:35:34.575588+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Memory Layer Registry.md', 'name': 'Memory Layer Registry.md', 'size_bytes': 8261, 'modified': '2026-03-14T21:18:44.850777+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Executive Layer Map.md', 'name': 'Agent Maestro \u2014 Executive Layer Map.md', 'size_bytes': 4051, 'modified': '2026-03-14T11:43:04.387422+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Memory Architecture Map.md', 'name': 'Memory Architecture Map.md', 'size_bytes': 1555, 'modified': '2026-03-14T10:35:34.634319+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Domain Map.md', 'name': 'Agent Maestro \u2014 Domain Map.md', 'size_bytes': 2386, 'modified': '2026-03-14T10:35:34.592667+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Pack Inheritance Map.md', 'name': 'Agent Maestro \u2014 Pack Inheritance Map.md', 'size_bytes': 3208, 'modified': '2026-03-14T10:35:34.607688+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Practice Map.md', 'name': 'Agent Maestro \u2014 Practice Map.md', 'size_bytes': 3493, 'modified': '2026-03-15T11:00:42.059338+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Authority Pack Compiler \u2014 Map.md', 'name': 'Authority Pack Compiler \u2014 Map.md', 'size_bytes': 3212, 'modified': '2026-03-15T11:00:42.076928+00:00'}, {'path': '02_KNOWLEDGE/system_maps/Agent Maestro \u2014 Layer Model Map.md', 'name': 'Agent Maestro \u2014 Layer Model Map.md', 'size_bytes': 3074, 'modified': '2026-03-15T11:00:42.058439+00:00'}, {'path': '02_KNOWLEDGE/domains/Operational Transformation.md', 'name': 'Operational Transformation.md', 'size_bytes': 1320, 'modified': '2026-03-12T16:03:41.051981+00:00'}, {'path': '02_KNOWLEDGE/domains/Authority Systems.md', 'name': 'Authority Systems.md', 'size_bytes': 1833, 'modified': '2026-03-14T10:35:34.342347+00:00'}, {'path': '02_KNOWLEDGE/domains/Human-Agent Collaboration.md', 'name': 'Human-Agent Collaboration.md', 'size_bytes': 1280, 'modified': '2026-03-12T16:03:41.058811+00:00'}, {'path': '02_KNOWLEDGE/domains/AI Executive Systems.md', 'name': 'AI Executive Systems.md', 'size_bytes': 1719, 'modified': '2026-03-14T10:35:34.339456+00:00'}, {'path': '02_KNOWLEDGE/domains/Multi-Agent Coordination.md', 'name': 'Multi-Agent Coordination.md', 'size_bytes': 1902, 'modified': '2026-03-14T10:35:34.370985+00:00'}, {'path': '02_KNOWLEDGE/domains/Governance Infrastructure.md', 'name': 'Governance Infrastructure.md', 'size_bytes': 1785, 'modified': '2026-03-15T11:00:42.042061+00:00'}, {'path': '02_KNOWLEDGE/domains/Operational Governance.md', 'name': 'Operational Governance.md', 'size_bytes': 1884, 'modified': '2026-03-12T16:46:58.030249+00:00'}, {'path': '02_KNOWLEDGE/domains/Organizational Intelligence.md', 'name': 'Organizational Intelligence.md', 'size_bytes': 1830, 'modified': '2026-03-12T16:46:58.034132+00:00'}, {'path': '02_KNOWLEDGE/domains/Workflow Intelligence.md', 'name': 'Workflow Intelligence.md', 'size_bytes': 1282, 'modified': '2026-03-12T16:03:41.067024+00:00'}, {'path': '02_KNOWLEDGE/domains/Governance Systems.md', 'name': 'Governance Systems.md', 'size_bytes': 1389, 'modified': '2026-03-14T10:35:34.359526+00:00'}, {'path': '02_KNOWLEDGE/domains/AI-Native Organizations.md', 'name': 'AI-Native Organizations.md', 'size_bytes': 1423, 'modified': '2026-03-14T10:35:34.333849+00:00'}, {'path': '02_KNOWLEDGE/domains/Platformization.md', 'name': 'Platformization.md', 'size_bytes': 1941, 'modified': '2026-03-14T10:35:34.375416+00:00'}, {'path': '02_KNOWLEDGE/domains/Agent Organizations.md', 'name': 'Agent Organizations.md', 'size_bytes': 1763, 'modified': '2026-03-14T10:35:34.353510+00:00'}, {'path': '02_KNOWLEDGE/patterns/Deterministic Control Surfaces.md', 'name': 'Deterministic Control Surfaces.md', 'size_bytes': 1464, 'modified': '2026-03-14T10:35:34.503314+00:00'}, {'path': '02_KNOWLEDGE/patterns/Thin-Edge Thick-Core Pattern.md', 'name': 'Thin-Edge Thick-Core Pattern.md', 'size_bytes': 2550, 'modified': '2026-03-14T10:35:34.559934+00:00'}, {'path': '02_KNOWLEDGE/patterns/Pack Versioning Pattern.md', 'name': 'Pack Versioning Pattern.md', 'size_bytes': 2500, 'modified': '2026-03-14T10:35:34.554367+00:00'}, {'path': '02_KNOWLEDGE/patterns/Authority Inheritance Pattern.md', 'name': 'Authority Inheritance Pattern.md', 'size_bytes': 2348, 'modified': '2026-03-14T10:35:34.476521+00:00'}, {'path': '02_KNOWLEDGE/patterns/Evidence Over Assumptions.md', 'name': 'Evidence Over Assumptions.md', 'size_bytes': 1561, 'modified': '2026-03-14T10:35:34.506206+00:00'}, {'path': '02_KNOWLEDGE/patterns/Executive-Supervisor-Specialist Pattern.md', 'name': 'Executive-Supervisor-Specialist Pattern.md', 'size_bytes': 2624, 'modified': '2026-03-14T10:35:34.526277+00:00'}, {'path': '02_KNOWLEDGE/patterns/Decision-Execution Separation.md', 'name': 'Decision-Execution Separation.md', 'size_bytes': 1441, 'modified': '2026-03-14T10:09:46.535991+00:00'}, {'path': '02_KNOWLEDGE/patterns/Constellation Architecture Pattern.md', 'name': 'Constellation Architecture Pattern.md', 'size_bytes': 2624, 'modified': '2026-03-14T10:35:34.491893+00:00'}, {'path': '02_KNOWLEDGE/patterns/Host Binding Pattern.md', 'name': 'Host Binding Pattern.md', 'size_bytes': 2360, 'modified': '2026-03-13T23:54:20.601946+00:00'}, {'path': '02_KNOWLEDGE/patterns/Model Workspace Protocol Pattern.md', 'name': 'Model Workspace Protocol Pattern.md', 'size_bytes': 3540, 'modified': '2026-03-13T23:54:31.397071+00:00'}, {'path': '02_KNOWLEDGE/patterns/Three-Layer Memory Model.md', 'name': 'Three-Layer Memory Model.md', 'size_bytes': 1579, 'modified': '2026-03-13T23:54:45.571551+00:00'}, {'path': '02_KNOWLEDGE/patterns/Pack Override Rules.md', 'name': 'Pack Override Rules.md', 'size_bytes': 2579, 'modified': '2026-03-14T10:35:34.539563+00:00'}, {'path': '02_KNOWLEDGE/patterns/Human Escalation Pattern.md', 'name': 'Human Escalation Pattern.md', 'size_bytes': 1370, 'modified': '2026-03-13T23:54:23.909513+00:00'}, {'path': '02_KNOWLEDGE/patterns/Anti-Agent-Sprawl Pattern.md', 'name': 'Anti-Agent-Sprawl Pattern.md', 'size_bytes': 1374, 'modified': '2026-03-13T23:53:42.788893+00:00'}, {'path': '02_KNOWLEDGE/patterns/Authority Pack Grammar.md', 'name': 'Authority Pack Grammar.md', 'size_bytes': 1960, 'modified': '2026-03-14T10:09:46.565606+00:00'}, {'path': '02_KNOWLEDGE/patterns/Controlled Evolution Pattern.md', 'name': 'Controlled Evolution Pattern.md', 'size_bytes': 1388, 'modified': '2026-03-12T16:03:41.205954+00:00'}, {'path': '02_KNOWLEDGE/patterns/Governance Before Autonomy.md', 'name': 'Governance Before Autonomy.md', 'size_bytes': 1459, 'modified': '2026-03-14T10:35:34.510124+00:00'}, {'path': '02_KNOWLEDGE/patterns/Governance Compilation Pattern.md', 'name': 'Governance Compilation Pattern.md', 'size_bytes': 2631, 'modified': '2026-03-15T11:00:42.053032+00:00'}, {'path': '02_KNOWLEDGE/patterns/Policy Resolution Pattern.md', 'name': 'Policy Resolution Pattern.md', 'size_bytes': 2524, 'modified': '2026-03-14T10:35:34.558571+00:00'}, {'path': '02_KNOWLEDGE/references/Governance Schemas Reference.md', 'name': 'Governance Schemas Reference.md', 'size_bytes': 2758, 'modified': '2026-03-15T11:00:42.054850+00:00'}, {'path': '02_KNOWLEDGE/references/Tool and Action Class Reference.md', 'name': 'Tool and Action Class Reference.md', 'size_bytes': 2850, 'modified': '2026-03-12T16:49:48.267605+00:00'}, {'path': '02_KNOWLEDGE/references/Compiler Artifact Schemas Reference.md', 'name': 'Compiler Artifact Schemas Reference.md', 'size_bytes': 2359, 'modified': '2026-03-15T11:00:42.053908+00:00'}, {'path': '02_KNOWLEDGE/references/Escalation Classes Reference.md', 'name': 'Escalation Classes Reference.md', 'size_bytes': 2314, 'modified': '2026-03-12T16:49:48.253998+00:00'}, {'path': '02_KNOWLEDGE/references/Host Runtime Reference.md', 'name': 'Host Runtime Reference.md', 'size_bytes': 2495, 'modified': '2026-03-12T16:49:48.263443+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent.md', 'name': 'Agent.md', 'size_bytes': 2746, 'modified': '2026-03-14T10:09:46.427014+00:00'}, {'path': '02_KNOWLEDGE/concepts/Authority Model.md', 'name': 'Authority Model.md', 'size_bytes': 2927, 'modified': '2026-03-14T10:35:34.109884+00:00'}, {'path': '02_KNOWLEDGE/concepts/Execution Authority.md', 'name': 'Execution Authority.md', 'size_bytes': 3309, 'modified': '2026-03-14T10:35:34.143977+00:00'}, {'path': '02_KNOWLEDGE/concepts/Memory Architecture.md', 'name': 'Memory Architecture.md', 'size_bytes': 2862, 'modified': '2026-03-13T23:52:32.360763+00:00'}, {'path': '02_KNOWLEDGE/concepts/Supervisor Agent.md', 'name': 'Supervisor Agent.md', 'size_bytes': 2992, 'modified': '2026-03-14T10:35:34.322862+00:00'}, {'path': '02_KNOWLEDGE/concepts/Operational Outcome.md', 'name': 'Operational Outcome.md', 'size_bytes': 3122, 'modified': '2026-03-14T10:35:34.175330+00:00'}, {'path': '02_KNOWLEDGE/concepts/Authority Inheritance.md', 'name': 'Authority Inheritance.md', 'size_bytes': 3130, 'modified': '2026-03-15T11:00:42.025656+00:00'}, {'path': '02_KNOWLEDGE/concepts/Authority Pack.md', 'name': 'Authority Pack.md', 'size_bytes': 3345, 'modified': '2026-03-14T10:35:34.120442+00:00'}, {'path': '02_KNOWLEDGE/concepts/Authority Architecture.md', 'name': 'Authority Architecture.md', 'size_bytes': 2531, 'modified': '2026-03-14T10:35:34.094105+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Constellation.md', 'name': 'Agent Constellation.md', 'size_bytes': 3606, 'modified': '2026-03-14T10:35:34.042915+00:00'}, {'path': '02_KNOWLEDGE/concepts/Host Binding.md', 'name': 'Host Binding.md', 'size_bytes': 2564, 'modified': '2026-03-13T23:53:13.700919+00:00'}, {'path': '02_KNOWLEDGE/concepts/Human Escalation.md', 'name': 'Human Escalation.md', 'size_bytes': 2759, 'modified': '2026-03-13T23:52:45.925784+00:00'}, {'path': '02_KNOWLEDGE/concepts/Executive Agent.md', 'name': 'Executive Agent.md', 'size_bytes': 3059, 'modified': '2026-03-14T10:35:34.155561+00:00'}, {'path': '02_KNOWLEDGE/concepts/Context Pack.md', 'name': 'Context Pack.md', 'size_bytes': 2943, 'modified': '2026-03-14T10:09:46.246110+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent System.md', 'name': 'Agent System.md', 'size_bytes': 2748, 'modified': '2026-03-14T10:35:34.075247+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Maestro Layer Model.md', 'name': 'Agent Maestro Layer Model.md', 'size_bytes': 4450, 'modified': '2026-03-14T10:35:34.061885+00:00'}, {'path': '02_KNOWLEDGE/concepts/Shared Services.md', 'name': 'Shared Services.md', 'size_bytes': 2893, 'modified': '2026-03-14T10:35:34.212377+00:00'}, {'path': '02_KNOWLEDGE/concepts/Governance Artifact.md', 'name': 'Governance Artifact.md', 'size_bytes': 2564, 'modified': '2026-03-14T10:35:34.158369+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Workflow.md', 'name': 'Agent Workflow.md', 'size_bytes': 2534, 'modified': '2026-03-14T10:35:34.091877+00:00'}, {'path': '02_KNOWLEDGE/concepts/Compiled Governance Artifact.md', 'name': 'Compiled Governance Artifact.md', 'size_bytes': 3002, 'modified': '2026-03-15T11:00:42.040146+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Orchestration.md', 'name': 'Agent Orchestration.md', 'size_bytes': 2700, 'modified': '2026-03-14T10:35:34.055588+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Systems.md', 'name': 'Agent Systems.md', 'size_bytes': 3938, 'modified': '2026-03-14T10:35:34.088493+00:00'}, {'path': '02_KNOWLEDGE/concepts/Agent Ecosystem.md', 'name': 'Agent Ecosystem.md', 'size_bytes': 2921, 'modified': '2026-03-14T10:35:34.028953+00:00'}, {'path': '02_KNOWLEDGE/concepts/Operational Intelligence.md', 'name': 'Operational Intelligence.md', 'size_bytes': 2986, 'modified': '2026-03-14T10:35:34.159632+00:00'}, {'path': '02_KNOWLEDGE/concepts/Model Workspace Protocol.md', 'name': 'Model Workspace Protocol.md', 'size_bytes': 4727, 'modified': '2026-03-14T10:35:34.171183+00:00'}, {'path': '02_KNOWLEDGE/concepts/Specialist Agent.md', 'name': 'Specialist Agent.md', 'size_bytes': 2718, 'modified': '2026-03-14T10:35:34.234150+00:00'}, {'path': '02_KNOWLEDGE/concepts/Pack Versioning.md', 'name': 'Pack Versioning.md', 'size_bytes': 3009, 'modified': '2026-03-14T10:35:34.190973+00:00'}, {'path': '02_KNOWLEDGE/concepts/Decision Authority.md', 'name': 'Decision Authority.md', 'size_bytes': 3102, 'modified': '2026-03-14T10:35:34.136621+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 Modes.md', 'name': 'Agent Maestro \u2014 Modes.md', 'size_bytes': 1716, 'modified': '2026-03-12T16:03:42.684448+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 Principles.md', 'name': 'Agent Maestro \u2014 Principles.md', 'size_bytes': 5013, 'modified': '2026-03-14T10:35:34.392823+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 Scope.md', 'name': 'Agent Maestro \u2014 Scope.md', 'size_bytes': 1793, 'modified': '2026-03-14T10:35:34.403545+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 North Star.md', 'name': 'Agent Maestro \u2014 North Star.md', 'size_bytes': 1695, 'modified': '2026-03-14T10:35:34.386583+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 Vault Rules.md', 'name': 'Agent Maestro \u2014 Vault Rules.md', 'size_bytes': 2562, 'modified': '2026-03-14T11:23:04.318657+00:00'}, {'path': '02_KNOWLEDGE/governance/CLAUDE.md', 'name': 'CLAUDE.md', 'size_bytes': 3905, 'modified': '2026-03-14T21:11:01.211451+00:00'}, {'path': '02_KNOWLEDGE/governance/Agent Maestro \u2014 Strategy.md', 'name': 'Agent Maestro \u2014 Strategy.md', 'size_bytes': 2007, 'modified': '2026-03-14T10:35:34.406166+00:00'}, {'path': '02_KNOWLEDGE/indexes/Compiler Artifacts Registry.md', 'name': 'Compiler Artifacts Registry.md', 'size_bytes': 2344, 'modified': '2026-03-15T11:00:42.043111+00:00'}, {'path': '02_KNOWLEDGE/indexes/Glossary.md', 'name': 'Glossary.md', 'size_bytes': 1442, 'modified': '2026-03-14T10:35:34.440594+00:00'}, {'path': '02_KNOWLEDGE/indexes/Artifact Taxonomy.md', 'name': 'Artifact Taxonomy.md', 'size_bytes': 1538, 'modified': '2026-03-12T16:03:41.251698+00:00'}, {'path': '02_KNOWLEDGE/indexes/System Registry.md', 'name': 'System Registry.md', 'size_bytes': 5466, 'modified': '2026-03-15T11:00:42.051944+00:00'}, {'path': '02_KNOWLEDGE/indexes/Authority Pack Registry.md', 'name': 'Authority Pack Registry.md', 'size_bytes': 3130, 'modified': '2026-03-12T16:51:10.290455+00:00'}, {'path': '02_KNOWLEDGE/indexes/Constellation Index.md', 'name': 'Constellation Index.md', 'size_bytes': 2348, 'modified': '2026-03-14T10:35:34.434541+00:00'}, {'path': '02_KNOWLEDGE/indexes/Pack Lineage Index.md', 'name': 'Pack Lineage Index.md', 'size_bytes': 2590, 'modified': '2026-03-12T16:51:10.305152+00:00'}, {'path': '02_KNOWLEDGE/indexes/Pack Version Registry.md', 'name': 'Pack Version Registry.md', 'size_bytes': 2425, 'modified': '2026-03-12T16:51:10.309719+00:00'}, {'path': '02_KNOWLEDGE/indexes/Canonical Notes Registry.md', 'name': 'Canonical Notes Registry.md', 'size_bytes': 10573, 'modified': '2026-03-14T10:35:34.422778+00:00'}, {'path': '02_KNOWLEDGE/indexes/Master Index \u2014 Generated.md', 'name': 'Master Index \u2014 Generated.md', 'size_bytes': 35194, 'modified': '2026-03-15T11:00:42.044701+00:00'}, {'path': '02_KNOWLEDGE/indexes/Authority Packs Index.md', 'name': 'Authority Packs Index.md', 'size_bytes': 3426, 'modified': '2026-03-14T10:35:34.417453+00:00'}, {'path': '02_KNOWLEDGE/indexes/Shared Services Index.md', 'name': 'Shared Services Index.md', 'size_bytes': 2404, 'modified': '2026-03-14T10:35:34.455921+00:00'}, {'path': '02_KNOWLEDGE/indexes/Canonical Notes Index.md', 'name': 'Canonical Notes Index.md', 'size_bytes': 2307, 'modified': '2026-03-14T10:35:34.420297+00:00'}, {'path': '02_KNOWLEDGE/indexes/CLAUDE.md', 'name': 'CLAUDE.md', 'size_bytes': 6686, 'modified': '2026-03-14T21:11:01.239012+00:00'}], 'count': 110}, 'error': None, 'artifacts': [], 'timestamp': '2026-03-15T11:12:31.640968+00:00'}",
+          "conditions": "Must follow defined workflow (audit before repair)",
+          "error": null,
+          "timestamp": "2026-03-15T11:12:31.641202+00:00"
+        }
+      ]
+    }
+  },
+  "cycle_log": []
+}

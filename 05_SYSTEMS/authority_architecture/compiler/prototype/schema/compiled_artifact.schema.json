@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compiled Governance Artifact",
+  "description": "Schema for the output of the Authority Pack Compiler.",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "compiled_from",
+    "compiled_at",
+    "compiler_version",
+    "governance"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string",
+      "description": "Unique identifier for this compiled artifact"
+    },
+    "compiled_from": {
+      "type": "object",
+      "properties": {
+        "pack_id": { "type": "string" },
+        "pack_name": { "type": "string" },
+        "pack_version": { "type": "string" },
+        "parent_pack_id": { "type": ["string", "null"] },
+        "constellation": { "type": "string" },
+        "agent_role": { "type": "string" }
+      },
+      "required": ["pack_id", "pack_version"]
+    },
+    "compiled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "compiler_version": {
+      "type": "string"
+    },
+    "compilation_report": {
+      "type": "object",
+      "properties": {
+        "stages_passed": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "inheritance_chain": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "overrides_applied": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "description": "The flattened, resolved governance contract",
+      "properties": {
+        "authority_type": { "type": "string" },
+        "scope": { "type": "object" },
+        "governed_entities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "governed_actions": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "rules": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "control_gates": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "evidence_requirements": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "escalation": { "type": "object" },
+        "failure_semantics": { "type": "object" }
+      }
+    },
+    "host_binding": {
+      "type": "object",
+      "properties": {
+        "host_type": { "type": "string" },
+        "host_path": { "type": "string" },
+        "bound_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

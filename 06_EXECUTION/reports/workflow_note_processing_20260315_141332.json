@@ -1,0 +1,617 @@
+{
+  "workflow_id": "note_processing",
+  "status": "failed",
+  "started_at": "2026-03-15T11:13:32.937457+00:00",
+  "ended_at": "2026-03-15T11:13:32.988290+00:00",
+  "stages_completed": 1,
+  "stages_skipped": 0,
+  "stages_failed": 1,
+  "stages_escalated": 0,
+  "escalations": [],
+  "stage_results": {
+    "capture_scan": {
+      "stage_id": "capture_scan",
+      "stage_name": "Capture Monitoring and Discovery",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "status": "completed",
+      "data": {
+        "directory": "01_CAPTURE",
+        "pattern": "*.md",
+        "files": [
+          {
+            "path": "01_CAPTURE/CLAUDE.md",
+            "name": "CLAUDE.md",
+            "size_bytes": 2157,
+            "modified": "2026-03-13T23:56:24.235573+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Potential upgrades to the vault.md",
+            "name": "Potential upgrades to the vault.md",
+            "size_bytes": 915,
+            "modified": "2026-03-14T05:32:21.030999+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Note Upgrade Workflow.md",
+            "name": "Note Upgrade Workflow.md",
+            "size_bytes": 85,
+            "modified": "2026-03-12T17:46:54.471038+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Vault Rules.md",
+            "name": "Vault Rules.md",
+            "size_bytes": 66,
+            "modified": "2026-03-11T17:07:35.993999+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Potential Roadmap \u2014 Authority Packs.md",
+            "name": "Potential Roadmap \u2014 Authority Packs.md",
+            "size_bytes": 319,
+            "modified": "2026-03-11T08:20:58.926112+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Note Knowledge Upgrade  Order.md",
+            "name": "Note Knowledge Upgrade  Order.md",
+            "size_bytes": 3754,
+            "modified": "2026-03-12T18:09:17.161999+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Agents, Auth, Packs, Constellations \u2014 Defined.md",
+            "name": "Agents, Auth, Packs, Constellations \u2014 Defined.md",
+            "size_bytes": 22909,
+            "modified": "2026-03-11T08:20:18.816999+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/Draft Project \u2014 TBP Outreach Agent V1 Spec.md",
+            "name": "Draft Project \u2014 TBP Outreach Agent V1 Spec.md",
+            "size_bytes": 5458,
+            "modified": "2026-03-10T08:41:03.285000+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Registry Template.md",
+            "name": "Registry Template.md",
+            "size_bytes": 882,
+            "modified": "2026-03-14T05:47:17.479264+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Index Template.md",
+            "name": "Index Template.md",
+            "size_bytes": 802,
+            "modified": "2026-03-14T05:47:17.477844+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Map Template.md",
+            "name": "Map Template.md",
+            "size_bytes": 1080,
+            "modified": "2026-03-14T05:47:17.478693+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Map.md",
+            "name": "System Map.md",
+            "size_bytes": 1008,
+            "modified": "2026-03-14T05:47:17.479829+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Registry.md",
+            "name": "System Registry.md",
+            "size_bytes": 927,
+            "modified": "2026-03-14T05:47:17.480375+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Authority Pack Template.md",
+            "name": "Authority Pack Template.md",
+            "size_bytes": 1255,
+            "modified": "2026-03-14T05:47:17.476750+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Template.md",
+            "name": "System Template.md",
+            "size_bytes": 1026,
+            "modified": "2026-03-14T05:47:17.480899+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Taxonomy Template.md",
+            "name": "Taxonomy Template.md",
+            "size_bytes": 962,
+            "modified": "2026-03-14T05:47:17.481464+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/frontmatter/Frontmatter Schema v1.md",
+            "name": "Frontmatter Schema v1.md",
+            "size_bytes": 4619,
+            "modified": "2026-03-14T05:47:17.499457+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Ruleset.md",
+            "name": "Template Ruleset.md",
+            "size_bytes": 9454,
+            "modified": "2026-03-14T10:35:35.134772+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Registry.md",
+            "name": "Template Registry.md",
+            "size_bytes": 2449,
+            "modified": "2026-03-14T05:47:17.492392+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Design Doctrine.md",
+            "name": "Template Design Doctrine.md",
+            "size_bytes": 2815,
+            "modified": "2026-03-14T05:47:17.490140+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Governance Rules.md",
+            "name": "Template Governance Rules.md",
+            "size_bytes": 2271,
+            "modified": "2026-03-14T05:47:17.490984+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Mapping.md",
+            "name": "Template Mapping.md",
+            "size_bytes": 2478,
+            "modified": "2026-03-14T05:47:17.491693+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Decision Template.md",
+            "name": "Decision Template.md",
+            "size_bytes": 1017,
+            "modified": "2026-03-14T05:47:17.484086+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Governance Template.md",
+            "name": "Governance Template.md",
+            "size_bytes": 971,
+            "modified": "2026-03-14T05:47:17.484824+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Principles Template.md",
+            "name": "Principles Template.md",
+            "size_bytes": 934,
+            "modified": "2026-03-14T05:47:17.486873+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Modes Template.md",
+            "name": "Modes Template.md",
+            "size_bytes": 988,
+            "modified": "2026-03-14T05:47:17.485484+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Scope Template.md",
+            "name": "Scope Template.md",
+            "size_bytes": 922,
+            "modified": "2026-03-14T05:47:17.488337+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Reference Template.md",
+            "name": "Reference Template.md",
+            "size_bytes": 915,
+            "modified": "2026-03-14T05:47:17.487644+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Concept Template.md",
+            "name": "Concept Template.md",
+            "size_bytes": 1046,
+            "modified": "2026-03-14T05:47:17.483396+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/North Star Template.md",
+            "name": "North Star Template.md",
+            "size_bytes": 897,
+            "modified": "2026-03-14T05:47:17.486164+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Strategy Template.md",
+            "name": "Strategy Template.md",
+            "size_bytes": 1123,
+            "modified": "2026-03-14T05:47:17.498353+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Roadmap Template.md",
+            "name": "Roadmap Template.md",
+            "size_bytes": 1122,
+            "modified": "2026-03-14T05:47:17.497669+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Process Template.md",
+            "name": "Process Template.md",
+            "size_bytes": 1071,
+            "modified": "2026-03-14T05:47:17.496334+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Pipeline Template.md",
+            "name": "Pipeline Template.md",
+            "size_bytes": 1223,
+            "modified": "2026-03-14T05:47:17.495779+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Authority Pack Section Template.md",
+            "name": "Authority Pack Section Template.md",
+            "size_bytes": 1240,
+            "modified": "2026-03-14T05:47:17.495244+00:00"
+          },
+          {
+            "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Project Template.md",
+            "name": "Project Template.md",
+            "size_bytes": 1151,
+            "modified": "2026-03-14T05:47:17.496958+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Authority Pack Compiler.md",
+            "name": "Authority Pack Compiler.md",
+            "size_bytes": 3484,
+            "modified": "2026-03-11T08:18:39.900118+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Pure Agent Concepts.md",
+            "name": "Pure Agent Concepts.md",
+            "size_bytes": 4470,
+            "modified": "2026-03-10T08:41:03.283201+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Auth Packs \u2014 Versioning & Inheritance.md",
+            "name": "Auth Packs \u2014 Versioning & Inheritance.md",
+            "size_bytes": 5047,
+            "modified": "2026-03-11T08:23:45.324460+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Registry Anchoring.md",
+            "name": "Registry Anchoring.md",
+            "size_bytes": 5191,
+            "modified": "2026-03-11T18:41:41.052945+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Deterministic Pack Compiler Rule.md",
+            "name": "Deterministic Pack Compiler Rule.md",
+            "size_bytes": 314,
+            "modified": "2026-03-11T11:43:01.388688+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Frontmatter Upgrade Checklist.md",
+            "name": "Frontmatter Upgrade Checklist.md",
+            "size_bytes": 1163,
+            "modified": "2026-03-11T12:36:12.624007+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Master Agents.md",
+            "name": "Master Agents.md",
+            "size_bytes": 8407,
+            "modified": "2026-03-14T12:35:09.180258+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Claude Note Quality Rules.md",
+            "name": "Claude Note Quality Rules.md",
+            "size_bytes": 924,
+            "modified": "2026-03-10T20:10:53.620596+00:00"
+          },
+          {
+            "path": "01_CAPTURE/inbox/Potential Authority Pack Templates.md",
+            "name": "Potential Authority Pack Templates.md",
+            "size_bytes": 404,
+            "modified": "2026-03-15T11:01:10.263774+00:00"
+          }
+        ],
+        "count": 45
+      },
+      "error": null,
+      "tool_result": {
+        "tool_name": "scan_directory",
+        "success": true,
+        "data": {
+          "directory": "01_CAPTURE",
+          "pattern": "*.md",
+          "files": [
+            {
+              "path": "01_CAPTURE/CLAUDE.md",
+              "name": "CLAUDE.md",
+              "size_bytes": 2157,
+              "modified": "2026-03-13T23:56:24.235573+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Potential upgrades to the vault.md",
+              "name": "Potential upgrades to the vault.md",
+              "size_bytes": 915,
+              "modified": "2026-03-14T05:32:21.030999+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Note Upgrade Workflow.md",
+              "name": "Note Upgrade Workflow.md",
+              "size_bytes": 85,
+              "modified": "2026-03-12T17:46:54.471038+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Vault Rules.md",
+              "name": "Vault Rules.md",
+              "size_bytes": 66,
+              "modified": "2026-03-11T17:07:35.993999+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Potential Roadmap \u2014 Authority Packs.md",
+              "name": "Potential Roadmap \u2014 Authority Packs.md",
+              "size_bytes": 319,
+              "modified": "2026-03-11T08:20:58.926112+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Note Knowledge Upgrade  Order.md",
+              "name": "Note Knowledge Upgrade  Order.md",
+              "size_bytes": 3754,
+              "modified": "2026-03-12T18:09:17.161999+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Agents, Auth, Packs, Constellations \u2014 Defined.md",
+              "name": "Agents, Auth, Packs, Constellations \u2014 Defined.md",
+              "size_bytes": 22909,
+              "modified": "2026-03-11T08:20:18.816999+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/Draft Project \u2014 TBP Outreach Agent V1 Spec.md",
+              "name": "Draft Project \u2014 TBP Outreach Agent V1 Spec.md",
+              "size_bytes": 5458,
+              "modified": "2026-03-10T08:41:03.285000+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Registry Template.md",
+              "name": "Registry Template.md",
+              "size_bytes": 882,
+              "modified": "2026-03-14T05:47:17.479264+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Index Template.md",
+              "name": "Index Template.md",
+              "size_bytes": 802,
+              "modified": "2026-03-14T05:47:17.477844+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Map Template.md",
+              "name": "Map Template.md",
+              "size_bytes": 1080,
+              "modified": "2026-03-14T05:47:17.478693+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Map.md",
+              "name": "System Map.md",
+              "size_bytes": 1008,
+              "modified": "2026-03-14T05:47:17.479829+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Registry.md",
+              "name": "System Registry.md",
+              "size_bytes": 927,
+              "modified": "2026-03-14T05:47:17.480375+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Authority Pack Template.md",
+              "name": "Authority Pack Template.md",
+              "size_bytes": 1255,
+              "modified": "2026-03-14T05:47:17.476750+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Template.md",
+              "name": "System Template.md",
+              "size_bytes": 1026,
+              "modified": "2026-03-14T05:47:17.480899+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Taxonomy Template.md",
+              "name": "Taxonomy Template.md",
+              "size_bytes": 962,
+              "modified": "2026-03-14T05:47:17.481464+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/frontmatter/Frontmatter Schema v1.md",
+              "name": "Frontmatter Schema v1.md",
+              "size_bytes": 4619,
+              "modified": "2026-03-14T05:47:17.499457+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Ruleset.md",
+              "name": "Template Ruleset.md",
+              "size_bytes": 9454,
+              "modified": "2026-03-14T10:35:35.134772+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Registry.md",
+              "name": "Template Registry.md",
+              "size_bytes": 2449,
+              "modified": "2026-03-14T05:47:17.492392+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Design Doctrine.md",
+              "name": "Template Design Doctrine.md",
+              "size_bytes": 2815,
+              "modified": "2026-03-14T05:47:17.490140+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Governance Rules.md",
+              "name": "Template Governance Rules.md",
+              "size_bytes": 2271,
+              "modified": "2026-03-14T05:47:17.490984+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Mapping.md",
+              "name": "Template Mapping.md",
+              "size_bytes": 2478,
+              "modified": "2026-03-14T05:47:17.491693+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Decision Template.md",
+              "name": "Decision Template.md",
+              "size_bytes": 1017,
+              "modified": "2026-03-14T05:47:17.484086+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Governance Template.md",
+              "name": "Governance Template.md",
+              "size_bytes": 971,
+              "modified": "2026-03-14T05:47:17.484824+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Principles Template.md",
+              "name": "Principles Template.md",
+              "size_bytes": 934,
+              "modified": "2026-03-14T05:47:17.486873+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Modes Template.md",
+              "name": "Modes Template.md",
+              "size_bytes": 988,
+              "modified": "2026-03-14T05:47:17.485484+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Scope Template.md",
+              "name": "Scope Template.md",
+              "size_bytes": 922,
+              "modified": "2026-03-14T05:47:17.488337+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Reference Template.md",
+              "name": "Reference Template.md",
+              "size_bytes": 915,
+              "modified": "2026-03-14T05:47:17.487644+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Concept Template.md",
+              "name": "Concept Template.md",
+              "size_bytes": 1046,
+              "modified": "2026-03-14T05:47:17.483396+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/North Star Template.md",
+              "name": "North Star Template.md",
+              "size_bytes": 897,
+              "modified": "2026-03-14T05:47:17.486164+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Strategy Template.md",
+              "name": "Strategy Template.md",
+              "size_bytes": 1123,
+              "modified": "2026-03-14T05:47:17.498353+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Roadmap Template.md",
+              "name": "Roadmap Template.md",
+              "size_bytes": 1122,
+              "modified": "2026-03-14T05:47:17.497669+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Process Template.md",
+              "name": "Process Template.md",
+              "size_bytes": 1071,
+              "modified": "2026-03-14T05:47:17.496334+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Pipeline Template.md",
+              "name": "Pipeline Template.md",
+              "size_bytes": 1223,
+              "modified": "2026-03-14T05:47:17.495779+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Authority Pack Section Template.md",
+              "name": "Authority Pack Section Template.md",
+              "size_bytes": 1240,
+              "modified": "2026-03-14T05:47:17.495244+00:00"
+            },
+            {
+              "path": "01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Project Template.md",
+              "name": "Project Template.md",
+              "size_bytes": 1151,
+              "modified": "2026-03-14T05:47:17.496958+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Authority Pack Compiler.md",
+              "name": "Authority Pack Compiler.md",
+              "size_bytes": 3484,
+              "modified": "2026-03-11T08:18:39.900118+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Pure Agent Concepts.md",
+              "name": "Pure Agent Concepts.md",
+              "size_bytes": 4470,
+              "modified": "2026-03-10T08:41:03.283201+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Auth Packs \u2014 Versioning & Inheritance.md",
+              "name": "Auth Packs \u2014 Versioning & Inheritance.md",
+              "size_bytes": 5047,
+              "modified": "2026-03-11T08:23:45.324460+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Registry Anchoring.md",
+              "name": "Registry Anchoring.md",
+              "size_bytes": 5191,
+              "modified": "2026-03-11T18:41:41.052945+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Deterministic Pack Compiler Rule.md",
+              "name": "Deterministic Pack Compiler Rule.md",
+              "size_bytes": 314,
+              "modified": "2026-03-11T11:43:01.388688+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Frontmatter Upgrade Checklist.md",
+              "name": "Frontmatter Upgrade Checklist.md",
+              "size_bytes": 1163,
+              "modified": "2026-03-11T12:36:12.624007+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Master Agents.md",
+              "name": "Master Agents.md",
+              "size_bytes": 8407,
+              "modified": "2026-03-14T12:35:09.180258+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Claude Note Quality Rules.md",
+              "name": "Claude Note Quality Rules.md",
+              "size_bytes": 924,
+              "modified": "2026-03-10T20:10:53.620596+00:00"
+            },
+            {
+              "path": "01_CAPTURE/inbox/Potential Authority Pack Templates.md",
+              "name": "Potential Authority Pack Templates.md",
+              "size_bytes": 404,
+              "modified": "2026-03-15T11:01:10.263774+00:00"
+            }
+          ],
+          "count": 45
+        },
+        "error": null,
+        "artifacts": [],
+        "timestamp": "2026-03-15T11:13:32.985880+00:00"
+      },
+      "action_result": {
+        "action": "Scan 01_CAPTURE directory for new items",
+        "permission": "allowed",
+        "executed": true,
+        "outcome": "{'tool_name': 'scan_directory', 'success': True, 'data': {'directory': '01_CAPTURE', 'pattern': '*.md', 'files': [{'path': '01_CAPTURE/CLAUDE.md', 'name': 'CLAUDE.md', 'size_bytes': 2157, 'modified': '2026-03-13T23:56:24.235573+00:00'}, {'path': '01_CAPTURE/unprocessed/Potential upgrades to the vault.md', 'name': 'Potential upgrades to the vault.md', 'size_bytes': 915, 'modified': '2026-03-14T05:32:21.030999+00:00'}, {'path': '01_CAPTURE/unprocessed/Note Upgrade Workflow.md', 'name': 'Note Upgrade Workflow.md', 'size_bytes': 85, 'modified': '2026-03-12T17:46:54.471038+00:00'}, {'path': '01_CAPTURE/unprocessed/Vault Rules.md', 'name': 'Vault Rules.md', 'size_bytes': 66, 'modified': '2026-03-11T17:07:35.993999+00:00'}, {'path': '01_CAPTURE/unprocessed/Potential Roadmap \u2014 Authority Packs.md', 'name': 'Potential Roadmap \u2014 Authority Packs.md', 'size_bytes': 319, 'modified': '2026-03-11T08:20:58.926112+00:00'}, {'path': '01_CAPTURE/unprocessed/Note Knowledge Upgrade  Order.md', 'name': 'Note Knowledge Upgrade  Order.md', 'size_bytes': 3754, 'modified': '2026-03-12T18:09:17.161999+00:00'}, {'path': '01_CAPTURE/unprocessed/Agents, Auth, Packs, Constellations \u2014 Defined.md', 'name': 'Agents, Auth, Packs, Constellations \u2014 Defined.md', 'size_bytes': 22909, 'modified': '2026-03-11T08:20:18.816999+00:00'}, {'path': '01_CAPTURE/unprocessed/Draft Project \u2014 TBP Outreach Agent V1 Spec.md', 'name': 'Draft Project \u2014 TBP Outreach Agent V1 Spec.md', 'size_bytes': 5458, 'modified': '2026-03-10T08:41:03.285000+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Registry Template.md', 'name': 'Registry Template.md', 'size_bytes': 882, 'modified': '2026-03-14T05:47:17.479264+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Index Template.md', 'name': 'Index Template.md', 'size_bytes': 802, 'modified': '2026-03-14T05:47:17.477844+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Map Template.md', 'name': 'Map Template.md', 'size_bytes': 1080, 'modified': '2026-03-14T05:47:17.478693+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Map.md', 'name': 'System Map.md', 'size_bytes': 1008, 'modified': '2026-03-14T05:47:17.479829+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Registry.md', 'name': 'System Registry.md', 'size_bytes': 927, 'modified': '2026-03-14T05:47:17.480375+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Authority Pack Template.md', 'name': 'Authority Pack Template.md', 'size_bytes': 1255, 'modified': '2026-03-14T05:47:17.476750+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/System Template.md', 'name': 'System Template.md', 'size_bytes': 1026, 'modified': '2026-03-14T05:47:17.480899+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/architecture_and_navigation_templates/Taxonomy Template.md', 'name': 'Taxonomy Template.md', 'size_bytes': 962, 'modified': '2026-03-14T05:47:17.481464+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/frontmatter/Frontmatter Schema v1.md', 'name': 'Frontmatter Schema v1.md', 'size_bytes': 4619, 'modified': '2026-03-14T05:47:17.499457+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Ruleset.md', 'name': 'Template Ruleset.md', 'size_bytes': 9454, 'modified': '2026-03-14T10:35:35.134772+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Registry.md', 'name': 'Template Registry.md', 'size_bytes': 2449, 'modified': '2026-03-14T05:47:17.492392+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Design Doctrine.md', 'name': 'Template Design Doctrine.md', 'size_bytes': 2815, 'modified': '2026-03-14T05:47:17.490140+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Governance Rules.md', 'name': 'Template Governance Rules.md', 'size_bytes': 2271, 'modified': '2026-03-14T05:47:17.490984+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/docs/Template Mapping.md', 'name': 'Template Mapping.md', 'size_bytes': 2478, 'modified': '2026-03-14T05:47:17.491693+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Decision Template.md', 'name': 'Decision Template.md', 'size_bytes': 1017, 'modified': '2026-03-14T05:47:17.484086+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Governance Template.md', 'name': 'Governance Template.md', 'size_bytes': 971, 'modified': '2026-03-14T05:47:17.484824+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Principles Template.md', 'name': 'Principles Template.md', 'size_bytes': 934, 'modified': '2026-03-14T05:47:17.486873+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Modes Template.md', 'name': 'Modes Template.md', 'size_bytes': 988, 'modified': '2026-03-14T05:47:17.485484+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Scope Template.md', 'name': 'Scope Template.md', 'size_bytes': 922, 'modified': '2026-03-14T05:47:17.488337+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Reference Template.md', 'name': 'Reference Template.md', 'size_bytes': 915, 'modified': '2026-03-14T05:47:17.487644+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/Concept Template.md', 'name': 'Concept Template.md', 'size_bytes': 1046, 'modified': '2026-03-14T05:47:17.483396+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/core_knowledge_templates/North Star Template.md', 'name': 'North Star Template.md', 'size_bytes': 897, 'modified': '2026-03-14T05:47:17.486164+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Strategy Template.md', 'name': 'Strategy Template.md', 'size_bytes': 1123, 'modified': '2026-03-14T05:47:17.498353+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Roadmap Template.md', 'name': 'Roadmap Template.md', 'size_bytes': 1122, 'modified': '2026-03-14T05:47:17.497669+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Process Template.md', 'name': 'Process Template.md', 'size_bytes': 1071, 'modified': '2026-03-14T05:47:17.496334+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Pipeline Template.md', 'name': 'Pipeline Template.md', 'size_bytes': 1223, 'modified': '2026-03-14T05:47:17.495779+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Authority Pack Section Template.md', 'name': 'Authority Pack Section Template.md', 'size_bytes': 1240, 'modified': '2026-03-14T05:47:17.495244+00:00'}, {'path': '01_CAPTURE/unprocessed/88_TEMPLATES/notes/execution_and _planning_template/Project Template.md', 'name': 'Project Template.md', 'size_bytes': 1151, 'modified': '2026-03-14T05:47:17.496958+00:00'}, {'path': '01_CAPTURE/inbox/Authority Pack Compiler.md', 'name': 'Authority Pack Compiler.md', 'size_bytes': 3484, 'modified': '2026-03-11T08:18:39.900118+00:00'}, {'path': '01_CAPTURE/inbox/Pure Agent Concepts.md', 'name': 'Pure Agent Concepts.md', 'size_bytes': 4470, 'modified': '2026-03-10T08:41:03.283201+00:00'}, {'path': '01_CAPTURE/inbox/Auth Packs \u2014 Versioning & Inheritance.md', 'name': 'Auth Packs \u2014 Versioning & Inheritance.md', 'size_bytes': 5047, 'modified': '2026-03-11T08:23:45.324460+00:00'}, {'path': '01_CAPTURE/inbox/Registry Anchoring.md', 'name': 'Registry Anchoring.md', 'size_bytes': 5191, 'modified': '2026-03-11T18:41:41.052945+00:00'}, {'path': '01_CAPTURE/inbox/Deterministic Pack Compiler Rule.md', 'name': 'Deterministic Pack Compiler Rule.md', 'size_bytes': 314, 'modified': '2026-03-11T11:43:01.388688+00:00'}, {'path': '01_CAPTURE/inbox/Frontmatter Upgrade Checklist.md', 'name': 'Frontmatter Upgrade Checklist.md', 'size_bytes': 1163, 'modified': '2026-03-11T12:36:12.624007+00:00'}, {'path': '01_CAPTURE/inbox/Master Agents.md', 'name': 'Master Agents.md', 'size_bytes': 8407, 'modified': '2026-03-14T12:35:09.180258+00:00'}, {'path': '01_CAPTURE/inbox/Claude Note Quality Rules.md', 'name': 'Claude Note Quality Rules.md', 'size_bytes': 924, 'modified': '2026-03-10T20:10:53.620596+00:00'}, {'path': '01_CAPTURE/inbox/Potential Authority Pack Templates.md', 'name': 'Potential Authority Pack Templates.md', 'size_bytes': 404, 'modified': '2026-03-15T11:01:10.263774+00:00'}], 'count': 45}, 'error': None, 'artifacts': [], 'timestamp': '2026-03-15T11:13:32.975557+00:00'}",
+        "conditions": "Read-only scan of inbox",
+        "error": null,
+        "timestamp": "2026-03-15T11:13:32.975927+00:00"
+      },
+      "timestamp": "2026-03-15T11:13:32.985902+00:00"
+    },
+    "capture_triage": {
+      "stage_id": "capture_triage",
+      "stage_name": "Capture Triage and Classification",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "status": "failed",
+      "data": null,
+      "error": null,
+      "tool_result": {
+        "tool_name": "read_note",
+        "success": false,
+        "data": null,
+        "error": null,
+        "artifacts": [],
+        "timestamp": "2026-03-15T11:13:32.988269+00:00"
+      },
+      "action_result": {
+        "action": "Classify captures by note type and domain",
+        "permission": "allowed",
+        "executed": true,
+        "outcome": "{'tool_name': 'read_note', 'success': False, 'data': None, 'error': \"[Errno 21] Is a directory: '/sessions/loving-busy-bohr/mnt/Agent Maestro/'\", 'artifacts': [], 'timestamp': '2026-03-15T11:13:32.986259+00:00'}",
+        "conditions": "Classification against controlled vocabulary for note_class",
+        "error": null,
+        "timestamp": "2026-03-15T11:13:32.986278+00:00"
+      },
+      "timestamp": "2026-03-15T11:13:32.988281+00:00"
+    }
+  }
+}

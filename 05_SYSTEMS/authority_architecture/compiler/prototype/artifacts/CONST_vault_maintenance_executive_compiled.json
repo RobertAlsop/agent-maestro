@@ -1,0 +1,203 @@
+{
+  "artifact_id": "compiled.CONST.vault_maintenance.executive.v1.0",
+  "compiled_from": {
+    "pack_id": "CONST.vault_maintenance.executive",
+    "pack_name": "Vault Maintenance — Executive (Maintenance Director)",
+    "pack_version": "1.0",
+    "parent_pack_id": "EXEC.pack.knowledge_executive",
+    "constellation": "vault_maintenance",
+    "agent_role": "executive"
+  },
+  "compiled_at": "2026-03-14T21:20:48.768371+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive"
+    ],
+    "overrides_applied": [
+      "CONST.vault_maintenance.executive overrides 'pack_id' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'pack_name' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'inherits_from' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'constellation' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'scope' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'governed_entities' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'governed_actions' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'rules' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'control_gates' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'evidence_requirements' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'escalation' from EXEC.pack.knowledge_executive",
+      "CONST.vault_maintenance.executive overrides 'failure_semantics' from EXEC.pack.knowledge_executive"
+    ],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "decision",
+    "scope": {
+      "domain": "vault_maintenance",
+      "boundaries": [
+        "All vault maintenance, audit, and repair operations",
+        "Capture inbox triage and note processing oversight",
+        "Definition alignment, ontology integrity, and template compliance",
+        "Self-healing repair approval and oversight",
+        "Link auditing and orphan detection (future absorption from vault_curator)"
+      ]
+    },
+    "governed_entities": [
+      "All markdown notes in the Agent Maestro vault",
+      "CSV data files in the Structured Data Layer",
+      "Frontmatter schema compliance",
+      "Wiki-link integrity and knowledge graph consistency",
+      "Capture inbox items pending processing"
+    ],
+    "governed_actions": [
+      {
+        "action": "Prioritise maintenance operations",
+        "permission": "allowed",
+        "conditions": "Based on audit reports, system health metrics, and escalation backlog"
+      },
+      {
+        "action": "Approve maintenance cycle execution",
+        "permission": "allowed",
+        "conditions": "All prerequisites met (specialists available, evidence current)"
+      },
+      {
+        "action": "Delegate operations to Maintenance Coordinator",
+        "permission": "allowed",
+        "conditions": "Task must be within vault_maintenance scope"
+      },
+      {
+        "action": "Approve non-destructive repairs for notes with authority_weight < 80",
+        "permission": "allowed",
+        "conditions": "Repair must have valid justification and audit evidence"
+      },
+      {
+        "action": "Review and approve escalations from Maintenance Coordinator",
+        "permission": "allowed",
+        "conditions": "Escalations within vault_maintenance authority scope"
+      },
+      {
+        "action": "Write execution reports and cycle summaries",
+        "permission": "allowed",
+        "conditions": "Reports logged to 06_EXECUTION/"
+      },
+      {
+        "action": "Approve repairs for notes with authority_weight >= 80",
+        "permission": "requires_escalation",
+        "conditions": "High-authority notes require Knowledge Executive approval"
+      },
+      {
+        "action": "Delete vault files",
+        "permission": "requires_escalation",
+        "conditions": "All file deletions require Knowledge Executive / human approval"
+      },
+      {
+        "action": "Modify canonical governance documents",
+        "permission": "requires_escalation",
+        "conditions": "Notes with authority_weight >= 90 require human approval"
+      },
+      {
+        "action": "Change vault directory structure",
+        "permission": "denied",
+        "conditions": "Structural changes are out of scope for this constellation"
+      },
+      {
+        "action": "Modify authority packs or governance architecture",
+        "permission": "denied",
+        "conditions": "Authority architecture changes require Governance Executive"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "VM-E-001",
+        "description": "All maintenance decisions must be traceable to audit report data",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-E-002",
+        "description": "Destructive operations (delete, rename, restructure) always escalate to Knowledge Executive or human",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-E-003",
+        "description": "Execution logs must be written for every maintenance cycle",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-E-004",
+        "description": "Canonical notes (authority_weight >= 90) are read-only without human approval",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VM-E-005",
+        "description": "Systemic issues affecting > 10% of vault must be escalated to Knowledge Executive immediately",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "VM-GATE-E01",
+        "condition": "Audit reports must exist and be current before approving maintenance cycle",
+        "on_fail": "escalate"
+      },
+      {
+        "gate_id": "VM-GATE-E02",
+        "condition": "No more than 100 changes per maintenance cycle without Knowledge Executive review",
+        "on_fail": "block"
+      },
+      {
+        "gate_id": "VM-GATE-E03",
+        "condition": "All specialist agents must be registered and have valid compiled authority packs",
+        "on_fail": "block"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "Specialist audit reports",
+        "required": true,
+        "format": "CSV reports from each active specialist"
+      },
+      {
+        "evidence_type": "State change log",
+        "required": true,
+        "format": "CSV at 06_EXECUTION/logs/state_change_log.csv"
+      },
+      {
+        "evidence_type": "Execution log",
+        "required": true,
+        "format": "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "EXEC.pack.knowledge_executive",
+      "escalation_conditions": [
+        "Repair requested for note with authority_weight >= 80",
+        "File deletion requested",
+        "Systemic issue affecting > 10% of vault",
+        "Unresolvable conflict between audit findings",
+        "Governance document modification requested"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "block",
+      "on_execution_failure": "escalate",
+      "on_quality_failure": "escalate_and_remediate",
+      "on_graph_integrity_failure": "block_and_audit"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/CONST_vault_maintenance_executive_compiled.json",
+    "bound_at": "2026-03-14T21:20:48.768395+00:00"
+  }
+}

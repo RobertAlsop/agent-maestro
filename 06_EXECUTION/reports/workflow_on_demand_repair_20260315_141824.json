@@ -1,0 +1,39 @@
+{
+  "workflow_id": "on_demand_repair",
+  "status": "failed",
+  "started_at": "2026-03-15T11:18:24.462315+00:00",
+  "ended_at": "2026-03-15T11:18:24.465438+00:00",
+  "stages_completed": 0,
+  "stages_skipped": 0,
+  "stages_failed": 1,
+  "stages_escalated": 0,
+  "escalations": [],
+  "stage_results": {
+    "repair_request": {
+      "stage_id": "repair_request",
+      "stage_name": "Repair Request Reception",
+      "agent_id": "compiled.CONST.vault_maintenance.supervisor.v1.0",
+      "status": "failed",
+      "data": null,
+      "error": null,
+      "tool_result": {
+        "tool_name": "read_note",
+        "success": false,
+        "data": null,
+        "error": null,
+        "artifacts": [],
+        "timestamp": "2026-03-15T11:18:24.465416+00:00"
+      },
+      "action_result": {
+        "action": "Delegate audit tasks to specialists",
+        "permission": "allowed",
+        "executed": true,
+        "outcome": "{'tool_name': 'read_note', 'success': False, 'data': None, 'error': \"[Errno 21] Is a directory: '/sessions/loving-busy-bohr/mnt/Agent Maestro/'\", 'artifacts': [], 'timestamp': '2026-03-15T11:18:24.463841+00:00'}",
+        "conditions": "Task must match specialist capability and be within vault_maintenance scope",
+        "error": null,
+        "timestamp": "2026-03-15T11:18:24.463870+00:00"
+      },
+      "timestamp": "2026-03-15T11:18:24.465430+00:00"
+    }
+  }
+}

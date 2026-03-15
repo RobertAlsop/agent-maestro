@@ -1,0 +1,180 @@
+source_id,source_name,relationship_type,target_id,target_name
+CON.agent_constellation,Agent Constellation,part_of,SYS.agent_ecosystem,Agent Ecosystem
+CON.agent_constellation,Agent Constellation,implements,PAT.constellation_architecture_pattern,Constellation Architecture Pattern
+CON.agent_constellation,Agent Constellation,implements,PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern
+CON.agent_constellation,Agent Constellation,uses,CON.agent_system,Agent System
+CON.agent_constellation,Agent Constellation,uses,CON.executive_agent,Executive Agent
+CON.agent_constellation,Agent Constellation,uses,CON.supervisor_agent,Supervisor Agent
+CON.agent_constellation,Agent Constellation,uses,CON.specialist_agent,Specialist Agent
+CON.agent_constellation,Agent Constellation,uses,CON.authority_pack,Authority Pack
+CON.agent_constellation,Agent Constellation,produces,CON.operational_outcome,Operational Outcome
+CON.agent_ecosystem,Agent Ecosystem,uses,SYS.agent_constellation,Agent Constellation
+CON.agent_ecosystem,Agent Ecosystem,uses,CON.agent_system,Agent System
+CON.agent_ecosystem,Agent Ecosystem,uses,SYS.shared_services,Shared Services
+CON.agent_ecosystem,Agent Ecosystem,produces,CON.operational_intelligence,Operational Intelligence
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,applies_to,CON.agent_system,Agent System
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,applies_to,SYS.agent_constellation,Agent Constellation
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,applies_to,CON.memory_architecture,Memory Architecture
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,applies_to,SYS.authority_architecture,Authority Architecture
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,uses,CON.agent,Agent
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,uses,CON.authority_pack,Authority Pack
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,uses,SYS.memory_model,Memory Model
+CON.agent_maestro_layer_model,Agent Maestro Layer Model,uses,CON.model_workspace_protocol,Model Workspace Protocol
+CON.agent_orchestration,Agent Orchestration,part_of,CON.agent_systems,Agent Systems
+CON.agent_orchestration,Agent Orchestration,implements,PAT.deterministic_control_surfaces,Deterministic Control Surfaces
+CON.agent_orchestration,Agent Orchestration,implements,PAT.human_escalation_pattern,Human Escalation Pattern
+CON.agent_orchestration,Agent Orchestration,applies_to,CON.agent_workflow,Agent Workflow
+CON.agent_orchestration,Agent Orchestration,uses,CON.agent,Agent
+CON.agent_system,Agent System,part_of,SYS.agent_ecosystem,Agent Ecosystem
+CON.agent_system,Agent System,part_of,SYS.agent_constellation,Agent Constellation
+CON.agent_system,Agent System,uses,CON.agent,Agent
+CON.agent_system,Agent System,uses,CON.authority_pack,Authority Pack
+CON.agent_system,Agent System,produces,CON.operational_outcome,Operational Outcome
+CON.agent_systems,Agent Systems,uses,CON.agent,Agent
+CON.agent_systems,Agent Systems,uses,CON.agent_workflow,Agent Workflow
+CON.agent_systems,Agent Systems,uses,CON.agent_orchestration,Agent Orchestration
+CON.agent_systems,Agent Systems,uses,SYS.authority_architecture,Authority Architecture
+CON.agent_systems,Agent Systems,produces,CON.operational_outcome,Operational Outcome
+CON.agent_systems,Agent Systems,produces,CON.operational_intelligence,Operational Intelligence
+CON.agent_workflow,Agent Workflow,part_of,CON.agent_systems,Agent Systems
+CON.agent_workflow,Agent Workflow,uses,CON.agent,Agent
+CON.agent_workflow,Agent Workflow,uses,CON.decision_authority,Decision Authority
+CON.agent_workflow,Agent Workflow,uses,CON.execution_authority,Execution Authority
+CON.agent_workflow,Agent Workflow,produces,CON.operational_outcome,Operational Outcome
+CON.agent,Agent,part_of,CON.agent_systems,Agent Systems
+CON.agent,Agent,part_of,CON.agent_workflow,Agent Workflow
+CON.agent,Agent,implements,PAT.anti_agent_sprawl,Anti-Agent-Sprawl Pattern
+CON.agent,Agent,uses,CON.context_pack,Context Pack
+CON.agent,Agent,uses,CON.decision_authority,Decision Authority
+CON.agent,Agent,uses,CON.execution_authority,Execution Authority
+CON.agent,Agent,produces,CON.operational_outcome,Operational Outcome
+CON.authority_architecture,Authority Architecture,defines,CON.authority_pack,Authority Pack
+CON.authority_architecture,Authority Architecture,defines,CON.decision_authority,Decision Authority
+CON.authority_architecture,Authority Architecture,defines,CON.execution_authority,Execution Authority
+CON.authority_architecture,Authority Architecture,implements,PAT.governance_before_autonomy,Governance Before Autonomy
+CON.authority_architecture,Authority Architecture,governs,CON.agent,Agent
+CON.authority_inheritance,Authority Inheritance,implements,PAT.authority_inheritance_pattern,Authority Inheritance Pattern
+CON.authority_inheritance,Authority Inheritance,implements,PAT.policy_resolution_pattern,Policy Resolution Pattern
+CON.authority_inheritance,Authority Inheritance,applies_to,CON.authority_pack,Authority Pack
+CON.authority_inheritance,Authority Inheritance,uses,SYS.pack_versioning,Pack Versioning
+CON.authority_model,Authority Model,defines,CON.decision_authority,Decision Authority
+CON.authority_model,Authority Model,defines,CON.execution_authority,Execution Authority
+CON.authority_model,Authority Model,applies_to,CON.authority_pack,Authority Pack
+CON.authority_pack,Authority Pack,defines,CON.decision_authority,Decision Authority
+CON.authority_pack,Authority Pack,defines,CON.execution_authority,Execution Authority
+CON.authority_pack,Authority Pack,part_of,SYS.authority_architecture,Authority Architecture
+CON.authority_pack,Authority Pack,governs,CON.agent,Agent
+CON.compiled_governance_artifact,Compiled Governance Artifact,implements,PAT.governance_compilation_pattern,Governance Compilation Pattern
+CON.compiled_governance_artifact,Compiled Governance Artifact,inherits_from,CON.authority_pack,Authority Pack
+CON.compiled_governance_artifact,Compiled Governance Artifact,uses,CON.host_binding,Host Binding
+CON.context_pack,Context Pack,part_of,CON.memory_architecture,Memory Architecture
+CON.context_pack,Context Pack,applies_to,CON.agent,Agent
+CON.context_pack,Context Pack,uses,SYS.knowledge_graph_layer,Knowledge Graph Layer
+CON.context_pack,Context Pack,uses,SYS.vector_memory_layer,Vector Memory Layer
+CON.context_pack,Context Pack,uses,SYS.structured_data_layer,Structured Data Layer
+CON.decision_authority,Decision Authority,part_of,SYS.authority_architecture,Authority Architecture
+CON.decision_authority,Decision Authority,implements,PAT.decision_execution_separation,Decision-Execution Separation
+CON.decision_authority,Decision Authority,implements,PAT.evidence_over_assumptions,Evidence Over Assumptions
+CON.decision_authority,Decision Authority,applies_to,CON.agent,Agent
+CON.execution_authority,Execution Authority,part_of,SYS.authority_architecture,Authority Architecture
+CON.execution_authority,Execution Authority,implements,PAT.decision_execution_separation,Decision-Execution Separation
+CON.execution_authority,Execution Authority,implements,PAT.evidence_over_assumptions,Evidence Over Assumptions
+CON.execution_authority,Execution Authority,applies_to,CON.agent,Agent
+CON.execution_authority,Execution Authority,uses,CON.context_pack,Context Pack
+CON.execution_authority,Execution Authority,uses,CON.decision_authority,Decision Authority
+CON.executive_agent,Executive Agent,part_of,SYS.agent_constellation,Agent Constellation
+CON.executive_agent,Executive Agent,implements,PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern
+CON.executive_agent,Executive Agent,governs,CON.supervisor_agent,Supervisor Agent
+CON.executive_agent,Executive Agent,inherits_from,CON.agent,Agent
+CON.executive_agent,Executive Agent,uses,CON.decision_authority,Decision Authority
+CON.executive_agent,Executive Agent,uses,CON.authority_pack,Authority Pack
+CON.governance_artifact,Governance Artifact,uses,CON.authority_pack,Authority Pack
+CON.governance_artifact,Governance Artifact,uses,CON.context_pack,Context Pack
+CON.governance_artifact,Governance Artifact,uses,CON.compiled_governance_artifact,Compiled Governance Artifact
+CON.host_binding,Host Binding,implements,PAT.host_binding_pattern,Host Binding Pattern
+CON.host_binding,Host Binding,applies_to,CON.compiled_governance_artifact,Compiled Governance Artifact
+CON.human_escalation,Human Escalation,implements,PAT.human_escalation_pattern,Human Escalation Pattern
+CON.human_escalation,Human Escalation,applies_to,CON.agent,Agent
+CON.human_escalation,Human Escalation,uses,CON.decision_authority,Decision Authority
+CON.memory_architecture,Memory Architecture,defines,CON.context_pack,Context Pack
+CON.memory_architecture,Memory Architecture,defines,SYS.knowledge_graph_layer,Knowledge Graph Layer
+CON.memory_architecture,Memory Architecture,defines,SYS.vector_memory_layer,Vector Memory Layer
+CON.memory_architecture,Memory Architecture,defines,SYS.structured_data_layer,Structured Data Layer
+CON.memory_architecture,Memory Architecture,implements,PAT.three_layer_memory_model,Three-Layer Memory Model
+CON.memory_architecture,Memory Architecture,produces,CON.operational_intelligence,Operational Intelligence
+CON.model_workspace_protocol,Model Workspace Protocol,implements,PAT.model_workspace_protocol_pattern,Model Workspace Protocol Pattern
+CON.model_workspace_protocol,Model Workspace Protocol,applies_to,SYS.agent_constellation,Agent Constellation
+CON.model_workspace_protocol,Model Workspace Protocol,uses,CON.authority_pack,Authority Pack
+CON.model_workspace_protocol,Model Workspace Protocol,uses,CON.compiled_governance_artifact,Compiled Governance Artifact
+CON.model_workspace_protocol,Model Workspace Protocol,uses,CON.specialist_agent,Specialist Agent
+CON.model_workspace_protocol,Model Workspace Protocol,uses,CON.executive_agent,Executive Agent
+CON.model_workspace_protocol,Model Workspace Protocol,uses,CON.supervisor_agent,Supervisor Agent
+CON.operational_intelligence,Operational Intelligence,applies_to,CON.agent_systems,Agent Systems
+CON.operational_intelligence,Operational Intelligence,uses,CON.memory_architecture,Memory Architecture
+CON.operational_intelligence,Operational Intelligence,produces,CON.operational_outcome,Operational Outcome
+CON.operational_outcome,Operational Outcome,part_of,CON.operational_intelligence,Operational Intelligence
+CON.operational_outcome,Operational Outcome,implements,PAT.evidence_over_assumptions,Evidence Over Assumptions
+CON.operational_outcome,Operational Outcome,uses,CON.agent_workflow,Agent Workflow
+CON.pack_versioning,Pack Versioning,implements,PAT.pack_versioning_pattern,Pack Versioning Pattern
+CON.pack_versioning,Pack Versioning,applies_to,CON.authority_pack,Authority Pack
+CON.pack_versioning,Pack Versioning,uses,SYS.authority_inheritance,Authority Inheritance
+CON.shared_services,Shared Services,part_of,SYS.agent_ecosystem,Agent Ecosystem
+CON.shared_services,Shared Services,applies_to,SYS.agent_constellation,Agent Constellation
+CON.shared_services,Shared Services,applies_to,CON.agent_system,Agent System
+CON.shared_services,Shared Services,uses,CON.memory_architecture,Memory Architecture
+CON.specialist_agent,Specialist Agent,part_of,SYS.agent_constellation,Agent Constellation
+CON.specialist_agent,Specialist Agent,implements,PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern
+CON.specialist_agent,Specialist Agent,inherits_from,CON.agent,Agent
+CON.specialist_agent,Specialist Agent,uses,CON.execution_authority,Execution Authority
+CON.supervisor_agent,Supervisor Agent,part_of,SYS.agent_constellation,Agent Constellation
+CON.supervisor_agent,Supervisor Agent,implements,PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern
+CON.supervisor_agent,Supervisor Agent,governs,CON.specialist_agent,Specialist Agent
+CON.supervisor_agent,Supervisor Agent,inherits_from,CON.agent,Agent
+CON.supervisor_agent,Supervisor Agent,uses,CON.decision_authority,Decision Authority
+PAT.anti_agent_sprawl,Anti-Agent-Sprawl Pattern,applies_to,CON.agent,Agent
+PAT.anti_agent_sprawl,Anti-Agent-Sprawl Pattern,uses,CON.authority_pack,Authority Pack
+PAT.authority_inheritance_pattern,Authority Inheritance Pattern,applies_to,CON.authority_pack,Authority Pack
+PAT.authority_inheritance_pattern,Authority Inheritance Pattern,applies_to,SYS.authority_inheritance,Authority Inheritance
+PAT.authority_pack_grammar,Authority Pack Grammar,applies_to,CON.authority_pack,Authority Pack
+PAT.constellation_architecture_pattern,Constellation Architecture Pattern,applies_to,SYS.agent_constellation,Agent Constellation
+PAT.constellation_architecture_pattern,Constellation Architecture Pattern,uses,CON.executive_agent,Executive Agent
+PAT.constellation_architecture_pattern,Constellation Architecture Pattern,uses,CON.supervisor_agent,Supervisor Agent
+PAT.constellation_architecture_pattern,Constellation Architecture Pattern,uses,CON.specialist_agent,Specialist Agent
+PAT.decision_execution_separation,Decision-Execution Separation,applies_to,CON.agent,Agent
+PAT.decision_execution_separation,Decision-Execution Separation,uses,CON.decision_authority,Decision Authority
+PAT.decision_execution_separation,Decision-Execution Separation,uses,CON.execution_authority,Execution Authority
+PAT.deterministic_control_surfaces,Deterministic Control Surfaces,applies_to,CON.agent_orchestration,Agent Orchestration
+PAT.evidence_over_assumptions,Evidence Over Assumptions,applies_to,CON.agent,Agent
+PAT.evidence_over_assumptions,Evidence Over Assumptions,applies_to,CON.decision_authority,Decision Authority
+PAT.evidence_over_assumptions,Evidence Over Assumptions,applies_to,CON.execution_authority,Execution Authority
+PAT.evidence_over_assumptions,Evidence Over Assumptions,uses,CON.operational_outcome,Operational Outcome
+PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern,applies_to,SYS.agent_constellation,Agent Constellation
+PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern,uses,CON.executive_agent,Executive Agent
+PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern,uses,CON.supervisor_agent,Supervisor Agent
+PAT.exec_supervisor_specialist,Executive-Supervisor-Specialist Pattern,uses,CON.specialist_agent,Specialist Agent
+PAT.governance_before_autonomy,Governance Before Autonomy,applies_to,CON.agent,Agent
+PAT.governance_before_autonomy,Governance Before Autonomy,uses,SYS.authority_architecture,Authority Architecture
+PAT.governance_compilation_pattern,Governance Compilation Pattern,applies_to,CON.compiled_governance_artifact,Compiled Governance Artifact
+PAT.host_binding_pattern,Host Binding Pattern,applies_to,CON.host_binding,Host Binding
+PAT.human_escalation_pattern,Human Escalation Pattern,applies_to,CON.agent,Agent
+PAT.human_escalation_pattern,Human Escalation Pattern,applies_to,CON.decision_authority,Decision Authority
+PAT.model_workspace_protocol_pattern,Model Workspace Protocol Pattern,applies_to,CON.model_workspace_protocol,Model Workspace Protocol
+PAT.pack_override_rules,Pack Override Rules,applies_to,SYS.authority_inheritance,Authority Inheritance
+PAT.pack_versioning_pattern,Pack Versioning Pattern,applies_to,SYS.pack_versioning,Pack Versioning
+PAT.policy_resolution_pattern,Policy Resolution Pattern,applies_to,SYS.authority_inheritance,Authority Inheritance
+PAT.three_layer_memory_model,Three-Layer Memory Model,applies_to,CON.memory_architecture,Memory Architecture
+PAT.three_layer_memory_model,Three-Layer Memory Model,uses,SYS.knowledge_graph_layer,Knowledge Graph Layer
+PAT.three_layer_memory_model,Three-Layer Memory Model,uses,SYS.vector_memory_layer,Vector Memory Layer
+PAT.three_layer_memory_model,Three-Layer Memory Model,uses,SYS.structured_data_layer,Structured Data Layer
+MAP.layer_model_map,Agent Maestro — Layer Model Map,part_of,MAP.agent_maestro.navigation,Agent Maestro — Navigation Map
+PROJ.session_log.2026_03_14,Agent Maestro v0.1 — Session Log 2026-03-14,part_of,PROJ.improvement_proposal_v0.1,Agent Maestro v0.1 — Improvement Proposal
+PROJ.session_log.2026_03_14,Agent Maestro v0.1 — Session Log 2026-03-14,produces,PROJ.improvement_proposal_v0.1,Agent Maestro v0.1 — Improvement Proposal
+SYS.workspace_layer,Workspace Layer,part_of,CON.agent_maestro_layer_model,Agent Maestro Layer Model
+SYS.workspace_layer,Workspace Layer,implements,CON.model_workspace_protocol,Model Workspace Protocol
+SYS.workspace_layer,Workspace Layer,implements,PAT.model_workspace_protocol_pattern,Model Workspace Protocol Pattern
+SYS.workspace_layer,Workspace Layer,applies_to,SYS.agent_constellation,Agent Constellation
+SYS.workspace_layer,Workspace Layer,uses,CON.compiled_governance_artifact,Compiled Governance Artifact
+SYS.workspace_layer,Workspace Layer,uses,SYS.knowledge_graph_layer,Knowledge Graph Layer
+SYS.workspace_layer,Workspace Layer,uses,SYS.structured_data_layer,Structured Data Layer
+SYS.structured_data_registry,Structured Data Registry,part_of,SYS.structured_data_layer,Structured Data Layer
+SYS.structured_data_registry,Structured Data Registry,implements,SYS.memory_model,Memory Model

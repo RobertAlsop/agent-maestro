@@ -1,0 +1,130 @@
+{
+  "artifact_id": "compiled.CONST.vault_curator.specialist.link_auditor.v1.0",
+  "compiled_from": {
+    "pack_id": "CONST.vault_curator.specialist.link_auditor",
+    "pack_name": "Vault Curator — Specialist (Link Auditor)",
+    "pack_version": "1.0",
+    "parent_pack_id": "CONST.vault_curator.supervisor",
+    "constellation": "vault_curator",
+    "agent_role": "specialist"
+  },
+  "compiled_at": "2026-03-14T21:11:10.760368+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor",
+      "CONST.vault_curator.specialist.link_auditor"
+    ],
+    "overrides_applied": [
+      "CONST.vault_curator.specialist.link_auditor overrides 'pack_id' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'pack_name' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'authority_type' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'inherits_from' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'agent_role' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'scope' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'governed_entities' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'governed_actions' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'rules' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'control_gates' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'evidence_requirements' from CONST.vault_curator.executive",
+      "CONST.vault_curator.specialist.link_auditor overrides 'escalation' from CONST.vault_curator.executive"
+    ],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "execution",
+    "scope": {
+      "domain": "vault_governance",
+      "boundaries": [
+        "Wiki-link validation across all vault markdown files"
+      ]
+    },
+    "governed_entities": [
+      "Wiki-links in markdown files",
+      "Link audit report CSV"
+    ],
+    "governed_actions": [
+      {
+        "action": "Scan vault files for wiki-links",
+        "permission": "allowed"
+      },
+      {
+        "action": "Check link targets exist",
+        "permission": "allowed"
+      },
+      {
+        "action": "Write link audit report CSV",
+        "permission": "allowed",
+        "conditions": "Output to 06_EXECUTION/reports/link_audit_report.csv"
+      },
+      {
+        "action": "Modify vault files",
+        "permission": "denied",
+        "conditions": "Link Auditor is read-only; fixes are Supervisor responsibility"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "VC-LA-001",
+        "description": "Must scan all .md files excluding CLAUDE.md",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-LA-002",
+        "description": "Must classify links as valid, broken, or ambiguous",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-LA-003",
+        "description": "Must not modify any vault files",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "VC-GATE-LA01",
+        "condition": "Vault root path must be valid and accessible",
+        "on_fail": "block"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "Link audit report",
+        "required": true,
+        "format": "CSV with columns: source_file, link_text, target_file, status, audit_date"
+      },
+      {
+        "evidence_type": "Execution log",
+        "required": true,
+        "format": "CSV entry in task_execution_log.csv"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "CONST.vault_curator.supervisor",
+      "escalation_conditions": [
+        "Vault path inaccessible",
+        "Parsing error in markdown file"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "block",
+      "on_execution_failure": "escalate"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/CONST_vault_curator_specialist_link_auditor_compiled.json",
+    "bound_at": "2026-03-14T21:11:10.760390+00:00"
+  }
+}

@@ -1,0 +1,87 @@
+pack_id: CONST.vault_curator.executive
+pack_name: Vault Curator — Executive (Vault Governance Director)
+version: "1.0"
+owner: AgentMaestro
+authority_type: decision
+inherits_from: null
+constellation: vault_curator
+agent_role: executive
+
+scope:
+  domain: vault_governance
+  boundaries:
+    - "Agent Maestro vault maintenance and integrity"
+    - "Frontmatter schema compliance"
+    - "Wiki-link integrity"
+    - "Knowledge graph consistency"
+
+governed_entities:
+  - "All markdown notes in the Agent Maestro vault"
+  - "CSV data files in the Structured Data Layer"
+  - "Authority pack YAML files"
+  - "CLAUDE.md governance files"
+
+governed_actions:
+  - action: "Prioritise maintenance tasks"
+    permission: allowed
+    conditions: "Based on schema validation and link audit reports"
+  - action: "Delegate audits to Supervisor"
+    permission: allowed
+    conditions: "Task must be within vault governance scope"
+  - action: "Approve non-destructive fixes"
+    permission: allowed
+    conditions: "Changes limited to frontmatter updates and link corrections"
+  - action: "Delete vault files"
+    permission: requires_escalation
+    conditions: "All file deletions require human operator approval"
+  - action: "Modify canonical governance documents"
+    permission: requires_escalation
+    conditions: "Notes with authority_weight >= 90 require human approval"
+  - action: "Change vault directory structure"
+    permission: denied
+    conditions: "Structural changes are out of scope for this constellation"
+
+rules:
+  - rule_id: "VC-E-001"
+    description: "All maintenance decisions must be traceable to audit report data"
+    enforcement: mandatory
+  - rule_id: "VC-E-002"
+    description: "Destructive operations (delete, rename, restructure) always escalate to human"
+    enforcement: mandatory
+  - rule_id: "VC-E-003"
+    description: "Execution logs must be written for every maintenance cycle"
+    enforcement: mandatory
+  - rule_id: "VC-E-004"
+    description: "Canonical notes (authority_weight >= 90) are read-only without human approval"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VC-GATE-001"
+    condition: "Audit reports must exist and be current (< 24 hours old) before prioritisation"
+    on_fail: escalate
+  - gate_id: "VC-GATE-002"
+    condition: "No more than 50 changes per maintenance cycle without human review"
+    on_fail: block
+
+evidence_requirements:
+  - evidence_type: "Link audit report CSV"
+    required: true
+    format: "CSV at 06_EXECUTION/reports/link_audit_report.csv"
+  - evidence_type: "Schema validation report CSV"
+    required: true
+    format: "CSV at 06_EXECUTION/reports/schema_validation_report.csv"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+
+escalation:
+  escalates_to: human_operator
+  escalation_conditions:
+    - "File deletion requested"
+    - "Canonical document modification requested"
+    - "More than 50 changes in a single cycle"
+    - "Unresolvable conflict between audit findings"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

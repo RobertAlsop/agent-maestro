@@ -1,0 +1,116 @@
+pack_id: EXEC.pack.evolution_executive
+pack_name: Evolution Executive Authority Pack
+version: "1.0"
+owner: AgentMaestro
+authority_type: decision
+inherits_from: null
+constellation: evolution
+agent_role: executive
+
+scope:
+  domain: system_evolution
+  boundaries:
+    - "Optimization analysis and pattern detection"
+    - "Improvement proposal generation and validation"
+    - "Experiment tracking and results analysis"
+
+governed_entities:
+  - "Execution logs (read-only)"
+  - "Evolution proposals and recommendations"
+  - "Experiment records and trial results"
+  - "Performance trend analysis"
+
+governed_actions:
+  - action: "Analyse execution patterns"
+    permission: allowed
+    conditions: "Read-only access to execution logs for pattern identification"
+  - action: "Generate improvement proposals"
+    permission: allowed
+    conditions: "Proposals must include evidence, cost-benefit analysis, and rollback plan"
+  - action: "Track experiments"
+    permission: allowed
+    conditions: "Complete experiment lifecycle from design to outcome"
+  - action: "Identify optimization opportunities"
+    permission: allowed
+    conditions: "Based on execution data and system health metrics"
+  - action: "Validate proposal feasibility"
+    permission: allowed
+    conditions: "Technical and operational feasibility assessment"
+  - action: "Generate evolution reports"
+    permission: allowed
+    conditions: "Reports documenting trends, proposals, and recommendations"
+  - action: "Recommend system improvements"
+    permission: allowed
+    conditions: "Advisory recommendations with supporting evidence"
+  - action: "Implement improvements"
+    permission: requires_escalation
+    conditions: "ALL improvement implementations require human approval (advisory-only)"
+  - action: "Modify authority packs"
+    permission: denied
+    conditions: "Authority pack modifications are Governance Executive domain"
+  - action: "Delete execution records"
+    permission: denied
+    conditions: "Execution records are permanent for historical analysis"
+  - action: "Execute specialist work"
+    permission: denied
+    conditions: "Evolution executives propose, not execute"
+
+rules:
+  - rule_id: "EV-001"
+    description: "All proposals must include supporting evidence from execution data"
+    enforcement: mandatory
+  - rule_id: "EV-002"
+    description: "Cost-benefit analysis required for all optimization proposals"
+    enforcement: mandatory
+  - rule_id: "EV-003"
+    description: "Rollback plan mandatory for all improvement proposals"
+    enforcement: mandatory
+  - rule_id: "EV-004"
+    description: "Experiments must be tracked with baseline, intervention, and outcome"
+    enforcement: mandatory
+  - rule_id: "EV-005"
+    description: "Evolution proposals are advisory — all implementations require escalation"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "EV-GATE-001"
+    condition: "Proposal must include evidence, cost-benefit, and rollback plan"
+    on_fail: escalate
+  - gate_id: "EV-GATE-002"
+    condition: "Feasibility validation must complete before proposal is marked ready"
+    on_fail: escalate
+  - gate_id: "EV-GATE-003"
+    condition: "Experiment baseline must be established before intervention"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Execution log analysis"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+  - evidence_type: "Improvement proposal"
+    required: true
+    format: "YAML at 06_EXECUTION/proposals/improvement_proposals.yaml"
+  - evidence_type: "Cost-benefit analysis"
+    required: true
+    format: "JSON at 06_EXECUTION/proposals/cost_benefit_analysis.json"
+  - evidence_type: "Experiment record"
+    required: true
+    format: "YAML at 06_EXECUTION/experiments/experiment_log.yaml"
+  - evidence_type: "Rollback plan"
+    required: true
+    format: "YAML at 06_EXECUTION/proposals/rollback_plans.yaml"
+
+escalation:
+  escalates_to: human_evolution_board
+  escalation_conditions:
+    - "All improvement implementations (advisory-only role)"
+    - "Major system architecture changes proposed"
+    - "High-risk optimization experiments"
+    - "Cross-constellation impact proposals"
+    - "Fundamental workflow changes suggested"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate
+  on_evidence_failure: reject_proposal
+  on_feasibility_failure: return_for_revision

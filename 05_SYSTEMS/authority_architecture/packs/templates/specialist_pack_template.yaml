@@ -1,0 +1,72 @@
+# Specialist Authority Pack Template
+# Use this template to create authority packs for specialist-layer agents.
+# Specialists perform specific tasks within a narrow domain under supervisor coordination.
+# They have the narrowest scope and most specific permissions.
+
+pack_id: CONST.{constellation}.specialist.{specialist_name}
+pack_name: "{Constellation Name} — Specialist ({Specialist Title})"
+version: "1.0"
+owner: AgentMaestro
+authority_type: execution
+inherits_from: CONST.{constellation}.supervisor  # Specialists inherit from their supervisor
+constellation: "{constellation_name}"
+agent_role: specialist
+
+scope:
+  domain: "{domain}"
+  boundaries:
+    - "{Narrow operational boundary — what exactly this specialist does}"
+
+governed_entities:
+  - "{Specific entity this specialist operates on}"
+
+governed_actions:
+  # Specialists typically: scan, analyse, report, and execute narrow tasks
+  - action: "{Primary specialist action — e.g., Scan vault files}"
+    permission: allowed
+    conditions: "{Conditions for this action}"
+  - action: "{Secondary specialist action — e.g., Generate report}"
+    permission: allowed
+    conditions: "{Output conditions — e.g., Output to specific CSV path}"
+  # Specialists should NOT modify things outside their narrow scope
+  - action: "Modify files outside specialist scope"
+    permission: denied
+    conditions: "Specialists operate within their defined boundaries only"
+  - action: "Make decisions above specialist authority"
+    permission: requires_escalation
+    conditions: "Decision authority belongs to supervisor or executive"
+
+rules:
+  - rule_id: "{PREFIX}-SP-001"
+    description: "{Primary operational rule for this specialist}"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-SP-002"
+    description: "Must produce evidence of all operations performed"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-SP-003"
+    description: "Must not modify artifacts outside defined scope"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "{PREFIX}-GATE-SP01"
+    condition: "{Entry condition — e.g., Input data must be accessible}"
+    on_fail: block
+
+evidence_requirements:
+  - evidence_type: "{Specialist output — e.g., Audit report}"
+    required: true
+    format: "{Format — e.g., CSV with columns: source, finding, severity}"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV entry in task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.{constellation}.supervisor
+  escalation_conditions:
+    - "Input data inaccessible"
+    - "Unexpected error during operation"
+    - "Finding that exceeds specialist authority to resolve"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

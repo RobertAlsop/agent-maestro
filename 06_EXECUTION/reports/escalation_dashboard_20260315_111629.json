@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-03-15T11:16:29.753890+00:00",
+  "total_escalations": 25,
+  "pending": 24,
+  "approved": 1,
+  "rejected": 0,
+  "by_constellation": {
+    "vault_curator": 19,
+    "vault_maintenance": 5
+  },
+  "by_recipient": {
+    "human_operator": 19,
+    "CONST.vault_maintenance.supervisor": 3,
+    "EXEC.pack.knowledge_executive": 2
+  },
+  "top_actions": [
+    [
+      "Delete vault files",
+      11
+    ],
+    [
+      "Prioritise maintenance tasks",
+      6
+    ],
+    [
+      "Control gate VC-GATE-001",
+      2
+    ],
+    [
+      "Classify notes",
+      2
+    ],
+    [
+      "Delegate audit tasks to specialists",
+      1
+    ],
+    [
+      "Coordinate specialist execution sequence",
+      1
+    ],
+    [
+      "Scan definition consistency",
+      1
+    ]
+  ],
+  "recent_pending": [
+    {
+      "escalation_id": "ESC-0025",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.definition_alignment.v1.0",
+      "action": "Scan definition consistency",
+      "reason": "Action not defined in authority pack \u2014 escalating",
+      "timestamp": "2026-03-15T11:12:31.648002+00:00"
+    },
+    {
+      "escalation_id": "ESC-0024",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "action": "Classify notes",
+      "reason": "Action not defined in authority pack \u2014 escalating",
+      "timestamp": "2026-03-15T11:12:31.584970+00:00"
+    },
+    {
+      "escalation_id": "ESC-0023",
+      "agent_id": "compiled.CONST.vault_maintenance.supervisor.v1.0",
+      "action": "Coordinate specialist execution sequence",
+      "reason": "Missing required evidence: Repair log with before/after states: 06_EXECUTION/log",
+      "timestamp": "2026-03-15T11:11:05.659388+00:00"
+    },
+    {
+      "escalation_id": "ESC-0022",
+      "agent_id": "compiled.CONST.vault_maintenance.supervisor.v1.0",
+      "action": "Delegate audit tasks to specialists",
+      "reason": "Missing required evidence: Repair log with before/after states: 06_EXECUTION/log",
+      "timestamp": "2026-03-15T11:11:05.652291+00:00"
+    },
+    {
+      "escalation_id": "ESC-0021",
+      "agent_id": "compiled.CONST.vault_maintenance.specialist.note_processor.v1.0",
+      "action": "Classify notes",
+      "reason": "Action not defined in authority pack \u2014 escalating",
+      "timestamp": "2026-03-15T11:11:05.643104+00:00"
+    },
+    {
+      "escalation_id": "ESC-0020",
+      "agent_id": "compiled.CONST.vault_curator.executive.v1.0",
+      "action": "Delete vault files",
+      "reason": "All file deletions require human operator approval",
+      "timestamp": "2026-03-14T21:22:16.993830+00:00"
+    },
+    {
+      "escalation_id": "ESC-0019",
+      "agent_id": "compiled.CONST.vault_curator.executive.v1.0",
+      "action": "Prioritise maintenance tasks",
+      "reason": "Execution failed: Something went wrong",
+      "timestamp": "2026-03-14T21:22:16.974106+00:00"
+    },
+    {
+      "escalation_id": "ESC-0018",
+      "agent_id": "compiled.CONST.vault_curator.executive.v1.0",
+      "action": "Delete vault files",
+      "reason": "All file deletions require human operator approval",
+      "timestamp": "2026-03-14T21:22:16.876361+00:00"
+    },
+    {
+      "escalation_id": "ESC-0017",
+      "agent_id": "compiled.CONST.vault_curator.executive.v1.0",
+      "action": "Control gate VC-GATE-001",
+      "reason": "Gate failed: Audit reports must exist and be current (< 24 hours old) before pri",
+      "timestamp": "2026-03-14T21:22:16.845708+00:00"
+    },
+    {
+      "escalation_id": "ESC-0016",
+      "agent_id": "compiled.CONST.vault_curator.executive.v1.0",
+      "action": "Delete vault files",
+      "reason": "All file deletions require human operator approval",
+      "timestamp": "2026-03-14T21:09:51.329257+00:00"
+    }
+  ]
+}

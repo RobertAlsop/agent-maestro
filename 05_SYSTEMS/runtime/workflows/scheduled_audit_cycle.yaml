@@ -1,0 +1,103 @@
+# Scheduled Audit Cycle — Machine-Executable Workflow Definition
+# Companion to: 05_SYSTEMS/agent_systems/constellations/vault_maintenance/04_workflows/scheduled_audit_cycle.md
+#
+# This YAML defines the execution contract. The markdown is the human documentation.
+
+workflow_id: scheduled_audit_cycle
+workflow_name: "Scheduled Audit Cycle"
+constellation: vault_maintenance
+description: >
+  Regular audit of the entire vault for consistency, integrity, and compliance.
+  Coordinates definition alignment, ontology integrity, and template compliance
+  specialists, then aggregates findings into a unified report.
+
+entry_stage: audit_init
+
+stages:
+  # ── Stage 1: Audit Initiation ─────────────────────────────
+  - stage_id: audit_init
+    name: "Audit Initiation"
+    agent_pack: "supervisor"
+    action: "Coordinate specialist execution sequence"
+    tool: scan_directory
+    tool_params:
+      dir_path: "02_KNOWLEDGE"
+      pattern: "*.md"
+      recursive: true
+    on_success: definition_audit
+    on_failure: abort
+    on_escalation: pause
+
+  # ── Stage 2: Definition Alignment Audit ────────────────────
+  - stage_id: definition_audit
+    name: "Definition Alignment Audit"
+    agent_pack: "specialist.definition_alignment"
+    action: "Scan vault notes for definitions and descriptions"
+    tool: scan_directory
+    tool_params:
+      dir_path: "02_KNOWLEDGE/governance"
+      pattern: "*.md"
+    on_success: ontology_audit
+    on_failure: aggregate_findings
+    on_escalation: pause
+    escalates_to: "CONST.vault_maintenance.supervisor"
+
+  # ── Stage 3: Ontology Integrity Audit ──────────────────────
+  - stage_id: ontology_audit
+    name: "Ontology Integrity Audit"
+    agent_pack: "specialist.ontology_integrity"
+    action: "Scan all wiki-links for broken targets"
+    tool: scan_links
+    tool_params:
+      dir_path: "02_KNOWLEDGE"
+    on_success: template_audit
+    on_failure: aggregate_findings
+    on_escalation: pause
+    escalates_to: "CONST.vault_maintenance.supervisor"
+
+  # ── Stage 4: Template Compliance Check ─────────────────────
+  - stage_id: template_audit
+    name: "Template Compliance Check"
+    agent_pack: "specialist.template_compliance"
+    action: "Scan vault notes for frontmatter schema compliance"
+    tool: scan_directory
+    tool_params:
+      dir_path: "02_KNOWLEDGE"
+      pattern: "*.md"
+      recursive: true
+    on_success: aggregate_findings
+    on_failure: aggregate_findings
+    on_escalation: pause
+    escalates_to: "CONST.vault_maintenance.supervisor"
+
+  # ── Stage 5: Findings Aggregation ──────────────────────────
+  - stage_id: aggregate_findings
+    name: "Findings Aggregation and Analysis"
+    agent_pack: "supervisor"
+    action: "Aggregate and cross-validate specialist reports"
+    tool: generate_report
+    tool_params:
+      report_name: "audit_cycle_report.json"
+      report_type: "json"
+      data:
+        cycle_type: "scheduled_audit"
+        generated_at: "auto"
+    on_success: supervisor_report
+    on_failure: escalate
+    on_escalation: pause
+
+  # ── Stage 6: Supervisor Reporting ──────────────────────────
+  - stage_id: supervisor_report
+    name: "Supervisor Reporting"
+    agent_pack: "supervisor"
+    action: "Write execution reports and audit summaries"
+    tool: generate_report
+    tool_params:
+      report_name: "audit_cycle_summary.json"
+      report_type: "json"
+      data:
+        report_type: "audit_cycle_summary"
+        generated_at: "auto"
+    on_success: end
+    on_failure: abort
+    on_escalation: pause

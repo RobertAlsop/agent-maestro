@@ -1,0 +1,4 @@
+- Designing systems that use intelligence under control.
+- **Architect of cognitive infrastructure** or
+- **Operational intelligence architect**
+- An AI-native system is a governed decision-and-action stack built on separated layers of meaning, truth, memory, execution, and control.

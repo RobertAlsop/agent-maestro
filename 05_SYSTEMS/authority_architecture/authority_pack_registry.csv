@@ -1,0 +1,29 @@
+pack_id,pack_name,pack_type,version,status,parent_pack_id,constellation,created_date,updated_date
+SYS.pack.conceptual_authority,Conceptual Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.decision_authority,Decision Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.execution_authority,Execution Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.governance_authority,Governance Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.interface_authority,Interface Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.memory_authority,Memory Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.operational_authority,Operational Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+SYS.pack.orchestration_authority,Orchestration Authority,core,1.0,active,,system,2026-03-13,2026-03-13
+CONST.vault_curator.executive,Vault Curator Executive Pack,constellation,1.0,deprecated,,vault_curator,2026-03-13,2026-03-15
+CONST.vault_curator.supervisor,Vault Curator Supervisor Pack,constellation,1.0,deprecated,,vault_curator,2026-03-13,2026-03-15
+CONST.vault_curator.specialist.link_auditor,Vault Curator Link Auditor Pack,constellation,1.0,deprecated,,vault_curator,2026-03-13,2026-03-15
+CONST.vault_curator.specialist.schema_validator,Vault Curator Schema Validator Pack,constellation,1.0,deprecated,,vault_curator,2026-03-13,2026-03-15
+CONST.vault_curator.specialist.orphan_detector,Vault Curator Orphan Detector Pack,constellation,1.0,deprecated,,vault_curator,2026-03-13,2026-03-15
+EXEC.pack.executive_orchestrator,Executive Orchestrator Authority Pack,executive,1.0,active,,system,2026-03-14,2026-03-14
+EXEC.pack.governance_executive,Governance Executive Authority Pack,executive,1.0,active,,system,2026-03-14,2026-03-14
+EXEC.pack.operations_executive,Operations Executive Authority Pack,executive,1.0,active,,system,2026-03-14,2026-03-14
+EXEC.pack.knowledge_executive,Knowledge Executive Authority Pack,executive,1.0,active,,system,2026-03-14,2026-03-14
+EXEC.pack.evolution_executive,Evolution Executive Authority Pack,executive,1.0,active,,system,2026-03-14,2026-03-14
+TPL.executive_pack_template,Executive Authority Pack Template,template,1.0,active,,system,2026-03-14,2026-03-14
+TPL.supervisor_pack_template,Supervisor Authority Pack Template,template,1.0,active,,system,2026-03-14,2026-03-14
+TPL.specialist_pack_template,Specialist Authority Pack Template,template,1.0,active,,system,2026-03-14,2026-03-14
+CONST.vault_maintenance.executive,Vault Maintenance Executive Pack,constellation,1.0,active,EXEC.pack.knowledge_executive,vault_maintenance,2026-03-15,2026-03-15
+CONST.vault_maintenance.supervisor,Vault Maintenance Supervisor Pack,constellation,1.0,active,CONST.vault_maintenance.executive,vault_maintenance,2026-03-14,2026-03-15
+CONST.vault_maintenance.specialist.definition_alignment,Vault Maintenance Definition Alignment Pack,constellation,1.0,active,CONST.vault_maintenance.supervisor,vault_maintenance,2026-03-14,2026-03-14
+CONST.vault_maintenance.specialist.ontology_integrity,Vault Maintenance Ontology Integrity Pack,constellation,1.0,active,CONST.vault_maintenance.supervisor,vault_maintenance,2026-03-14,2026-03-14
+CONST.vault_maintenance.specialist.template_compliance,Vault Maintenance Template Compliance Pack,constellation,1.0,active,CONST.vault_maintenance.supervisor,vault_maintenance,2026-03-14,2026-03-14
+CONST.vault_maintenance.specialist.note_processor,Vault Maintenance Note Processor Pack,constellation,1.0,active,CONST.vault_maintenance.supervisor,vault_maintenance,2026-03-14,2026-03-14
+CONST.vault_maintenance.specialist.self_healing,Vault Maintenance Self-Healing Pack,constellation,1.0,active,CONST.vault_maintenance.supervisor,vault_maintenance,2026-03-14,2026-03-14

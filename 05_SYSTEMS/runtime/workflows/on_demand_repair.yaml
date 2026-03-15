@@ -1,0 +1,88 @@
+# On-Demand Repair — Machine-Executable Workflow Definition
+# Companion to: 05_SYSTEMS/agent_systems/constellations/vault_maintenance/04_workflows/on_demand_repair.md
+
+workflow_id: on_demand_repair
+workflow_name: "On-Demand Repair"
+constellation: vault_maintenance
+description: >
+  Targeted repair of specific vault issues. Routes through risk assessment
+  to autonomous, supervised, or escalated execution paths.
+
+entry_stage: repair_request
+
+stages:
+  # ── Stage 1: Repair Request Reception ──────────────────────
+  - stage_id: repair_request
+    name: "Repair Request Reception"
+    agent_pack: "supervisor"
+    action: "Delegate audit tasks to specialists"
+    tool: read_note
+    tool_params:
+      note_path: ""  # Injected via initial_params
+    on_success: repair_analysis
+    on_failure: abort
+    on_escalation: pause
+
+  # ── Stage 2: Repair Analysis ───────────────────────────────
+  - stage_id: repair_analysis
+    name: "Repair Analysis and Planning"
+    agent_pack: "supervisor"
+    action: "Aggregate and cross-validate specialist reports"
+    tool: validate_frontmatter
+    tool_params:
+      note_path: ""  # Injected via initial_params
+    on_success: autonomous_repair
+    on_failure: escalate_repair
+    on_escalation: escalate_repair
+
+  # ── Stage 3a: Autonomous Repair (Low-Risk) ─────────────────
+  - stage_id: autonomous_repair
+    name: "Autonomous Repair Execution"
+    agent_pack: "specialist.self_healing"
+    action: "Apply frontmatter corrections"
+    tool: write_note
+    tool_params:
+      note_path: ""  # Injected via initial_params
+    condition:
+      field: "repair_analysis.valid"
+      operator: "eq"
+      value: false
+    on_success: repair_validation
+    on_failure: escalate_repair
+    on_escalation: escalate_repair
+
+  # ── Stage 4: High-Risk Escalation ──────────────────────────
+  - stage_id: escalate_repair
+    name: "High-Risk Escalation"
+    agent_pack: "supervisor"
+    action: "Approve repairs for notes with authority_weight >= 80"
+    on_success: repair_validation
+    on_failure: abort
+    on_escalation: pause
+    escalates_to: "EXEC.pack.knowledge_executive"
+
+  # ── Stage 5: Validation ────────────────────────────────────
+  - stage_id: repair_validation
+    name: "Repair Validation"
+    agent_pack: "specialist.self_healing"
+    action: "Validate repair success"
+    tool: validate_frontmatter
+    tool_params:
+      note_path: ""  # Injected via initial_params
+    on_success: repair_report
+    on_failure: escalate_repair
+    on_escalation: pause
+
+  # ── Stage 6: Reporting ─────────────────────────────────────
+  - stage_id: repair_report
+    name: "Repair Completion Report"
+    agent_pack: "supervisor"
+    action: "Write execution reports and audit summaries"
+    tool: generate_report
+    tool_params:
+      report_name: "repair_report.json"
+      report_type: "json"
+      data:
+        report_type: "on_demand_repair"
+    on_success: end
+    on_failure: abort

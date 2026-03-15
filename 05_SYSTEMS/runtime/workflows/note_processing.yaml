@@ -1,0 +1,125 @@
+# Note Processing — Machine-Executable Workflow Definition
+# Companion to: 05_SYSTEMS/agent_systems/constellations/vault_maintenance/04_workflows/note_processing.md
+
+workflow_id: note_processing
+workflow_name: "Note Processing"
+constellation: vault_maintenance
+description: >
+  Process unprocessed captures from 01_CAPTURE into canonical vault locations.
+  Classifies, validates, enriches frontmatter, and promotes or archives.
+
+entry_stage: capture_scan
+
+stages:
+  # ── Stage 1: Capture Discovery ─────────────────────────────
+  - stage_id: capture_scan
+    name: "Capture Monitoring and Discovery"
+    agent_pack: "specialist.note_processor"
+    action: "Scan 01_CAPTURE directory for new items"
+    tool: scan_directory
+    tool_params:
+      dir_path: "01_CAPTURE"
+      pattern: "*.md"
+      recursive: true
+    on_success: capture_triage
+    on_failure: abort
+    on_escalation: pause
+
+  # ── Stage 2: Triage and Classification ─────────────────────
+  - stage_id: capture_triage
+    name: "Capture Triage and Classification"
+    agent_pack: "specialist.note_processor"
+    action: "Classify captures by note type and domain"
+    tool: read_note
+    tool_params:
+      note_path: ""  # Injected per-note during execution
+    condition:
+      field: "capture_scan.count"
+      operator: "gt"
+      value: 0
+    on_success: governance_validation
+    on_failure: abort
+    on_escalation: pause
+
+  # ── Stage 3: Governance Validation ─────────────────────────
+  - stage_id: governance_validation
+    name: "Governance Validation"
+    agent_pack: "specialist.note_processor"
+    action: "Enrich captures with schema v2 frontmatter"
+    tool: validate_frontmatter
+    tool_params:
+      note_path: ""  # Injected per-note during execution
+    on_success: frontmatter_enrichment
+    on_failure: escalate_capture
+    on_escalation: escalate_capture
+
+  # ── Stage 4: Frontmatter Enrichment ────────────────────────
+  - stage_id: frontmatter_enrichment
+    name: "Frontmatter Enrichment"
+    agent_pack: "specialist.note_processor"
+    action: "Enrich captures with schema v2 frontmatter"
+    tool: write_note
+    tool_params:
+      note_path: ""
+    on_success: promotion_decision
+    on_failure: escalate_capture
+    on_escalation: escalate_capture
+
+  # ── Stage 5: Promotion Decision ────────────────────────────
+  - stage_id: promotion_decision
+    name: "Promotion Decision"
+    agent_pack: "supervisor"
+    action: "Triage capture inbox items"
+    on_success: canonical_placement
+    on_failure: archive_capture
+    on_escalation: escalate_capture
+
+  # ── Stage 6a: Canonical Placement ──────────────────────────
+  - stage_id: canonical_placement
+    name: "Canonical Placement and Integration"
+    agent_pack: "specialist.note_processor"
+    action: "Promote captures to 02_KNOWLEDGE through 04_PROJECTS"
+    tool: move_note
+    tool_params:
+      source_path: ""  # Injected
+      dest_path: ""    # Determined by classification
+    on_success: processing_report
+    on_failure: escalate_capture
+    on_escalation: escalate_capture
+
+  # ── Stage 6b: Archive ──────────────────────────────────────
+  - stage_id: archive_capture
+    name: "Archive Capture"
+    agent_pack: "specialist.note_processor"
+    action: "Archive captures to 99_ARCHIVE"
+    tool: move_note
+    tool_params:
+      source_path: ""
+      dest_path: "99_ARCHIVE/"
+    on_success: processing_report
+    on_failure: escalate_capture
+    on_escalation: escalate_capture
+
+  # ── Stage 7: Escalation ────────────────────────────────────
+  - stage_id: escalate_capture
+    name: "Escalation to Knowledge Executive"
+    agent_pack: "supervisor"
+    action: "Approve repairs for notes with authority_weight >= 80"
+    on_success: processing_report
+    on_failure: abort
+    on_escalation: pause
+    escalates_to: "EXEC.pack.knowledge_executive"
+
+  # ── Stage 8: Reporting ─────────────────────────────────────
+  - stage_id: processing_report
+    name: "Processing Completion Report"
+    agent_pack: "supervisor"
+    action: "Write execution reports and audit summaries"
+    tool: generate_report
+    tool_params:
+      report_name: "note_processing_report.json"
+      report_type: "json"
+      data:
+        report_type: "note_processing"
+    on_success: end
+    on_failure: abort

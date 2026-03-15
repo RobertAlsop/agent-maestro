@@ -1,0 +1,3 @@
+constellation_id,constellation_name,executive_agent,status,created_date,last_executed,workspace_path
+CONST.vault_curator,Vault Curator,CONST.vault_curator.agent.executive,deprecated,2026-03-14,,05_SYSTEMS/agent_systems/constellations/vault_curator/workspaces/
+CONST.vault_maintenance,Vault Maintenance,CONST.vault_maintenance.executive,active,2026-03-14,,05_SYSTEMS/agent_systems/constellations/vault_maintenance/

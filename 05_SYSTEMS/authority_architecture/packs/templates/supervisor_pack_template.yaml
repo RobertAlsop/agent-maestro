@@ -1,0 +1,90 @@
+# Supervisor Authority Pack Template
+# Use this template to create authority packs for supervisor-layer agents.
+# Supervisors coordinate specialists within a domain, manage workflows, and report to executives.
+# They do NOT perform specialist tasks directly — they orchestrate and validate.
+
+pack_id: CONST.{constellation}.supervisor
+pack_name: "{Constellation Name} — Supervisor ({Supervisor Title})"
+version: "1.0"
+owner: AgentMaestro
+authority_type: operational
+inherits_from: CONST.{constellation}.executive  # Supervisors inherit from their executive
+constellation: "{constellation_name}"
+agent_role: supervisor
+
+scope:
+  domain: "{domain}"
+  boundaries:
+    - "{Primary operational boundary}"
+
+governed_entities:
+  - "{Entity this supervisor coordinates}"
+  - "{Specialist agents under this supervisor}"
+
+governed_actions:
+  # Supervisors typically: coordinate, assign, validate, and report
+  - action: "Assign tasks to specialists"
+    permission: allowed
+    conditions: "Tasks must be within constellation scope"
+  - action: "Coordinate specialist execution sequence"
+    permission: allowed
+    conditions: "Sequence must follow defined workflow"
+  - action: "Validate specialist outputs"
+    permission: allowed
+    conditions: "Validation against defined quality criteria"
+  - action: "Write execution reports"
+    permission: allowed
+    conditions: "Reports logged to 06_EXECUTION/"
+  - action: "Trigger specialist re-run on validation failure"
+    permission: allowed
+    conditions: "Maximum 2 retries before escalation"
+  # Supervisors escalate decisions above their authority
+  - action: "Approve changes to canonical notes"
+    permission: requires_escalation
+    conditions: "Escalate to executive or human"
+  - action: "Modify workflow definitions"
+    permission: requires_escalation
+    conditions: "Workflow changes require executive approval"
+  # Supervisors do not do specialist work
+  - action: "Perform specialist-level operations"
+    permission: denied
+    conditions: "Supervisors orchestrate; specialists execute"
+
+rules:
+  - rule_id: "{PREFIX}-S-001"
+    description: "Must follow the defined workflow sequence"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-S-002"
+    description: "Must validate all specialist outputs before reporting"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-S-003"
+    description: "Must log all coordination decisions"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "{PREFIX}-GATE-S01"
+    condition: "All required specialists must be available before starting workflow"
+    on_fail: escalate
+  - gate_id: "{PREFIX}-GATE-S02"
+    condition: "Specialist outputs must pass validation before proceeding"
+    on_fail: retry_or_escalate
+
+evidence_requirements:
+  - evidence_type: "Specialist output reports"
+    required: true
+    format: "As defined by each specialist's evidence requirements"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.{constellation}.executive
+  escalation_conditions:
+    - "Specialist failure after maximum retries"
+    - "Validation failure that cannot be auto-resolved"
+    - "Task outside supervisor scope"
+    - "Canonical document modification required"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

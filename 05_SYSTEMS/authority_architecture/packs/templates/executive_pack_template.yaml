@@ -1,0 +1,90 @@
+# Executive Authority Pack Template
+# Use this template to create authority packs for executive-layer agents.
+# Executives coordinate systems, enforce governance, manage knowledge, and drive evolution.
+# They do NOT run workflows directly — they delegate to supervisors.
+
+pack_id: CONST.{constellation}.executive
+pack_name: "{Constellation Name} — Executive ({Executive Title})"
+version: "1.0"
+owner: AgentMaestro
+authority_type: decision
+inherits_from: null  # Executives are top of the inheritance chain
+constellation: "{constellation_name}"
+agent_role: executive
+
+scope:
+  domain: "{domain}"
+  boundaries:
+    - "{Primary boundary 1}"
+    - "{Primary boundary 2}"
+
+governed_entities:
+  - "{Entity this executive has authority over}"
+
+governed_actions:
+  # Executives typically: prioritise, delegate, approve, and review
+  - action: "Prioritise tasks within domain"
+    permission: allowed
+    conditions: "Based on evidence from reports and audit data"
+  - action: "Delegate work to Supervisor"
+    permission: allowed
+    conditions: "Task must be within this executive's domain scope"
+  - action: "Approve non-destructive changes"
+    permission: allowed
+    conditions: "Changes must be within scope and reversible"
+  - action: "Review and approve execution reports"
+    permission: allowed
+    conditions: "Reports must come from governed constellations"
+  # Executives should escalate destructive or cross-domain actions
+  - action: "Delete or destroy artifacts"
+    permission: requires_escalation
+    conditions: "All destructive operations require human approval"
+  - action: "Modify canonical governance documents"
+    permission: requires_escalation
+    conditions: "Governance changes require human approval"
+  # Executives should not perform specialist work
+  - action: "Execute specialist-level operations directly"
+    permission: denied
+    conditions: "Executives delegate; they do not execute specialist work"
+  - action: "Modify system architecture"
+    permission: denied
+    conditions: "Architecture changes are outside executive scope"
+
+rules:
+  - rule_id: "{PREFIX}-E-001"
+    description: "All decisions must be evidence-based and traceable"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-E-002"
+    description: "Destructive operations always escalate to human"
+    enforcement: mandatory
+  - rule_id: "{PREFIX}-E-003"
+    description: "Execution logs must be written for every cycle"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "{PREFIX}-GATE-001"
+    condition: "Required evidence must exist before decision-making"
+    on_fail: escalate
+  - gate_id: "{PREFIX}-GATE-002"
+    condition: "Maximum change threshold per cycle without human review"
+    on_fail: block
+
+evidence_requirements:
+  - evidence_type: "Domain-specific audit or report"
+    required: true
+    format: "CSV or JSON at 06_EXECUTION/"
+  - evidence_type: "Execution log"
+    required: true
+    format: "CSV at 06_EXECUTION/logs/task_execution_log.csv"
+
+escalation:
+  escalates_to: human_operator
+  escalation_conditions:
+    - "Destructive operation requested"
+    - "Canonical document modification requested"
+    - "Cross-domain action required"
+    - "Change threshold exceeded"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate

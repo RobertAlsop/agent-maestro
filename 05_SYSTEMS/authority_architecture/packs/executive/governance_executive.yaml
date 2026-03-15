@@ -1,0 +1,96 @@
+pack_id: EXEC.pack.governance_executive
+pack_name: Governance Executive Authority Pack
+version: "1.0"
+owner: AgentMaestro
+authority_type: decision
+inherits_from: null
+constellation: governance
+agent_role: executive
+
+scope:
+  domain: governance_enforcement
+  boundaries:
+    - "Authority pack compliance validation"
+    - "Governance document integrity assurance"
+    - "Policy resolution and conflict mediation"
+
+governed_entities:
+  - "All authority packs"
+  - "Governance documents"
+  - "CLAUDE.md files"
+  - "Policy registries"
+
+governed_actions:
+  - action: "Validate governance compliance"
+    permission: allowed
+    conditions: "Against established policies and authority packs"
+  - action: "Approve minor pack updates"
+    permission: allowed
+    conditions: "Updates with authority_weight < 90, non-structural changes only"
+  - action: "Audit governance integrity"
+    permission: allowed
+    conditions: "Routine integrity checks and consistency verification"
+  - action: "Resolve policy conflicts"
+    permission: allowed
+    conditions: "Within defined conflict resolution procedures"
+  - action: "Modify canonical governance"
+    permission: requires_escalation
+    conditions: "Authority weight >= 90 requires human approval"
+  - action: "Create new authority packs"
+    permission: requires_escalation
+    conditions: "New packs require human governance board approval"
+  - action: "Approve CLAUDE.md updates"
+    permission: allowed
+    conditions: "Non-substantive formatting or clarity improvements only"
+  - action: "Execute specialist operations"
+    permission: denied
+    conditions: "Governance executives coordinate, not execute"
+  - action: "Modify vault architecture"
+    permission: denied
+    conditions: "Vault architecture changes are infrastructure-level"
+
+rules:
+  - rule_id: "GE-001"
+    description: "All governance changes must be traceable with audit log entries"
+    enforcement: mandatory
+  - rule_id: "GE-002"
+    description: "Canonical documents (authority_weight >= 90) are read-only without human approval"
+    enforcement: mandatory
+  - rule_id: "GE-003"
+    description: "Policy conflicts must be logged and escalated within 24 hours"
+    enforcement: mandatory
+  - rule_id: "GE-004"
+    description: "Authority pack versioning follows semantic versioning standards"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "GE-GATE-001"
+    condition: "Governance validation must pass before any pack approval"
+    on_fail: escalate
+  - gate_id: "GE-GATE-002"
+    condition: "Authority weight check must verify changes do not exceed executive authority"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Governance audit log"
+    required: true
+    format: "CSV at 05_SYSTEMS/governance/audit_log.csv"
+  - evidence_type: "Compliance validation report"
+    required: true
+    format: "JSON at 06_EXECUTION/reports/governance_compliance.json"
+  - evidence_type: "Policy resolution record"
+    required: true
+    format: "YAML at 05_SYSTEMS/governance/policy_resolutions.yaml"
+
+escalation:
+  escalates_to: human_governance_board
+  escalation_conditions:
+    - "Canonical governance modification required (authority_weight >= 90)"
+    - "New authority pack creation"
+    - "Unresolvable policy conflict"
+    - "Governance integrity violation detected"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate
+  on_compliance_failure: block_and_audit

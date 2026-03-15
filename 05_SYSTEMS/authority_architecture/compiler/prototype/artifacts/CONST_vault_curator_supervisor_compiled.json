@@ -1,0 +1,149 @@
+{
+  "artifact_id": "compiled.CONST.vault_curator.supervisor.v1.0",
+  "compiled_from": {
+    "pack_id": "CONST.vault_curator.supervisor",
+    "pack_name": "Vault Curator — Supervisor (Integrity Coordinator)",
+    "pack_version": "1.0",
+    "parent_pack_id": "CONST.vault_curator.executive",
+    "constellation": "vault_curator",
+    "agent_role": "supervisor"
+  },
+  "compiled_at": "2026-03-14T21:11:11.746573+00:00",
+  "compiler_version": "0.1.0",
+  "compilation_report": {
+    "stages_passed": [
+      "input_validation",
+      "inheritance_resolution",
+      "override_application",
+      "policy_resolution",
+      "completeness_validation",
+      "artifact_generation",
+      "host_binding",
+      "output_registration"
+    ],
+    "inheritance_chain": [
+      "CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor"
+    ],
+    "overrides_applied": [
+      "CONST.vault_curator.supervisor overrides 'pack_id' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'pack_name' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'authority_type' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'inherits_from' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'agent_role' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'scope' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'governed_entities' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'governed_actions' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'rules' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'control_gates' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'evidence_requirements' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'escalation' from CONST.vault_curator.executive",
+      "CONST.vault_curator.supervisor overrides 'failure_semantics' from CONST.vault_curator.executive"
+    ],
+    "warnings": []
+  },
+  "governance": {
+    "authority_type": "delegation",
+    "scope": {
+      "domain": "vault_governance",
+      "boundaries": [
+        "Coordinating specialist audit tasks",
+        "Aggregating audit results",
+        "Applying non-destructive fixes within authority"
+      ]
+    },
+    "governed_entities": [
+      "Specialist agent task assignments",
+      "Audit result aggregation",
+      "Non-destructive vault fixes"
+    ],
+    "governed_actions": [
+      {
+        "action": "Delegate audit tasks to specialists",
+        "permission": "allowed",
+        "conditions": "Task must match specialist capability"
+      },
+      {
+        "action": "Aggregate specialist reports",
+        "permission": "allowed"
+      },
+      {
+        "action": "Apply safe renames (broken link fixes)",
+        "permission": "allowed",
+        "conditions": "Only when link target is unambiguous"
+      },
+      {
+        "action": "Apply frontmatter corrections",
+        "permission": "allowed",
+        "conditions": "Only for missing non-canonical fields"
+      },
+      {
+        "action": "Delete vault files",
+        "permission": "requires_escalation",
+        "conditions": "Must escalate to Executive"
+      },
+      {
+        "action": "Modify canonical governance documents",
+        "permission": "denied"
+      }
+    ],
+    "rules": [
+      {
+        "rule_id": "VC-S-001",
+        "description": "Specialists must complete audits before fixes are applied",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-S-002",
+        "description": "All fixes must be logged with before/after state",
+        "enforcement": "mandatory"
+      },
+      {
+        "rule_id": "VC-S-003",
+        "description": "Ambiguous link targets must be escalated, not auto-resolved",
+        "enforcement": "mandatory"
+      }
+    ],
+    "control_gates": [
+      {
+        "gate_id": "VC-GATE-S01",
+        "condition": "Specialist audit must complete successfully before fix phase begins",
+        "on_fail": "block"
+      },
+      {
+        "gate_id": "VC-GATE-S02",
+        "condition": "Fix count must not exceed 20 per specialist per cycle",
+        "on_fail": "escalate"
+      }
+    ],
+    "evidence_requirements": [
+      {
+        "evidence_type": "Specialist audit reports",
+        "required": true,
+        "format": "CSV reports from each specialist"
+      },
+      {
+        "evidence_type": "Fix log",
+        "required": true,
+        "format": "CSV documenting each fix applied"
+      }
+    ],
+    "escalation": {
+      "escalates_to": "CONST.vault_curator.executive",
+      "escalation_conditions": [
+        "File deletion required",
+        "Ambiguous link target",
+        "Fix count exceeds 20 per specialist"
+      ]
+    },
+    "failure_semantics": {
+      "on_authority_violation": "escalate",
+      "on_execution_failure": "escalate"
+    }
+  },
+  "host_binding": {
+    "host_type": "filesystem",
+    "host_path": "/sessions/loving-busy-bohr/mnt/Agent Maestro/05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/CONST_vault_curator_supervisor_compiled.json",
+    "bound_at": "2026-03-14T21:11:11.746597+00:00"
+  }
+}

@@ -1,0 +1,76 @@
+pack_id: CONST.vault_curator.supervisor
+pack_name: Vault Curator — Supervisor (Integrity Coordinator)
+version: "1.0"
+owner: AgentMaestro
+authority_type: delegation
+inherits_from: CONST.vault_curator.executive
+constellation: vault_curator
+agent_role: supervisor
+
+scope:
+  domain: vault_governance
+  boundaries:
+    - "Coordinating specialist audit tasks"
+    - "Aggregating audit results"
+    - "Applying non-destructive fixes within authority"
+
+governed_entities:
+  - "Specialist agent task assignments"
+  - "Audit result aggregation"
+  - "Non-destructive vault fixes"
+
+governed_actions:
+  - action: "Delegate audit tasks to specialists"
+    permission: allowed
+    conditions: "Task must match specialist capability"
+  - action: "Aggregate specialist reports"
+    permission: allowed
+  - action: "Apply safe renames (broken link fixes)"
+    permission: allowed
+    conditions: "Only when link target is unambiguous"
+  - action: "Apply frontmatter corrections"
+    permission: allowed
+    conditions: "Only for missing non-canonical fields"
+  - action: "Delete vault files"
+    permission: requires_escalation
+    conditions: "Must escalate to Executive"
+  - action: "Modify canonical governance documents"
+    permission: denied
+
+rules:
+  - rule_id: "VC-S-001"
+    description: "Specialists must complete audits before fixes are applied"
+    enforcement: mandatory
+  - rule_id: "VC-S-002"
+    description: "All fixes must be logged with before/after state"
+    enforcement: mandatory
+  - rule_id: "VC-S-003"
+    description: "Ambiguous link targets must be escalated, not auto-resolved"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VC-GATE-S01"
+    condition: "Specialist audit must complete successfully before fix phase begins"
+    on_fail: block
+  - gate_id: "VC-GATE-S02"
+    condition: "Fix count must not exceed 20 per specialist per cycle"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Specialist audit reports"
+    required: true
+    format: "CSV reports from each specialist"
+  - evidence_type: "Fix log"
+    required: true
+    format: "CSV documenting each fix applied"
+
+escalation:
+  escalates_to: CONST.vault_curator.executive
+  escalation_conditions:
+    - "File deletion required"
+    - "Ambiguous link target"
+    - "Fix count exceeds 20 per specialist"
+
+failure_semantics:
+  on_authority_violation: escalate
+  on_execution_failure: escalate

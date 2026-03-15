@@ -1,0 +1,111 @@
+pack_id: CONST.vault_maintenance.specialist.self_healing
+pack_name: Vault Maintenance — Specialist (Self-Healing Repairer)
+version: "1.0"
+owner: AgentMaestro
+authority_type: execution
+inherits_from: CONST.vault_maintenance.supervisor
+constellation: vault_maintenance
+agent_role: specialist
+
+scope:
+  domain: vault_maintenance
+  boundaries:
+    - "Executing repairs to vault notes based on audit findings"
+    - "Applying fixes within authority boundaries (authority_weight < 80)"
+    - "Validating repair success and maintaining audit trails"
+
+governed_entities:
+  - "Vault notes requiring repairs (authority_weight < 80 only)"
+  - "Repair requests from audit specialists"
+  - "Repair audit trail and logs"
+
+governed_actions:
+  - action: "Apply frontmatter corrections"
+    permission: allowed
+    conditions: "Only for notes with authority_weight < 80; corrections must match schema v2"
+  - action: "Fix broken wiki-links with unambiguous targets"
+    permission: allowed
+    conditions: "Target must be unique and verified; ambiguous targets require escalation"
+  - action: "Add missing bidirectional relationship links"
+    permission: allowed
+    conditions: "Standard pattern, no ambiguity, authority_weight < 80"
+  - action: "Standardize tags to canonical glossary"
+    permission: allowed
+    conditions: "Tag mapping must be deterministic"
+  - action: "Validate repair success"
+    permission: allowed
+    conditions: "Re-run relevant audit check on repaired note"
+  - action: "Generate repair report with before/after states"
+    permission: allowed
+    conditions: "Output to 06_EXECUTION/reports/vault_repair_report.csv"
+  - action: "Repair notes with authority_weight >= 80"
+    permission: requires_escalation
+    conditions: "High-authority repairs require supervisor approval"
+  - action: "Fix ambiguous wiki-link targets"
+    permission: requires_escalation
+    conditions: "Ambiguous link resolution requires supervisor judgement"
+  - action: "Modify note content (body text beyond frontmatter)"
+    permission: requires_escalation
+    conditions: "Content modifications carry semantic risk"
+  - action: "Delete vault files"
+    permission: denied
+    conditions: "Repairs fix; they do not delete"
+  - action: "Modify authority packs or governance documents"
+    permission: denied
+    conditions: "Governance modifications are outside repair scope"
+  - action: "Change vault directory structure"
+    permission: denied
+    conditions: "Structural changes are outside repair scope"
+
+rules:
+  - rule_id: "VM-SH-001"
+    description: "All repairs must include confidence score (0-100%)"
+    enforcement: mandatory
+  - rule_id: "VM-SH-002"
+    description: "Repairs with confidence < 80% require supervisor approval"
+    enforcement: mandatory
+  - rule_id: "VM-SH-003"
+    description: "Every repair must log before-state and after-state"
+    enforcement: mandatory
+  - rule_id: "VM-SH-004"
+    description: "Must validate repair success before marking complete"
+    enforcement: mandatory
+  - rule_id: "VM-SH-005"
+    description: "Repairs with confidence < 60% must be escalated immediately"
+    enforcement: mandatory
+
+control_gates:
+  - gate_id: "VM-SH-GATE-01"
+    condition: "Audit findings must exist before repair can begin"
+    on_fail: block
+  - gate_id: "VM-SH-GATE-02"
+    condition: "Target note must have authority_weight < 80 for autonomous repair"
+    on_fail: escalate
+  - gate_id: "VM-SH-GATE-03"
+    condition: "Repair confidence must be >= 80% for autonomous execution"
+    on_fail: escalate
+
+evidence_requirements:
+  - evidence_type: "Repair report with before/after states"
+    required: true
+    format: "CSV with columns: note_path, issue_type, before_state, after_state, confidence, status"
+  - evidence_type: "Validation confirmation"
+    required: true
+    format: "Re-audit result confirming repair resolved the issue"
+  - evidence_type: "Execution log entry"
+    required: true
+    format: "CSV entry in task_execution_log.csv"
+
+escalation:
+  escalates_to: CONST.vault_maintenance.supervisor
+  escalation_conditions:
+    - "Target note has authority_weight >= 80"
+    - "Repair confidence < 80%"
+    - "Ambiguous wiki-link target"
+    - "Content modification required (beyond frontmatter)"
+    - "Unexpected error during repair"
+    - "Repair validation failed (fix did not resolve issue)"
+
+failure_semantics:
+  on_authority_violation: block
+  on_execution_failure: escalate
