@@ -57,13 +57,19 @@ Key insight: the problem isn't "how do we connect LLMs to AM?" (that's already s
 - **Model routing system** — deferred as a system. Simple three-tier approach adopted instead: Haiku-class for Level 1 (cheap/fast), Sonnet-class for Level 2 (standard), Opus-class for Level 3 (important). Pick one per tier, use them, measure later.
 - **TOML with JSON for lower API fees** — deferred pending investigation of actual cost savings vs. added complexity.
 
-### Self-Observation & Autonomy (Wave 8 candidate)
+### Pipeline Enforcement, Git-Ops & Self-Observation (Wave 8 candidate — revised)
 
-**Source:** Old roadmap Waves 6-7
+**Source:** Old roadmap Waves 6-7, Tools Evolution analysis (2026-03-17), Wave 6 process gap diagnosis
 
-Instrument the pipeline with timing and metrics. Implement observation logging. Build the self-assessment loop: observe → identify patterns → propose improvements → governance gate → execute or escalate. The evolution loop that allows AM to improve itself safely.
+**Revised scope after Wave 7 design conversation (2026-03-17):** Wave 8 should deliver two new tool suites alongside the original self-observation scope:
 
-**Sub-capabilities:**
+**Pipeline-enforcement suite** (`04_EXECUTE/tools/pipeline-enforcement/`): Mechanically verify that pipeline stages complete — does every completed wave have a reflection? Does every reflection have a capture seed? Does every active proposal have an audit? Is every proposal in the right lifecycle stage? Proven need: Wave 6 reflection was skipped and nothing detected it.
+
+**Git-ops suite** (`04_EXECUTE/tools/git-ops/`): AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Proven friction: manual git operations in Cowork are irritating; Claude Code handles git natively but has no AM-aware rules.
+
+**Self-observation instrumentation:** Instrument the pipeline with timing and metrics. Implement observation logging. Build the self-assessment loop: observe → identify patterns → propose improvements → governance gate → execute or escalate.
+
+**Sub-capabilities (from original scope, still valid):**
 - Self-observation instrumentation (timing, metrics, observation_log.csv)
 - Evolution capability (system observer, performance analyzer, improvement recommender)
 - Governance validation of proposed changes (contract validator, architecture compliance, pipeline validator)
@@ -80,6 +86,7 @@ Instrument the pipeline with timing and metrics. Implement observation logging. 
 - **Skills acquisition model** — building skills vs. acquiring from external marketplace. (Capture: "Skills")
 - **Archived treatise rescue** — ✓ Resolved in Wave 5.2: treatise rescued to `02_KNOWLEDGE/concepts/AM — Treatise on Core Principles.md`, updated to schema v3.
 - **Report lifecycle management** — daily integrity reports accumulate in `05_RECORD/reports/` (~365/year). At current scale this is manageable. Revisit when report count exceeds 500, or when cross-run trend comparison requires structured querying (at which point SQLite may also earn its place). Options: retention policy (archive reports older than N days), date-bucketed subfolders, or automated cleanup script. (Source: Wave 7 adversarial audit, IF-4)
+- **Report-analytics tool suite** — cross-run comparison, trend analysis, diff between health reports. "Are broken links increasing or decreasing?" "Which tools consistently find issues?" This is where SQLite may first earn its place. Need not yet proven — requires accumulated daily reports from Wave 7. Revisit after 30+ daily reports exist. (Source: Tools Evolution analysis, 2026-03-17)
 
 ---
 
