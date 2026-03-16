@@ -1,0 +1,1 @@
+He’s an interesting idea. Once we have eight of my stripped down to its absolute basics. We could create like a first little product package, which is like a complete empty agent, maestro instance and it basically when you plug an LLM into it guides, the LLM to create the first agent and run the first instance and start the evolution of itself something like that

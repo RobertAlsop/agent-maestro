@@ -1,76 +1,79 @@
 ---
-type: concept
-note_class: knowledge
-domain: ai_governance
-layer: knowledge
-
-canonical: false
-authority_weight: 60
-resolution_basis: authority_weight
-schema_version: 2
 title: "Authority Architecture"
-
+type: concept
 status: active
-review_status: draft
-version: 1
-
-created_date: 2026-03-10
-last_modified: 2026-03-14
-
-owner: AgentMaestro
-
+authority_weight: 55
+schema_version: 3
+created: "2026-03-16"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Authority Pack]]"
-    - "[[Decision Authority]]"
-    - "[[Execution Authority]]"
-  part_of: []
-  implements:
-    - "[[Governance Before Autonomy]]"
-  governs:
-    - "[[Agent]]"
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-
-
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
-tags:
-  - concept
-  - agent_maestro
-
-hash: ""
+  derives_from:
+    - "[[Agent Maestro — Foundations]]"
+    - "[[Agent Maestro — North Star]]"
+  governs: []
+  related:
+    - "[[Role — Worker]]"
+    - "[[Role — Reviewer]]"
+    - "[[Skill — Gate]]"
+    - "[[Skill — Escalate]]"
+tags: [concept, authority, governance, foundational]
 ---
 
 # Authority Architecture
 
-## Definition
-
-The governance layer that defines what [[Agent|agents]] are permitted to decide, do, and escalate within an [[Agent Systems|agent system]]. Authority architecture is the structural answer to the question: *who is allowed to do what, under what conditions, with what evidence?*
-
-## Boundaries
-
-Authority architecture governs agent behaviour, not agent capability. It does not determine what an agent *can* do (that is model capability and tooling); it determines what an agent *may* do. The distinction is critical — capability without authority constraint is uncontrolled automation.
-
 ## Purpose
 
-Per [[Agent Maestro — Principles]], the authority architecture matters more than the model. A weak model operating under strong authority constraints produces auditable, predictable results. A powerful model operating without authority constraints produces unaccountable risk. The pattern [[Governance Before Autonomy]] formalises this priority.
+Define how authority flows through Agent Maestro — the connective tissue between governance principles and operational execution.
 
-## Key Components
+## Definition
 
-- [[Authority Pack]] — the modular, versioned governance contract assigned to each agent class
-- [[Decision Authority]] — the bounded permission to select among options and commit to a course of action
-- [[Execution Authority]] — the bounded permission to act on external systems
-- [[Governance Before Autonomy]] — the foundational constraint requiring authority structures before agent deployment
+Authority Architecture is the system by which purpose descends and accountability ascends through every layer of Agent Maestro. It is the operational expression of Law 1 (Direction of Authority), Seed 3 (Constraint), and D4 (Human Sovereignty).
 
-## Relationships
+## The Authority Chain
 
-- Authority Architecture]] — the system-level implementation of authority architecture
-- [[Authority Architecture Map]]
-- [[Authority Packs Index]]
-- [[Agent Maestro — Concepts Map]]
+Purpose descends from the human through governance to execution:
+
+```
+Human Intent
+  → North Star (authority_weight: 97) — mission and intent
+    → Foundations (authority_weight: 95) — kernel mechanics
+      → Governance docs (80-94) — rules, scope, strategy
+        → Roles (70) — authority boundaries
+          → Skills (60) — capabilities
+            → Agent instantiation — runtime execution
+```
+
+Accountability ascends in the reverse direction: every action is traceable upward through the chain to the human who authorized the system's purpose.
+
+## Three-Level Escalation
+
+Not every decision needs to travel the full chain. The escalation model routes decisions to the appropriate level:
+
+| Level | When | Resolution |
+|-------|------|------------|
+| 1 — Automatic | Rules cover it | Pass/fail against criteria. [[Role — Worker\|Worker]] executes. |
+| 2 — Agent Judgment | Principles apply | Trace decision to [[Agent Maestro — Foundations\|Foundations]]. [[Role — Reviewer\|Reviewer]] evaluates. |
+| 3 — Human Approval | Irreversible, architectural, or governance-level | Escalate with full context. Human decides. |
+
+## Authority Weights
+
+Authority weight is a numeric signal (0-100) that determines precedence when documents conflict. Higher weight wins. The ranges are defined in [[Agent Maestro — Vault Rules|Vault Rule 48]].
+
+The weight doesn't measure importance — it measures *authority to override*. A concept at weight 40 might be deeply important, but it yields to a governance doc at weight 85 when they conflict.
+
+## Key Principles
+
+- **No level may bypass the one above it** (Seed 3, Constraint). No execution without routing. No routing without validation. No validation without schema.
+- **Human sovereignty is non-negotiable** (D4). The human sits at the top of every authority chain. No autonomous action may be irreversible without human approval.
+- **Separation of powers** (D6). The entity that proposes must not approve. The entity that executes must not audit.
+
+## Traceability
+
+This concept ties together Law 1 (Direction of Authority), Seed 3 (Constraint), D4 (Human Sovereignty), and D6 (Separation of Powers) into a single operational model. It is the architecture that the [[Skill — Gate|Gate]] and [[Skill — Escalate|Escalate]] skills implement at runtime.
+
+## Related
+
+- [[Agent Maestro — Foundations]]
+- [[Agent Maestro — Vault Rules]]
+- [[Skill — Gate]]
+- [[Skill — Escalate]]

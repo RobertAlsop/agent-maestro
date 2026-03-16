@@ -1,0 +1,1 @@
+Building skills versus acquiring skills from external marketplace or even for free

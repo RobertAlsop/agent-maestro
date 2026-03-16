@@ -1,0 +1,1 @@
+We could change the language so that a retrospective becomes a reflection and that there’s no sub folder so it’s just the reflections folder full of reflections.

@@ -1,5 +1,5 @@
 ---
-title: "Wave 5.1 — Design Session Retrospective"
+title: "Wave 5.1 — Design Session Reflection"
 type: report
 status: active
 authority_weight: 30
@@ -15,17 +15,17 @@ relationships:
     - "[[Agent Maestro — North Star]]"
     - "[[Agent Maestro — Modes]]"
 tags:
-  - retrospective
+  - reflection
   - brainstorm
   - wave-5.1
   - reflect
 ---
 
-# Wave 5.1 — Design Session Retrospective
+# Wave 5.1 — Design Session Reflection
 
 ## Purpose
 
-Close the loop on the Wave 5.1 design phase. This document captures what happened, what we learned, and what feeds forward as input for the build phase and future waves. Per the universal pipeline: Reflect → Capture. This retrospective becomes the next session's brief.
+Close the loop on the Wave 5.1 design phase. This document captures what happened, what we learned, and what feeds forward as input for the build phase and future waves. Per the universal pipeline: Reflect → Capture. This reflection becomes the next session's brief.
 
 ---
 
@@ -135,4 +135,4 @@ The brainstorm section above feeds back into Capture. The loop closes.
 
 ---
 
-*This retrospective was produced in the final stage of the Wave 5.1 design session. It should be moved to `06_REFLECT/retrospectives/` during the v1.0.0 build.*
+*This reflection was produced in the final stage of the Wave 5.1 design session. It should be moved to `06_REFLECT/` during the v1.0.0 build.*

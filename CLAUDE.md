@@ -12,9 +12,9 @@ This vault IS Agent Maestro. The folder structure mirrors the universal pipeline
 
 1. **This file** (CLAUDE.md) — The Charter. Understand the architecture, conventions, and your role.
 2. **Foundations** → `02_KNOWLEDGE/governance/Agent Maestro — Foundations.md` — The constitutional authority. All decisions trace back here.
-3. **Design Blueprint** → `AM v1.0.0 — Design Blueprint.md` — The full architectural specification.
+3. **Universal Workflow** → `02_KNOWLEDGE/governance/AM — Universal Workflow.md` — How work happens at every scale.
 4. **Your role** → `02_KNOWLEDGE/governance/roles/` — Load your role definition (Worker or Reviewer).
-5. **System Map** → `02_KNOWLEDGE/indexes/SYSTEM_MAP.md` — The Inventory. What currently exists in the vault and where to find it.
+5. **System Map** → `SYSTEM_MAP.md` — The Inventory. What currently exists in the vault and where to find it.
 
 ## The Universal Pipeline
 
@@ -56,7 +56,7 @@ AM v1.0.0 — Design Blueprint.md  ← Full architectural specification
     logs/                         Operational logs (sessions, state changes, tasks)
     reports/                      Audit reports and summaries
     archive/                      Historical items
-06_REFLECT/                    ← Retrospectives, evolution proposals, brainstorms
+06_REFLECT/                    ← Reflections, evolution proposals, brainstorms
 ```
 
 ## Governance Hierarchy

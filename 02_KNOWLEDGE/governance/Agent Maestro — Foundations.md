@@ -10,15 +10,10 @@ relationships:
   derives_from:
     - "[[Agent Maestro — North Star]]"
   governs:
-    - "[[Agent Maestro — Principles]]"
     - "[[Agent Maestro — Vault Rules]]"
-    - "[[Agent Maestro — Modes]]"
     - "[[Agent Maestro — Scope]]"
     - "[[Agent Maestro — Strategy]]"
-  related:
-    - "[[Foundational Kernel]]"
-    - "[[Derived Principles]]"
-    - "[[Audit Taxonomy]]"
+  related: []
 tags:
   - governance
   - foundations
@@ -30,7 +25,7 @@ tags:
 
 Agent Maestro is the discipline of designing, governing, and evolving operational intelligence systems. This document defines its irreducible kernel — the foundational elements from which all other governance, architecture, and operational decisions are derived.
 
-For extended rationale and framework reconciliation, see [[AM — Wave 5 — Treatise on Core Principles]].
+For extended rationale and framework reconciliation, see [[AM — Wave 5 — Treatise on Core Principles]] (in `05_RECORD/archive/`).
 
 ---
 
@@ -49,6 +44,19 @@ perception → interpretation → decision → action → memory → feedback
 ```
 
 Between interpretation and decision, there is always a validation gate: no decision proceeds without checking against the Constraint hierarchy. The loop runs at every level of abstraction — a build session, an agent execution, a governance review, a single document's lifecycle.
+
+The vault itself is a fractal instance of this loop. Each pipeline folder maps to a loop stage, and each operational mode corresponds to the same:
+
+| Loop Stage | Pipeline Folder | Mode |
+|---|---|---|
+| Perception | 01_CAPTURE | Capture — receive and gather input |
+| Interpretation | 02_KNOWLEDGE | Interpret — understand, classify, connect |
+| Decision | 03_DECIDE | Decide — evaluate options, commit to plans |
+| Action | 04_EXECUTE | Execute — build, implement, create |
+| Memory | 05_RECORD | Record — document outcomes, log results |
+| Feedback | 06_REFLECT | Reflect — review, learn, propose next steps |
+
+Gates between stages enforce the Constraint seed — no stage transition without validation. Reflect always feeds back into Capture, closing the loop.
 
 **Seed 2 — Structure**
 
@@ -139,7 +147,7 @@ Kernel (7 elements)          → What is always true
   ↓
 Derived Principles (6)       → How the kernel applies to Agent Maestro
   ↓
-Operational Patterns (many)  → Templates, authority packs, pipelines, audits
+Operational Patterns (many)  → Templates, roles, skills, pipelines, audits
 ```
 
 Purpose descends through the levels. Each level is the minimum viable expression of the one above it. The same structure appears at every abstraction level in the vault.
@@ -162,4 +170,4 @@ The adversarial method (assume it's wrong, try to prove it) is a lens applied wi
 
 ## Relationship to Other Governance Documents
 
-This document is the highest-authority governance document in Agent Maestro (authority_weight: 95). All other governance documents — Principles, Vault Rules, Modes, Scope, Strategy — derive from and must align with these foundations. The existing [[Agent Maestro — Principles]] document is superseded in authority but retained as a historical reference until the derived principles above are fully integrated across the vault.
+This document is the highest-authority *operational* governance document in Agent Maestro (authority_weight: 95). Only [[Agent Maestro — North Star]] (authority_weight: 97) sits above it — defining the mission that these foundations serve. All other governance documents — [[Agent Maestro — Vault Rules|Vault Rules]], [[Agent Maestro — Scope|Scope]], [[Agent Maestro — Strategy|Strategy]] — derive from and must align with these foundations. The original 12 principles and their reconciliation to this kernel are preserved in the archive for traceability (see `05_RECORD/archive/wave_5.2_governance/`).

@@ -1,0 +1,1 @@
+Should we introduce a stage or function where every capture seed produces a brief or is that overkill?

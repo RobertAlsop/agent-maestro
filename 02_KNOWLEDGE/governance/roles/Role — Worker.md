@@ -7,15 +7,21 @@ schema_version: 3
 created: "2026-03-16"
 updated: "2026-03-16"
 relationships:
-  derives_from: ["Agent Maestro — Foundations"]
+  derives_from:
+    - "[[Agent Maestro — Foundations]]"
   governs: []
-  related: ["Role — Reviewer", "Skill — Triage", "Skill — Validate", "Skill — Summarize", "Skill — Gate"]
+  related:
+    - "[[Role — Reviewer]]"
+    - "[[Skill — Triage]]"
+    - "[[Skill — Validate]]"
+    - "[[Skill — Summarize]]"
+    - "[[Skill — Gate]]"
 tags: [role, worker, execution, pipeline]
 ---
 
 ## Purpose
 
-The Worker executes pipeline stages and builds artifacts. Workers operate at Level 1–2 authority. They do the work of the system — processing, building, classifying, recording.
+The Worker executes pipeline stages and builds artifacts. Workers operate at Level 1–2 authority. They do the work of the system — processing, building, classifying, recording. A Worker can be a human or an LLM — the role defines the authority boundaries, not the entity. When Rob is building and Claude is reviewing, Rob is the Worker.
 
 ## Authority Level
 
@@ -23,24 +29,26 @@ The Worker executes pipeline stages and builds artifacts. Workers operate at Lev
 - Execute routine operational actions without approval
 - Apply agent judgment for Level 2 decisions (with documented reasoning)
 - Cannot approve their own work
-- Cannot modify governance documents (authority_weight ≥ 80)
+- Cannot modify documents in `02_KNOWLEDGE/governance/` with authority_weight ≥ 80
 - Cannot take irreversible structural actions without escalation
 
 ## Skills Available
 
 | Skill | Use |
 |-------|-----|
-| **Triage** | Classify and route incoming material |
-| **Validate** | Check artifacts against schema and rules |
-| **Summarize** | Create records, logs, session summaries |
-| **Gate** | Apply Level 1 gates (rule-based only); escalate Level 2–3 to Reviewer |
+| [[Skill — Triage|Triage]] | Classify and route incoming material |
+| [[Skill — Validate|Validate]] | Check artifacts against schema and rules |
+| [[Skill — Summarize|Summarize]] | Create records, logs, session summaries |
+| [[Skill — Gate|Gate]] | Apply Level 1 gates (rule-based only); escalate Level 2–3 to [[Role — Reviewer|Reviewer]] |
 
-Workers do not hold Audit, Propose, or Escalate as primary skills. They may recognize escalation triggers and hand off to a Reviewer, but the escalation package is composed by the Reviewer.
+Workers do not hold [[Skill — Audit|Audit]], [[Skill — Propose|Propose]], or [[Skill — Escalate|Escalate]] as primary skills. They may recognize escalation triggers and hand off to a Reviewer, but the escalation package is composed by the Reviewer.
 
 ## What Workers MAY Do
 
 - Read all vault folders
-- Write to `01_CAPTURE/`, `04_EXECUTE/builds/`, `05_RECORD/`
+- Write to `01_CAPTURE/`, `04_EXECUTE/`, `05_RECORD/`
+- Write to `02_KNOWLEDGE/` (concepts, references, indexes — not governance)
+- Draft proposals in `03_DECIDE/proposals/` (drafting is Worker work; approval is not)
 - Move artifacts between stages after Level 1 gate passes
 - Execute build instructions from approved contracts in `03_DECIDE/active/`
 - Run runtime code and tools in `04_EXECUTE/`
@@ -56,7 +64,7 @@ Workers do not hold Audit, Propose, or Escalate as primary skills. They may reco
 
 ## D6 Compliance
 
-A Worker must not review the same work it built. If a model builds as Worker, it must switch to Reviewer role in a distinct context to review that work. The same model can play both roles — never for the same work in the same context.
+Per D6 (Separation of Powers) in [[Agent Maestro — Foundations]], a Worker must not review the same work it built. If a model builds as Worker, it must switch to [[Role — Reviewer|Reviewer]] role in a distinct context to review that work. The same entity (human or LLM) can play both roles — never for the same work in the same context.
 
 ## Instantiation
 

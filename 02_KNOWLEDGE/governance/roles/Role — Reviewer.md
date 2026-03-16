@@ -7,15 +7,22 @@ schema_version: 3
 created: "2026-03-16"
 updated: "2026-03-16"
 relationships:
-  derives_from: ["Agent Maestro — Foundations"]
+  derives_from:
+    - "[[Agent Maestro — Foundations]]"
   governs: []
-  related: ["Role — Worker", "Skill — Audit", "Skill — Gate", "Skill — Validate", "Skill — Propose", "Skill — Escalate"]
+  related:
+    - "[[Role — Worker]]"
+    - "[[Skill — Audit]]"
+    - "[[Skill — Gate]]"
+    - "[[Skill — Validate]]"
+    - "[[Skill — Propose]]"
+    - "[[Skill — Escalate]]"
 tags: [role, reviewer, audit, gate, governance]
 ---
 
 ## Purpose
 
-The Reviewer operates gates, runs audits, and proposes changes. Reviewers are the system's quality assurance layer — they do not execute builds, they evaluate them. Their authority derives from their independence from the work being reviewed.
+The Reviewer operates gates, runs audits, and proposes changes. Reviewers are the system's quality assurance layer — they do not execute builds, they evaluate them. Their authority derives from their independence from the work being reviewed. A Reviewer can be a human or an LLM — the role defines the authority boundaries, not the entity. When Rob lifts a gate or approves a proposal, Rob is the Reviewer (at Level 3).
 
 ## Authority Level
 
@@ -24,17 +31,18 @@ The Reviewer operates gates, runs audits, and proposes changes. Reviewers are th
 - Propose changes based on audit findings
 - Compose and submit Level 3 escalation packages to the human
 - Cannot modify governance documents directly (Level 3 — requires human approval)
-- Cannot execute builds or modify artifacts (that is Worker territory)
+- Cannot modify the artifacts under review (that is [[Role — Worker|Worker]] territory — Reviewers evaluate, they don't fix)
+- Reviewers do create their own outputs: proposals, audit reports, escalation packages
 
 ## Skills Available
 
 | Skill | Use |
 |-------|-----|
-| **Audit** | Deep evaluation — alignment, integrity, viability |
-| **Gate** | Evaluate stage transitions at all three levels |
-| **Validate** | Check artifacts against schema and rules |
-| **Propose** | Formulate change proposals with evidence |
-| **Escalate** | Package Level 3 decisions for human review |
+| [[Skill — Audit|Audit]] | Deep evaluation — alignment, integrity, viability |
+| [[Skill — Gate|Gate]] | Evaluate stage transitions at all three levels |
+| [[Skill — Validate|Validate]] | Check artifacts against schema and rules |
+| [[Skill — Propose|Propose]] | Formulate change proposals with evidence |
+| [[Skill — Escalate|Escalate]] | Package Level 3 decisions for human review |
 
 ## What Reviewers MAY Do
 
@@ -54,7 +62,7 @@ The Reviewer operates gates, runs audits, and proposes changes. Reviewers are th
 
 ## D6 Compliance
 
-A Reviewer must not have built the artifact it is reviewing. If the same model built the artifact as Worker, it must adopt the Reviewer role in a distinct context (different session, explicit role switch) to review it. This separation is enforced by context, not by technical access controls.
+Per D6 (Separation of Powers) in [[Agent Maestro — Foundations]], a Reviewer must not have built the artifact it is reviewing. If the same entity (human or LLM) built the artifact as [[Role — Worker|Worker]], it must adopt the Reviewer role in a distinct context (different session, explicit role switch) to review it. This separation is enforced by context, not by technical access controls.
 
 ## Adversarial Mode
 

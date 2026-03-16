@@ -1,78 +1,69 @@
 ---
-type: concept
-note_class: knowledge
-domain: agent_architecture
-layer: knowledge
-
-canonical: false
-authority_weight: 60
-resolution_basis: authority_weight
-schema_version: 2
 title: "Memory Architecture"
-
+type: concept
 status: active
-review_status: draft
-version: 1
-
-created_date: 2026-03-10
-last_modified: 2026-03-14
-
-owner: AgentMaestro
-
+authority_weight: 55
+schema_version: 3
+created: "2026-03-16"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Context Pack]]"
-    - "[[Knowledge Graph Layer]]"
-    - "[[Vector Memory Layer]]"
-    - "[[Structured Data Layer]]"
-  part_of: []
-  implements:
-    - "[[Three-Layer Memory Model]]"
+  derives_from:
+    - "[[Agent Maestro — Foundations]]"
   governs: []
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces:
-    - "[[Operational Intelligence]]"
-
-
-
-source_type: ai_authored
-supersedes: []
-superseded_by: []
-
-tags:
-  - concept
-  - agent_maestro
-
-hash: ""
+  related:
+    - "[[Skill — Summarize]]"
+tags: [concept, memory, foundational]
 ---
 
 # Memory Architecture
 
-## Definition
-
-The three-layer system through which [[Agent|agents]] store, retrieve, and reason over knowledge during operation. Memory architecture is the knowledge infrastructure of [[Operational Intelligence]] — it determines what an agent knows, how it retrieves that knowledge, and how knowledge is structured for reliability.
-
-## Boundaries
-
-Memory architecture covers how knowledge is stored and retrieved. It does not cover how agents *use* that knowledge to make decisions — that is governed by [[Decision Authority]] and the agent's reasoning process. The delivery mechanism that assembles memory for a specific task is the [[Context Pack]], which sits at the interface between memory architecture and agent execution.
-
 ## Purpose
 
-Reliable agent operation requires structured memory. Unstructured retrieval leads to unpredictable behaviour — agents that retrieve the wrong context produce unreliable outcomes regardless of reasoning capability. The [[Three-Layer Memory Model]] formalises the separation of concerns across memory types.
+Define the three-layer memory model that organizes knowledge within Agent Maestro. This concept expands on D2 (Three-Layer Memory Model) from [[Agent Maestro — Foundations]].
 
-## Key Components
+## Definition
 
-- [[Knowledge Graph Layer]] — explicit, structured relationships between entities and concepts (e.g., "agent X is governed by authority pack Y")
-- [[Vector Memory Layer]] — semantic similarity retrieval for unstructured content (e.g., finding relevant past decisions or documents)
-- [[Structured Data Layer]] — operational records with defined schemas (e.g., task logs, performance metrics, audit trails)
-- [[Context Pack]] — the task-scoped assembly drawn from all three layers, prepared for agent consumption
+Agent Maestro organizes knowledge in three distinct layers, each with different responsibilities and access patterns. Together they ensure that the system can remember what it needs to — structured relationships, semantic meaning, and operational data.
 
-## Relationships
+## The Three Layers
 
-- [[Three-Layer Memory Model]] — the pattern that formalises the three-layer separation
-- [[Memory Model]] — the system-level specification of memory behaviour
-- [[Memory Governance]] — the governance layer that controls memory access and retention
-- [[Memory Architecture Map]]
-- [[Agent Maestro — Concepts Map]]
+### 1. Knowledge Graph (Relationships)
+
+The network of wiki-links and `relationships` frontmatter that connects every document in the vault. This layer answers: *how are things related?*
+
+- **Current implementation:** Wiki-links in note bodies (navigational), `derives_from` / `governs` / `related` fields in frontmatter (structural)
+- **Access pattern:** Graph traversal — follow links to discover connections
+- **Maintained by:** Authors when creating/editing notes, validated by [[Skill — Validate]]
+
+### 2. Structured Data (Registries and Logs)
+
+CSV files, registries, and structured records that track operational data. This layer answers: *what happened, and what exists?*
+
+- **Current implementation:** `tool_registry.csv`, escalation logs, state change logs, task execution logs in `05_RECORD/`
+- **Access pattern:** Query/filter — search by field values
+- **Maintained by:** Runtime tools and the [[Skill — Summarize]] skill
+
+### 3. Vector Memory (Semantic Search)
+
+Semantic embeddings that enable similarity-based retrieval. This layer answers: *what is this similar to?*
+
+- **Current implementation:** Not yet implemented. This is a future capability (Stage 1 → Stage 2 transition).
+- **Access pattern:** Similarity search — find conceptually related content regardless of explicit links
+- **Planned use:** Enabling agents to find relevant knowledge without knowing exact note titles
+
+## How the Layers Interact
+
+The knowledge graph provides structure (what connects to what). Structured data provides facts (what happened when). Vector memory will provide discovery (what else is relevant). A well-functioning system uses all three: the graph for navigation, the data for accountability, and the vectors for serendipity.
+
+## Current State
+
+Layers 1 and 2 are operational. Layer 3 is planned. The system functions without vector memory — explicit links and structured logs cover current needs. Vector memory becomes important when the vault grows large enough that explicit linking can't capture all relevant connections.
+
+## Traceability
+
+Directly implements D2 (Three-Layer Memory Model) from [[Agent Maestro — Foundations]], which derives from Seed 2 (Structure) — specifically the Memory primitive ("what from the past informs the present?").
+
+## Related
+
+- [[Agent Maestro — Foundations]]
+- [[Skill — Summarize]]

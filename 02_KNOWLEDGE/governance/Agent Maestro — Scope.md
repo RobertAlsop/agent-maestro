@@ -29,25 +29,27 @@ Agent Maestro is bounded. Clear scope prevents drift and keeps the discipline op
 
 ## In Scope
 
-- [[Agent Systems]] architecture
-- [[Authority Architecture]] governance
-- Operational workflows
-- [[Memory Architecture]]
-- Orchestration systems
-- Monitoring and observability
-- Operational intelligence infrastructure
+- The universal pipeline — designing, operating, and evolving the 6-stage workflow
+- Governance frameworks — authority hierarchies, escalation models, role definitions
+- Operational intelligence systems — making AI work reliably within complex human contexts
+- Human-AI collaborative workflows — how humans and LLMs work together effectively
+- Pattern discovery — identifying and codifying the fractal patterns that make systems governable
+- Vault architecture — self-documenting, self-auditing knowledge structures
+- Skills, roles, and on-demand agent instantiation
 
 ## Out of Scope
 
-- Model training
-- LLM research
-- Low-level AI algorithm development
+- Model training or fine-tuning
+- LLM research or algorithm development
+- The content that flows through the system (AM governs the pipes, not the water)
 - Isolated automation scripts without governance
+- Building specific end-user products (AM is infrastructure, not application)
 
 ## Implications
 
-- Agent Maestro assumes agents operate inside **real organizations** with real accountability structures.
-- Work that falls outside scope should not be filed under Agent Maestro.
+- AM assumes intelligence systems operate within real accountability structures — human sovereignty is non-negotiable
+- Work that falls outside scope should not be filed under Agent Maestro
+- Scope can be extended through a formal proposal (per [[Agent Maestro — Vault Rules|Vault Rule 65]]), but the default is bounded
 
 ## When It Applies
 
