@@ -1,27 +1,13 @@
 ---
-schema_version: 2
 title: "Agent Maestro — Foundations"
-type: foundations
-note_class: doctrine
-domain: governance
-layer: governance
-authority_weight: 95
-resolution_basis: canonical
-canonical: true
+type: governance
 status: active
-review_status: approved
-version: 3
-created_date: 2026-03-15
-last_modified: 2026-03-15
-owner: AgentMaestro
-source_type: collaborative
+authority_weight: 95
+schema_version: 3
+created: "2026-03-15"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Foundational Kernel]]"
-    - "[[Derived Principles]]"
-    - "[[Audit Taxonomy]]"
-  part_of: []
-  implements:
+  derives_from:
     - "[[Agent Maestro — North Star]]"
   governs:
     - "[[Agent Maestro — Principles]]"
@@ -29,19 +15,15 @@ relationships:
     - "[[Agent Maestro — Modes]]"
     - "[[Agent Maestro — Scope]]"
     - "[[Agent Maestro — Strategy]]"
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-  supersedes: []
-  superseded_by: []
+  related:
+    - "[[Foundational Kernel]]"
+    - "[[Derived Principles]]"
+    - "[[Audit Taxonomy]]"
 tags:
   - governance
   - foundations
   - kernel
-  - principles
   - canonical
-hash: ""
 ---
 
 # Agent Maestro — Foundations

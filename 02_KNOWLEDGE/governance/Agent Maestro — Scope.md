@@ -1,38 +1,20 @@
 ---
-schema_version: 2
 title: "Agent Maestro — Scope"
-type: scope
-note_class: governance
-domain: governance
-layer: governance
-authority_weight: 80
-resolution_basis: authority_weight
-canonical: true
+type: governance
 status: active
-review_status: approved
-version: 2
-created_date: 2026-03-10
-last_modified: 2026-03-15
-owner: AgentMaestro
-source_type: collaborative
+authority_weight: 80
+schema_version: 3
+created: "2026-03-10"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Agent Maestro Scope Boundaries]]"
-  part_of: []
-  implements:
+  derives_from:
     - "[[Agent Maestro — Foundations]]"
     - "[[Agent Maestro — North Star]]"
   governs: []
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-  supersedes: []
-  superseded_by: []
+  related: []
 tags:
   - governance
   - scope
-hash: ""
 ---
 
 # Agent Maestro — Scope

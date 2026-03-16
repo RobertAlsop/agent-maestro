@@ -1,39 +1,22 @@
 ---
-schema_version: 2
 title: "Agent Maestro — Principles"
-type: principles
-note_class: doctrine
-domain: governance
-layer: governance
+type: governance
+status: archived
 authority_weight: 70
-resolution_basis: authority_weight
-canonical: false
-status: active
-review_status: approved
-version: 3
-created_date: 2026-03-10
-last_modified: 2026-03-15
-owner: AgentMaestro
-source_type: collaborative
+schema_version: 3
+created: "2026-03-10"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Original 12 Principles]]"
-  part_of: []
-  implements:
+  derives_from:
     - "[[Agent Maestro — North Star]]"
   governs: []
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-  supersedes: []
-  superseded_by:
+  related:
     - "[[Agent Maestro — Foundations]]"
 tags:
   - governance
   - principles
   - historical
-hash: ""
+  - superseded
 ---
 
 # Agent Maestro — Principles

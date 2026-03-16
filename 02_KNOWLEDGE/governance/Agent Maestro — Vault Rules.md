@@ -1,123 +1,107 @@
 ---
-schema_version: 2
 title: "Agent Maestro — Vault Rules"
 type: governance
-note_class: governance
-domain: governance
-layer: governance
-authority_weight: 85
-resolution_basis: authority_weight
-canonical: true
 status: active
-review_status: approved
-version: 2
-created_date: 2026-03-10
-last_modified: 2026-03-15
-owner: AgentMaestro
-source_type: collaborative
+authority_weight: 85
+schema_version: 3
+created: "2026-03-10"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Vault Structure Rules]]"
-  part_of: []
-  implements:
+  derives_from:
     - "[[Agent Maestro — Foundations]]"
   governs:
+    - "[[01_CAPTURE]]"
     - "[[02_KNOWLEDGE]]"
-    - "[[03_PIPELINES]]"
-    - "[[04_PROJECTS]]"
-    - "[[05_SYSTEMS]]"
-    - "[[06_EXECUTION]]"
-    - "[[88_TEMPLATES]]"
-    - "[[99_ARCHIVE]]"
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-  supersedes: []
-  superseded_by: []
+    - "[[03_DECIDE]]"
+    - "[[04_EXECUTE]]"
+    - "[[05_RECORD]]"
+    - "[[06_REFLECT]]"
+  related:
+    - "[[Agent Maestro — North Star]]"
 tags:
   - governance
   - vault
   - rules
-hash: ""
 ---
 
 # Agent Maestro — Vault Rules
 
 ## Purpose
 
-Define the structural rules that keep the Agent Maestro vault consistent, navigable, and trustworthy. These rules operationalize the Structure seed (every component must have the seven primitives) and Law 2 (all actions must be verifiable, reversible, and accountable).
+Define the structural rules that keep the Agent Maestro vault consistent, navigable, and trustworthy. These rules operationalize the Structure seed (every component must serve the seven primitives) and Law 2 (all actions must be verifiable, reversible, and accountable).
 
 ## Principle
 
-Structure is governance. A vault without rules becomes an unnavigable knowledge dump.
+Structure is governance. A vault without rules becomes an unnavigable knowledge dump. The vault IS the pipeline — its structure directly mirrors the universal 6-stage workflow.
 
-## Rules
+## Vault Structure Rules
 
-### Note Creation
+1. The vault has exactly six pipeline folders: `01_CAPTURE`, `02_KNOWLEDGE`, `03_DECIDE`, `04_EXECUTE`, `05_RECORD`, `06_REFLECT`.
+2. Each folder corresponds to a pipeline stage. Content belongs in the folder that matches its function, not its format.
+3. `CLAUDE.md` at the vault root is the Charter — the entry point for any agent. It is not a vault note and does not use frontmatter.
+4. The Design Blueprint at the vault root is the architectural specification for the current version.
 
-1. Every note must be created from one of the approved templates in `88_TEMPLATES/`.
-2. No note may invent its own structure. If no template fits, stop and request one.
-3. Every note must populate its frontmatter fields correctly per schema_version: 2.
-4. Every note must have a stable, unique title that serves as its identifier. Titles do not change once a note is established.
-5. Notes contain light but meaningful initial content. No empty placeholders.
+## Note Creation Rules
 
-### Linking and Navigation
+5. Every note must have YAML frontmatter conforming to schema_version: 3.
+6. Every note must have a **Purpose** section explaining why it exists.
+7. Notes must contain meaningful content — no empty placeholders (Law 3: only what is necessary).
+8. If no template fits the content type, the agent should create a minimal note with correct frontmatter and flag it for review.
 
-6. Every concept note must include a minimum of two internal wiki-links.
-7. Every note must link to at least one related document.
-8. Every concept, system, and pipeline must appear in at least one map.
-9. Maps link downward to contents and upward to parent maps.
-10. No orphan notes are allowed.
+## Schema v3 Requirements
 
-### Authority Packs
+9. All frontmatter must include at minimum: `title`, `type`, `status`, `authority_weight`, `schema_version`, `created`, `updated`, `relationships`, `tags`.
+10. The `type` field must use one of the controlled values: governance, concept, skill, role, pipeline, log, report, proposal.
+11. The `status` field must use one of: draft, active, archived.
+12. The `relationships` field must include three sub-fields: `derives_from`, `governs`, `related`.
+13. All dates use ISO 8601 format: `YYYY-MM-DD`.
+14. Empty list fields use `[]`, never null.
 
-11. Authority pack folders follow the canonical `00–13` grammar. No deviations.
-12. Each authority pack file represents exactly one grammar section.
+## Linking and Navigation
 
-### Vault Structure
+15. Wiki-links use the canonical format: `[[Note Title]]`.
+16. Every note (except the North Star) must have at least one entry in `derives_from`. This is the formal parent link — it traces authority upward and prevents orphans.
+17. Every concept or governance note must include at least one wiki-link in its body content, connecting it to related knowledge.
+18. All wiki-links must resolve to existing notes. Orphan links indicate missing knowledge and must be flagged.
+19. No orphan notes — every note must be reachable from at least one other note via `derives_from`, `governs`, or `related`.
 
-13. `01_CAPTURE` is the inbox — unsorted input arrives here and should be processed promptly. The inbox should be kept empty.
-14. `02_KNOWLEDGE` (including governance) and `99_ARCHIVE` are canonical directory structures. Do not redesign them.
-15. Canonical note titles must be unique across the vault.
-16. No concept may link directly to more than one layer above itself. (Prevents conceptual short-circuiting and preserves layered integrity.)
-17. All note templates are stored canonically in `88_TEMPLATES/`. Templates in `05_SYSTEMS/templates/` are the compiled/runtime versions.
+## Navigation
+
+20. The vault maintains a single master map: `02_KNOWLEDGE/indexes/SYSTEM_MAP.md`. This is the inventory — a compact index of what currently exists in the vault.
+21. SYSTEM_MAP must be updated as part of any build that changes vault structure, adds or removes documents, or reorganizes content.
+22. CLAUDE.md is the Charter (what AM is). SYSTEM_MAP is the Inventory (what exists). Both are required.
+
+## Authority and Governance
+
+23. Documents with `authority_weight` ≥ 80 are canonical. Changes to canonical documents require human approval (Level 3 escalation).
+24. When two documents conflict, higher `authority_weight` wins. When weights are equal, defer to the Foundations.
+25. The Foundations document (authority_weight: 95) is the highest authority in the vault. It cannot be modified without explicit human approval and a full pipeline cycle (proposal → audit → approval → implementation → record → reflect).
+
+## Pipeline Integrity
+
+26. `01_CAPTURE` is the inbox — unsorted input arrives here and should be processed through triage promptly. The inbox should be kept lean.
+27. Content moves through the pipeline in order: Capture → Knowledge → Decide → Execute → Record → Reflect. Skipping stages requires explicit justification traceable to the Foundations.
+28. Every stage transition passes through a gate. Gate intensity scales with the stakes of the transition.
+29. `06_REFLECT` feeds back into `01_CAPTURE` — evolution proposals and brainstorms become input for the next cycle.
 
 ## Validation Checklist
 
 Before accepting any note as complete, verify:
 
-### YAML Validity
-- Frontmatter begins and ends with `---`
+**Frontmatter:**
+- Begins and ends with `---`
 - Indentation is consistent (2 spaces)
-- No tabs or mixed indentation
+- All required fields present (see rule 9)
+- `type` and `status` use controlled vocabulary values
 
-### Field Presence
-Fields must include at minimum: `schema_version`, `title`, `type`, `note_class`, `authority_weight`, `status`, `review_status`, `version`, `created_date`, `last_modified`, `tags`, `relationships`
+**Content:**
+- Has a Purpose section
+- Contains substantive content (not a placeholder)
+- Wiki-links use canonical format
 
-### Relationship Structure
-Every note contains typed relationships:
-```yaml
-relationships:
-  defines: []
-  part_of: []
-  implements: []
-  governs: []
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-```
-
-### Required Body Sections
-Each note contains at minimum:
-- **Purpose** — what this note is for
-- One or more sections of substantive content
-
-### Link Integrity
-- All wiki-links use the canonical format: `[[Note Title]]`
-- No full-path links (`...]]`)
-- Internal links resolve to existing notes
+**Relationships:**
+- `derives_from` traces upward to at least one parent (for non-root documents)
+- Links resolve to existing notes
 
 ## When It Applies
 
