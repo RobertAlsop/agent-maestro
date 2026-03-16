@@ -31,3 +31,4 @@ node_modules/
 .env
 .env.*
 credentials.json
+04_EXECUTE/tools/vault-maintenance/reports/
