@@ -5,7 +5,7 @@ status: active
 authority_weight: 75
 schema_version: 3
 created: "2026-03-16"
-updated: "2026-03-16"
+updated: "2026-03-17"
 relationships:
   derives_from:
     - "[[Agent Maestro — Strategy]]"
@@ -29,7 +29,7 @@ The roadmap follows D3 (Controlled Evolution) — each wave proves the one befor
 
 ## Current Position
 
-**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 5.2 (Pipeline Hardening) is in progress.
+**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 6 (Mechanical Integrity) is complete. Wave 7 (Scheduled Execution) is next.
 
 ---
 
@@ -51,23 +51,23 @@ Delivered the v1.0.0 structural redesign. Vault consolidated from 100+ files to 
 
 Produced the Design Blueprint. Collaborative human-AI design process proved effective. Fractal insight validated. Law 3 (Economy) confirmed as the sharpest design tool.
 
-### Wave 5.2 — Pipeline Hardening (current)
+### Wave 5.2 — Pipeline Hardening ✓
 
 **Question:** Is every joint finished?
 
-Governance documents reviewed and tightened. Pipeline folders audited. Concepts consolidated (39→5). Proposal lifecycle codified. Roadmap and register created. SOPs documented. See [[Proposal — Wave 5.2 Pipeline Hardening]] for the full contract.
+Governance documents reviewed and tightened. Pipeline folders audited. Concepts consolidated (39→5). Proposal lifecycle codified. Roadmap and register created. Universal Workflow documented. See [[Proposal — Wave 5.2 Pipeline Hardening]] for the full contract.
 
-### Wave 6 — Mechanical Integrity
+### Wave 6 — Mechanical Integrity ✓
 
 **Question:** Can AM detect its own structural problems?
 
-Build the shell script layer that validates vault integrity mechanically — broken links, YAML validation, orphan detection, inventory generation. Define the boundary: scripts enforce mechanical integrity, LLMs enforce semantic integrity. This is the foundation that makes autonomous operation possible.
+Delivered the vault-maintenance tool suite: seven detection tools (structure, YAML, broken links, orphans, stubs, naming, inventory) plus orchestrator. Config-driven, portable, read-only. First health report ran and found real issues — confirming the tools work. Established [[AM — Integrity Layers]] (mechanical/semantic boundary) and [[AM — Tool Conventions]] as governance. See [[Proposal — Wave 6 Mechanical Integrity]] for the full contract.
 
-### Wave 7 — Runtime & Execution
+### Wave 7 — Scheduled Execution (current)
 
 **Question:** Can AM actually *run* things?
 
-Bring 04_EXECUTE to life. Build the runtime provider layer, implement scheduled execution (Python daemon or equivalent), establish the memory/persistence approach. AM stops being a vault you chat with and becomes a system that operates.
+Give AM autonomous operation via launchd scheduling of the integrity suite. Date-stamped reports land in `05_RECORD/reports/` daily without human initiation. Optionally, a local LLM (Ollama/llama3.2) summarises findings and macOS notifications alert on problems. Local-first stack — no external API dependencies. See [[Proposal — Wave 7 Scheduled Execution]] for the full contract.
 
 ### Wave 8 — Self-Observation & Autonomy
 
@@ -147,3 +147,5 @@ The proven, refined methodology becomes a sellable offering. The exact form — 
 - [[Agent Maestro — North Star]]
 - [[AM — Future Waves Register]]
 - [[Proposal — Wave 5.2 Pipeline Hardening]]
+- [[Proposal — Wave 6 Mechanical Integrity]]
+- [[Proposal — Wave 7 Scheduled Execution]]

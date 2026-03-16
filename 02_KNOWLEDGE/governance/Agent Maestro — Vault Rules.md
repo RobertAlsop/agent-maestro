@@ -104,7 +104,7 @@ Structure is governance. A vault without rules becomes an unnavigable knowledge 
 ## Proposal Lifecycle
 
 44. Proposals follow a three-stage lifecycle within `03_DECIDE/`: **draft** in `proposals/`, **active** in `active/`, **archived** in `05_RECORD/archive/`. Each transition corresponds to a pipeline gate.
-45. A new proposal is created in `03_DECIDE/proposals/` with `status: draft`. It remains there until it passes its gate criteria — including human approval for any proposal that touches governance or structure.
+45. A new proposal is created in `03_DECIDE/proposals/` with `status: draft`. It remains there until it passes its gate criteria — including human approval for any proposal that touches governance or structure. If the proposal derives from a capture seed, the seed is consumed (moved to `05_RECORD/archive/` with `status: archived`) when the proposal is created — this is the moment the work the seed describes has formally begun.
 46. When a proposal is approved, its `status` is changed to `active`, an `approved` date field is added to frontmatter, and the file is moved to `03_DECIDE/active/`. This is the formal commitment to execute.
 47. When a proposal's work is complete (all completion criteria checked, reflection filed), the proposal is moved to `05_RECORD/archive/` with `status: archived` and a `completed` date field added. This closes the loop.
 48. A rejected proposal is moved directly to `05_RECORD/archive/` with `status: archived` and a `rejected` date field. The archive preserves the reasoning for future reference.

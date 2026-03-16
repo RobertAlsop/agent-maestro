@@ -41,15 +41,13 @@ The register is inclusive — every plausible idea gets a place. The roadmap is 
 - "Potential rule" → codified as [[AM — Integrity Layers]]
 - "Agent responsibility collision" → simplified to two-layer model (Mechanical Integrity / Semantic Integrity) with future layers deferred until proven need
 
-### Scheduled Execution (Wave 7 candidate — revised)
+### Scheduled Execution (Wave 7 — promoted)
 
-**Source:** Capture — "Runtime Provider Layer Proposal v2," "AM Python Daemon for scheduled automations," Wave 7 brainstorm (2026-03-16)
+**Status:** Promoted to Roadmap. Proposal drafted 2026-03-16, adversarial audit complete. See [[Proposal — Wave 7 Scheduled Execution]] in `03_DECIDE/active/`.
 
-**Revised scope after design conversation (2026-03-16):** Wave 7 should prove the simplest thing that answers "can AM run things?" — launchd scheduling the integrity suite, reports landing in `05_RECORD/reports/` automatically, and optionally a thin Python script that invokes an LLM to summarise findings. No daemon, no runtime provider framework, no database, no model routing system.
+**Final scope:** Three phases — (1) launchd scheduling `orchestrate.sh` via a wrapper script with date-stamped reports, (2) optional LLM summary via Ollama (llama3.2) appended to reports, (3) optional macOS native notification on findings. Local-first stack: no external API dependencies, no daemon, no framework.
 
 Key insight: the problem isn't "how do we connect LLMs to AM?" (that's already solved — an LLM reads the vault). The problem is "how does AM do things when no human starts a session?" The minimum answer is: scheduled script execution via launchd.
-
-See `01_CAPTURE/Wave 7 — Brainstorm.md` for the full design conversation output.
 
 **Deferred from original Wave 7 scope (validated ideas, not yet needed):**
 
@@ -81,6 +79,7 @@ Instrument the pipeline with timing and metrics. Implement observation logging. 
 - **Roles placement** — question whether roles should live in governance. Currently they do. (Capture: "Roles") — resolved in Wave 5.2: roles confirmed in `governance/roles/`.
 - **Skills acquisition model** — building skills vs. acquiring from external marketplace. (Capture: "Skills")
 - **Archived treatise rescue** — ✓ Resolved in Wave 5.2: treatise rescued to `02_KNOWLEDGE/concepts/AM — Treatise on Core Principles.md`, updated to schema v3.
+- **Report lifecycle management** — daily integrity reports accumulate in `05_RECORD/reports/` (~365/year). At current scale this is manageable. Revisit when report count exceeds 500, or when cross-run trend comparison requires structured querying (at which point SQLite may also earn its place). Options: retention policy (archive reports older than N days), date-bucketed subfolders, or automated cleanup script. (Source: Wave 7 adversarial audit, IF-4)
 
 ---
 

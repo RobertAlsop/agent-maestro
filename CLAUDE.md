@@ -156,6 +156,10 @@ Before any build session:
 **Current version:** v0.5.0 (Wave 5 complete)
 **Target version:** v1.0.0 (Wave 5.1 — structural redesign)
 
+## Session Close-Out
+
+Before ending any session that advances or completes a wave: return to the proposal's completion criteria and check every item. If the reflection hasn't been written, write it. If the capture seed hasn't been created, create it. The reflect stage is not optional — it closes the loop.
+
 ## Permissions & Escalation
 
 - **Agents MAY:** Read all folders, execute skills within their role, write to RECORD
