@@ -2,183 +2,164 @@
 
 ## Purpose
 
-This vault is the operational center for Agent Maestro—the discipline of designing, governing, and evolving operational intelligence systems. Agent Maestro provides a comprehensive framework for building AI agents that are reliable, controllable, and capable of complex autonomous work within human-defined boundaries.
+Agent Maestro is the discipline of designing, governing, and evolving operational intelligence systems. Its mission is to create **more reliable intelligent systems** — not smarter AI.
 
-The vault is organized into seven major functional areas (01_CAPTURE through 06_EXECUTION + 99_ARCHIVE) that implement the Four-Layer Model: Authority Layer → Agent Runtime → Workflow Layer → Workspace Layer.
+This vault IS Agent Maestro. The folder structure mirrors the universal pipeline. Every folder is a stage. Every stage has gates. The same pattern operates at every level of abstraction.
 
 ## Start Here — Agent Bootloader
 
 **Read order for agents entering this vault:**
 
-1. **This file** (CLAUDE.md) — Understand vault structure, conventions, and permissions
-2. **SYSTEM_MAP.md** → `02_KNOWLEDGE/system_maps/SYSTEM_MAP.md` — Find anything in the vault by exact path
-3. **Your authority pack** → Check `05_SYSTEMS/agent_systems/constellation_registry.csv` to find your constellation, then load your compiled pack from `05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/`
+1. **This file** (CLAUDE.md) — The Charter. Understand the architecture, conventions, and your role.
+2. **Foundations** → `02_KNOWLEDGE/governance/Agent Maestro — Foundations.md` — The constitutional authority. All decisions trace back here.
+3. **Design Blueprint** → `AM v1.0.0 — Design Blueprint.md` — The full architectural specification.
+4. **Your role** → `02_KNOWLEDGE/governance/roles/` — Load your role definition (Worker or Reviewer).
+5. **System Map** → `02_KNOWLEDGE/indexes/SYSTEM_MAP.md` — The Inventory. What currently exists in the vault and where to find it.
 
-**Decision tree — "Where do I look?"**
+## The Universal Pipeline
 
-| If you need... | Go to... |
-|----------------|----------|
-| What Agent Maestro IS and WHY it exists | `02_KNOWLEDGE/governance/Agent Maestro — North Star.md` |
-| What the foundational kernel and derived principles are | `02_KNOWLEDGE/governance/Agent Maestro — Foundations.md` |
-| What the original 12 principles were (historical) | `02_KNOWLEDGE/governance/Agent Maestro — Principles.md` |
-| What an agent is ALLOWED to do | Your compiled authority pack JSON in `05_SYSTEMS/authority_architecture/compiler/prototype/artifacts/` |
-| Which agents exist and what they do | `05_SYSTEMS/agent_systems/constellation_registry.csv` + constellation folders in `05_SYSTEMS/agent_systems/constellations/` |
-| All authority packs registered | `05_SYSTEMS/authority_architecture/authority_pack_registry.csv` |
-| How to run an agent or constellation | `05_SYSTEMS/runtime/orchestrator.py` (CLI: `list`, `status`, `run`, `run-agent`, `compile`, `review`, `approve`, `reject`, `dashboard`) |
-| Pipeline definitions (how work flows) | `03_PIPELINES/` — one subfolder per pipeline type |
-| Build session lifecycle | `03_PIPELINES/development/Build Session Protocol.md` |
-| Operational logs and reports | `06_EXECUTION/logs/` (task, escalation, state change, session logs) |
-| Current project status / build plan | `04_PROJECTS/active/agent_maestro_development/` |
-| Complete vault index with all paths | `02_KNOWLEDGE/system_maps/SYSTEM_MAP.md` |
+Agent Maestro is a 6-stage pipeline. The vault folders ARE the pipeline stages.
 
-## Structure Overview
+| Stage | Folder | Function | Question it answers |
+|-------|--------|----------|-------------------|
+| Input | `01_CAPTURE/` | Receive | What arrived? |
+| Interpret | `02_KNOWLEDGE/` | Understand | What does it mean? |
+| Decide | `03_DECIDE/` | Commit | What are we going to do? |
+| Act | `04_EXECUTE/` | Execute | Do it. |
+| Record | `05_RECORD/` | Remember | What happened? |
+| Reflect | `06_REFLECT/` | Learn | What did we learn? What's next? |
 
-| Folder | Purpose | Key Files |
-|--------|---------|-----------|
-| `01_CAPTURE/` | Inbox for unsorted input (raw observations, drafts, captured context) | ~45 unprocessed notes |
-| `02_KNOWLEDGE/` | Authoritative knowledge base | `governance/` (6 core docs), `system_maps/` (21 maps + SYSTEM_MAP.md), `indexes/knowledge_graph_index.csv` |
-| `03_PIPELINES/` | Operational workflow definitions and pipeline contracts | 7 pipeline definitions across 4 categories |
-| `04_PROJECTS/` | Project tracking with lifecycle management | `active/`, `incubating/`, `completed/` |
-| `05_SYSTEMS/` | Implementation-level architecture and governance (most sensitive) | `runtime/` (Python), `authority_architecture/` (packs + compiler), `agent_systems/` (constellations) |
-| `06_EXECUTION/` | Operational dashboards, logs, reports, tasks, planning | `logs/` (4 CSV logs), `reports/`, `dashboards/`, `workflows/prompts/` |
-| `99_ARCHIVE/` | Historical and archived items (read-only reference) | — |
+Between every stage: a **gate**. Nothing moves forward without a check.
 
-## Global Conventions
+The loop closes: Reflect feeds back into Input. The brainstorm becomes the next brief.
 
-All notes in this vault follow these conventions:
+## Vault Structure
 
-### Frontmatter & Metadata
-- All vault notes use YAML frontmatter with `schema_version: 2`
-- Required frontmatter fields depend on note type (see Governance Schemas Reference)
-- Common fields: `title`, `tags`, `relationships`, `authority_weight`, `created_date`, `last_modified`
-- **Exception:** `CLAUDE.md` files are infrastructure files, not vault notes. They do not use YAML frontmatter and are excluded from schema validation and knowledge graph indexing. They serve as lightweight governance contracts for AI agents working in each directory.
+```
+CLAUDE.md                      ← You are here (The Charter)
+AM v1.0.0 — Design Blueprint.md  ← Full architectural specification
 
-### Wiki-Links & Relationships
-- Wiki-links use double-bracket format: `[[Note Name]]`
-- Relationships in frontmatter use typed links: `defines`, `part_of`, `implements`, `governs`, `inherits_from`, `applies_to`, `uses`, `produces`
+01_CAPTURE/                    ← Raw ideas, observations, drafts, unsorted input
+02_KNOWLEDGE/                  ← Governance, concepts, skills, templates, references
+    governance/                   Constitutional documents (authority_weight ≥ 80)
+    governance/roles/             Worker and Reviewer role definitions
+    concepts/                     Domain knowledge and frameworks
+    skills/                       The 7 core skill definitions
+    templates/                    Patterns for creating artifacts
+    references/                   External references
+    indexes/                      Knowledge graph, registries
+03_DECIDE/                     ← Active projects, proposals, contracts, roadmaps
+04_EXECUTE/                    ← Runtime code, tools, active builds
+    runtime/                      Python runtime (governed_agent, orchestrator, etc.)
+    tools/                        Utility scripts
+05_RECORD/                     ← Logs, reports, summaries, session history, archive
+    logs/                         Operational logs (sessions, state changes, tasks)
+    reports/                      Audit reports and summaries
+    archive/                      Historical items
+06_REFLECT/                    ← Retrospectives, evolution proposals, brainstorms
+```
 
-### Dates & Data
-- All dates use ISO 8601 format: `YYYY-MM-DD`
-- CSV files use UTF-8 encoding with comma delimiters and ISO 8601 date format
+## Governance Hierarchy
 
-### Naming Conventions
-- Note titles use Title Case with em-dashes for subtitles (e.g., "Agent Maestro — North Star")
-- Folders use UPPER_CASE_WITH_UNDERSCORES
-- Files in 05_SYSTEMS use Title Case for governance documents
+The highest-authority documents, in order:
 
-## The Four-Layer Model
+| Document | Authority Weight | What it governs |
+|----------|-----------------|-----------------|
+| [[Agent Maestro — Foundations]] | 95 | Everything — the kernel (3 seeds, 1 meta-principle, 3 laws, 6 derived principles) |
+| [[Agent Maestro — North Star]] | 90 | Mission and strategic intent |
+| [[Agent Maestro — Vault Rules]] | 85 | Vault structure, schema, and conventions |
+| [[Agent Maestro — Scope]] | 80 | What AM does and does not cover |
+| [[Agent Maestro — Strategy]] | 80 | How AM evolves through capability stages |
+| [[Agent Maestro — Modes]] | 75 | The 6 operational modes (aligned with pipeline stages) |
 
-The Agent Maestro architecture is organized in four layers:
+When documents conflict, higher authority_weight wins. When weights are equal, defer to the Foundations. When the Foundations are ambiguous, escalate to the human.
 
-1. **Authority Layer** (`05_SYSTEMS/authority_architecture/`): Defines what agents can and cannot do through authority packs, inheritance rules, and policy resolution
-2. **Agent Runtime** (`05_SYSTEMS/runtime/` + `05_SYSTEMS/agent_systems/`): The systems and agents themselves — GovernedAgent base class, orchestrator, state change logging
-3. **Workflow Layer** (`03_PIPELINES/`): Operational workflows and pipeline contracts that guide agent execution
-4. **Workspace Layer** (`06_EXECUTION/`): Dashboards, logs, reports, and task management where agents record outcomes
+## Agent Architecture
 
-## Key Governance Documents (Authority Layer)
+### Skills (7 core capabilities)
 
-These documents define the fundamental principles and constraints for the entire system. Located in `02_KNOWLEDGE/governance/`:
+| Skill | What it does |
+|-------|-------------|
+| **Triage** | Classify input and route through the pipeline |
+| **Validate** | Check artifacts against governance rules |
+| **Audit** | Deep evaluation — alignment, integrity, viability |
+| **Propose** | Formulate change proposals with evidence |
+| **Gate** | Evaluate pipeline stage transitions |
+| **Summarize** | Synthesize outcomes and create records |
+| **Escalate** | Package decisions for human review |
 
-| Document | Authority Weight | Purpose |
-|----------|-----------------|---------|
-| [[Agent Maestro — Foundations]] | 95 | Foundational kernel (3 seeds, 1 meta-principle, 3 laws) + 6 derived principles |
-| [[Agent Maestro — Principles]] | 90 | The original 12 principles (historical — superseded in authority by Foundations) |
-| [[Agent Maestro — North Star]] | 90 | Core vision and strategic intent |
-| [[Agent Maestro — Modes]] | 80 | Three operational modes (Design, Governance, Execution) |
-| [[Agent Maestro — Scope]] | 80 | What Agent Maestro does and does not cover |
-| [[Agent Maestro — Strategy]] | 80 | Strategic approach and key initiatives |
-| [[Agent Maestro — Vault Rules]] | 80 | Rules for vault organization and content management |
+Skill definitions live in `02_KNOWLEDGE/skills/`.
 
-## Key Registries
+### Roles (2 + Human)
 
-| Registry | Path | What it tracks |
-|----------|------|---------------|
-| Authority Pack Registry | `05_SYSTEMS/authority_architecture/authority_pack_registry.csv` | All 29 authority packs |
-| Constellation Registry | `05_SYSTEMS/agent_systems/constellation_registry.csv` | 2 constellations (1 active, 1 archived) |
-| Agent Registry | `05_SYSTEMS/agent_systems/agent_registry.csv` | All 18 agents with roles and permissions |
-| Compiler Artifacts Registry | `05_SYSTEMS/authority_architecture/compiler/compiler_artifacts_registry.csv` | All 17 compiled JSON artifacts |
-| Knowledge Graph Index | `02_KNOWLEDGE/indexes/knowledge_graph_index.csv` | All vault notes with metadata |
-| Session Index | `06_EXECUTION/logs/sessions/session_index.csv` | All build sessions |
-| State Change Log | `06_EXECUTION/logs/state_change_log.csv` | All vault modifications |
-| Task Execution Log | `06_EXECUTION/logs/task_execution_log.csv` | All agent action results |
-| Escalation Log | `06_EXECUTION/logs/escalation_log.csv` | All escalations |
+```
+HUMAN (ultimate authority — Level 3)
+  │
+  ├─ Reviewer (Level 2 — audits, gates, proposes)
+  └─ Worker (Level 1-2 — executes, processes, builds)
+```
 
-## Runtime System
+Role definitions live in `02_KNOWLEDGE/governance/roles/`.
 
-The runtime is implemented in Python at `05_SYSTEMS/runtime/`:
+**D6 rule:** The same model can play both roles, but not for the same work in the same context. Build as Worker, review as Reviewer.
 
-| Module | Purpose |
-|--------|---------|
-| `governed_agent.py` | Base class: loads compiled packs, checks permissions (exact match), enforces control gates, validates evidence requirements |
-| `agent_runtime.py` | Runtime environment: logging, escalation, agent lifecycle |
-| `orchestrator.py` | CLI: `python orchestrator.py list/status/run/run-agent/compile --vault-root <path>` |
-| `state_change_logger.py` | Tracks CREATE/MODIFY/MOVE/ARCHIVE/DELETE/PROMOTE/REPAIR operations |
-| `tool_interface.py` | 9 vault tools + 2 MCP tools via `@register_tool` decorator |
-| `workflow_engine.py` | YAML workflow definitions → stage-by-stage governed execution |
-| `escalation_processor.py` | Escalation lifecycle: review queue, approve/reject, dashboard |
-| `mcp_adapter.py` | MCP client adapter for external integrations (Slack, GitHub, etc.) |
-| `mcp_servers.yaml` | MCP server configuration (transport, tools, credentials) |
-| `tool_registry.csv` | Vault-native registry of all approved tools with schemas and adapters |
+### Escalation Levels
 
-The compiler at `05_SYSTEMS/authority_architecture/compiler/prototype/compiler.py` transforms YAML authority packs into compiled JSON governance artifacts via an 8-stage pipeline.
+| Level | When | Resolution |
+|-------|------|------------|
+| 1 — Automatic | Rules cover it | Pass/fail against criteria |
+| 2 — Agent judgment | Principles apply | Trace decision to Foundations |
+| 3 — Human approval | Irreversible, architectural, or governance-level | Escalate with full context |
 
-## Agent Permissions & Escalation
+## Document Schema (v3)
 
-- **Agents MAY**: Read from all layers, follow pipeline contracts, update relationships in frontmatter, write operational data to 06_EXECUTION
-- **Agents MUST escalate**: Changes to canonical knowledge (authority_weight >= 90), modifications to authority packs, system architecture changes, permanent deletions
-- **Agents MUST NOT**: Modify archived items in 99_ARCHIVE, ignore escalation requirements, deviate from established patterns without governance approval
+All vault notes use YAML frontmatter:
 
-**Permission checking** uses exact string matching only. Unknown actions fail-safe to REQUIRES_ESCALATION. Control gates evaluate via context-provided evaluator functions. Evidence requirements check file existence before action execution.
+```yaml
+---
+title: ""
+type: ""               # governance | concept | skill | role | pipeline | log | report | proposal
+status: ""             # draft | active | archived
+authority_weight: 0    # 0-100 (≥80 = canonical)
+schema_version: 3
+created: ""            # ISO 8601
+updated: ""            # ISO 8601
+relationships:
+  derives_from: []     # upward authority trace
+  governs: []          # downward authority
+  related: []          # everything else
+tags: []
+---
+```
+
+**Exception:** CLAUDE.md files are infrastructure, not vault notes. They do not use YAML frontmatter.
+
+## Conventions
+
+- Dates: ISO 8601 (`YYYY-MM-DD`)
+- Note titles: Title Case with em-dashes for subtitles ("Agent Maestro — Foundations")
+- Wiki-links: `[[Note Title]]`
+- Folder names: UPPER_CASE or lowercase (pipeline folders use numbers + UPPER_CASE)
+- CSV files: UTF-8, comma-delimited, ISO 8601 dates
 
 ## Build Protocol
 
-> **⚠ MANDATORY: Read both documents below before starting any build session.**
+Before any build session:
 
-Before beginning any build work, agents MUST read:
-
-1. **Build Session Protocol** → `03_PIPELINES/development/Build Session Protocol.md`
-   — Defines the 7-stage lifecycle: Input → Brief → Proposal → Build → Output Summary → Session Log → Git Commit
-2. **Git Best Practices for AI-Assisted Builds** → `03_PIPELINES/development/Git Best Practices for AI-Assisted Builds v1.md`
-   — Branch rules, checkpoint tags, commit conventions, safety rules for Claude
-
-**Session stages (summary):**
-
-1. Input → 2. Brief/Roadmap → 3. Proposal (Build Contract) → 4. Build → 5. Output Summary → 6. Session Log → 7. Git Commit + Release
+1. Read the **Design Blueprint** → `AM v1.0.0 — Design Blueprint.md`
+2. Create a feature branch — never commit directly to `master`
+3. Tag current state before major changes: `git tag pre-<description>`
+4. Commit format: `SES-XXX: [summary]` or descriptive message
+5. The proposal is the contract — never build without human approval
 
 **Repository:** `https://github.com/robertalsop/agent-maestro`
-**Current version:** v0.5.0 (Wave 5 complete — Foundations alignment pass)
-**Default branch:** `master` — never commit build work directly here; use a feature branch
+**Current version:** v0.5.0 (Wave 5 complete)
+**Target version:** v1.0.0 (Wave 5.1 — structural redesign)
 
-**Critical rules:**
-- Never build without human approval of the proposal. The proposal is the contract.
-- Never work directly on `master`. Always create a dedicated branch (e.g., `phase-c-capture-processing`).
-- Create a checkpoint tag before each major build pass: `git tag pre-phase-X`
-- Commit format: `SES-XXX: [summary of changes]`
-- For milestone versions: `git tag vX.Y.Z` + `git push origin vX.Y.Z`
+## Permissions & Escalation
 
-**Project document locations:**
+- **Agents MAY:** Read all folders, execute skills within their role, write to RECORD
+- **Agents MUST escalate:** Changes to governance docs (authority_weight ≥ 80), structural changes, permanent deletions
+- **Agents MUST NOT:** Approve their own work, modify Foundations without human approval, skip gates
 
-| Document type | Location |
-|---------------|----------|
-| Evolution roadmaps | `04_PROJECTS/active/agent_maestro_development/roadmaps/` |
-| Build briefs | `04_PROJECTS/active/agent_maestro_development/briefs/` |
-| Proposals | `04_PROJECTS/active/agent_maestro_development/proposals/` |
-| Session logs | `06_EXECUTION/logs/sessions/` |
-| Output summaries | `04_PROJECTS/active/agent_maestro_development/summaries/` |
-
-## Phase D Architecture Documents (v0.4.0)
-
-| Document | Path | Purpose |
-|----------|------|---------|
-| Execution Architecture | `02_KNOWLEDGE/concepts/Execution Architecture.md` | Three-layer execution model: Reasoning → Governance Mediation → Tool Execution |
-| Tool Registry Design | `02_KNOWLEDGE/concepts/Tool Registry Design.md` | Tool registry architecture, adapter pattern, adding new tools |
-| Tool Registry (CSV) | `05_SYSTEMS/runtime/tool_registry.csv` | Machine-readable catalog of all 11 approved tools |
-| MCP Adapter | `05_SYSTEMS/runtime/mcp_adapter.py` | External integration via Model Context Protocol |
-| Host Options Evaluation | `02_KNOWLEDGE/references/Host Options Evaluation.md` | Hybrid recommendation: Claude sessions + Python daemon |
-| Self-Observation Spec | `02_KNOWLEDGE/concepts/Self-Observation Specification.md` | What agents log about their own performance |
-
-## Related Documents
-
-- See `CLAUDE.md` files in each subdirectory for layer-specific governance
-- See `02_KNOWLEDGE/system_maps/SYSTEM_MAP.md` for the complete vault index
-- Consult Governance Schemas Reference and Tool and Action Class Reference for detailed taxonomies
+When in doubt: escalate. The cost of asking is always lower than the cost of unauthorized action.

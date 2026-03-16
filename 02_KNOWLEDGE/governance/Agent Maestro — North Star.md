@@ -1,39 +1,22 @@
 ---
-schema_version: 2
 title: "Agent Maestro — North Star"
-type: north_star
-note_class: doctrine
-domain: governance
-layer: governance
-authority_weight: 90
-resolution_basis: canonical
-canonical: true
+type: governance
 status: active
-review_status: approved
-version: 2
-created_date: 2026-03-10
-last_modified: 2026-03-15
-owner: AgentMaestro
-source_type: collaborative
+authority_weight: 90
+schema_version: 3
+created: "2026-03-10"
+updated: "2026-03-16"
 relationships:
-  defines:
-    - "[[Agent Maestro Mission]]"
-  part_of: []
-  implements: []
+  derives_from: []
   governs:
     - "[[Agent Maestro — Scope]]"
     - "[[Agent Maestro — Strategy]]"
-  inherits_from: []
-  applies_to: []
-  uses: []
-  produces: []
-  supersedes: []
-  superseded_by: []
+  related:
+    - "[[Agent Maestro — Foundations]]"
 tags:
   - governance
   - north_star
   - canonical
-hash: ""
 ---
 
 # Agent Maestro — North Star
