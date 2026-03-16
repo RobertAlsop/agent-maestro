@@ -53,6 +53,8 @@ Constitutional and operational governance documents.
 | `Agent Maestro — Strategy.md` | 80 | How AM evolves through 4 capability stages |
 | `AM — Roadmap.md` | 75 | Strategic arc — committed waves and milestones |
 | `AM — Universal Workflow.md` | 70 | How work happens at every scale (draft) |
+| `AM — Integrity Layers.md` | 75 | Architectural separation: Mechanical vs Semantic integrity |
+| `AM — Tool Conventions.md` | 70 | How tools are designed, built, and operated |
 | `AM — Future Waves Register.md` | 60 | Backlog of validated ideas grouped by Strategy stage |
 
 ### governance/roles/
@@ -123,13 +125,35 @@ Active projects and approved decisions. Change proposals under review.
 
 | File | Status |
 |------|--------|
-| `Proposal — Wave 5.2 Pipeline Hardening.md` | Approved, nearing completion |
+| `Proposal — Wave 5.2 Pipeline Hardening.md` | Complete |
+| `Proposal — Wave 6 Mechanical Integrity.md` | Approved, executing |
 
 ---
 
 ## 04_EXECUTE — Act
 
-Empty. All pre-v1.0.0 runtime code and tools archived to `05_RECORD/archive/wave_5.2_execute/` during Wave 5.2 Phase 3. Rebuild planned for Wave 7.
+### tools/vault-maintenance/
+
+Mechanical integrity tool suite (Wave 6). Validates vault structural health against configurable rules.
+
+| File | Role |
+|------|------|
+| `structure_check.sh` | Verify required folders, root files, pipeline CLAUDE.md |
+| `yaml_validation.sh` | Validate YAML frontmatter (schema v3 compliance) |
+| `broken_links.sh` | Check all wiki-links and relationship entries resolve |
+| `orphan_detection.sh` | Detect files with no inbound links |
+| `stub_detection.sh` | Detect empty/placeholder files |
+| `naming_validation.sh` | Check filename/title uniqueness and matching |
+| `inventory.sh` | Generate full vault manifest |
+| `orchestrate.sh` | Run all tools, produce aggregate health report |
+| `README.md` | Suite documentation, config schema, usage |
+
+| Subfolder | Contents |
+|-----------|----------|
+| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific) |
+| `lib/` | `config.sh` (shared bash library), `yaml_validator.py` (Python core) |
+| `reports/` | Generated reports (per-tool + aggregate) |
+| `logs/` | Operational logs |
 
 ---
 
@@ -140,7 +164,7 @@ Logs, session history, and archive.
 | Subfolder | Contents |
 |-----------|----------|
 | `logs/sessions/` | 17 session logs (SES-002 through SES-018) + session_index.csv |
-| `reports/` | Empty — awaiting future audit reports |
+| `reports/` | `Wave 6 — First Vault Health Report.md` |
 | `sessions/` | Legacy session logs (pre-Wave 5.2 format) |
 | `archive/` | Historical items organized by wave |
 
@@ -174,4 +198,4 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 
 ---
 
-*Updated: 2026-03-16 — Wave 5.2 Pipeline Hardening complete.*
+*Updated: 2026-03-16 — Wave 6 Mechanical Integrity tools built.*

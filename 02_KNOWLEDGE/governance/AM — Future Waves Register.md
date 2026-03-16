@@ -6,6 +6,7 @@ authority_weight: 60
 schema_version: 3
 created: "2026-03-16"
 updated: "2026-03-16"
+note: "Wave 6 entry promoted; Wave 7 entry revised after design conversation"
 relationships:
   derives_from:
     - "[[Agent Maestro — Strategy]]"
@@ -30,30 +31,33 @@ The register is inclusive — every plausible idea gets a place. The roadmap is 
 
 ## Stage 1 — Self-Governance
 
-### Mechanical Integrity Layer (Wave 6 candidate)
+### Mechanical Integrity Layer (Wave 6 — promoted)
 
-**Source:** Capture — "Proposal — Shell Script Vault Maintenance Constellation," "The 6 shell scripts every large knowledge-vault builder eventually creates"
+**Status:** Promoted to Roadmap. Proposal approved 2026-03-16. See [[Proposal — Wave 6 Mechanical Integrity]] in `03_DECIDE/active/`.
 
-Build the shell script layer for deterministic vault validation. Core capabilities: vault integrity scanning, inventory reporting, broken link detection, YAML validation, duplicate ID detection, orphan file detection, stub detection, auto-commit, scheduled maintenance runner, CI validation. Config-driven and portable across vaults.
+**Governance produced during design:** [[AM — Integrity Layers]] (establishes Mechanical/Semantic boundary), [[AM — Tool Conventions]] (governs how tools are built). Both in `02_KNOWLEDGE/governance/`.
 
-Key design principle: shell scripts enforce mechanical integrity, LLMs enforce semantic integrity. Scripts detect and report; they never interpret meaning.
+**Related ideas resolved:**
+- "Potential rule" → codified as [[AM — Integrity Layers]]
+- "Agent responsibility collision" → simplified to two-layer model (Mechanical Integrity / Semantic Integrity) with future layers deferred until proven need
 
-**Related ideas:**
-- "Potential rule" capture note — codify which tasks belong to scripts vs. LLMs
-- "Agent responsibility collision" capture note — layered architecture preventing agents from stepping on each other (Layer 0: vault, Layer 1: mechanical scripts, Layer 2: triage/routing, Layer 3: specialist auditors, Layer 4: controlled repair, Layer 5: validation/change control)
+### Scheduled Execution (Wave 7 candidate — revised)
 
-### Runtime & Execution Layer (Wave 7 candidate)
+**Source:** Capture — "Runtime Provider Layer Proposal v2," "AM Python Daemon for scheduled automations," Wave 7 brainstorm (2026-03-16)
 
-**Source:** Capture — "Runtime Provider Layer Proposal v2," "AM Python Daemon for scheduled automations"
+**Revised scope after design conversation (2026-03-16):** Wave 7 should prove the simplest thing that answers "can AM run things?" — launchd scheduling the integrity suite, reports landing in `05_RECORD/reports/` automatically, and optionally a thin Python script that invokes an LLM to summarise findings. No daemon, no runtime provider framework, no database, no model routing system.
 
-Bring 04_EXECUTE to life. The Runtime Provider Layer (RPL) is a substrate service providing governed access to LLM inference. Provider-agnostic (local via Ollama, cloud via Anthropic/OpenAI). Strict separation: RPL handles inference only; runtime engines handle all side effects.
+Key insight: the problem isn't "how do we connect LLMs to AM?" (that's already solved — an LLM reads the vault). The problem is "how does AM do things when no human starts a session?" The minimum answer is: scheduled script execution via launchd.
 
-The Python daemon enables scheduled, unattended execution — vault maintenance runs on a cron/launchd schedule without human intervention.
+See `01_CAPTURE/Wave 7 — Brainstorm.md` for the full design conversation output.
 
-**Related ideas:**
-- "Memory Options" / "RAG vs QMD" capture notes — persistence and retrieval strategy (CSV, SQLite, vector, page index DB). Decision needed: what's the right memory architecture for AM's operational data?
-- "Toon" capture note — use TOON with JSON for lower API fees during routine operations
-- Model routing — different models for different tasks (Opus for design, Sonnet for execution, Haiku for monitoring)
+**Deferred from original Wave 7 scope (validated ideas, not yet needed):**
+
+- **Runtime Provider Layer** — LLM API abstraction layer. Deferred because a direct API call is sufficient when there's only one consumer. Revisit when multiple tools need LLM access with different requirements, or when provider-switching becomes operationally necessary.
+- **Python daemon** — long-running background process for intelligent task chaining. Deferred because launchd handles simple scheduling without process management overhead. Revisit when Wave 8 introduces chained workflows where one step's output determines the next.
+- **Memory architecture (SQLite, vector DB, RAG)** — deferred because the vault (~60 files) fits in context. Current memory model (markdown + YAML + CSV + git) is sufficient. SQLite is the right first step if cross-run data comparison proves necessary. Vector DB is a Stage 2 concern (needed when vault outgrows context window).
+- **Model routing system** — deferred as a system. Simple three-tier approach adopted instead: Haiku-class for Level 1 (cheap/fast), Sonnet-class for Level 2 (standard), Opus-class for Level 3 (important). Pick one per tier, use them, measure later.
+- **TOML with JSON for lower API fees** — deferred pending investigation of actual cost savings vs. added complexity.
 
 ### Self-Observation & Autonomy (Wave 8 candidate)
 
