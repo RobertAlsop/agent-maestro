@@ -1,8 +1,8 @@
 # Vault Maintenance Tool Suite
 
-Mechanical integrity tools for Obsidian vaults. Validates structural health against configurable rules — detects broken links, invalid YAML, orphaned files, naming issues, and structural gaps.
+Mechanical integrity and pipeline enforcement tools for Obsidian vaults. Validates structural health and process compliance — detects broken links, invalid YAML, orphaned files, naming issues, structural gaps, and lifecycle rule violations.
 
-Built as part of Agent Maestro Wave 6. Governed by [[AM — Tool Conventions]] and [[AM — Integrity Layers]].
+Built across Agent Maestro Waves 6 and 8.2. Governed by [[AM — Tool Conventions]], [[AM — Integrity Layers]], and [[AM — Artifact Lifecycles]].
 
 ## Quick Start
 
@@ -19,6 +19,8 @@ Built as part of Agent Maestro Wave 6. Governed by [[AM — Tool Conventions]] a
 
 ## Tools
 
+### Wave 6 — Structural Integrity
+
 | Tool | What it checks | Rules enforced |
 |------|---------------|----------------|
 | `structure_check.sh` | Required folders, root files, pipeline CLAUDE.md files exist and are non-empty | Vault Rules 1–4, 57 |
@@ -28,7 +30,22 @@ Built as part of Agent Maestro Wave 6. Governed by [[AM — Tool Conventions]] a
 | `stub_detection.sh` | No empty files, no frontmatter-only notes, no heading-only notes | Vault Rule 7 |
 | `naming_validation.sh` | No duplicate filenames, no duplicate titles, frontmatter `title` matches filename | Vault Rule 34 |
 | `inventory.sh` | Generates a manifest of all files with type, status, authority weight, and link counts | Vault Rules 21–23 |
-| `orchestrate.sh` | Runs all tools in sequence, produces aggregate health report | — |
+
+### Wave 8.2 — Pipeline Enforcement
+
+| Tool | What it checks | Lifecycle spec |
+|------|---------------|----------------|
+| `capture_triage.py` | Capture items untriaged past deadline (14 days); routing provenance (bidirectional link check, warnings only) | Capture Item lifecycle |
+| `proposal_lifecycle.py` | Status/location consistency; audit gate (non-empty `## Audit`); reflection existence for complete waves; archive gate for complete waves | Proposal lifecycle |
+| `reflection_completeness.py` | Reflection existence per completed wave; capture seed existence per reflection; `derives_from` provenance in both directions | Reflection lifecycle |
+| `concept_lifecycle.py` | Draft stagnation (>30 days); authority chain (`derives_from` non-empty); reflection reference (active concepts) | Concept lifecycle |
+| `governance_compliance.py` | Authority floor (`authority_weight` ≥ 70 for governance docs); location enforcement (type: governance in governance folder); type/folder consistency vault-wide | Governance Document lifecycle |
+
+### Orchestrator
+
+| Tool | What it does |
+|------|-------------|
+| `orchestrate.sh` | Runs all tools in sequence (structural first, pipeline second), produces aggregate health report |
 
 Each tool is independently runnable and produces a self-contained report.
 
@@ -125,7 +142,7 @@ The orchestrator produces `vault_health_report.md` with per-tool summaries and c
 ## Requirements
 
 - **Bash 3.2+** (macOS default) — all shell tools
-- **Python 3** with **PyYAML** — `yaml_validation.sh` only
+- **Python 3** with **PyYAML** — `yaml_validation.sh` and all Wave 8.2 pipeline tools
 
 Install PyYAML: `pip install pyyaml` or `pip3 install pyyaml`
 
@@ -135,22 +152,38 @@ Install PyYAML: `pip install pyyaml` or `pip3 install pyyaml`
 vault-maintenance/
 ├── config/
 │   ├── defaults.conf        # Generic vault defaults
-│   └── am.conf              # Agent Maestro config
+│   └── am.conf              # Agent Maestro config (structural + pipeline)
 ├── lib/
 │   ├── config.sh            # Shared bash library (config parsing, report helpers)
-│   └── yaml_validator.py    # Python YAML validation core
+│   ├── yaml_validator.py    # Python YAML validation core (Wave 6)
+│   └── vault_model.py       # Shared Python vault model (Wave 8.2) — imported by all pipeline tools
 ├── reports/                  # Generated reports (gitignored)
 ├── logs/                     # Operational logs (gitignored)
-├── structure_check.sh
-├── yaml_validation.sh       # Shell wrapper → lib/yaml_validator.py
-├── broken_links.sh
-├── orphan_detection.sh
-├── stub_detection.sh
-├── naming_validation.sh
-├── inventory.sh
+├── structure_check.sh        # Wave 6
+├── yaml_validation.sh        # Wave 6 — shell wrapper → lib/yaml_validator.py
+├── broken_links.sh           # Wave 6
+├── orphan_detection.sh       # Wave 6
+├── stub_detection.sh         # Wave 6
+├── naming_validation.sh      # Wave 6
+├── inventory.sh              # Wave 6
+├── capture_triage.py         # Wave 8.2 — pipeline enforcement
+├── proposal_lifecycle.py     # Wave 8.2 — pipeline enforcement
+├── reflection_completeness.py # Wave 8.2 — pipeline enforcement
+├── concept_lifecycle.py      # Wave 8.2 — pipeline enforcement
+├── governance_compliance.py  # Wave 8.2 — pipeline enforcement
 ├── orchestrate.sh
 └── README.md
 ```
+
+### Library architecture
+
+`lib/vault_model.py` is shared by all five pipeline enforcement tools. It provides:
+- `build_vault_model(vault_root, config)` — parse all vault frontmatter into VaultArtifact objects
+- `parse_completed_waves(roadmap_content)` — extract completed wave identifiers from the Roadmap
+- `write_report(...)` — standardized Markdown report writer
+- Helper functions for exclusion, wiki-link parsing, date resolution, and reference checking
+
+Each tool rebuilds the vault model per invocation (tools run as separate processes). The library's Economy value is code reuse — one implementation of YAML parsing, date resolution, config loading, and relationship traversal maintained in one place.
 
 ## Design Principles
 

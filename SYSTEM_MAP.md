@@ -5,7 +5,7 @@ status: active
 authority_weight: 50
 schema_version: 3
 created: "2026-03-16"
-updated: "2026-03-16"
+updated: "2026-03-17"
 relationships:
   derives_from: ["Agent Maestro — Vault Rules"]
   governs: []
@@ -129,9 +129,8 @@ Active projects and approved decisions. Change proposals under review.
 
 | File | Status |
 |------|--------|
-| `Proposal — Wave 5.2 Pipeline Hardening.md` | Complete |
-| `Proposal — Wave 6 Mechanical Integrity.md` | Complete |
-| `Proposal — Wave 7 Scheduled Execution.md` | Approved, executing |
+| `Proposal — Wave 7 Scheduled Execution.md` | Complete — pending archive (finishing ritual gap) |
+| `Proposal — Wave 8.2 Pipeline Enforcement Tooling.md` | Approved, executing |
 
 ---
 
@@ -139,7 +138,9 @@ Active projects and approved decisions. Change proposals under review.
 
 ### tools/vault-maintenance/
 
-Mechanical integrity tool suite (Wave 6). Validates vault structural health against configurable rules.
+Mechanical integrity and pipeline enforcement tool suite (Waves 6 + 8.2). Validates structural health and lifecycle process compliance.
+
+**Wave 6 — Structural integrity:**
 
 | File | Role |
 |------|------|
@@ -150,13 +151,26 @@ Mechanical integrity tool suite (Wave 6). Validates vault structural health agai
 | `stub_detection.sh` | Detect empty/placeholder files |
 | `naming_validation.sh` | Check filename/title uniqueness and matching |
 | `inventory.sh` | Generate full vault manifest |
-| `orchestrate.sh` | Run all tools, produce aggregate health report |
+
+**Wave 8.2 — Pipeline enforcement:**
+
+| File | Role |
+|------|------|
+| `capture_triage.py` | Check capture item triage deadlines and routing provenance |
+| `proposal_lifecycle.py` | Check proposal status/location, audit gate, reflection and archive requirements |
+| `reflection_completeness.py` | Check reflection existence, capture seed existence, and provenance chains |
+| `concept_lifecycle.py` | Check concept draft stagnation, authority chain, and reflection references |
+| `governance_compliance.py` | Check authority floor, location enforcement, and type/folder consistency |
+
+| File | Role |
+|------|------|
+| `orchestrate.sh` | Run all tools (structural first, pipeline second), produce aggregate health report |
 | `README.md` | Suite documentation, config schema, usage |
 
 | Subfolder | Contents |
 |-----------|----------|
-| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific) |
-| `lib/` | `config.sh` (shared bash library), `yaml_validator.py` (Python core) |
+| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific, includes pipeline config) |
+| `lib/` | `config.sh` (bash), `yaml_validator.py` (Wave 6 Python core), `vault_model.py` (Wave 8.2 shared library) |
 | `reports/` | Generated reports (per-tool + aggregate) |
 | `logs/` | Operational logs |
 
@@ -221,4 +235,4 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 
 ---
 
-*Updated: 2026-03-17 — Wave 8.1 governance: AM — LLM Conventions and AM — Artifact Lifecycles added.*
+*Updated: 2026-03-17 — Wave 8.2 complete: five pipeline enforcement tools added to vault-maintenance suite.*

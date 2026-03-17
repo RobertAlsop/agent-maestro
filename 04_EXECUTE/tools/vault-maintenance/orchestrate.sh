@@ -38,6 +38,7 @@ mkdir -p "$OUT_DIR"
 
 # Tools to run, in order
 TOOLS=(
+    # Wave 6 — Structural integrity
     "structure_check.sh:Structure Check"
     "yaml_validation.sh:YAML Validation"
     "broken_links.sh:Broken Links"
@@ -45,6 +46,12 @@ TOOLS=(
     "stub_detection.sh:Stub Detection"
     "naming_validation.sh:Naming Validation"
     "inventory.sh:Inventory"
+    # Wave 8.2 — Pipeline enforcement
+    "capture_triage.py:Capture Triage"
+    "proposal_lifecycle.py:Proposal Lifecycle"
+    "reflection_completeness.py:Reflection Completeness"
+    "concept_lifecycle.py:Concept Lifecycle"
+    "governance_compliance.py:Governance Compliance"
 )
 
 # Run each tool and collect results

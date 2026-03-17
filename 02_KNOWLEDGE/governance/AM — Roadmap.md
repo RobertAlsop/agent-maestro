@@ -29,7 +29,7 @@ The roadmap follows D3 (Controlled Evolution) — each wave proves the one befor
 
 ## Current Position
 
-**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 7 (Scheduled Execution) is complete. Wave 8.1 (Pipeline Enforcement governance) is complete. Wave 8.2 (Pipeline Enforcement tooling) is next.
+**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 8.2 (Pipeline Enforcement tooling) is complete. Wave 8.3 (Git-Ops) is next.
 
 ---
 
@@ -77,9 +77,9 @@ Delivered autonomous operation via launchd scheduling of the integrity suite. Da
 
 Produced the governance prerequisite for pipeline enforcement: [[AM — LLM Conventions]] (three audits, evidence convention, safety rules, operational risks) and [[AM — Artifact Lifecycles]] (lifecycle rules for 7 artifact types, gates, mechanical checks, finishing ritual). Both audited adversarially and approved.
 
-#### Wave 8.2 — Pipeline Enforcement Tooling
+#### Wave 8.2 — Pipeline Enforcement Tooling ✓
 
-Mechanically verify that lifecycle rules from [[AM — Artifact Lifecycles]] are followed. The mechanical checks specified in that document are the spec for this wave's tooling.
+Delivered five pipeline enforcement tools (`capture_triage.py`, `proposal_lifecycle.py`, `reflection_completeness.py`, `concept_lifecycle.py`, `governance_compliance.py`) plus the shared `vault_model.py` library. First run found real process gaps — confirming the tools work. See [[Proposal — Wave 8.2 Pipeline Enforcement Tooling]] for the full contract.
 
 #### Wave 8.3 — Git-Ops
 

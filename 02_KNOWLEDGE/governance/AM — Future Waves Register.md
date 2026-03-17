@@ -104,7 +104,6 @@ Self-observation instrumentation (timing, metrics, observation logging) and the 
 **Source:** Various capture notes
 
 - **Slack notifications** — message sent when new capture seeds, proposals, or reports are filed. Same function pattern for each. (Capture: "Message sent on new capture sees")
-- **Capture seed → brief pipeline** — should every capture seed automatically produce a brief? Or is that overkill? (Capture: "Breifs")
 - **Terminology refinement** — ✓ Resolved in Wave 5.2: "reflections" adopted, replacing "retrospectives." Folder, template, and all references updated.
 - **Roles placement** — question whether roles should live in governance. Currently they do. (Capture: "Roles") — resolved in Wave 5.2: roles confirmed in `governance/roles/`.
 - **Skills acquisition model** — building skills vs. acquiring from external marketplace. (Capture: "Skills")
