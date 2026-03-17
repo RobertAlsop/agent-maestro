@@ -197,6 +197,18 @@ LLMs have known failure modes that interact with AM's governance in specific way
 
 ---
 
+## Temporal Reasoning Conventions
+
+When an LLM analyses trends from temporal data (e.g., observation metrics accumulated across maintenance runs), it must follow these additional conventions. These extend the general principles above — grounding, uncertainty, traceability — to the specific challenges of reasoning about change over time.
+
+**Minimum history.** Do not draw conclusions from fewer than a configurable minimum number of data points (default: 5 runs). State the sample size when reporting trends. A trend inferred from 3 data points is speculation; a trend inferred from 10 is an observation. The distinction matters — present it honestly.
+
+**Trend ambiguity.** When a trend could be explained by multiple causes, present all plausible explanations rather than committing to one. Express confidence qualitatively: "likely," "possibly," "insufficient evidence." A metric degrading after a wave merge could indicate a regression, a scope expansion, or a detection improvement — the data alone does not distinguish these. The LLM's job is to enumerate hypotheses, not to pick a winner.
+
+**Signal vs noise.** Short-term fluctuations in small-count metrics (e.g., `failed` going from 0 to 1 back to 0) are noise, not trends. Require sustained directional change across multiple runs before calling something a trend. Single-point anomalies should be noted as "possible fluctuation" rather than "degradation." This is the temporal equivalent of Convention 7 (Conservative) from [[AM — Tool Conventions]]: when ambiguous, do not over-report.
+
+---
+
 ## Derivation from Foundations
 
 This document traces to:

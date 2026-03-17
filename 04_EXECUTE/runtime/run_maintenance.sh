@@ -4,8 +4,9 @@
 # Coordinates the full maintenance sequence:
 #   1. Run orchestrate.sh (mechanical integrity)
 #   2. Run extract_metrics.py (temporal metric extraction, if available)
-#   3. Run summarise_report.py (semantic summary, if available)
-#   4. Run notify.sh (notification on findings, if available)
+#   3. Run observation_analysis.py (trend analysis, if available + sufficient data)
+#   4. Run summarise_report.py (semantic summary, if available)
+#   5. Run notify.sh (notification on findings, if available)
 #
 # Called by launchd plist. Each phase degrades gracefully if its
 # script is not present or fails.
@@ -86,7 +87,30 @@ else
     log "Skipping metric extraction (extract_metrics.py not available)"
 fi
 
-# --- Phase 3: LLM Summary (optional) ---
+# --- Phase 3: Observation Analysis (optional) ---
+
+ANALYSER="${SCRIPT_DIR}/observation_analysis.py"
+
+if [[ -x "$ANALYSER" ]]; then
+    log "Running observation_analysis.py..."
+    set +e
+    python3 "$ANALYSER" \
+        --vault-root "$VAULT_ROOT" \
+        --csv-path "$OBSERVATION_CSV" \
+        --output-dir "${VAULT_ROOT}/05_RECORD/reports" \
+        --quiet \
+        2>&1 | while IFS= read -r line; do log "  analyse: $line"; done
+    analyse_exit=${PIPESTATUS[0]}
+    set -e
+    log "observation_analysis.py exited with code ${analyse_exit}"
+    if [[ $analyse_exit -eq 2 ]]; then
+        log "Skipping observation analysis (insufficient data or error)"
+    fi
+else
+    log "Skipping observation analysis (observation_analysis.py not available)"
+fi
+
+# --- Phase 4: LLM Summary (optional) ---
 
 SUMMARISER="${SCRIPT_DIR}/summarise_report.py"
 
@@ -104,7 +128,7 @@ else
     log "Skipping summary (script not available or no report)"
 fi
 
-# --- Phase 4: Notification (optional) ---
+# --- Phase 5: Notification (optional) ---
 
 NOTIFIER="${SCRIPT_DIR}/notify.sh"
 
