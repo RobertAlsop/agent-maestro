@@ -1,1 +1,0 @@
-Commit succeeded (the warnings are the usual mounted filesystem noise)

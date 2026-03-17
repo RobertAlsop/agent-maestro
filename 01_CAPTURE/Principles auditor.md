@@ -1,0 +1,1 @@
+Should we design principles auditors that go through the vault and check that the core principles are being applied?

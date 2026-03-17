@@ -15,12 +15,14 @@ relationships:
     - "[[AM — Tool Conventions]]"
     - "[[AM — Artifact Lifecycles]]"
     - "[[AM — Roadmap]]"
+    - "[[Wave 8.3 — Reflection]]"
 tags:
   - governance
   - git
   - version-control
   - conventions
   - safety
+  - historical-exceptions
 ---
 
 # AM — Git Conventions
@@ -322,6 +324,38 @@ Git operations have varying risk profiles. The escalation level determines wheth
 | Force-push | 3 — Human approval | Destructive, rewrites remote history. Explicit human instruction required. |
 | Rewrite history (rebase, amend, filter-branch) | 3 — Human approval | Destructive. Explicit human instruction required. |
 | Delete tags | 3 — Human approval | Tags are immutable anchors. Deletion requires explicit justification. |
+
+---
+
+## Convention Adoption and Historical Exceptions
+
+### Effective Dates
+
+Git conventions apply *going forward from their adoption date*, not retroactively to the entire repository history. A convention cannot meaningfully govern commits, branches, or tags that were created before the convention existed.
+
+Each convention section in this document has an implicit effective date — the date the convention was approved and merged to `master`. For the initial version of this document (Wave 8.3, merged 2026-03-17), all conventions take effect from that date. Future additions to this document should note their effective date if it differs from the document's original adoption.
+
+The `git_hygiene.py` detection tool respects effective dates through configuration. The `master_commit_convention_start` config key tells Check 3 (direct master commits) to skip commits before the branching convention existed. The `pre_wave_tag_exceptions` config key tells Check 4 (pre-wave tags) to skip waves that predate the checkpoint tag convention. This is not suppression of findings — it is honest scoping of what the convention governs.
+
+**Principle:** Conventions govern future behaviour. Historical non-compliance is documented, not falsified. Creating retroactive tags or renaming historical branches to match current patterns would misrepresent when the convention was followed. The correct response to pre-convention history is: acknowledge it, document the exceptions in the tool config with rationale, and ensure the convention is followed going forward.
+
+### Managing Historical Exceptions
+
+When a convention is adopted and the detection tool surfaces pre-convention debt:
+
+1. **Items that can be fixed without falsifying the record** — fix them. Example: deleting merged branches with pre-convention names. The branches are dead pointers; deleting them removes clutter without misrepresenting history.
+2. **Items that cannot be fixed without falsifying the record** — document them as known exceptions. Example: missing pre-wave checkpoint tags for waves completed before the tagging convention existed. Creating those tags now would misrepresent when the checkpoint was taken.
+3. **Exception documentation lives in the tool config** (`am.conf`), not in this governance document. The config is the operational layer; this document is the policy layer. The config entries must include comments explaining *why* the exception exists, tracing back to this section.
+
+### Branch Cleanup Timing
+
+Branch cleanup is part of the merge ritual, not a deferred task. When a working branch is merged to `master`:
+
+1. Delete the branch locally: `git branch -d <branch-name>`
+2. Delete the branch remotely: `git push origin --delete <branch-name>`
+3. Both steps happen in the same session as the merge.
+
+If cleanup is missed, `git_hygiene.py` Check 1 (branch naming) and Check 2 (stale branches) serve as the safety net. But the safety net is not the workflow — the workflow is immediate cleanup at merge time. Stale merged branches are noise that obscures the branch list and generates unnecessary findings.
 
 ---
 

@@ -217,9 +217,20 @@ def check3_direct_master_commits(vault_root: str, config: dict) -> tuple:
     master_branch = config.get("master_branch", "master")
     window = int(config.get("master_commit_window", 50))
 
+    # Convention start date: commits before this date predate the branching
+    # convention and are skipped to avoid warning noise about unfixable history.
+    convention_start = config.get("master_commit_convention_start", None)
+    convention_cutoff = None
+    if convention_start:
+        try:
+            convention_cutoff = datetime.strptime(convention_start, "%Y-%m-%d")
+            convention_cutoff = convention_cutoff.replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass  # Ignore malformed date — check all commits
+
     stdout, stderr, code = run_git(
         ["log", f"--max-count={window}", "--first-parent", master_branch,
-         "--format=%H|%P|%s"],
+         "--format=%H|%P|%s|%ci"],
         vault_root,
     )
     if code != 0:
@@ -229,17 +240,31 @@ def check3_direct_master_commits(vault_root: str, config: dict) -> tuple:
 
     commits = [line for line in stdout.splitlines() if line.strip()]
     warnings = []
-    checked = len(commits)
+    checked = 0
     passed = 0
 
     for line in commits:
-        parts = line.split("|", 2)
-        if len(parts) < 2:
-            passed += 1
+        parts = line.split("|", 3)
+        if len(parts) < 3:
             continue
         commit_hash = parts[0][:8]
         parents = parts[1].split() if parts[1] else []
-        subject = parts[2] if len(parts) > 2 else ""
+        subject = parts[2]
+        commit_date_str = parts[3] if len(parts) > 3 else ""
+
+        # Skip commits that predate the branching convention
+        if convention_cutoff and commit_date_str:
+            try:
+                commit_date = datetime.strptime(
+                    commit_date_str[:19], "%Y-%m-%d %H:%M:%S"
+                )
+                commit_date = commit_date.replace(tzinfo=timezone.utc)
+                if commit_date < convention_cutoff:
+                    continue  # Pre-convention — not counted, not warned
+            except ValueError:
+                pass  # Parse failed — include in check
+
+        checked += 1
 
         if len(parents) > 1:
             # Merge commit — exempt and clean
@@ -295,8 +320,13 @@ def check4_pre_wave_tags(vault_root: str, config: dict) -> tuple:
         return [], [], 0, 0, f"Check 4 (pre-wave tags): git tag failed: {tags_err}"
 
     existing_tags = set(tags_out.splitlines())
+
+    # Pre-wave tag exceptions: waves that predate the checkpoint tag convention.
+    # These are documented historical gaps — tags cannot be retroactively created.
+    tag_exceptions = set(config.get("pre_wave_tag_exceptions", []))
+
     findings = []
-    checked = len(completed_waves)
+    checked = 0
     passed = 0
 
     for wave in completed_waves:
@@ -307,9 +337,16 @@ def check4_pre_wave_tags(vault_root: str, config: dict) -> tuple:
             findings.append(
                 f"Wave `{identifier}`: could not extract wave ID for tag check"
             )
+            checked += 1
             continue
 
         wave_id = wave_id_match.group(1)
+
+        # Skip waves listed in exceptions — pre-convention, documented gap
+        if wave_id in tag_exceptions:
+            continue
+
+        checked += 1
         expected_tag = f"pre-wave-{wave_id}"
 
         if expected_tag in existing_tags:

@@ -41,3 +41,4 @@ credentials.json
 
 # Stale report artifacts from misconfigured output paths
 04_EXECUTE/tools/vault-maintenance/04_EXECUTE/
+04_EXECUTE/tools/vault-maintenance/05_RECORD/
