@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.agentmaestro.vault-maintenance</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/robertalsop/Obsidian/02_Systems/Agent Maestro/04_EXECUTE/runtime/run_maintenance.sh</string>
+    </array>
+
+    <!-- Daily at 06:00 local time -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>6</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/robertalsop/Obsidian/02_Systems/Agent Maestro/04_EXECUTE/tools/vault-maintenance/logs/launchd_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/robertalsop/Obsidian/02_Systems/Agent Maestro/04_EXECUTE/tools/vault-maintenance/logs/launchd_stderr.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/robertalsop/Obsidian/02_Systems/Agent Maestro</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

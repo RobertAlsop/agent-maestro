@@ -29,9 +29,9 @@ while IFS= read -r file; do
         skip_title=true
     fi
 
-    # Check duplicate filenames
+    # Check duplicate filenames (skip structural exemptions like CLAUDE.md)
     existing="$(grep -F "	${basename_full}	" "$FILENAMES_FILE" 2>/dev/null | head -1 || true)"
-    if [[ -n "$existing" ]]; then
+    if [[ -n "$existing" && "$skip_title" == false ]]; then
         prev_path="$(echo "$existing" | cut -f1)"
         add_finding "${rel_path}: duplicate filename (also at ${prev_path})"
     fi

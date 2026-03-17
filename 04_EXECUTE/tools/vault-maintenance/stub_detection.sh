@@ -24,8 +24,8 @@ while IFS= read -r file; do
     mark_checked
     rel_path="${file#$VAULT_ROOT/}"
 
-    # Skip structural files
-    if is_structural_exemption "$file"; then
+    # Skip structural files and stub-exempt folders (e.g. 01_CAPTURE)
+    if is_structural_exemption "$file" || is_stub_exempt "$file"; then
         mark_passed
         continue
     fi

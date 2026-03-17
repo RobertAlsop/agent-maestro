@@ -1,0 +1,11 @@
+# config.example.yaml — Runtime configuration for Agent Maestro scheduled execution
+#
+# Copy this file to config.yaml and adjust values as needed.
+# The summarise_report.py script looks for config.yaml in its own directory.
+
+# Ollama endpoint (local LLM server)
+ollama_host: "http://localhost:11434"
+
+# Model to use for report summarisation
+# Must be installed in Ollama (run: ollama pull llama3.2)
+model: "llama3.2"

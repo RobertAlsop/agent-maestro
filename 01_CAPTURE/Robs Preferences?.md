@@ -1,0 +1,1 @@
+We could extrapolate robs preferences and turn them into a general rule or guideline for human preferences.

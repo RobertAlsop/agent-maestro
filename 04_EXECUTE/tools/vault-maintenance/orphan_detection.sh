@@ -25,7 +25,9 @@ while IFS= read -r file; do
     fi
 done < <(get_vault_files)
 
-# Scan all files for outbound links — these are inbound links for their targets
+# Scan ALL files (incl. archive, templates) for outbound links.
+# Uses get_index_files() so that links FROM excluded content still count
+# as inbound links for their targets.
 > "$INBOUND_FILE"
 while IFS= read -r file; do
     # Extract all [[wiki-links]] from entire file
@@ -60,11 +62,16 @@ while IFS= read -r file; do
             fi
         fi
     done < "$file"
-done < <(get_vault_files) | sort -u > "$INBOUND_FILE"
+done < <(get_index_files) | sort -u > "$INBOUND_FILE"
 
 # Check each note for inbound links
 while IFS=$'\t' read -r basename rel_path; do
     mark_checked
+    # Skip files in orphan-exempt folders (leaf artifacts like logs and reports)
+    if is_orphan_exempt "${VAULT_ROOT}/${rel_path}"; then
+        mark_passed
+        continue
+    fi
     if grep -qFx "$basename" "$INBOUND_FILE" 2>/dev/null; then
         mark_passed
     else

@@ -32,7 +32,9 @@ The Inventory. A compact index of what currently exists in the vault and where t
 
 Raw material waiting to be processed. Flat structure — no subfolders. Capture seeds and loose ideas land here. See `CLAUDE.md` in folder for conventions.
 
-Currently empty (inbox clear after Wave 5.2 triage).
+| File | Contents |
+|------|----------|
+| `Wave 8 — Capture Seed.md` | Seed from Wave 7 reflection — pipeline enforcement, git-ops, self-observation |
 
 ---
 
@@ -126,7 +128,8 @@ Active projects and approved decisions. Change proposals under review.
 | File | Status |
 |------|--------|
 | `Proposal — Wave 5.2 Pipeline Hardening.md` | Complete |
-| `Proposal — Wave 6 Mechanical Integrity.md` | Approved, executing |
+| `Proposal — Wave 6 Mechanical Integrity.md` | Complete |
+| `Proposal — Wave 7 Scheduled Execution.md` | Approved, executing |
 
 ---
 
@@ -154,6 +157,22 @@ Mechanical integrity tool suite (Wave 6). Validates vault structural health agai
 | `lib/` | `config.sh` (shared bash library), `yaml_validator.py` (Python core) |
 | `reports/` | Generated reports (per-tool + aggregate) |
 | `logs/` | Operational logs |
+
+### runtime/
+
+Scheduled execution runtime (Wave 7). Coordinates autonomous vault maintenance — scheduling, LLM summarisation, and notification.
+
+| File | Role |
+|------|------|
+| `run_maintenance.sh` | Wrapper script — coordinates orchestrate.sh, summary, notification |
+| `summarise_report.py` | Reads health report, invokes local LLM, appends summary |
+| `notify.sh` | Sends macOS notification on findings |
+| `config.example.yaml` | Configuration template (Ollama endpoint, model) |
+| `README.md` | Runtime documentation |
+
+| Subfolder | Contents |
+|-----------|----------|
+| `launchd/` | `com.agentmaestro.vault-maintenance.plist`, `install.sh`, `uninstall.sh` |
 
 ---
 
@@ -195,7 +214,9 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 | `Wave 5.1 — Design Session Reflection.md` | Wave 5.1 |
 | `Wave 5.2 — Phases 1–3 Reflection.md` | Wave 5.2 (mid-wave) |
 | `Wave 5.2 — Final Reflection.md` | Wave 5.2 (final) |
+| `Wave 6 — Reflection.md` | Wave 6 |
+| `Wave 7 — Reflection.md` | Wave 7 |
 
 ---
 
-*Updated: 2026-03-16 — Wave 6 Mechanical Integrity tools built.*
+*Updated: 2026-03-17 — Wave 7 Scheduled Execution runtime built.*

@@ -16,6 +16,8 @@ REQUIRED_CLAUDE_MD=()
 FRONTMATTER_OPTIONAL_FOLDERS=()
 REQUIRED_FIELDS=()
 STRUCTURAL_EXEMPTIONS=()
+ORPHAN_EXEMPT_FOLDERS=()
+STUB_EXEMPT_FOLDERS=()
 WIKI_LINK_REQUIRED_TYPES=()
 AW_MIN=0
 AW_MAX=100
@@ -84,6 +86,8 @@ parse_config_file() {
                 frontmatter_optional_folders) current_list="FRONTMATTER_OPTIONAL_FOLDERS" ;;
                 required_fields)  current_list="REQUIRED_FIELDS" ;;
                 structural_exemptions) current_list="STRUCTURAL_EXEMPTIONS" ;;
+                orphan_exempt_folders) current_list="ORPHAN_EXEMPT_FOLDERS" ;;
+                stub_exempt_folders) current_list="STUB_EXEMPT_FOLDERS" ;;
                 wiki_link_required_types) current_list="WIKI_LINK_REQUIRED_TYPES" ;;
                 exclude_patterns) current_list="EXCLUDE_PATTERNS" ;;
                 controlled_vocabulary) in_nested_map="controlled_vocabulary" ;;
@@ -257,11 +261,47 @@ get_vault_files() {
     eval "$find_cmd" | sort
 }
 
+# Return ALL vault .md files for building lookup indexes.
+# Only excludes infrastructure dirs (.git, .obsidian, .trash), NOT content
+# exclusions like archive or templates. This ensures links to excluded
+# content still resolve correctly.
+get_index_files() {
+    find "$VAULT_ROOT" -name '*.md' -type f \
+        -not -path '*/.git/*' \
+        -not -path '*/.obsidian/*' \
+        -not -path '*/.trash/*' \
+        | sort
+}
+
 is_frontmatter_optional() {
     local file="$1"
     local rel_path="${file#$VAULT_ROOT/}"
     local folder
     for folder in "${FRONTMATTER_OPTIONAL_FOLDERS[@]}"; do
+        if [[ "$rel_path" == "${folder}/"* ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+is_stub_exempt() {
+    local file="$1"
+    local rel_path="${file#$VAULT_ROOT/}"
+    local folder
+    for folder in "${STUB_EXEMPT_FOLDERS[@]}"; do
+        if [[ "$rel_path" == "${folder}/"* ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+is_orphan_exempt() {
+    local file="$1"
+    local rel_path="${file#$VAULT_ROOT/}"
+    local folder
+    for folder in "${ORPHAN_EXEMPT_FOLDERS[@]}"; do
         if [[ "$rel_path" == "${folder}/"* ]]; then
             return 0
         fi

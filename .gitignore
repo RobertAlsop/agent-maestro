@@ -32,3 +32,12 @@ node_modules/
 .env.*
 credentials.json
 04_EXECUTE/tools/vault-maintenance/reports/
+04_EXECUTE/tools/vault-maintenance/logs/
+04_EXECUTE/runtime/config.yaml
+
+# Tool-generated reports in RECORD (individual tool outputs are working artifacts,
+# not vault records — only date-stamped health reports and narratives belong here)
+05_RECORD/reports/*_report.md
+
+# Stale report artifacts from misconfigured output paths
+04_EXECUTE/tools/vault-maintenance/04_EXECUTE/

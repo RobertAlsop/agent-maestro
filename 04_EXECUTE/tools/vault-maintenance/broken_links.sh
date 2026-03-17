@@ -13,15 +13,19 @@ source "${SCRIPT_DIR}/lib/config.sh"
 load_config "$@" || exit 2
 init_report "Broken Links"
 
-# Build a lookup file of all note titles (filename without .md)
+# Build a lookup file of all note titles (filename without .md).
+# Uses get_index_files() to include ALL vault content (incl. archive, templates)
+# so that links to excluded-from-scanning files still resolve correctly.
 init_tmp_dir
 NOTE_INDEX="${TOOL_TMPDIR}/note_index.txt"
 while IFS= read -r file; do
     basename "$file" .md
-done < <(get_vault_files) > "$NOTE_INDEX"
+done < <(get_index_files) > "$NOTE_INDEX"
 
 resolve_link() {
     local target="$1"
+    # Handle Obsidian escaped pipe in tables: \| is a display-text separator
+    target="${target%%\\|*}"
     target="${target%%|*}"
     target="${target%%#*}"
     target="$(echo "$target" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
@@ -44,8 +48,11 @@ extract_body_links() {
             continue
         fi
         if [[ "$past_frontmatter" == true || "$in_frontmatter" == false ]]; then
+            # Strip backtick-quoted content before extracting wiki-links
+            local cleaned_line
+            cleaned_line="$(echo "$line" | sed 's/`[^`]*`//g')"
             # Use grep to extract [[...]] patterns
-            echo "$line" | grep -oE '\[\[[^]]+\]\]' | sed 's/^\[\[//;s/\]\]$//' || true
+            echo "$cleaned_line" | grep -oE '\[\[[^]]+\]\]' | sed 's/^\[\[//;s/\]\]$//' || true
         fi
     done < "$file"
 }
