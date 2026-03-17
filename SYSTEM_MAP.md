@@ -133,6 +133,7 @@ Active projects and approved decisions. Change proposals under review.
 | `Proposal — Wave 7 Scheduled Execution.md` | Complete — pending archive (finishing ritual gap) |
 | `Proposal — Wave 8.2 Pipeline Enforcement Tooling.md` | Complete — pending archive |
 | `Proposal — Wave 8.3 Git Hygiene Detection.md` | Complete — pending archive |
+| `Proposal — Wave 9 Self-Observation.md` | Complete |
 
 ---
 
@@ -170,6 +171,12 @@ Mechanical integrity and pipeline enforcement tool suite (Waves 6 + 8.2). Valida
 |------|------|
 | `git_hygiene.py` | Check git conventions: branch naming, stale branches, direct master commits, pre-wave tags, tag naming, commit message quality, uncommitted changes |
 
+**Wave 9 — Self-observation:**
+
+| File | Role |
+|------|------|
+| `extract_metrics.py` | Temporal metric extraction — reads tool reports, computes deltas, writes to observation CSV |
+
 | File | Role |
 |------|------|
 | `orchestrate.sh` | Run all tools (structural → pipeline → git), produce aggregate health report |
@@ -177,7 +184,7 @@ Mechanical integrity and pipeline enforcement tool suite (Waves 6 + 8.2). Valida
 
 | Subfolder | Contents |
 |-----------|----------|
-| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific, includes pipeline + git hygiene config) |
+| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific), `metric_registry.csv` (Wave 9 — metric definitions for observation) |
 | `lib/` | `config.sh` (bash), `yaml_validator.py` (Wave 6 Python core), `vault_model.py` (Wave 8.2 shared library, also used by git_hygiene.py) |
 | `reports/` | Generated reports (per-tool + aggregate) |
 | `logs/` | Operational logs |
@@ -188,8 +195,9 @@ Scheduled execution runtime (Wave 7). Coordinates autonomous vault maintenance �
 
 | File | Role |
 |------|------|
-| `run_maintenance.sh` | Wrapper script — coordinates orchestrate.sh, summary, notification |
+| `run_maintenance.sh` | Wrapper script — coordinates orchestrate.sh, metric extraction, observation analysis, summary, notification |
 | `summarise_report.py` | Reads health report, invokes local LLM, appends summary |
+| `observation_analysis.py` | Wave 9 — reads observation CSV, identifies trends, invokes LLM for causal analysis |
 | `notify.sh` | Sends macOS notification on findings |
 | `config.example.yaml` | Configuration template (Ollama endpoint, model) |
 | `README.md` | Runtime documentation |
@@ -207,6 +215,7 @@ Logs, session history, and archive.
 | Subfolder | Contents |
 |-----------|----------|
 | `logs/sessions/` | 17 session logs (SES-002 through SES-018) + session_index.csv |
+| `logs/observation_metrics.csv` | Wave 9 — append-only temporal metric store |
 | `reports/` | `Wave 6 — First Vault Health Report.md` |
 | `sessions/` | Legacy session logs (pre-Wave 5.2 format) |
 | `archive/` | Historical items organized by wave |
@@ -243,4 +252,4 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 
 ---
 
-*Updated: 2026-03-17 — Wave 8.3 complete: git_hygiene.py added to vault-maintenance suite.*
+*Updated: 2026-03-17 — Wave 9 complete: self-observation infrastructure (extract_metrics.py, observation_analysis.py, metric_registry.csv, observation_metrics.csv).*

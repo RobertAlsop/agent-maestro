@@ -29,7 +29,7 @@ The roadmap follows D3 (Controlled Evolution) — each wave proves the one befor
 
 ## Current Position
 
-**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 8.2 (Pipeline Enforcement tooling) is complete. Wave 8.3 (Git Hygiene Detection) — proposal approved, ready to build.
+**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 9 (Self-Observation) is complete — AM can now observe and measure its own operational behaviour over time. Stage 1 exit criteria are met.
 
 ---
 
@@ -85,11 +85,11 @@ Delivered five pipeline enforcement tools (`capture_triage.py`, `proposal_lifecy
 
 Single Python detection tool (`git_hygiene.py`) with 7 checks enforcing [[AM — Git Conventions]]: branch naming, stale branches, direct commits to master (warnings), pre-wave tag presence, tag naming consistency, commit message format, uncommitted changes. Proposal approved 2026-03-17. See [[Proposal — Wave 8.3 Git Hygiene Detection 1]] for the full contract.
 
-### Wave 9 — Self-Observation
+### Wave 9 — Self-Observation ✓
 
 **Question:** Can AM observe and measure its own operational behaviour?
 
-Self-observation instrumentation — timing, metrics, observation logging — and the self-assessment loop (observe → identify → propose → gate → execute/escalate). The final Stage 1 wave: AM doesn't just enforce rules, it watches how it operates and identifies improvement opportunities. Completes the self-governance story.
+Delivered temporal metric extraction (`extract_metrics.py`) and semantic trend analysis (`observation_analysis.py`). The observation loop is the Irreducible Loop applied reflexively — same pattern, new subject. Metrics from all 13 detection tools are extracted into an append-only CSV after each maintenance run. When sufficient history accumulates, the LLM analyses trends at the appropriate escalation level (Level 1: mechanical summary; Level 2: causal analysis; Level 3: governance escalation). Reflect-to-Perceive feedback closes the loop — each run checks whether previously flagged metrics have changed. Extended [[AM — LLM Conventions]] with Temporal Reasoning Conventions and [[AM — Artifact Lifecycles]] with observation analysis lifecycle and retention policy. See [[Proposal — Wave 9 Self-Observation]] for the full contract.
 
 **Stage 1 Exit Criteria:**
 - The vault detects its own structural problems automatically
@@ -165,3 +165,4 @@ The proven, refined methodology becomes a sellable offering. The exact form — 
 - [[Proposal — Wave 5.2 Pipeline Hardening]]
 - [[Proposal — Wave 6 Mechanical Integrity]]
 - [[Proposal — Wave 7 Scheduled Execution]]
+- [[Proposal — Wave 9 Self-Observation]]

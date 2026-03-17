@@ -75,6 +75,13 @@ HEALTH_ROW_RE = re.compile(
 # Map result strings to numeric values for the overall_result metric
 RESULT_MAP = {"CLEAN": 0, "FINDINGS": 1, "ERROR": 2}
 
+# Regex for observation analysis findings table rows:
+# | Tool | Metric | Current | Threshold | Direction | Sustained | Breach Rate |
+ANALYSIS_FINDING_RE = re.compile(
+    r"^\|\s*(.+?)\s*\|\s*(\w+)\s*\|\s*(\d+)\s*\|",
+    re.MULTILINE,
+)
+
 
 # ---------------------------------------------------------------------------
 # Registry loading
@@ -254,6 +261,63 @@ def compute_escalation(value, reg):
     elif polarity == "higher_is_better" and value < threshold:
         return default_esc
     return 1
+
+
+# ---------------------------------------------------------------------------
+# Reflect-to-Perceive feedback (Phase 3)
+# ---------------------------------------------------------------------------
+def find_previous_analysis(vault_root):
+    """Find the most recent observation analysis report. Returns path or None."""
+    reports_dir = os.path.join(vault_root, "05_RECORD", "reports")
+    if not os.path.isdir(reports_dir):
+        return None
+    candidates = sorted(
+        [f for f in os.listdir(reports_dir)
+         if f.startswith("observation_analysis_") and f.endswith(".md")],
+        reverse=True,
+    )
+    return os.path.join(reports_dir, candidates[0]) if candidates else None
+
+
+def parse_flagged_metrics(analysis_path):
+    """Parse which metrics were flagged (Level 2+) in the previous analysis.
+
+    Returns set of (tool, metric_name) tuples.
+    """
+    flagged = set()
+    try:
+        with open(analysis_path, encoding="utf-8") as f:
+            content = f.read()
+    except (OSError, UnicodeDecodeError):
+        return flagged
+
+    # Parse findings table rows — skip header
+    for m in ANALYSIS_FINDING_RE.finditer(content):
+        tool = m.group(1).strip()
+        metric = m.group(2).strip()
+        if tool in ("Tool", "---"):
+            continue
+        flagged.add((tool, metric))
+    return flagged
+
+
+def check_flagged_metrics(flagged, current_rows):
+    """Check whether previously flagged metrics improved, degraded, or stayed stable.
+
+    Returns list of feedback strings.
+    """
+    feedback = []
+    for tool, metric in sorted(flagged):
+        matching = [r for r in current_rows
+                    if r["tool"] == tool and r["metric_name"] == metric]
+        if not matching:
+            continue
+        row = matching[0]
+        direction = row.get("direction", "")
+        if direction:
+            feedback.append(f"  {tool}.{metric}: {direction} "
+                          f"(was flagged, now {row['metric_value']})")
+    return feedback
 
 
 # ---------------------------------------------------------------------------
@@ -478,6 +542,15 @@ def main():
 
     write_rows_atomic(csv_path, rows)
 
+    # --- Reflect-to-Perceive feedback ---
+    # Check whether metrics flagged in the previous observation analysis have changed
+    feedback_lines = []
+    analysis_path = find_previous_analysis(vault_root)
+    if analysis_path:
+        flagged = parse_flagged_metrics(analysis_path)
+        if flagged:
+            feedback_lines = check_flagged_metrics(flagged, rows)
+
     # --- Output ---
     escalation_summary = ""
     if max_escalation >= 2:
@@ -489,6 +562,10 @@ def main():
         if warnings:
             for w in warnings:
                 print(f"  WARNING: {w}")
+        if feedback_lines:
+            print("Reflect-to-Perceive feedback (previously flagged metrics):")
+            for line in feedback_lines:
+                print(line)
         print(f"CSV: {csv_path}")
 
     # Exit code: 1 if any threshold breaches, 0 if all clean

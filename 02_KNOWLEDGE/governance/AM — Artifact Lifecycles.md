@@ -312,6 +312,51 @@ Need identified → Drafted → Reviewed → Human approved → Active → Evolv
 
 ---
 
+### 8. Observation Analysis
+
+**Location:** `05_RECORD/reports/`
+
+**Purpose:** A structured interpretation of vault operational trends produced by `observation_analysis.py`. Unlike ephemeral health reports (which are overwritten each run), observation analyses contain unique semantic reasoning — causal analysis, recommendations, and governance escalations — that may inform future decisions.
+
+**Lifecycle:**
+
+```
+Generated → Current → Superseded → Archived
+```
+
+**Stages and gates:**
+
+| Transition | Gate | Evidence |
+|---|---|---|
+| Generated → Current | **Existence:** the analysis was produced and saved to `05_RECORD/reports/`. | Date-stamped file exists (`observation_analysis_YYYY-MM-DD.md`). |
+| Current → Superseded | **Newer analysis:** a subsequent observation analysis has been generated. | A newer `observation_analysis_*.md` exists. |
+| Superseded → Archived | **Retention decision:** Level 2+ analyses (containing recommendations) are archivable — they contain unique reasoning. Level 1 analyses (mechanical summaries only) are ephemeral and may be overwritten. | For Level 1: overwritten. For Level 2+: moved to `05_RECORD/archive/` with `status: archived`. |
+
+**Why archivable?** Observation analyses at Level 2+ contain the system's self-assessment reasoning — why a trend is concerning, what might have caused it, what was recommended. This history enables future cycles to check whether past recommendations achieved their purpose. The raw metrics (CSV) record *what* happened; the analysis records *what the system thought about it*.
+
+**Mechanical checks:**
+
+- Observation analyses are exempt from orphan detection (consumed, not linked to).
+
+**Semantic assessment:**
+
+- None required for Level 1 analyses. Level 2+ analyses should be reviewed by a Reviewer if they contain recommendations that might inform a proposal.
+
+---
+
+### Health Report Retention Policy
+
+The observation infrastructure produces several data types with different retention characteristics:
+
+| Data Type | Location | Retention | Rationale |
+|---|---|---|---|
+| **Raw metrics (observation CSV)** | `05_RECORD/logs/observation_metrics.csv` | Keep everything. Append-only. Never delete. | Irreplaceable source data. ~20K rows/year — negligible storage. Law 2 (reversible) favours retention. |
+| **Per-tool reports** | `04_EXECUTE/tools/vault-maintenance/reports/` | Ephemeral — overwritten each run. | Point-in-time snapshots. The metrics extracted from them persist in the CSV. |
+| **Aggregate health reports** | `05_RECORD/reports/vault_health_report_*.md` | Active window of 90 days in `05_RECORD/reports/`, then archived to `05_RECORD/archive/`. | Date-stamped filenames already support accumulation. 90-day window balances accessibility with tidiness. |
+| **Observation analyses** | `05_RECORD/reports/observation_analysis_*.md` | Standard Report lifecycle. Level 2+ are archivable when superseded. | Unique semantic reasoning is worth preserving. |
+
+---
+
 ## The Gate Principle
 
 All gates in this document follow a single principle from the Foundations:
