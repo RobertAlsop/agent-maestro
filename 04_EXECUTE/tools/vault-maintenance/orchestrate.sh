@@ -52,6 +52,8 @@ TOOLS=(
     "reflection_completeness.py:Reflection Completeness"
     "concept_lifecycle.py:Concept Lifecycle"
     "governance_compliance.py:Governance Compliance"
+    # Wave 8.3 — Git hygiene
+    "git_hygiene.py:Git Hygiene"
 )
 
 # Run each tool and collect results

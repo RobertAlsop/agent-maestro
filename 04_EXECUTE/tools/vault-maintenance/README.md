@@ -1,8 +1,8 @@
 # Vault Maintenance Tool Suite
 
-Mechanical integrity and pipeline enforcement tools for Obsidian vaults. Validates structural health and process compliance — detects broken links, invalid YAML, orphaned files, naming issues, structural gaps, and lifecycle rule violations.
+Mechanical integrity, pipeline enforcement, and git hygiene tools for Obsidian vaults. Validates structural health, process compliance, and version control conventions — detects broken links, invalid YAML, orphaned files, naming issues, structural gaps, lifecycle rule violations, and git convention drift.
 
-Built across Agent Maestro Waves 6 and 8.2. Governed by [[AM — Tool Conventions]], [[AM — Integrity Layers]], and [[AM — Artifact Lifecycles]].
+Built across Agent Maestro Waves 6, 8.2, and 8.3. Governed by [[AM — Tool Conventions]], [[AM — Integrity Layers]], [[AM — Artifact Lifecycles]], and [[AM — Git Conventions]].
 
 ## Quick Start
 
@@ -41,11 +41,17 @@ Built across Agent Maestro Waves 6 and 8.2. Governed by [[AM — Tool Convention
 | `concept_lifecycle.py` | Draft stagnation (>30 days); authority chain (`derives_from` non-empty); reflection reference (active concepts) | Concept lifecycle |
 | `governance_compliance.py` | Authority floor (`authority_weight` ≥ 70 for governance docs); location enforcement (type: governance in governance folder); type/folder consistency vault-wide | Governance Document lifecycle |
 
+### Wave 8.3 — Git Hygiene
+
+| Tool | What it checks | Convention source |
+|------|---------------|-------------------|
+| `git_hygiene.py` | Branch naming (Check 1), stale branches (Check 2), direct master commits as warnings (Check 3), pre-wave tag presence (Check 4), tag naming (Check 5), commit message format (Check 6), uncommitted changes as warning (Check 7) | AM — Git Conventions |
+
 ### Orchestrator
 
 | Tool | What it does |
 |------|-------------|
-| `orchestrate.sh` | Runs all tools in sequence (structural first, pipeline second), produces aggregate health report |
+| `orchestrate.sh` | Runs all tools in sequence (structural → pipeline → git), produces aggregate health report |
 
 Each tool is independently runnable and produces a self-contained report.
 
@@ -98,6 +104,18 @@ wiki_link_required_types: []  # Note types that must have body wiki-links
 
 # All tools
 exclude_patterns: []          # Paths/patterns excluded from all scans
+
+# git_hygiene.py (Wave 8.3)
+git_branch_patterns: []       # Regexes for valid branch names (master always exempt)
+stale_branch_threshold_days: 30   # Days before an unmerged branch is flagged stale
+master_branch: "master"       # Protected baseline branch name
+master_commit_window: 50      # How many master commits to inspect for direct-commit check
+git_tag_patterns: []          # Regexes for valid tag names
+commit_message_window: 50     # How many recent commits to inspect for message quality
+commit_min_length: 5          # Minimum subject line length (eliminates throwaway messages)
+commit_format_patterns: []    # Regexes for accepted commit message formats
+commit_reject_patterns: []    # Regexes for known-bad commit messages (hard fail)
+check_uncommitted_changes: true   # Set false during active-session runs to suppress warning fatigue
 ```
 
 ### CLI Arguments
@@ -152,11 +170,11 @@ Install PyYAML: `pip install pyyaml` or `pip3 install pyyaml`
 vault-maintenance/
 ├── config/
 │   ├── defaults.conf        # Generic vault defaults
-│   └── am.conf              # Agent Maestro config (structural + pipeline)
+│   └── am.conf              # Agent Maestro config (structural + pipeline + git hygiene)
 ├── lib/
 │   ├── config.sh            # Shared bash library (config parsing, report helpers)
 │   ├── yaml_validator.py    # Python YAML validation core (Wave 6)
-│   └── vault_model.py       # Shared Python vault model (Wave 8.2) — imported by all pipeline tools
+│   └── vault_model.py       # Shared Python vault model (Wave 8.2) — imported by pipeline + git tools
 ├── reports/                  # Generated reports (gitignored)
 ├── logs/                     # Operational logs (gitignored)
 ├── structure_check.sh        # Wave 6
@@ -171,19 +189,22 @@ vault-maintenance/
 ├── reflection_completeness.py # Wave 8.2 — pipeline enforcement
 ├── concept_lifecycle.py      # Wave 8.2 — pipeline enforcement
 ├── governance_compliance.py  # Wave 8.2 — pipeline enforcement
+├── git_hygiene.py            # Wave 8.3 — git convention detection
 ├── orchestrate.sh
 └── README.md
 ```
 
 ### Library architecture
 
-`lib/vault_model.py` is shared by all five pipeline enforcement tools. It provides:
+`lib/vault_model.py` is shared by all pipeline enforcement and git hygiene tools. It provides:
 - `build_vault_model(vault_root, config)` — parse all vault frontmatter into VaultArtifact objects
 - `parse_completed_waves(roadmap_content)` — extract completed wave identifiers from the Roadmap
 - `write_report(...)` — standardized Markdown report writer
 - Helper functions for exclusion, wiki-link parsing, date resolution, and reference checking
 
 Each tool rebuilds the vault model per invocation (tools run as separate processes). The library's Economy value is code reuse — one implementation of YAML parsing, date resolution, config loading, and relationship traversal maintained in one place.
+
+`git_hygiene.py` uses `subprocess` to call git CLI commands directly. No git library dependency is introduced — the git CLI is universally available and produces parseable output. Each of the seven checks runs independently with best-effort error isolation: if one check fails (e.g., Roadmap unavailable for Check 4), the remaining checks continue and the failure is reported as a warning in the output.
 
 ## Design Principles
 
