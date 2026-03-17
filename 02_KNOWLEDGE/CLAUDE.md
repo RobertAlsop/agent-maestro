@@ -13,7 +13,7 @@ This layer contains everything the system needs to understand itself and make in
   - **governance/roles/** — [[Role — Worker]] and [[Role — Reviewer]] definitions
 - **skills/** — The 7 core skill definitions (Triage, Validate, Audit, Propose, Gate, Summarize, Escalate)
 - **concepts/** — Foundational domain concepts (minimum viable set, authority_weight 50-59)
-- **protocols/** — Operational procedures and workflows (e.g., [[Git Best Practices for AI-Assisted Builds]]). Phase 5 SOPs will live here.
+- **protocols/** — Operational procedures and workflows. Git conventions are now in governance/ as [[AM — Git Conventions]].
 - **templates/** — Schema v3 templates for creating new notes
 
 ## Agent Rules

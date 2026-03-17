@@ -153,12 +153,7 @@ Structure is governance. A vault without rules becomes an unnavigable knowledge 
 
 ## Git and Version Control
 
-67. All implementation work occurs on dedicated working branches. The `main` branch is the protected baseline — it must remain stable, reversible, and suitable for rollback at all times.
-68. Before any major build pass, create a checkpoint tag from the current known-good state (e.g., `pre-wave-5.2`).
-69. Commits must be small, scoped, and tied to a single implementation objective. Commit messages must be descriptive — no vague messages.
-70. Working branches are only merged to `main` after relevant validations pass.
-71. Agents must not: rewrite git history without explicit instruction, force-push without permission, work directly on `main`, or bypass validation steps.
-72. The full git workflow reference is maintained in [[Git Best Practices for AI-Assisted Builds]] (`02_KNOWLEDGE/protocols/`).
+67. All version control operations in the AM repository are governed by [[AM — Git Conventions]] (`02_KNOWLEDGE/governance/`), which defines branch, tag, commit, merge, recovery, and safety conventions in full. The core principle: `master` is the protected baseline, all implementation work occurs on dedicated working branches, and every change must be verifiable, reversible, and accountable (Law 2).
 
 ## Validation Checklist
 
@@ -187,4 +182,4 @@ Always. These rules apply to every note created in this vault.
 
 - [[Agent Maestro — Foundations]]
 - [[Agent Maestro — North Star]]
-- [[Git Best Practices for AI-Assisted Builds]]
+- [[AM — Git Conventions]]

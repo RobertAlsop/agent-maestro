@@ -1,8 +1,10 @@
 ---
 title: "Git Best Practices for AI-Assisted Builds"
 type: concept
-status: active
+status: archived
 authority_weight: 40
+archived_date: "2026-03-17"
+archived_reason: "Replaced by [[AM — Git Conventions]] (governance, authority_weight 70). All principles preserved and extended."
 schema_version: 3
 created: "2026-03-16"
 updated: "2026-03-16"

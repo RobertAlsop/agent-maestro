@@ -5,7 +5,7 @@ status: active
 authority_weight: 50
 schema_version: 3
 created: "2026-03-16"
-updated: "2026-03-16"
+updated: "2026-03-17"
 relationships:
   derives_from: ["Agent Maestro — Vault Rules"]
   governs: []
@@ -50,7 +50,7 @@ Constitutional and operational governance documents.
 |------|-----------|------|
 | `Agent Maestro — North Star.md` | 97 | Mission and strategic intent — highest authority |
 | `Agent Maestro — Foundations.md` | 95 | The kernel — 3 seeds, 1 meta-principle, 3 laws, 6 derived principles |
-| `Agent Maestro — Vault Rules.md` | 85 | Vault structure, schema, conventions (72 rules) |
+| `Agent Maestro — Vault Rules.md` | 85 | Vault structure, schema, conventions (67 rules — git rules consolidated into Rule 67 pointer) |
 | `Agent Maestro — Scope.md` | 80 | What AM does and does not cover |
 | `Agent Maestro — Strategy.md` | 80 | How AM evolves through 4 capability stages |
 | `AM — Roadmap.md` | 75 | Strategic arc — committed waves and milestones |
@@ -59,6 +59,7 @@ Constitutional and operational governance documents.
 | `AM — Tool Conventions.md` | 70 | How tools are designed, built, and operated |
 | `AM — LLM Conventions.md` | 70 | How LLMs operate — three audits, evidence, safety rules |
 | `AM — Artifact Lifecycles.md` | 70 | Lifecycle rules for all primary artifact types |
+| `AM — Git Conventions.md` | 70 | Git workflow, conventions, safety rules, escalation levels |
 | `AM — Future Waves Register.md` | 60 | Backlog of validated ideas grouped by Strategy stage |
 
 ### governance/roles/
@@ -112,7 +113,7 @@ The 7 core capability definitions.
 
 | File | Contents |
 |------|----------|
-| `Git Best Practices for AI-Assisted Builds.md` | Git conventions for AI-assisted development |
+| `Git Best Practices for AI-Assisted Builds.md` | **Archived** — replaced by `AM — Git Conventions.md` in governance/. Copy in `05_RECORD/archive/`. |
 
 ---
 
@@ -129,9 +130,9 @@ Active projects and approved decisions. Change proposals under review.
 
 | File | Status |
 |------|--------|
-| `Proposal — Wave 5.2 Pipeline Hardening.md` | Complete |
-| `Proposal — Wave 6 Mechanical Integrity.md` | Complete |
-| `Proposal — Wave 7 Scheduled Execution.md` | Approved, executing |
+| `Proposal — Wave 7 Scheduled Execution.md` | Complete — pending archive (finishing ritual gap) |
+| `Proposal — Wave 8.2 Pipeline Enforcement Tooling.md` | Complete — pending archive |
+| `Proposal — Wave 8.3 Git Hygiene Detection.md` | Complete — pending archive |
 
 ---
 
@@ -139,7 +140,9 @@ Active projects and approved decisions. Change proposals under review.
 
 ### tools/vault-maintenance/
 
-Mechanical integrity tool suite (Wave 6). Validates vault structural health against configurable rules.
+Mechanical integrity and pipeline enforcement tool suite (Waves 6 + 8.2). Validates structural health and lifecycle process compliance.
+
+**Wave 6 — Structural integrity:**
 
 | File | Role |
 |------|------|
@@ -150,13 +153,32 @@ Mechanical integrity tool suite (Wave 6). Validates vault structural health agai
 | `stub_detection.sh` | Detect empty/placeholder files |
 | `naming_validation.sh` | Check filename/title uniqueness and matching |
 | `inventory.sh` | Generate full vault manifest |
-| `orchestrate.sh` | Run all tools, produce aggregate health report |
+
+**Wave 8.2 — Pipeline enforcement:**
+
+| File | Role |
+|------|------|
+| `capture_triage.py` | Check capture item triage deadlines and routing provenance |
+| `proposal_lifecycle.py` | Check proposal status/location, audit gate, reflection and archive requirements |
+| `reflection_completeness.py` | Check reflection existence, capture seed existence, and provenance chains |
+| `concept_lifecycle.py` | Check concept draft stagnation, authority chain, and reflection references |
+| `governance_compliance.py` | Check authority floor, location enforcement, and type/folder consistency |
+
+**Wave 8.3 — Git hygiene:**
+
+| File | Role |
+|------|------|
+| `git_hygiene.py` | Check git conventions: branch naming, stale branches, direct master commits, pre-wave tags, tag naming, commit message quality, uncommitted changes |
+
+| File | Role |
+|------|------|
+| `orchestrate.sh` | Run all tools (structural → pipeline → git), produce aggregate health report |
 | `README.md` | Suite documentation, config schema, usage |
 
 | Subfolder | Contents |
 |-----------|----------|
-| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific) |
-| `lib/` | `config.sh` (shared bash library), `yaml_validator.py` (Python core) |
+| `config/` | `defaults.conf` (generic), `am.conf` (AM-specific, includes pipeline + git hygiene config) |
+| `lib/` | `config.sh` (bash), `yaml_validator.py` (Wave 6 Python core), `vault_model.py` (Wave 8.2 shared library, also used by git_hygiene.py) |
 | `reports/` | Generated reports (per-tool + aggregate) |
 | `logs/` | Operational logs |
 
@@ -221,4 +243,4 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 
 ---
 
-*Updated: 2026-03-17 — Wave 8.1 governance: AM — LLM Conventions and AM — Artifact Lifecycles added.*
+*Updated: 2026-03-17 — Wave 8.3 complete: git_hygiene.py added to vault-maintenance suite.*

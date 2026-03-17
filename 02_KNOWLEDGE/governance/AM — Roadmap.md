@@ -29,7 +29,7 @@ The roadmap follows D3 (Controlled Evolution) — each wave proves the one befor
 
 ## Current Position
 
-**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 7 (Scheduled Execution) is complete. Wave 8.1 (Pipeline Enforcement governance) is complete. Wave 8.2 (Pipeline Enforcement tooling) is next.
+**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 8.2 (Pipeline Enforcement tooling) is complete. Wave 8.3 (Git Hygiene Detection) — proposal approved, ready to build.
 
 ---
 
@@ -77,13 +77,19 @@ Delivered autonomous operation via launchd scheduling of the integrity suite. Da
 
 Produced the governance prerequisite for pipeline enforcement: [[AM — LLM Conventions]] (three audits, evidence convention, safety rules, operational risks) and [[AM — Artifact Lifecycles]] (lifecycle rules for 7 artifact types, gates, mechanical checks, finishing ritual). Both audited adversarially and approved.
 
-#### Wave 8.2 — Pipeline Enforcement Tooling
+#### Wave 8.2 — Pipeline Enforcement Tooling ✓
 
-Mechanically verify that lifecycle rules from [[AM — Artifact Lifecycles]] are followed. The mechanical checks specified in that document are the spec for this wave's tooling.
+Delivered five pipeline enforcement tools (`capture_triage.py`, `proposal_lifecycle.py`, `reflection_completeness.py`, `concept_lifecycle.py`, `governance_compliance.py`) plus the shared `vault_model.py` library. First run found real process gaps — confirming the tools work. Also produced [[AM — Git Conventions]] (governance, authority_weight 70) — the authoritative reference for all git operations, AI safety rules, and escalation levels. See [[Proposal — Wave 8.2 Pipeline Enforcement Tooling]] for the full contract.
 
-#### Wave 8.3 — Git-Ops
+#### Wave 8.3 — Git Hygiene Detection
 
-AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Needs its own design conversation.
+Single Python detection tool (`git_hygiene.py`) with 7 checks enforcing [[AM — Git Conventions]]: branch naming, stale branches, direct commits to master (warnings), pre-wave tag presence, tag naming consistency, commit message format, uncommitted changes. Proposal approved 2026-03-17. See [[Proposal — Wave 8.3 Git Hygiene Detection 1]] for the full contract.
+
+### Wave 9 — Self-Observation
+
+**Question:** Can AM observe and measure its own operational behaviour?
+
+Self-observation instrumentation — timing, metrics, observation logging — and the self-assessment loop (observe → identify → propose → gate → execute/escalate). The final Stage 1 wave: AM doesn't just enforce rules, it watches how it operates and identifies improvement opportunities. Completes the self-governance story.
 
 **Stage 1 Exit Criteria:**
 - The vault detects its own structural problems automatically
@@ -102,13 +108,13 @@ Apply AM's methodology to Rob's business — the first stress test against real-
 
 **Dual-instance model:** When Stage 2 begins, AM forks. One instance continues self-evolving (Stage 1 ongoing). A second instance is created to learn by working on the external system. Both instances share the same foundational governance but evolve independently. Learnings cross-pollinate during reflections.
 
-### Wave 9 — Generalized Audit Protocol
+### Wave 10 — Generalized Audit Protocol
 
 **Question:** Can AM assess a system it didn't build?
 
 Extract the self-audit capability into a protocol that works on any folder structure or vault. Scan, assess, map relationships, produce findings and recommendations. This is AM's first outward-facing capability.
 
-### Wave 10 — External Application & Discovery
+### Wave 11 — External Application & Discovery
 
 **Question:** Can AM organize Rob's business?
 
