@@ -2,11 +2,11 @@
 title: "AM — Future Waves Register"
 type: governance
 status: active
-authority_weight: 60
+authority_weight: 70
 schema_version: 3
 created: "2026-03-16"
 updated: "2026-03-17"
-note: "Wave 8 restructured: 8.1 governance complete, 8.2 pipeline tooling ready for proposal, 8.3 git-ops registered, self-observation deferred"
+note: "Wave 8 restructured: 8.1 governance complete, 8.2 pipeline tooling complete, 8.3 git hygiene detection approved (ready to build), 8.4 git workflow automation registered, self-observation deferred"
 relationships:
   derives_from:
     - "[[Agent Maestro — Strategy]]"
@@ -65,35 +65,35 @@ Key insight: the problem isn't "how do we connect LLMs to AM?" (that's already s
 
 **Status:** Complete. Produced [[AM — LLM Conventions]] and [[AM — Artifact Lifecycles]] as the governance prerequisite for pipeline enforcement tooling. Both adversarially audited and approved 2026-03-17.
 
-#### Wave 8.2 — Pipeline Enforcement Tooling (next)
+#### Wave 8.2 — Pipeline Enforcement Tooling (complete)
 
-**Status:** Ready for proposal. The mechanical checks specified in [[AM — Artifact Lifecycles]] are the spec.
+**Status:** Complete. Delivered 2026-03-17. Proposal archived to `05_RECORD/archive/`. See [[Proposal — Wave 8.2 Pipeline Enforcement Tooling]].
 
-**Known mechanically checkable items (from Artifact Lifecycles — not exhaustive, the full document contains additional checks per artifact type):**
+**Scope:** 17 mechanical checks across 5 Python tools (capture_triage.py, proposal_lifecycle.py, reflection_completeness.py, concept_lifecycle.py, governance_compliance.py), plus shared vault model library (vault_model.py). Integrated into orchestrate.sh.
 
-1. Every active proposal has a non-empty `## Audit` section
-2. No proposal exists in `active/` with `status: draft`
-3. Every completed wave has a reflection in `06_REFLECT/`
-4. Every reflection has a corresponding capture seed in `01_CAPTURE/`
-5. No concept has been in `status: draft` for more than 30 days without review
-6. No capture item has been sitting untriaged for more than 14 days
-7. Proposals are created in `proposals/` before appearing in `active/`
+**Governance produced:** [[AM — Git Conventions]] (authority_weight 70, approved 2026-03-17) — defines all git conventions, escalation levels for 14 git operations, AI safety rules, and is the spec that `git_hygiene.py` enforces. [[Agent Maestro — Vault Rules]] Rules 67–72 consolidated into single Rule 67 pointer delegating to this document.
 
-Additional checks from the full document include: reflection `derives_from` includes the wave's proposal, capture seed references the reflection, every active concept has non-empty `derives_from`, no proposal remains in `active/` after wave completion, governance documents have authority_weight ≥ 70 and complete schema v3 frontmatter.
+**Proven need:** Wave 6 reflection was skipped and nothing detected it. Proposals have appeared in `active/` without audit. First run found six real process gaps.
 
-**Proven need:** Wave 6 reflection was skipped and nothing detected it. Proposals have appeared in `active/` without audit.
+#### Wave 8.3 — Git Hygiene Detection (approved, ready to build)
 
-#### Wave 8.3 — Git-Ops (needs design conversation)
+**Status:** Proposal approved 2026-03-17. See [[Proposal — Wave 8.3 Git Hygiene Detection 1]] in `03_DECIDE/active/`.
 
-**Status:** Registered. Needs its own design conversation before proposal.
+**Scope:** Single Python detection tool (`git_hygiene.py`) with 7 checks enforcing [[AM — Git Conventions]]: branch naming, stale branches, direct commits to master (as warnings), pre-wave tag presence, tag naming consistency, commit message format, uncommitted changes. Best-effort error isolation. Integrated into orchestrate.sh via the same read-check-report pattern as Wave 6 and 8.2 tools.
 
-AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Proven friction: manual git operations in Cowork are irritating; Claude Code handles git natively but has no AM-aware rules.
+**Related:** Wave 8.4 (Git Workflow Automation) documented in the brainstorm as a future wave — action-taking tools that cross the Report-Don't-Repair boundary, needing an "Action Tool Conventions" governance extension.
 
-### Self-Observation (deferred from original Wave 8 scope)
+#### Wave 8.4 — Git Workflow Automation (future)
 
-Self-observation instrumentation (timing, metrics, observation logging) and the self-assessment loop (observe → identify → propose → gate → execute/escalate) are valid future work but were descoped from Wave 8 to keep it focused on pipeline enforcement and git-ops. Revisit after Wave 8 is complete.
+**Status:** Registered. Documented in [[Wave 8.3 — Git-Ops Brainstorm]] §Wave 8.4. Depends on Wave 8.3 and a governance extension (Action Tool Conventions).
 
-**Sub-capabilities (still valid, deferred):**
+Automate the repetitive git workflow steps defined in [[AM — Git Conventions]] §The Wave Git Workflow: branch creation, checkpoint tagging, validation runs, merge after validation, branch cleanup. Escalation levels already defined in AM — Git Conventions §Escalation Levels. Crosses the Report-Don't-Repair boundary (Convention 3) — these are action-taking tools that write state, requiring different trust properties than detection tools.
+
+### Self-Observation (Wave 9 — promoted to Roadmap)
+
+**Status:** Promoted to Roadmap as Wave 9. The final Stage 1 wave. Descoped from Wave 8 to keep it focused on pipeline enforcement and git-ops. Design conversation and proposal to follow after Wave 8.3 completion.
+
+**Sub-capabilities:**
 - Self-observation instrumentation (timing, metrics, observation_log.csv)
 - Evolution capability (system observer, performance analyzer, improvement recommender)
 - Governance validation of proposed changes (contract validator, architecture compliance, pipeline validator)
@@ -115,13 +115,13 @@ Self-observation instrumentation (timing, metrics, observation logging) and the 
 
 ## Stage 2 — First External Application
 
-### Generalized Audit Protocol (Wave 9 candidate)
+### Generalized Audit Protocol (Wave 10 candidate)
 
 **Source:** Old roadmap Wave 8.1
 
 Extract AM's self-audit capability into a protocol for any vault or folder structure. Scan structure, identify patterns, assess quality and consistency, map relationships, produce findings and recommendations. This is the mechanical integrity layer plus semantic audit, generalized beyond AM's own schema.
 
-### Discovery & Interview Workflow (Wave 10 candidate)
+### Discovery & Interview Workflow (Wave 11 candidate)
 
 **Source:** Old roadmap Wave 8.2
 

@@ -1,14 +1,14 @@
 ---
-title: "Wave 8.3 — Reflection"
+title: Wave 8.3 — Reflection
 type: report
 status: active
 authority_weight: 30
 schema_version: 3
-created: "2026-03-17"
-updated: "2026-03-17"
+created: 2026-03-17
+updated: 2026-03-17
 relationships:
   derives_from:
-    - "[[Proposal — Wave 8.3 Git Hygiene Detection]]"
+    - "[[Proposal — Wave 8.3 Git Hygiene Detection 1]]"
     - "[[AM — Git Conventions]]"
     - "[[AM — Tool Conventions]]"
   governs: []
@@ -16,7 +16,12 @@ relationships:
     - "[[AM — Roadmap]]"
     - "[[AM — Integrity Layers]]"
     - "[[Wave 8.2 — Reflection]]"
-tags: [reflection, wave-8, git-ops, git-hygiene, detection]
+tags:
+  - reflection
+  - wave-8
+  - git-ops
+  - git-hygiene
+  - detection
 ---
 
 # Wave 8.3 — Reflection

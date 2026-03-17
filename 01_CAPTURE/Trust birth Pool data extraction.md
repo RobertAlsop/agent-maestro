@@ -1,0 +1,1 @@
+Is the real task for trust Birthpools potentially not to audit it and then go inside the folder and refactor it into a better state. Maybe the idea is to go and order it and then extract all the proprietary data and re-create it in the image of agent Meister.

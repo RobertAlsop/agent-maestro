@@ -1,0 +1,1 @@
+It feels like we need to design how we are going to run the self-awareness runs

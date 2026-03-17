@@ -12,7 +12,7 @@ The Wave 8.2 tools surfaced real gaps on first run. These need to be resolved be
 1. **Wave 8.1 reflection is missing.** Wave 8.1 is ✓ in the Roadmap but no reflection exists in `06_REFLECT/`. Write it.
 2. **Wave 7 proposal not archived.** Still in `active/` after wave completion. Move to `05_RECORD/archive/` with `status: archived`.
 3. **`AM — Future Waves Register` authority_weight is 60.** Below governance floor of 70. Raise to 70 with a note explaining why.
-4. **`Git Best Practices for AI-Assisted Builds.md` type mismatch.** Lives in `02_KNOWLEDGE/protocols/` but has type: concept. Either move to concepts/ or correct the type. Needs human decision.
+4. **`Git Best Practices for AI-Assisted Builds.md` type mismatch.** ✓ Resolved: document promoted to governance as [[AM — Git Conventions]] (authority_weight 70, approved 2026-03-17). Original archived to `05_RECORD/archive/`.
 5. **Old reflections (5.1, 5.2, 6) have no capture seeds.** Pre-governance gaps. Create retroactive seeds or document why they're exempt.
 
 ## Wave 8.3 — Git-Ops

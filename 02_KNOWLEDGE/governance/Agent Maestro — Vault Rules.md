@@ -182,4 +182,4 @@ Always. These rules apply to every note created in this vault.
 
 - [[Agent Maestro — Foundations]]
 - [[Agent Maestro — North Star]]
-- [[Git Best Practices for AI-Assisted Builds]]
+- [[AM — Git Conventions]]

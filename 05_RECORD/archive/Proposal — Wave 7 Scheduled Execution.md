@@ -1,7 +1,7 @@
 ---
 title: "Proposal — Wave 7 Scheduled Execution"
 type: proposal
-status: active
+status: archived
 authority_weight: 30
 schema_version: 3
 created: "2026-03-16"

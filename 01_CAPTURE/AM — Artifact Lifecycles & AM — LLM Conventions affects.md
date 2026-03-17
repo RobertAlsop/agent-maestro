@@ -1,0 +1,1 @@
+Let's check how AM — Artifact Lifecycles and AM — LLM Conventions affects everything else in the vault, especially front matter conventions, Claude.mds and templates.

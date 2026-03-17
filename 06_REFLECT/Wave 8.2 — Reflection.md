@@ -85,7 +85,9 @@ No new concepts emerged from Wave 8.2 that are not already represented in the va
 
 **Wave 8.3 — Git-Ops** is next in the roadmap. AM-aware git enforcement: branch naming, commit format validation, uncommitted change detection, tag management. Needs its own design conversation — see [[AM — Future Waves Register]].
 
-**Wave 9 — Generalized Audit Protocol** is the Stage 2 transition. The self-audit capability extracted into a protocol that works on any folder structure.
+**Wave 9 — Self-Observation** is the final Stage 1 wave. AM observes and measures its own operational behaviour.
+
+**Wave 10 — Generalized Audit Protocol** is the Stage 2 transition. The self-audit capability extracted into a protocol that works on any folder structure.
 
 The vault now has mechanical enforcement at both layers of the integrity stack:
 - **Structural:** Does the vault have the right shape? (Wave 6)
