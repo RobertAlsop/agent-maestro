@@ -29,7 +29,7 @@ The roadmap follows D3 (Controlled Evolution) — each wave proves the one befor
 
 ## Current Position
 
-**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 6 (Mechanical Integrity) is complete. Wave 7 (Scheduled Execution) is next.
+**Stage 1 — Self-Governance.** AM governs its own vault. The pipeline works. Governance is solid. The patterns are being discovered and codified through practice. Wave 7 (Scheduled Execution) is complete. Wave 8.1 (Pipeline Enforcement governance) is complete. Wave 8.2 (Pipeline Enforcement tooling) is next.
 
 ---
 
@@ -63,17 +63,27 @@ Governance documents reviewed and tightened. Pipeline folders audited. Concepts 
 
 Delivered the vault-maintenance tool suite: seven detection tools (structure, YAML, broken links, orphans, stubs, naming, inventory) plus orchestrator. Config-driven, portable, read-only. First health report ran and found real issues — confirming the tools work. Established [[AM — Integrity Layers]] (mechanical/semantic boundary) and [[AM — Tool Conventions]] as governance. See [[Proposal — Wave 6 Mechanical Integrity]] for the full contract.
 
-### Wave 7 — Scheduled Execution (current)
+### Wave 7 — Scheduled Execution ✓
 
 **Question:** Can AM actually *run* things?
 
-Give AM autonomous operation via launchd scheduling of the integrity suite. Date-stamped reports land in `05_RECORD/reports/` daily without human initiation. Optionally, a local LLM (Ollama/llama3.2) summarises findings and macOS notifications alert on problems. Local-first stack — no external API dependencies. See [[Proposal — Wave 7 Scheduled Execution]] for the full contract.
+Delivered autonomous operation via launchd scheduling of the integrity suite. Date-stamped reports land in `05_RECORD/reports/` daily without human initiation. Local LLM (Ollama/llama3.2) summarises findings. macOS notifications alert on problems. Local-first stack — no external API dependencies. See [[Proposal — Wave 7 Scheduled Execution]] for the full contract.
 
-### Wave 8 — Self-Observation & Autonomy
+### Wave 8 — Pipeline Enforcement & Git-Ops
 
-**Question:** Can AM run on itself without a human starting every session?
+**Question:** Does AM enforce its own process — not just structure?
 
-Instrument the pipeline with observation data. Implement scheduled maintenance that runs autonomously. Build the self-assessment loop: observe → identify issues → propose fixes → gate → execute (within authority) or escalate. Define the agent responsibility architecture to prevent collision.
+#### Wave 8.1 — Governance ✓
+
+Produced the governance prerequisite for pipeline enforcement: [[AM — LLM Conventions]] (three audits, evidence convention, safety rules, operational risks) and [[AM — Artifact Lifecycles]] (lifecycle rules for 7 artifact types, gates, mechanical checks, finishing ritual). Both audited adversarially and approved.
+
+#### Wave 8.2 — Pipeline Enforcement Tooling
+
+Mechanically verify that lifecycle rules from [[AM — Artifact Lifecycles]] are followed. The mechanical checks specified in that document are the spec for this wave's tooling.
+
+#### Wave 8.3 — Git-Ops
+
+AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Needs its own design conversation.
 
 **Stage 1 Exit Criteria:**
 - The vault detects its own structural problems automatically

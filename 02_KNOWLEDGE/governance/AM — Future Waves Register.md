@@ -5,8 +5,8 @@ status: active
 authority_weight: 60
 schema_version: 3
 created: "2026-03-16"
-updated: "2026-03-16"
-note: "Wave 6 entry promoted; Wave 7 entry revised after design conversation"
+updated: "2026-03-17"
+note: "Wave 8 restructured: 8.1 governance complete, 8.2 pipeline tooling ready for proposal, 8.3 git-ops registered, self-observation deferred"
 relationships:
   derives_from:
     - "[[Agent Maestro — Strategy]]"
@@ -57,19 +57,43 @@ Key insight: the problem isn't "how do we connect LLMs to AM?" (that's already s
 - **Model routing system** — deferred as a system. Simple three-tier approach adopted instead: Haiku-class for Level 1 (cheap/fast), Sonnet-class for Level 2 (standard), Opus-class for Level 3 (important). Pick one per tier, use them, measure later.
 - **TOML with JSON for lower API fees** — deferred pending investigation of actual cost savings vs. added complexity.
 
-### Pipeline Enforcement, Git-Ops & Self-Observation (Wave 8 candidate — revised)
+### Pipeline Enforcement & Git-Ops (Wave 8 — partially promoted)
 
 **Source:** Old roadmap Waves 6-7, Tools Evolution analysis (2026-03-17), Wave 6 process gap diagnosis
 
-**Revised scope after Wave 7 design conversation (2026-03-17):** Wave 8 should deliver two new tool suites alongside the original self-observation scope:
+#### Wave 8.1 — Governance (promoted, complete)
 
-**Pipeline-enforcement suite** (`04_EXECUTE/tools/pipeline-enforcement/`): Mechanically verify that pipeline stages complete — does every completed wave have a reflection? Does every reflection have a capture seed? Does every active proposal have an audit? Is every proposal in the right lifecycle stage? Proven need: Wave 6 reflection was skipped and nothing detected it.
+**Status:** Complete. Produced [[AM — LLM Conventions]] and [[AM — Artifact Lifecycles]] as the governance prerequisite for pipeline enforcement tooling. Both adversarially audited and approved 2026-03-17.
 
-**Git-ops suite** (`04_EXECUTE/tools/git-ops/`): AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Proven friction: manual git operations in Cowork are irritating; Claude Code handles git natively but has no AM-aware rules.
+#### Wave 8.2 — Pipeline Enforcement Tooling (next)
 
-**Self-observation instrumentation:** Instrument the pipeline with timing and metrics. Implement observation logging. Build the self-assessment loop: observe → identify patterns → propose improvements → governance gate → execute or escalate.
+**Status:** Ready for proposal. The mechanical checks specified in [[AM — Artifact Lifecycles]] are the spec.
 
-**Sub-capabilities (from original scope, still valid):**
+**Known mechanically checkable items (from Artifact Lifecycles — not exhaustive, the full document contains additional checks per artifact type):**
+
+1. Every active proposal has a non-empty `## Audit` section
+2. No proposal exists in `active/` with `status: draft`
+3. Every completed wave has a reflection in `06_REFLECT/`
+4. Every reflection has a corresponding capture seed in `01_CAPTURE/`
+5. No concept has been in `status: draft` for more than 30 days without review
+6. No capture item has been sitting untriaged for more than 14 days
+7. Proposals are created in `proposals/` before appearing in `active/`
+
+Additional checks from the full document include: reflection `derives_from` includes the wave's proposal, capture seed references the reflection, every active concept has non-empty `derives_from`, no proposal remains in `active/` after wave completion, governance documents have authority_weight ≥ 70 and complete schema v3 frontmatter.
+
+**Proven need:** Wave 6 reflection was skipped and nothing detected it. Proposals have appeared in `active/` without audit.
+
+#### Wave 8.3 — Git-Ops (needs design conversation)
+
+**Status:** Registered. Needs its own design conversation before proposal.
+
+AM-aware git enforcement — branch status, uncommitted changes, commit format validation, tag management. Proven friction: manual git operations in Cowork are irritating; Claude Code handles git natively but has no AM-aware rules.
+
+### Self-Observation (deferred from original Wave 8 scope)
+
+Self-observation instrumentation (timing, metrics, observation logging) and the self-assessment loop (observe → identify → propose → gate → execute/escalate) are valid future work but were descoped from Wave 8 to keep it focused on pipeline enforcement and git-ops. Revisit after Wave 8 is complete.
+
+**Sub-capabilities (still valid, deferred):**
 - Self-observation instrumentation (timing, metrics, observation_log.csv)
 - Evolution capability (system observer, performance analyzer, improvement recommender)
 - Governance validation of proposed changes (contract validator, architecture compliance, pipeline validator)

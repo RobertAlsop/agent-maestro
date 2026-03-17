@@ -57,6 +57,8 @@ Constitutional and operational governance documents.
 | `AM — Universal Workflow.md` | 70 | How work happens at every scale (draft) |
 | `AM — Integrity Layers.md` | 75 | Architectural separation: Mechanical vs Semantic integrity |
 | `AM — Tool Conventions.md` | 70 | How tools are designed, built, and operated |
+| `AM — LLM Conventions.md` | 70 | How LLMs operate — three audits, evidence, safety rules |
+| `AM — Artifact Lifecycles.md` | 70 | Lifecycle rules for all primary artifact types |
 | `AM — Future Waves Register.md` | 60 | Backlog of validated ideas grouped by Strategy stage |
 
 ### governance/roles/
@@ -219,4 +221,4 @@ Reflections live directly in this folder — one per wave, flat structure. Each 
 
 ---
 
-*Updated: 2026-03-17 — Wave 7 Scheduled Execution runtime built.*
+*Updated: 2026-03-17 — Wave 8.1 governance: AM — LLM Conventions and AM — Artifact Lifecycles added.*
