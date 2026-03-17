@@ -3,8 +3,9 @@
 #
 # Coordinates the full maintenance sequence:
 #   1. Run orchestrate.sh (mechanical integrity)
-#   2. Run summarise_report.py (semantic summary, if available)
-#   3. Run notify.sh (notification on findings, if available)
+#   2. Run extract_metrics.py (temporal metric extraction, if available)
+#   3. Run summarise_report.py (semantic summary, if available)
+#   4. Run notify.sh (notification on findings, if available)
 #
 # Called by launchd plist. Each phase degrades gracefully if its
 # script is not present or fails.
@@ -60,7 +61,32 @@ if [[ -f "$GENERIC_REPORT" ]]; then
     log "Report saved: ${REPORT_FILE}"
 fi
 
-# --- Phase 2: LLM Summary (optional) ---
+# --- Phase 2: Metric Extraction (optional) ---
+
+EXTRACTOR="${TOOLS_DIR}/extract_metrics.py"
+OBSERVATION_CSV="${VAULT_ROOT}/05_RECORD/logs/observation_metrics.csv"
+
+if [[ -x "$EXTRACTOR" ]]; then
+    log "Running extract_metrics.py..."
+    set +e
+    python3 "$EXTRACTOR" \
+        --config "$CONFIG_FILE" \
+        --vault-root "$VAULT_ROOT" \
+        --output-dir "${TOOLS_DIR}/reports" \
+        --csv-path "$OBSERVATION_CSV" \
+        --quiet \
+        2>&1 | while IFS= read -r line; do log "  extract: $line"; done
+    extract_exit=${PIPESTATUS[0]}
+    set -e
+    log "extract_metrics.py exited with code ${extract_exit}"
+    if [[ $extract_exit -eq 2 ]]; then
+        log "WARNING: Metric extraction failed (exit 2) — continuing"
+    fi
+else
+    log "Skipping metric extraction (extract_metrics.py not available)"
+fi
+
+# --- Phase 3: LLM Summary (optional) ---
 
 SUMMARISER="${SCRIPT_DIR}/summarise_report.py"
 
@@ -78,7 +104,7 @@ else
     log "Skipping summary (script not available or no report)"
 fi
 
-# --- Phase 3: Notification (optional) ---
+# --- Phase 4: Notification (optional) ---
 
 NOTIFIER="${SCRIPT_DIR}/notify.sh"
 

@@ -1,0 +1,57 @@
+tool,metric_name,enabled,polarity,threshold,default_escalation,category,goal_trace
+Structure Check,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+Structure Check,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+Structure Check,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+Structure Check,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+YAML Validation,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+YAML Validation,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+YAML Validation,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+YAML Validation,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+Broken Links,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+Broken Links,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+Broken Links,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+Broken Links,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+Orphan Detection,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+Orphan Detection,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+Orphan Detection,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+Orphan Detection,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+Stub Detection,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+Stub Detection,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+Stub Detection,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+Stub Detection,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+Naming Validation,checked,true,higher_is_better,1,2,structural,Seed 2 — Integrity
+Naming Validation,passed,true,higher_is_better,1,1,structural,Seed 2 — Integrity
+Naming Validation,failed,true,lower_is_better,0,2,structural,Seed 2 — Integrity
+Naming Validation,warnings,true,lower_is_better,0,1,structural,Seed 2 — Integrity
+Inventory,checked,false,higher_is_better,1,2,structural,Seed 2 — Integrity
+Inventory,passed,false,higher_is_better,1,1,structural,Seed 2 — Integrity
+Inventory,failed,false,lower_is_better,0,2,structural,Seed 2 — Integrity
+Inventory,warnings,false,lower_is_better,0,1,structural,Seed 2 — Integrity
+Capture Triage,checked,true,higher_is_better,1,2,process,Seed 1 — Process
+Capture Triage,passed,true,higher_is_better,1,1,process,Seed 1 — Process
+Capture Triage,failed,true,lower_is_better,0,2,process,Seed 1 — Process
+Capture Triage,warnings,true,lower_is_better,0,1,process,Seed 1 — Process
+Proposal Lifecycle,checked,true,higher_is_better,1,2,process,Seed 1 — Process
+Proposal Lifecycle,passed,true,higher_is_better,1,1,process,Seed 1 — Process
+Proposal Lifecycle,failed,true,lower_is_better,0,2,process,Seed 1 — Process
+Proposal Lifecycle,warnings,true,lower_is_better,0,1,process,Seed 1 — Process
+Reflection Completeness,checked,true,higher_is_better,1,2,process,Seed 1 — Process
+Reflection Completeness,passed,true,higher_is_better,1,1,process,Seed 1 — Process
+Reflection Completeness,failed,true,lower_is_better,0,2,process,Seed 1 — Process
+Reflection Completeness,warnings,true,lower_is_better,0,1,process,Seed 1 — Process
+Concept Lifecycle,checked,true,higher_is_better,1,2,process,Seed 1 — Process
+Concept Lifecycle,passed,true,higher_is_better,1,1,process,Seed 1 — Process
+Concept Lifecycle,failed,true,lower_is_better,0,2,process,Seed 1 — Process
+Concept Lifecycle,warnings,true,lower_is_better,0,1,process,Seed 1 — Process
+Governance Compliance,checked,true,higher_is_better,1,2,process,Seed 2 — Integrity
+Governance Compliance,passed,true,higher_is_better,1,1,process,Seed 2 — Integrity
+Governance Compliance,failed,true,lower_is_better,0,2,process,Seed 2 — Integrity
+Governance Compliance,warnings,true,lower_is_better,0,1,process,Seed 2 — Integrity
+Git Hygiene,checked,true,higher_is_better,1,2,git,Seed 2 — Integrity
+Git Hygiene,passed,true,higher_is_better,1,1,git,Seed 2 — Integrity
+Git Hygiene,failed,true,lower_is_better,0,2,git,Seed 2 — Integrity
+Git Hygiene,warnings,true,lower_is_better,0,1,git,Seed 2 — Integrity
+Health Report,tools_clean,true,higher_is_better,1,1,aggregate,Seed 1 — Process
+Health Report,tools_findings,true,lower_is_better,0,2,aggregate,Seed 1 — Process
+Health Report,tools_error,true,lower_is_better,0,2,aggregate,Seed 1 — Process
+Health Report,overall_result,true,lower_is_better,1,2,aggregate,Seed 1 — Process
